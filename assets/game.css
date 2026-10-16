@@ -1,0 +1,59 @@
+/* 게임 · 골든벨 */
+.gmenu{text-align:center;padding:10px 0}
+.gmenu .eyebrow{justify-content:center}
+.gscore{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px 0 20px}
+.team{display:flex;align-items:center;gap:14px;padding:10px 20px;border-radius:16px;border:2px solid var(--line);background:var(--surface);min-width:190px;justify-content:space-between;transition:transform .2s,box-shadow .2s}
+.team span{font-weight:700;font-size:18px;outline:none;border-bottom:1px dashed transparent}
+.team span:focus{border-bottom-color:var(--muted)}
+.team b{font:700 34px/1 var(--mono)}
+.team.t0{--tc:#2a56c6}.team.t1{--tc:#c8402b}
+.team b{color:var(--tc)}
+.team.turn{border-color:var(--tc);box-shadow:0 0 0 4px color-mix(in srgb,var(--tc) 18%,transparent);transform:translateY(-2px)}
+.team b.pop{animation:pop .4s}
+@keyframes pop{40%{transform:scale(1.35)}}
+.vs{font:700 14px var(--mono);color:var(--muted)}
+.gcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:10px 0 18px}
+.gcard{display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;padding:20px;border-radius:18px;border:1px solid var(--line);background:var(--surface);cursor:pointer;box-shadow:var(--shadow);min-height:170px}
+.gcard:hover{border-color:var(--hi)}
+.gcard .gi{font-size:40px;line-height:1}
+.gcard b{font-size:19px}
+.gcard span:last-child{color:var(--muted);font-size:14px}
+.ghead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.ghead b{font-size:20px}
+.clock{font:700 28px/1 var(--mono);min-width:56px;text-align:center;padding:8px 12px;border-radius:12px;background:var(--soft);border:1px solid var(--line)}
+.clock.hurry{background:var(--hot);color:#fff;border-color:var(--hot)}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:0 auto}
+.mc{position:relative;aspect-ratio:5/3;border-radius:16px;border:0;cursor:pointer;font:inherit;perspective:800px;background:transparent;padding:0}
+.mc span{position:absolute;inset:0;display:grid;place-items:center;border-radius:16px;backface-visibility:hidden;transition:transform .4s;padding:8px;text-align:center}
+.mc .fr{background:var(--accent);color:var(--accent-ink);font:700 34px var(--mono)}
+.mc .bk{background:var(--surface);border:2px solid var(--line);transform:rotateY(180deg);font-size:clamp(14px,1.8vw,20px);font-weight:700}
+.mc.en .bk{font-size:clamp(17px,2.2vw,26px)}
+.mc.open .fr,.mc.done .fr{transform:rotateY(180deg)}
+.mc.open .bk,.mc.done .bk{transform:rotateY(360deg)}
+.mc.done.d0 .bk{border-color:#2a56c6;background:color-mix(in srgb,#2a56c6 12%,var(--surface))}
+.mc.done.d1 .bk{border-color:#c8402b;background:color-mix(in srgb,#c8402b 12%,var(--surface))}
+.speedq{font-size:clamp(36px,6vw,64px);font-weight:700;text-align:center;margin:30px 0 10px}
+.speeda{font-size:clamp(40px,7vw,72px);font-weight:700;text-align:center;color:var(--hot)}
+.btn.tb.t0{border-color:#2a56c6;color:#2a56c6}.btn.tb.t1{border-color:#c8402b;color:#c8402b}
+.gend{text-align:center;padding:40px 0}
+.gend b{display:block;font-size:48px;margin:10px 0}
+@media (max-width:760px){.gcards{grid-template-columns:1fr}.mgrid{grid-template-columns:repeat(3,1fr)}.team{min-width:0}.gscore{gap:6px}}
+
+/* 골든벨 */
+.bell{max-width:1100px;margin:0 auto}
+.bq{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 32px;box-shadow:var(--shadow)}
+.bq .qn{display:flex;align-items:center;gap:10px;color:var(--muted);font-weight:700;margin-bottom:8px}
+.bq .qn .clock{margin-left:auto}
+.bq h2{font-size:clamp(24px,3.4vw,40px);line-height:1.35;margin:0 0 22px;letter-spacing:-.01em}
+.bopts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bopts button{display:flex;align-items:center;gap:14px;text-align:left;font:inherit;font-size:clamp(17px,2.2vw,26px);font-weight:500;padding:16px 18px;border-radius:16px;border:2px solid var(--line);background:var(--surface);cursor:pointer;min-height:76px}
+.bopts button i{font:700 15px/1 var(--mono);font-style:normal;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--soft);flex:none}
+.bopts button.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,var(--surface))}
+.bopts button.right i{background:var(--ok);color:#fff}
+.bopts button.wrong{border-color:var(--hot);background:color-mix(in srgb,var(--hot) 10%,var(--surface))}
+.bopts button.dim{opacity:.45}
+.bexp{margin-top:16px;padding:12px 16px;border-radius:12px;background:var(--soft);font-size:17px}
+.bexp b{color:var(--ok);margin-right:6px}
+.survive{display:flex;align-items:center;gap:8px;font-weight:700}
+.survive input{width:70px;font:700 18px var(--mono);padding:4px 8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-align:center}
+@media (max-width:640px){.bopts{grid-template-columns:1fr}}

@@ -1,0 +1,88 @@
+/* 중·고 영어 수업실 · 공통 디자인 (메인, 연습실, 게임, 골든벨) */
+:root{
+  --bg:#edf0f3; --grid:#dfe4ea; --surface:#fff; --soft:#f3f6f8; --ink:#141c25; --muted:#5b6876; --line:#d4dbe2;
+  --accent:#1f3a5f; --accent-ink:#fff; --hi:#2f5fd0; --hot:#c8402b; --ok:#2e8a50; --warn:#c98a0c;
+  --word:#2f5fd0; --talk:#2e8a50; --gram:#8a4fc2; --read:#c06a1a; --quiz:#c8402b;
+  --r:16px; --shadow:0 1px 0 rgba(20,28,37,.04),0 6px 18px -10px rgba(20,28,37,.18);
+  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1318; --grid:#18212b; --surface:#151c24; --soft:#1a232d; --ink:#e3e9ef; --muted:#93a1af; --line:#28333f;
+  --accent:#9fc0ff; --accent-ink:#0e1318; --hi:#86a9ff; --hot:#ff7461; --ok:#6cc48a; --warn:#f0b84a;
+  --word:#86a9ff; --talk:#6cc48a; --gram:#c39cf0; --read:#f0a35c; --quiz:#ff7461; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1318; --grid:#18212b; --surface:#151c24; --soft:#1a232d; --ink:#e3e9ef; --muted:#93a1af; --line:#28333f;
+  --accent:#9fc0ff; --accent-ink:#0e1318; --hi:#86a9ff; --hot:#ff7461; --ok:#6cc48a; --warn:#f0b84a;
+  --word:#86a9ff; --talk:#6cc48a; --gram:#c39cf0; --read:#f0a35c; --quiz:#ff7461; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;
+  color:var(--ink);font:15px/1.6 var(--sans);word-break:keep-all;overflow-wrap:break-word;min-height:100vh;-webkit-text-size-adjust:100%}
+a{color:var(--hi)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--hi);outline-offset:2px}
+.en{font-family:var(--sans);letter-spacing:0}
+
+/* 위 막대 */
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:10px max(16px,calc((100vw - 1180px)/2));background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);min-height:56px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand .logo{width:30px;height:30px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 14px/1 var(--sans);letter-spacing:-.02em}
+.crumb{color:var(--muted);font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb::before{content:"›";margin:0 8px 0 2px;color:var(--line)}
+.spacer{flex:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;font-weight:500;font-size:14px;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:color-mix(in srgb,var(--hi) 50%,var(--line))}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
+.btn.ghost{background:transparent}
+.btn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+.wrap{max-width:1180px;margin:0 auto;padding:22px 16px 60px}
+.eyebrow{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--hi)}
+.chip{display:inline-flex;align-items:center;gap:4px;padding:1px 8px;border:1px solid var(--line);border-radius:6px;font-size:12px;color:var(--muted);background:var(--surface)}
+h1.page{font-size:clamp(26px,4vw,36px);line-height:1.2;margin:8px 0 18px;letter-spacing:-.02em}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.foot{margin:40px 0 0;text-align:center;color:var(--muted);font-size:12.5px;line-height:1.7}
+.foot a{color:inherit}
+
+/* 세그먼트 탭 */
+.seg{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--surface);flex-wrap:wrap}
+.seg button{border:0;background:transparent;border-radius:9px;padding:8px 14px;min-height:38px;font-weight:500;cursor:pointer;color:var(--muted)}
+.seg button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);font-weight:700}
+
+/* 스피커 버튼 */
+.say{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface);cursor:pointer;flex:none;color:var(--hi)}
+.say svg{width:16px;height:16px}
+.say.playing{background:var(--hi);color:#fff;border-color:var(--hi)}
+
+/* 메인 화면 */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end;margin:6px 0 22px}
+.hero p{margin:0;color:var(--muted);max-width:640px}
+.books{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.unit{margin:0 0 16px;overflow:hidden}
+.unit>header{display:flex;gap:14px;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.unit .no{font:700 13px/1 var(--mono);color:var(--accent);background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 9px;white-space:nowrap}
+.unit h2{margin:0;font-size:19px;line-height:1.3}
+.unit h2 small{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+.unit .meta{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.unit.soon{opacity:.62}
+.unit.soon header .meta::after{content:"준비 중";font-size:12px;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:2px 8px}
+.rows{display:grid}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .k{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.row .k i{width:10px;height:10px;border-radius:3px;flex:none}
+.row .t{min-width:0}
+.row .t b{display:block;font-weight:500}
+.row .t span{color:var(--muted);font-size:13px}
+.row .go{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.row.unitwide{background:var(--soft)}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row .go{justify-content:flex-start}
+  .unit .meta{margin-left:0}
+  .topbar .crumb{display:none}
+}
+@media (max-width:560px){.topbar .rate,.topbar .brand>span:last-child{display:none}}
