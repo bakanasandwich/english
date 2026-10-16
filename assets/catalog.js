@@ -27,6 +27,6 @@ window.CATALOG = [
       {no: 5, ready: true, estimate: true, title: 'The City as a Canvas', ko: '도시라는 캔버스', talk: ['감상 묻고 답하기', '길 묻고 안내하기'], grammar: ['목적격 관계대명사', 'used to'], read: '여행 잡지 특집 기사'},
       {no: 6, ready: true, estimate: true, title: 'The Greatest Love for All', ko: '모두를 위한 가장 큰 사랑', talk: ['감사 표현하기', '위로·격려하기'], grammar: ['지각동사 + 목적어 + 동사원형/-ing', 'so ~ that'], read: '단편 이야기'},
       {no: 7, ready: true, estimate: true, title: 'Let\u2019s Enjoy Festivals', ko: '축제를 즐겨요', talk: ['알고 있는지 묻기', '초대하고 답하기'], grammar: ['It ~ to부정사', 'call A B'], read: '세계 축제 소개 기사'},
-      {no: 8, ready: false, title: 'Time Travel', grammar: ['현재완료', 'something + 형용사']}
+      {no: 8, ready: true, estimate: true, title: 'Time Travel', ko: '시간 여행', talk: ['경험 묻고 답하기', '기대 표현하기'], grammar: ['현재완료', 'something + 형용사'], read: '단편 이야기 (판타지)'}
     ]}
 ];
