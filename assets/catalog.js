@@ -22,7 +22,7 @@ window.CATALOG = [
     lessons: [
       {no: 1, ready: true, estimate: true, title: 'The Future Is in Our Hands', ko: '미래는 우리 손에', talk: ['걱정 표현하기', '제안하기'], grammar: ['to부정사 (목적)', '조건의 if'], read: '학급 프로젝트 보고서'},
       {no: 2, ready: true, estimate: true, title: 'How Teens Talk Now', ko: '요즘 십대는 어떻게 말할까', talk: ['의미 묻고 설명하기', '의견 묻고 답하기'], grammar: ['접속사 that', '수여동사'], read: '청소년 잡지 기사'},
-      {no: 3, ready: false, title: 'What a Great Idea!'},
+      {no: 3, ready: true, estimate: true, title: 'What a Great Idea!', ko: '정말 멋진 생각이야!', talk: ['놀람 표현하기', '방법 묻고 설명하기'], grammar: ['감탄문', '주격 관계대명사'], read: '발명 이야기 칼럼'},
       {no: 4, ready: false, title: 'Are You Money Smart?'},
       {no: 5, ready: false, title: 'The City as a Canvas', grammar: ['목적격 관계대명사', 'used to']},
       {no: 6, ready: false, title: 'The Greatest Love for All', grammar: ['지각동사 + 목적어 + -ing/동사원형', 'so ~ that']},

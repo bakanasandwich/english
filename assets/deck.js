@@ -141,7 +141,7 @@
       add(`${tag(`Grammar ${gi + 1} · Notice`)}<h2>무엇이 보이나요?</h2><div class="sents">${g.notice.map((n, k) => `<div class="row"><span class="n">${k + 1}</span><div class="en">${mark(n.en)}<span class="k">${esc(n.ko)}</span></div>${say(n.en)}</div>`).join('')}</div>
         <div class="qbox f" style="margin-top:26px;padding:18px 28px"><div class="q" style="font-size:30px"><b>Q.</b>색칠된 부분은 어떤 모양이고, 무슨 뜻일까?</div></div>`,
         note('규칙 발견', '규칙을 먼저 말해 주지 않는다. 예문을 읽고 학생이 공통점을 찾게 한 뒤 다음 장에서 정리한다.'));
-      add(`${tag(`Grammar ${gi + 1} · ${g.name}`)}<h2>${esc(g.name)}</h2><div class="formula en"><em>${esc(g.form)}</em><small>= ${esc(g.meaning)}</small></div>
+      add(`${tag(`Grammar ${gi + 1} · ${g.name}`)}<h2>${esc(g.name)}</h2><div class="formula en" style="font-size:${g.form.length > 34 ? 32 : g.form.length > 24 ? 38 : 46}px"><em>${esc(g.form)}</em><small>= ${esc(g.meaning)}</small></div>
         <div class="rules">${g.rule.map(r => `<div class="rule f"><b>${esc(r.k)}</b><div class="en">${esc(r.v)}<span class="ex">${esc(r.ex)}</span></div></div>`).join('')}</div>`,
         note('규칙 정리', '자리(목적어·보어·주어)를 기준으로 정리한다. 각 줄의 예문을 함께 읽는다.'));
       add(`${tag(`Grammar ${gi + 1} · Check`)}<h2>알맞은 형태로 바꾸기</h2><div class="sents">${g.check.map((c, k) => `<div class="row"><span class="n">${k + 1}</span><div class="en">${esc(c.q).replace('____', `<span class="bl f"><i>${esc(c.a)}</i></span>`)}</div></div>`).join('')}</div>`,
