@@ -43,7 +43,7 @@ window.CATALOG = [
   { id: 'm3-donga', school: '중학교', grade: '3학년', book: '영어 3 (가안)', publisher: '동아출판 (윤정미)', path: 'm3/donga', draft: true,
     lessons: [
       {no: 1, ready: true, estimate: true, title: 'Be Yourself', ko: '나답게 살기', talk: ['의견 표현하기', '확신 정도 표현하기'], grammar: ['관계대명사 what', '현재완료진행'], read: '청소년 에세이 모음'},
-      {no: 2, ready: false, title: 'Science Is All Around', grammar: ['수동태', 'so that']},
+      {no: 2, ready: true, estimate: true, title: 'Science Is All Around', ko: '과학은 어디에나 있다', talk: ['궁금증 표현하기', '설명 요청하고 설명하기'], grammar: ['수동태', 'so that'], read: '과학 잡지 기사'},
       {no: 3, ready: false, title: 'Heroes Among Us', grammar: ['분사', 'too ~ to / enough to']},
       {no: 4, ready: false, title: 'The Power of Words', grammar: ['간접의문문', '관계부사']},
       {no: 5, ready: false, title: 'When Art Meets Technology', grammar: ['가정법 과거', 'I wish + 가정법']},
