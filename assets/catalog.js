@@ -23,7 +23,7 @@ window.CATALOG = [
       {no: 1, ready: true, estimate: true, title: 'Happy Together', ko: '함께라서 행복해', talk: ['인사하고 소개하기', '좋아하는 것 묻고 답하기'], grammar: ['be동사', '일반동사'], read: '학급 소개 게시판'},
       {no: 2, ready: true, estimate: true, title: 'Eat, Play, and Live Well!', ko: '잘 먹고, 잘 놀고, 잘 살자!', talk: ['몸 상태 묻고 답하기', '할 수 있는 일 묻고 답하기'], grammar: ['현재진행형', 'can · will'], read: '건강 챌린지 일기'},
       {no: 3, ready: true, estimate: true, title: 'Let\u2019s Be Positive', ko: '긍정적으로 생각하자', talk: ['지난 일 묻고 답하기', '칭찬하고 격려하기'], grammar: ['과거시제', '명령문'], read: '짧은 이야기'},
-      {no: 4, ready: false, title: 'The Joy of Traveling', grammar: ['동명사', 'be going to']},
+      {no: 4, ready: true, estimate: true, title: 'The Joy of Traveling', ko: '여행의 즐거움', talk: ['계획 묻고 답하기', '추천하고 까닭 말하기'], grammar: ['동명사', 'be going to'], read: '여행 블로그'},
       {no: 5, ready: false, title: 'Think like Sherlock Holmes!'},
       {no: 6, ready: false, title: 'Good for the Earth, Good for Us'},
       {no: 7, ready: false, title: 'Find Your Dream'},
