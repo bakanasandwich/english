@@ -49,6 +49,6 @@ window.CATALOG = [
       {no: 5, ready: true, estimate: true, title: 'When Art Meets Technology', ko: '예술이 기술을 만날 때', talk: ['의견 묻고 답하기', '바람 표현하기'], grammar: ['가정법 과거', 'I wish'], read: '정보문'},
       {no: 6, ready: true, estimate: true, title: 'Lessons from the Past', ko: '과거에서 배우는 것', talk: ['들어 보았는지 묻고 답하기', '설명 요청하기'], grammar: ['과거완료', '분사구문'], read: '역사 이야기'},
       {no: 7, ready: true, estimate: true, title: 'A Greener Tomorrow', ko: '더 푸른 내일', talk: ['걱정 묻고 표현하기', '제안하고 답하기'], grammar: ['although', 'the 비교급'], read: '정보문'},
-      {no: 8, ready: false, title: 'Dream Big, Start Small', grammar: ['관계대명사의 계속적 용법', 'not only A but also B']}
+      {no: 8, ready: true, estimate: true, title: 'Dream Big, Start Small', ko: '크게 꿈꾸고 작게 시작하라', talk: ['계획 묻고 답하기', '격려하기'], grammar: ['계속적 용법', 'not only ~'], read: '수필'}
     ]}
 ];
