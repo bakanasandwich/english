@@ -230,12 +230,22 @@
     i = Math.max(0, Math.min(total - 1, i));
     if (i !== cur) { E.stop(); stopAll(); }
     cur = i; secs.forEach((s, k) => s.classList.toggle('on', k === i));
+    autofit(secs[i]);
     const fs = frags[i]; step = st === 'all' ? fs.length : Math.max(0, Math.min(fs.length, st || 0));
     fs.forEach((f, k) => f.classList.toggle('shown', k < step));
     document.getElementById('pgn').textContent = `${i + 1} / ${total}`;
     document.getElementById('prog').style.width = `${(i + 1) / total * 100}%`;
     notes.innerHTML = (S[i].note || '<p>메모 없음</p>') + `<p style="margin-top:14px;color:#8a8577;font-size:13px">${i + 1} / ${total}</p>`;
     history.replaceState(null, '', '#' + (i + 1));
+  }
+  /* 내용이 아래 쪽 번호 줄을 넘으면 글자를 조금씩 줄인다 (밝은 슬라이드) */
+  function autofit(sec) {
+    if (dark || sec.dataset.fit) return; sec.dataset.fit = '1';
+    const meta = sec.querySelector('.meta'); if (!meta) return;
+    const targets = [...sec.querySelectorAll('.chat,.sents,.rules,.scr,.cols,.drill,.wgrid,.trap,.cmp,.spell,.relgrid')];
+    if (!targets.length) return;
+    const over = () => { const mt = meta.getBoundingClientRect().top; let mx = 0; [...sec.children].forEach(c => { if (c !== meta && !c.classList.contains('cover')) mx = Math.max(mx, c.getBoundingClientRect().bottom); }); return mx > mt - 6; };
+    let k = 1; while (over() && k > .62) { k -= .05; targets.forEach(t => { t.style.zoom = k; }); }
   }
   function next() { const fs = frags[cur]; if (step < fs.length) { fs[step++].classList.add('shown'); } else if (cur < total - 1) show(cur + 1, 0); }
   function prev() { if (step > 0) { frags[cur][--step].classList.remove('shown'); } else if (cur > 0) show(cur - 1, 'all'); }
