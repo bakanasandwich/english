@@ -53,7 +53,7 @@ button{font:inherit;color:inherit}
 .cover .road span{font-size:19px;font-weight:700;padding:9px 16px;border-radius:999px;border:2px solid var(--line);color:var(--muted)}
 .cover .road span.now{border-color:var(--pc);background:var(--pc);color:#fff}
 .cover .road i{font-style:normal;color:var(--line);align-self:center;font-size:20px}
-.cover .big{position:absolute;right:70px;bottom:70px;font:700 220px/1 var(--sans);color:var(--soft);letter-spacing:-.04em;z-index:0;pointer-events:none}
+.cover .big{white-space:nowrap;position:absolute;right:70px;bottom:70px;font:700 220px/1 var(--sans);color:var(--soft);letter-spacing:-.04em;z-index:0;pointer-events:none}
 .cover>*{position:relative;z-index:1}
 /* 질문 상자 */
 .qbox{border:3px solid var(--pc);border-radius:18px;padding:30px 36px;margin-top:10px}

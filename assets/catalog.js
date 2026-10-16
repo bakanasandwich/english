@@ -21,7 +21,7 @@ window.CATALOG = [
   { id: 'm2-donga', school: '중학교', grade: '2학년', book: '영어 2', publisher: '동아출판 (윤정미)', path: 'm2/donga',
     lessons: [
       {no: 1, ready: true, estimate: true, title: 'The Future Is in Our Hands', ko: '미래는 우리 손에', talk: ['걱정 표현하기', '제안하기'], grammar: ['to부정사 (목적)', '조건의 if'], read: '학급 프로젝트 보고서'},
-      {no: 2, ready: false, title: 'How Teens Talk Now'},
+      {no: 2, ready: true, estimate: true, title: 'How Teens Talk Now', ko: '요즘 십대는 어떻게 말할까', talk: ['의미 묻고 설명하기', '의견 묻고 답하기'], grammar: ['접속사 that', '수여동사'], read: '청소년 잡지 기사'},
       {no: 3, ready: false, title: 'What a Great Idea!'},
       {no: 4, ready: false, title: 'Are You Money Smart?'},
       {no: 5, ready: false, title: 'The City as a Canvas', grammar: ['목적격 관계대명사', 'used to']},

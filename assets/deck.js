@@ -44,7 +44,7 @@
     <ul class="b">${list.map(g => `<li>${esc(g)}</li>`).join('')}</ul>
     <div class="qbox" style="margin-top:40px"><div class="q"><b>Big Question</b>${esc(L.bigQ.en)}</div><div class="k">${esc(L.bigQ.ko)}</div></div>`,
     note('학습 목표', '목표를 함께 읽고, 단원 전체를 꿰는 질문(Big Question)을 소개한다. 단원 마지막 본문 차시에서 이 질문에 영어로 답한다.'));
-  const coverSlide = (label, bigWord) => add(`<div class="cover"><div class="big">${esc(bigWord)}</div>${tag(`Lesson ${L.no} · ${P.n}차시 ${P.name}`)}<h1 class="en">${esc(L.title)}</h1>
+  const coverSlide = (label, bigWord) => add(`<div class="cover"><div class="big" style="font-size:${bigWord.length > 9 ? 120 : bigWord.length > 5 ? 160 : 220}px">${esc(bigWord)}</div>${tag(`Lesson ${L.no} · ${P.n}차시 ${P.name}`)}<h1 class="en">${esc(L.title)}</h1>
     <div class="sub">${esc(L.ko)} · ${esc(label)}</div><div class="road">${roadmap()}</div></div>`,
     note('차시 안내', `이 단원은 어휘 → 대화문 → 문법 → 본문 순서로 진행한다. 오늘은 ${P.n}차시 ${P.name}.`));
   const hookSlide = (h, lbl) => add(`${tag(lbl || 'Warm-up')}<h2>생각 열기</h2><div class="qbox"><div class="q"><b>Q.</b>${esc(h.en)} ${say(h.en)}</div><div class="k">${esc(h.ko)}</div></div>`,
