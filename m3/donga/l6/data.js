@@ -255,7 +255,7 @@ window.LESSON = {
     ['“고대의”를 뜻하는 낱말은?', ['daily', 'ancient', 'modern', 'historical'], 1, 'ancient: 고대의'],
     ['“destroy”와 반대 개념인 낱말은?', ['bury', 'erupt', 'disappear', 'protect'], 3, 'destroy ↔ protect'],
     ['“The town was covered ___ ash.”', ['with', 'at', 'from', 'about'], 0, 'be covered with'],
-    ['들어 보았는지 묻는 표현은?', ['What do you mean?', 'Let me explain.', 'Have you heard about it?', 'It means a lot to me.'], 2, 'Have you heard about ~?'],
+    ['들어 보았는지 묻는 표현은?', ['What do you mean?', 'Let me explain.', 'Have you heard about it?', 'It means a lot to all of us.'], 2, 'Have you heard about ~?'],
     ['설명을 요청하는 표현은?', ['I mean it.', 'I’ve read about it.', 'Can you explain that?', 'Yes, I’ve heard about it.'], 2, 'Can you explain ~? / What do you mean by ~?'],
     ['Let’s Watch에서 화산이 분출할 때 누군가 막 한 일은?', ['빵을 오븐에 넣었다', '벽에 그림을 그렸다', '도시를 떠났다', '박물관에 빵을 기증했다'], 0, 'someone had just put it in the oven'],
     ['빈칸에 알맞은 것은? “When I arrived, the bus ___.”', ['leaves', 'has left', 'is leaving', 'had left'], 3, '과거보다 먼저: had + p.p.'],
