@@ -46,7 +46,7 @@ window.CATALOG = [
       {no: 2, ready: true, estimate: true, title: 'Science Is All Around', ko: '과학은 어디에나 있다', talk: ['궁금증 표현하기', '설명 요청하고 설명하기'], grammar: ['수동태', 'so that'], read: '과학 잡지 기사'},
       {no: 3, ready: true, estimate: true, title: 'Heroes Among Us', ko: '우리 곁의 영웅', talk: ['소식 전하고 반응하기', '바람·희망 표현하기'], grammar: ['분사', 'too ~ to · enough to'], read: '지역 신문 특집 기사'},
       {no: 4, ready: true, estimate: true, title: 'The Power of Words', ko: '말의 힘', talk: ['기억 여부 묻고 답하기', '사과하고 답하기'], grammar: ['간접의문문', '관계부사'], read: '칼럼'},
-      {no: 5, ready: false, title: 'When Art Meets Technology', grammar: ['가정법 과거', 'I wish + 가정법']},
+      {no: 5, ready: true, estimate: true, title: 'When Art Meets Technology', ko: '예술이 기술을 만날 때', talk: ['의견 묻고 답하기', '바람 표현하기'], grammar: ['가정법 과거', 'I wish'], read: '정보문'},
       {no: 6, ready: false, title: 'Lessons from the Past', grammar: ['과거완료', '분사구문']},
       {no: 7, ready: false, title: 'A Greener Tomorrow', grammar: ['양보의 접속사 although', 'the 비교급, the 비교급']},
       {no: 8, ready: false, title: 'Dream Big, Start Small', grammar: ['관계대명사의 계속적 용법', 'not only A but also B']}
