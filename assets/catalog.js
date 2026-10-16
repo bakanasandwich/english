@@ -25,7 +25,7 @@ window.CATALOG = [
       {no: 3, ready: true, estimate: true, title: 'What a Great Idea!', ko: '정말 멋진 생각이야!', talk: ['놀람 표현하기', '방법 묻고 설명하기'], grammar: ['감탄문', '주격 관계대명사'], read: '발명 이야기 칼럼'},
       {no: 4, ready: true, estimate: true, title: 'Are You Money Smart?', ko: '나는 돈을 현명하게 쓸까?', talk: ['충고 구하고 하기', '선호 묻고 답하기'], grammar: ['to부정사 (형용사적 용법)', '비교 표현'], read: '돈 관리 상담 칼럼'},
       {no: 5, ready: true, estimate: true, title: 'The City as a Canvas', ko: '도시라는 캔버스', talk: ['감상 묻고 답하기', '길 묻고 안내하기'], grammar: ['목적격 관계대명사', 'used to'], read: '여행 잡지 특집 기사'},
-      {no: 6, ready: false, title: 'The Greatest Love for All', grammar: ['지각동사 + 목적어 + -ing/동사원형', 'so ~ that']},
+      {no: 6, ready: true, estimate: true, title: 'The Greatest Love for All', ko: '모두를 위한 가장 큰 사랑', talk: ['감사 표현하기', '위로·격려하기'], grammar: ['지각동사 + 목적어 + 동사원형/-ing', 'so ~ that'], read: '단편 이야기'},
       {no: 7, ready: false, title: 'Let\u2019s Enjoy Festivals', grammar: ['It ~ to부정사', 'call A B']},
       {no: 8, ready: false, title: 'Time Travel', grammar: ['현재완료', 'something + 형용사']}
     ]}
