@@ -16,7 +16,7 @@
     $('#units').innerHTML = B.lessons.map(l => {
       const base = `${B.path}/l${l.no}/`;
       if (!l.ready) return `<section class="card unit soon" id="${B.id}-${l.no}"><header><span class="no">L${l.no}</span><h2>Lesson ${l.no}${l.title ? ' · ' + esc(l.title) : ''}<small>${l.grammar ? esc(l.grammar.join(' · ')) + ' · ' : ''}만드는 중</small></h2><div class="meta"></div></header></section>`;
-      return `<section class="card unit" id="${B.id}-${l.no}"><header><span class="no">L${l.no}</span><h2 class="en">${esc(l.title)}<small>${esc(l.ko)}${l.estimate ? ' · 의사소통 기능·문법 일부 추정 (교과서 구성표 확인 전)' : ''}</small></h2>
+      return `<section class="card unit" id="${B.id}-${l.no}"><header><span class="no">L${l.no}</span><h2 class="en">${esc(l.title)}<small>${esc(l.ko)}${B.draft ? ' · 교과서 공개 전 가안 (중3 문법 순서 기준)' : l.estimate ? ' · 의사소통 기능·문법 일부 추정 (교과서 구성표 확인 전)' : ''}</small></h2>
         <div class="meta">${(l.talk || []).map(t => `<span class="chip">${esc(t)}</span>`).join('')}${(l.grammar || []).map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div></header>
         <div class="rows">${PER.map(p => `<div class="row"><div class="k"><i style="background:${p.color}"></i>${p.n}차시 ${esc(p.name)}</div><div class="t"><b class="en">${esc(p.en)}</b><span>${esc(desc[p.key](l))}</span></div>
           <div class="go"><a class="btn primary" href="${base}${p.deck}">슬라이드</a><a class="btn" href="${base}sim.html#${labTab[p.key]}">연습실</a></div></div>`).join('')}

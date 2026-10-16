@@ -39,5 +39,16 @@ window.CATALOG = [
       {no: 6, ready: true, estimate: true, title: 'The Greatest Love for All', ko: '모두를 위한 가장 큰 사랑', talk: ['감사 표현하기', '위로·격려하기'], grammar: ['지각동사 + 목적어 + 동사원형/-ing', 'so ~ that'], read: '단편 이야기'},
       {no: 7, ready: true, estimate: true, title: 'Let\u2019s Enjoy Festivals', ko: '축제를 즐겨요', talk: ['알고 있는지 묻기', '초대하고 답하기'], grammar: ['It ~ to부정사', 'call A B'], read: '세계 축제 소개 기사'},
       {no: 8, ready: true, estimate: true, title: 'Time Travel', ko: '시간 여행', talk: ['경험 묻고 답하기', '기대 표현하기'], grammar: ['현재완료', 'something + 형용사'], read: '단편 이야기 (판타지)'}
+    ]},
+  { id: 'm3-donga', school: '중학교', grade: '3학년', book: '영어 3 (가안)', publisher: '동아출판 (윤정미)', path: 'm3/donga', draft: true,
+    lessons: [
+      {no: 1, ready: true, estimate: true, title: 'Be Yourself', ko: '나답게 살기', talk: ['의견 표현하기', '확신 정도 표현하기'], grammar: ['관계대명사 what', '현재완료진행'], read: '청소년 에세이 모음'},
+      {no: 2, ready: false, title: 'Science Is All Around', grammar: ['수동태', 'so that']},
+      {no: 3, ready: false, title: 'Heroes Among Us', grammar: ['분사', 'too ~ to / enough to']},
+      {no: 4, ready: false, title: 'The Power of Words', grammar: ['간접의문문', '관계부사']},
+      {no: 5, ready: false, title: 'When Art Meets Technology', grammar: ['가정법 과거', 'I wish + 가정법']},
+      {no: 6, ready: false, title: 'Lessons from the Past', grammar: ['과거완료', '분사구문']},
+      {no: 7, ready: false, title: 'A Greener Tomorrow', grammar: ['양보의 접속사 although', 'the 비교급, the 비교급']},
+      {no: 8, ready: false, title: 'Dream Big, Start Small', grammar: ['관계대명사의 계속적 용법', 'not only A but also B']}
     ]}
 ];
