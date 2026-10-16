@@ -46,8 +46,8 @@
   page({k: 'talk', period: '2차시 대화문', title: 'Let’s Watch · Speaking', sub: W.title, goal: '대화를 보고 내용을 이해하고, 배운 표현으로 친구와 묻고 답할 수 있다.', sim: 'talk', body:
     sec(1, `${W.label} · ${W.title}`, `<p style="margin:0 0 6px;font-size:9.5pt;color:var(--muted)">${esc(W.setting)}</p><ol class="q en">${W.check.map(c => `<li>${esc(c.q)}${line(c.a)}</li>`).join('')}</ol>`) +
     sec(2, '대화 순서 맞히기', `<p style="margin:0 0 6px;font-size:9.5pt">${esc(s1.label)} ${esc(dB.title)}의 순서를 ( ) 안에 번호로 쓰세요.</p><ol class="q en" style="list-style:none;padding:0">${ordB.map(l => `<li>( <span class="blank" style="min-width:8mm"><i>${l.i + 1}</i></span> ) <b>${esc(l.s)}</b>: ${esc(plain(l.en))}</li>`).join('')}</ol>`) +
-    sec(3, '친구 인터뷰', `<table class="t en"><tr><th style="width:18%">Name</th><th>What are you interested in?</th><th>What are you going to do this weekend?</th></tr>${[1, 2, 3].map(() => '<tr><td style="height:11mm"></td><td></td><td></td></tr>').join('')}</table>
-      <p style="margin:8px 0 2px;font-size:9.5pt">가장 기억에 남는 친구를 소개하는 문장 쓰기</p>${line('Jisu is interested in cooking. She is going to bake bread this weekend.')}${line()}`)});
+    sec(3, '친구 인터뷰', `<table class="t en"><tr><th style="width:18%">Name</th>${T.sets.map(st => `<th>${esc(st.key.q[0].replace(/~/g, '…'))}</th>`).join('')}</tr>${[1, 2, 3].map(() => `<tr><td style="height:11mm"></td>${T.sets.map(() => '<td></td>').join('')}</tr>`).join('')}</table>
+      <p style="margin:8px 0 2px;font-size:9.5pt">가장 기억에 남는 친구를 소개하는 문장 쓰기</p>${line(T.interviewEx || '')}${line()}`)});
 
   /* 4쪽 · 문법 규칙 */
   const G = L.grammar.points;
@@ -64,7 +64,7 @@
   page({k: 'grammar', period: '3차시 문법', title: 'Grammar in Use', sub: '배열하기 · 고쳐 쓰기 · 나의 문장', goal: '배운 형태를 넣어 정확한 문장을 쓸 수 있다.', sim: 'grammar', body:
     sec(1, '우리말에 맞게 배열하기', `<ol class="q">${scr.map((s, i) => `<li>${esc(s.ko)}<div class="chips en" style="margin:3px 0">${seeded(s.en.replace(/[.?!]$/, '').split(' '), i + 2).map(w => `<span>${esc(w)}</span>`).join('')}</div>${line(s.en)}</li>`).join('')}</ol>`) +
     sec(2, '틀린 부분을 바르게 고쳐 쓰기', `<ol class="q en">${G.map(g => `<li>${esc(g.trap.bad)}${line(g.trap.good)}</li>`).join('')}</ol>`) +
-    sec(3, '나를 소개하는 문장', `<p style="margin:0;font-size:9.5pt" class="en">${esc(L.grammar.wrap.en)}</p>${line('I want to learn Spanish. I enjoy watching movies.')}${line()}`)});
+    sec(3, '나를 소개하는 문장', `<p style="margin:0;font-size:9.5pt" class="en">${esc(L.grammar.wrap.en)}</p>${line(L.grammar.wrapEx || '')}${line()}`)});
 
   /* 6·7쪽 · 본문 */
   const R = L.reading, cut = R.split;
@@ -72,7 +72,7 @@
   const glossbar = ps => { const ks = Object.keys(R.gloss).filter(k => ps.some(p => new RegExp(`\\b${k}`, 'i').test(p.en))); return ks.length ? `<div class="glossbar">${ks.map(k => `<span><b class="en">${esc(k)}</b> ${esc(R.gloss[k])}</span>`).join('')}</div>` : ''; };
   const tfTable = items => `<table class="t tf en"><tr><th>문장</th><th>T / F</th></tr>${items.map(t => `<tr><td>${esc(t.s)}${t.why ? ` <span class="ans-only" style="font-size:8.5pt">(${esc(t.why)})</span>` : ''}</td><td><span class="ans-only">${t.a ? 'T' : 'F'}</span></td></tr>`).join('')}</table>`;
   const p1 = R.paras.slice(0, cut), p2 = R.paras.slice(cut);
-  const tfOf = ps => R.tf.filter(t => ps.some(p => p.who && t.s.startsWith(p.who.split(',')[0])));
+  
   const ord = R.order ? seeded(R.order.map((o, i) => ({o, i})), 13) : [];
   page({k: 'read', period: '4차시 본문 ①', title: R.title, sub: R.kind, goal: L.goals.read1.join(' '), sim: 'read', body:
     sec(1, '읽기 전에', `<ol class="q en">${R.before.map(b => `<li>${esc(b.q)}${line()}</li>`).join('')}</ol>`) +
@@ -87,7 +87,7 @@
   /* 8쪽 · 본문 정리 */
   page({k: 'read', period: '5차시 본문 ②', title: 'After Reading', sub: '핵심 문장 · 비교 · 요약 · 나의 불꽃', goal: L.goals.read2.slice(1).join(' ') || L.goals.read2[0], sim: 'read', body:
     sec(1, '핵심 문장 완성하기', `<ol class="q en">${(R.key || []).map(k => `<li>${blank(k.en)} <span class="k">${esc(k.note)}</span></li>`).join('')}</ol>`) +
-    (R.people ? sec(2, '세 사람 비교하기', `<table class="t en"><tr><th style="width:14%"></th><th>Before</th><th>Action</th><th>Now</th></tr>${R.people.map(p => `<tr><td class="w">${esc(p.name)}</td><td><span class="ans-only">${esc(p.before)}</span></td><td style="height:9mm"><span class="ans-only">${esc(p.action)}</span></td><td><span class="ans-only">${esc(p.now)}</span></td></tr>`).join('')}</table>`) : '') +
+    (R.chart ? sec(2, R.chart.ko || '비교하기', `<table class="t en"><tr><th style="width:14%"></th>${R.chart.cols.map(c => `<th>${esc(c)}</th>`).join('')}</tr>${R.chart.rows.map(r => `<tr><td class="w">${esc(r.name)}</td>${r.cells.map(c => `<td style="height:9mm"><span class="ans-only">${esc(c)}</span></td>`).join('')}</tr>`).join('')}</table>`) : '') +
     sec(3, '요약문 완성하기', `<div class="box en" style="line-height:2">${blank(R.summary.text)}</div>`) +
     sec(4, L.bigQ.en, `<p style="margin:0;font-size:9.5pt">${esc(R.wrap.ko)}</p><p class="en" style="margin:2px 0;font-size:9.5pt;color:var(--muted)">${esc(R.wrap.en)}</p>${line()}${line()}${line()}`)});
 

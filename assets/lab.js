@@ -173,7 +173,7 @@
           const ok = got === words.join(' '); tries++;
           tg.className = 'target ' + (ok ? 'right' : 'wrong');
           if (ok) { if (tries === 1) score++; $('#fb').className = 'feedback ok'; $('#fb').textContent = '정확해요! ' + it.en; E.say(it.en, {onend: () => { i++; draw(); }}); }
-          else { $('#fb').className = 'feedback no'; $('#fb').textContent = tl.children.length ? '아직 남은 조각이 있어요.' : '순서를 다시 살펴봐요. 동사 뒤의 모양(to / -ing)을 확인!'; }
+          else { $('#fb').className = 'feedback no'; $('#fb').textContent = tl.children.length ? '아직 남은 조각이 있어요.' : '순서를 다시 살펴봐요. 오른쪽 규칙을 확인!'; }
         };
         $('#skip').onclick = () => { $('#fb').className = 'feedback no'; $('#fb').textContent = '정답: ' + it.en + end; setTimeout(() => { i++; draw(); }, 2200); };
       };
@@ -284,7 +284,7 @@
 
   document.title = `연습실 · Lesson ${L.no} ${L.title} · ${SITE.name}`;
   $('#title').textContent = `${L.title} 연습실`;
-  $('#eyebrow').innerHTML = `<span class="dot"></span>Lesson ${L.no} · ${esc(L.ko)} <span class="chip">${L.sample ? '시범 단원' : '교과서 단원'}</span>`;
+  $('#eyebrow').innerHTML = `<span class="dot"></span>Lesson ${L.no} · ${esc(L.ko)} ${L.estimate ? '<span class="chip">일부 추정</span>' : ''}`;
   const h = location.hash.slice(1); go(h || 'words');
   addEventListener('hashchange', () => { const t = location.hash.slice(1); if (t && t !== tab) go(t); });
 })();

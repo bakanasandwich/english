@@ -133,9 +133,9 @@
   /* ═════ 3차시 · 문법 ═════ */
   function buildGrammar() {
     const G = L.grammar;
-    coverSlide('Grammar', 'to / -ing');
+    coverSlide('Grammar', G.cover || 'Gr');
     goalsSlide(L.goals.grammar);
-    add(`${tag('Warm-up')}<h2>생각 열기</h2><div class="qbox">${G.hook.en.split(/\s+\/\s+/).map(h => `<div class="q en" style="margin:6px 0">${esc(h).replace(/___/g, '<span class="bl"><i></i></span>')}</div>`).join('')}<div class="k">${esc(G.hook.ko)}</div></div>`,
+    add(`${tag('Warm-up')}<h2>생각 열기</h2><div class="qbox">${G.hook.en.split(/\s+\/\s+/).map(h => `<div class="q en" style="margin:6px 0">${esc(h).replace(/\{\{(.+?)\}\}|___/g, '<span class="bl"><i></i></span>')}</div>`).join('')}<div class="k">${esc(G.hook.ko)}</div></div>`,
       note('도입 발문', G.hook.note));
     G.points.forEach((g, gi) => {
       add(`${tag(`Grammar ${gi + 1} · Notice`)}<h2>무엇이 보이나요?</h2><div class="sents">${g.notice.map((n, k) => `<div class="row"><span class="n">${k + 1}</span><div class="en">${mark(n.en)}<span class="k">${esc(n.ko)}</span></div>${say(n.en)}</div>`).join('')}</div>
@@ -146,16 +146,16 @@
         note('규칙 정리', '자리(목적어·보어·주어)를 기준으로 정리한다. 각 줄의 예문을 함께 읽는다.'));
       add(`${tag(`Grammar ${gi + 1} · Check`)}<h2>알맞은 형태로 바꾸기</h2><div class="sents">${g.check.map((c, k) => `<div class="row"><span class="n">${k + 1}</span><div class="en">${esc(c.q).replace('____', `<span class="bl f"><i>${esc(c.a)}</i></span>`)}</div></div>`).join('')}</div>`,
         note('확인 문제', '괄호 속 동사를 바꾸게 한다. 틀린 학생에게는 앞의 동사(want/enjoy 등)를 다시 보게 한다.'));
-      if (g.compare) add(`${tag(`Grammar ${gi + 1} · Compare`)}<h2>to부정사일까, 동명사일까?</h2><table class="cmp en"><tr>${g.compare.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr>
+      if (g.compare) add(`${tag(`Grammar ${gi + 1} · Compare`)}<h2>${esc(g.compare.title || '어떻게 구별할까?')}</h2><table class="cmp en"><tr>${g.compare.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr>
         ${g.compare.cols[0].map((_, r) => `<tr>${g.compare.cols.map(c => `<td class="f">${esc(c[r] || '')}</td>`).join('')}</tr>`).join('')}</table>`,
-        note('비교', '외울 때는 “원하고 바라고 계획하고 결정하는 것은 아직 안 한 일 → to”, “즐기고 끝내고 계속하는 것은 하고 있는 일 → -ing”로 연결하면 쉽다(완벽한 규칙은 아님).'));
+        note('비교', g.compare.note || '열마다 공통점을 찾게 한 뒤 예문을 만들어 보게 한다.'));
       add(`${tag(`Grammar ${gi + 1} · Watch out`)}<h2>이렇게 쓰면 틀려요</h2><div class="trap en"><div class="x"><b>✗</b>${esc(g.trap.bad)}</div><div class="o f"><b>✓</b>${esc(g.trap.good)}</div><div class="why f">${esc(g.trap.why)}</div></div>`,
         note('자주 하는 실수', '틀린 문장을 먼저 보여 주고 어디가 틀렸는지 찾게 한다.'));
       add(`${tag(`Grammar ${gi + 1} · Make it`)}<h2>문장 만들기</h2><div class="scr">${g.scramble.map((s, k) => {
         const words = E.shuffle(s.en.replace(/[.?!]$/, '').split(' ')); return `<div><div class="k">${k + 1}. ${esc(s.ko)}</div><div class="chips en">${words.map(w => `<span>${esc(w)}</span>`).join('')}</div><div class="a en ans f">${esc(s.en)}</div></div>`; }).join('')}</div>`,
         note('배열', '낱말 조각을 순서대로 말해 보게 한 뒤 넘겨서 확인한다. 연습실 ‘문장 만들기’에서 개인 연습으로 이어진다.'));
     });
-    add(`${tag('Warm-up 다시 보기')}<h2>처음 질문의 답</h2><div class="qbox"><div class="q en">I want <span class="bl f"><i>to play</i></span> the drums.</div><div class="q en" style="margin-top:14px">I enjoy <span class="bl f"><i>playing</i></span> the drums.</div><div class="k f">앞의 동사가 뒤의 모양을 정한다.</div></div>`,
+    if (/\{\{/.test(G.hook.en)) add(`${tag('Warm-up 다시 보기')}<h2>처음 질문의 답</h2><div class="qbox">${G.hook.en.split(/\s+\/\s+/).map(h => `<div class="q en" style="margin:8px 0">${blank(h)}</div>`).join('')}${G.hook.answer ? `<div class="k f">${esc(G.hook.answer)}</div>` : ''}</div>`,
       note('처음 질문으로', '도입에서 미뤄 둔 답을 확인한다.'));
     wrapSlide(G.wrap);
   }
@@ -182,26 +182,26 @@
         note('관통 발문', '이 단원 전체를 꿰는 질문. 5차시 마지막에 영어 세 문장으로 답한다.', `<p>${R.before.map(b => `${esc(b.q)} → ${esc(b.a)}`).join('<br>')}</p>`));
     } else {
       dcover(R.cover2 || 'Explore', R.coverKo2 || '계속 탐색하기');
-      const prev = ps.slice(0, cut).filter(x => x.p.who).map(x => x.p);
-      add(`<div class="center"><div class="eyebrow">LAST TIME</div><h2 style="margin-top:20px">${esc(prev[0] ? prev[0].who.split(',')[0] : '')}의 불꽃은?</h2>
-        <div class="lad">${(R.people || []).slice(0, 1).map(pp => `<p class="f"><b>BEFORE</b>${esc(pp.before)}</p><p class="f"><b>ACTION</b>${esc(pp.action)}</p><p class="f"><b>NOW</b>${esc(pp.now)}</p>`).join('')}</div></div>`,
-        note('지난 시간', '지난 시간 인물이 처음에 어땠고, 무엇을 했고, 지금은 어떤지 학생이 영어로 말하게 한다.'));
+      const rc = R.recap || {q: '지난 시간에 읽은 내용은?', items: []};
+      add(`<div class="center"><div class="eyebrow">LAST TIME</div><h2 style="margin-top:20px">${esc(rc.q)}</h2>
+        <div class="lad">${rc.items.map(it => `<p class="f"><b>${esc(it.k)}</b>${esc(it.v)}</p>`).join('')}</div></div>`,
+        note('지난 시간', '지난 시간에 읽은 내용을 학생이 영어로 말하게 한다.'));
     }
     const words = Object.keys(R.gloss).filter(k => mine.some(x => new RegExp(`\\b${k}`, 'i').test(x.p.en)));
     if (words.length) add(`<div class="center"><div class="eyebrow">KEY WORDS</div><div class="kw">${words.slice(0, 9).map(k => `<div><b class="en">${esc(k)}</b><span class="f">${esc(R.gloss[k])}</span></div>`).join('')}</div></div>`,
       note('미리 보는 낱말', '뜻을 가린 채 발음해 보고, 넘기며 뜻을 확인한다. 본문에서는 점선 낱말을 누르면 뜻이 뜬다.'));
     mine.forEach(x => paraSlide(x.p, x.i));
-    const tfs = R.tf.filter(t => mine.some(x => x.p.who && t.s.startsWith(x.p.who.split(',')[0])));
+    const tfs = R.tf.filter(t => t.p != null ? (part === 1 ? t.p < cut : t.p >= cut) : mine.some(x => x.p.who && t.s.startsWith(x.p.who.split(',')[0])));
     if (tfs.length) add(`<div class="center"><div class="eyebrow">TRUE OR FALSE</div><div class="tf">${tfs.map(t => `<div class="en"><span>${esc(t.s)}${t.why ? `<small class="f">${esc(t.why)}</small>` : ''}</span><em class="f ${t.a ? 't' : 'x'}">${t.a ? 'TRUE' : 'FALSE'}</em></div>`).join('')}</div></div>`,
       note('맞는지 틀린지', 'F인 문장은 본문 근거를 찾아 바르게 고쳐 말하게 한다.'));
     if (part === 1 && R.order) add(`<div class="center"><div class="eyebrow">IN ORDER</div><h2 style="font-size:46px;margin-top:14px">일어난 순서대로</h2><div class="order">${R.order.map((o, k) => `<div class="f en"><span>${k + 1}</span>${esc(o)}</div>`).join('')}</div></div>`,
       note('순서', '카드를 섞어 나눠 주고 순서대로 놓게 한 뒤 확인해도 좋다.'));
-    if (part === 1) add(`<div class="center"><div class="eyebrow">NEXT</div><h2 style="margin-top:20px">다른 두 학생은<br>어떻게 불꽃을 찾았을까?</h2></div>`, note('다음 시간', '다음 차시 예고.'));
+    if (part === 1) add(`<div class="center"><div class="eyebrow">NEXT</div><h2 style="margin-top:20px">${esc(R.next || '다음 이야기는 어떻게 이어질까?').replace(/\n/g, '<br>')}</h2></div>`, note('다음 시간', '다음 차시 예고.'));
     if (part === 2) {
       (R.key || []).forEach((k, i) => add(`<div class="center"><div class="eyebrow">KEY SENTENCE ${i + 1}</div><div class="keyline en" style="margin-top:28px">${mark(k.en)}</div><div class="keynote f">${esc(k.note)}</div> <div style="margin-top:24px">${say(k.en)}</div></div>`,
         note('핵심 문장', '색칠되는 부분이 3차시 문법과 어떻게 이어지는지 묻는다.' + (k.g ? ` (문법 ${k.g === 'g1' ? '1 · to부정사' : '2 · 동명사'})` : ''))));
-      if (R.people) add(`<div class="center"><div class="eyebrow">THREE SPARKS</div><div class="trio">${R.people.map(pp => `<div><h3 class="en">${esc(pp.name)}</h3><p class="f en"><b>BEFORE</b>${esc(pp.before)}</p><p class="f en"><b>ACTION</b>${esc(pp.action)}</p><p class="f en"><b>NOW</b>${esc(pp.now)}</p></div>`).join('')}</div></div>`,
-        note('세 사람 비교', '공통점(포기하지 않음, 계속 시도함)과 차이점을 찾게 한다.'));
+      if (R.chart) add(`<div class="center"><div class="eyebrow">${esc(R.chart.title)}</div><div class="trio" style="grid-template-columns:repeat(${R.chart.rows.length},1fr)">${R.chart.rows.map(r => `<div><h3 class="en">${esc(r.name)}</h3>${r.cells.map((c, k) => `<p class="f en"><b>${esc(R.chart.cols[k].toUpperCase())}</b>${esc(c)}</p>`).join('')}</div>`).join('')}</div></div>`,
+        note('비교하기', R.chart.note || '공통점과 차이점을 찾게 한다.'));
       add(`<div class="center"><div class="eyebrow">SUMMARY</div><div class="sumtext en" style="margin-top:28px">${blank(R.summary.text)}</div></div>`, note('요약', '빈칸을 먼저 짝과 채운 뒤 하나씩 확인한다.'));
       add(`<div class="center"><span class="mark">“</span><h2>${esc(L.bigQ.en)}</h2><div class="write en">${esc(R.wrap.en).replace(/______/g, '<span class="bl" style="min-width:6em"><i></i></span>')}</div><div class="eyebrow" style="margin-top:26px;letter-spacing:.04em;font-size:22px;font-weight:500;color:#d8d0c2">${esc(R.wrap.ko)}</div></div>`,
         note('관통 질문으로 돌아가기', '1차시부터 배운 낱말, 대화 표현, 문법을 써서 세 문장으로 답하게 한다. 두세 명이 발표한다.'));

@@ -20,13 +20,13 @@ window.PERIODS = [
 window.CATALOG = [
   { id: 'm2-donga', school: '중학교', grade: '2학년', book: '영어 2', publisher: '동아출판 (윤정미)', path: 'm2/donga',
     lessons: [
-      {no: 1, ready: true, sample: true, title: 'Find Your Spark', ko: '나만의 불꽃 찾기', talk: ['관심 묻고 답하기', '계획 묻고 답하기'], grammar: ['to부정사 (명사적 용법)', '동명사'], read: '학교 신문 인터뷰 기사'},
-      {no: 2, ready: false, title: ''},
-      {no: 3, ready: false, title: ''},
-      {no: 4, ready: false, title: ''},
-      {no: 5, ready: false, title: ''},
-      {no: 6, ready: false, title: ''},
-      {no: 7, ready: false, title: ''},
-      {no: 8, ready: false, title: ''}
+      {no: 1, ready: true, estimate: true, title: 'The Future Is in Our Hands', ko: '미래는 우리 손에', talk: ['걱정 표현하기', '제안하기'], grammar: ['to부정사 (목적)', '조건의 if'], read: '학급 프로젝트 보고서'},
+      {no: 2, ready: false, title: 'How Teens Talk Now'},
+      {no: 3, ready: false, title: 'What a Great Idea!'},
+      {no: 4, ready: false, title: 'Are You Money Smart?'},
+      {no: 5, ready: false, title: 'The City as a Canvas', grammar: ['목적격 관계대명사', 'used to']},
+      {no: 6, ready: false, title: 'The Greatest Love for All', grammar: ['지각동사 + 목적어 + -ing/동사원형', 'so ~ that']},
+      {no: 7, ready: false, title: 'Let\u2019s Enjoy Festivals', grammar: ['It ~ to부정사', 'call A B']},
+      {no: 8, ready: false, title: 'Time Travel', grammar: ['현재완료', 'something + 형용사']}
     ]}
 ];

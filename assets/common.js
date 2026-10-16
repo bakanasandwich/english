@@ -69,7 +69,8 @@
   function topbar() {
     const bar = document.querySelector('[data-topbar]'); if (!bar) return;
     const root = document.body.dataset.root || '';
-    const crumbs = (bar.dataset.topbar || '').split('|').filter(Boolean);
+    let crumbs = (bar.dataset.topbar || '').split('|').filter(Boolean);
+    if (crumbs[0] === 'auto' && window.LESSON) { const {L, B} = lessonMeta(); crumbs = [`${B.school ? B.school[0] : ''}${(B.grade || '')[0] || ''} ${B.book || ''} (${(B.publisher || '').replace(/[()]/g, '').replace(/\s+/g, '·')})`, `Lesson ${L.no}`].concat(crumbs.slice(1)); }
     bar.innerHTML = `<a class="brand" href="${root}index.html"><span class="logo">En</span><span>${esc(SITE.name)}</span></a>` +
       crumbs.map(c => `<span class="crumb">${esc(c)}</span>`).join('') + '<span class="spacer"></span>' + (bar.dataset.extra || '');
   }
