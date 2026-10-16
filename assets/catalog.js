@@ -18,6 +18,17 @@ window.PERIODS = [
 ];
 
 window.CATALOG = [
+  { id: 'm1-donga', school: '중학교', grade: '1학년', book: '영어 1', publisher: '동아출판 (윤정미)', path: 'm1/donga',
+    lessons: [
+      {no: 1, ready: true, estimate: true, title: 'Happy Together', ko: '함께라서 행복해', talk: ['인사하고 소개하기', '좋아하는 것 묻고 답하기'], grammar: ['be동사', '일반동사'], read: '학급 소개 게시판'},
+      {no: 2, ready: false, title: 'Eat, Play, and Live Well!', grammar: ['현재진행형', '조동사 can · will']},
+      {no: 3, ready: false, title: 'Let\u2019s Be Positive', grammar: ['과거시제', '명령문']},
+      {no: 4, ready: false, title: 'The Joy of Traveling', grammar: ['동명사', 'be going to']},
+      {no: 5, ready: false, title: 'Think like Sherlock Holmes!'},
+      {no: 6, ready: false, title: 'Good for the Earth, Good for Us'},
+      {no: 7, ready: false, title: 'Find Your Dream'},
+      {no: 8, ready: false, title: 'Be Smart Online'}
+    ]},
   { id: 'm2-donga', school: '중학교', grade: '2학년', book: '영어 2', publisher: '동아출판 (윤정미)', path: 'm2/donga',
     lessons: [
       {no: 1, ready: true, estimate: true, title: 'The Future Is in Our Hands', ko: '미래는 우리 손에', talk: ['걱정 표현하기', '제안하기'], grammar: ['to부정사 (목적)', '조건의 if'], read: '학급 프로젝트 보고서'},

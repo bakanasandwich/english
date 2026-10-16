@@ -2,7 +2,7 @@
 (() => {
   const E = window.EN, esc = E.esc, $ = s => document.querySelector(s);
   const books = window.CATALOG;
-  let cur = (E.store.get('book') && books.find(b => b.id === E.store.get('book'))) ? E.store.get('book') : books[0].id;
+  let cur = (E.store.get('book') && books.find(b => b.id === E.store.get('book'))) ? E.store.get('book') : 'm2-donga';
   const h = location.hash.slice(1); const hb = books.find(b => h.startsWith(b.id)); if (hb) cur = hb.id;
   const PER = window.PERIODS;
   const desc = {vocab: l => '낱말 익히기 · 문장 속 낱말 · 덩어리 표현 · 철자', talk: l => (l.talk || []).join(' · ') + ' · Let’s Watch', grammar: l => (l.grammar || []).join(' · '), read1: l => `${l.read || ''} · 읽기 전 · 앞부분 읽기`, read2: l => '뒷부분 읽기 · 핵심 문장 · 요약 · 나의 생각 쓰기'};
@@ -11,7 +11,7 @@
     E.store.set('book', cur);
     const B = books.find(b => b.id === cur);
     $('#books').innerHTML = books.map(b => `<button type="button" class="btn" aria-pressed="${b.id === cur}" data-b="${b.id}">${esc(b.school)} ${esc(b.grade)} · ${esc(b.book)} <span class="muted" style="font-weight:400">${esc(b.publisher)}</span></button>`).join('') +
-      ['중학교 1학년', '중학교 3학년', '고등학교 공통영어'].map(t => `<span class="btn" style="opacity:.5;cursor:default" title="준비 중">${t} · 준비 중</span>`).join('');
+      ['중학교 3학년', '고등학교'].filter(t => !books.some(b => `${b.school} ${b.grade}` === t)).map(t => `<span class="btn" style="opacity:.5;cursor:default" title="준비 중">${t} · 준비 중</span>`).join('');
     $('#books').querySelectorAll('[data-b]').forEach(b => b.onclick = () => { cur = b.dataset.b; render(); });
     $('#units').innerHTML = B.lessons.map(l => {
       const base = `${B.path}/l${l.no}/`;
