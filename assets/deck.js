@@ -288,6 +288,12 @@
       note(`문단 ${i + 1}`, '① 스피커로 듣기 → ② 점선 낱말을 눌러 뜻 확인 → ③ CHECK 질문에 답할 근거 문장 찾기 → ④ THINK는 짝과 이야기.', `<p class="tr">${esc(p.ko)}</p>`, p.bg && p.bg.about ? `<p><b>배경 사진</b> ${esc(p.bg.about)}</p>` : ''), p.bg ? 'has-bg' : '');
     S[S.length - 1].bg = p.bg;
   }
+  // 작품 감상: 작품을 크게 보여 주고 1분 “천천히 보기” 타이머를 켠다
+  function artSlide(a) {
+    add(`<div class="artview"><img src="${esc(asset(a.src))}" alt="${esc(a.title)}"><div class="artcap"><b>${esc(a.title)}</b>${a.credit ? `<span>${esc(a.credit)}</span>` : ''}
+      <button type="button" class="timer" data-timer="60" aria-label="1분 천천히 보기 타이머">1:00</button></div></div>`,
+      note('천천히 보기 (1분)', '설명을 읽기 전에 1분 동안 작품만 본다. 타이머를 누르면 1분이 줄어든다. 끝나면 “무엇이 먼저 보였나? 왜 그렇게 생각하나?”를 묻는다.'), 'art-slide');
+  }
   function buildRead(part) {
     const R = L.reading, cut = R.split, ps = R.paras.map((p, i) => ({p, i}));
     const mine = part === 1 ? ps.slice(0, cut) : ps.slice(cut);
@@ -306,7 +312,7 @@
     const words = Object.keys(R.gloss).filter(k => mine.some(x => new RegExp(`\\b${k}`, 'i').test(x.p.en)));
     if (words.length) add(`<div class="center"><div class="eyebrow">KEY WORDS</div><div class="kw">${words.slice(0, 9).map(k => `<div><b class="en">${esc(k)}</b><span class="f">${esc(R.gloss[k])}</span></div>`).join('')}</div></div>`,
       note('미리 보는 낱말', '뜻을 가린 채 발음해 보고, 넘기며 뜻을 확인한다. 본문에서는 점선 낱말을 누르면 뜻이 뜬다.'));
-    mine.forEach(x => paraSlide(x.p, x.i));
+    mine.forEach(x => { if (x.p.art) artSlide(x.p.art); paraSlide(x.p, x.i); });
     const tfs = R.tf.filter(t => t.p != null ? (part === 1 ? t.p < cut : t.p >= cut) : mine.some(x => x.p.who && t.s.startsWith(x.p.who.split(',')[0])));
     if (tfs.length) add(`<div class="center"><div class="eyebrow">TRUE OR FALSE</div><div class="tf">${tfs.map(t => `<div class="en"><span>${esc(t.s)}${t.why ? `<small class="f">${esc(t.why)}</small>` : ''}</span><em class="f ${t.a ? 't' : 'x'}">${t.a ? 'TRUE' : 'FALSE'}</em></div>`).join('')}</div></div>`,
       note('맞는지 틀린지', 'F인 문장은 본문 근거를 찾아 바르게 고쳐 말하게 한다.'));
@@ -384,6 +390,10 @@
       pa.classList.add('playing');
       playing = E.sequence(lines.map((l, i) => ({text: plain(l.en), voice: (SPK[l.s] || {}).voice || i % 2, pitch: (SPK[l.s] || {}).pitch, before: () => rows.forEach((r, k) => r.classList.toggle('cur', k === i))})), () => stopAll());
       return; }
+    const tm = e.target.closest('[data-timer]');
+    if (tm) { e.stopPropagation(); if (tm._t) { clearInterval(tm._t); tm._t = null; tm.classList.remove('run'); return; }
+      let n = +tm.dataset.timer; tm.classList.add('run');
+      tm._t = setInterval(() => { n--; tm.textContent = `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`; if (n <= 0) { clearInterval(tm._t); tm._t = null; tm.classList.remove('run'); tm.textContent = '끝!'; } }, 1000); return; }
     const au = e.target.closest('[data-audio]');
     if (au) { e.stopPropagation(); E.stop(); const a = new Audio(au.dataset.audio); au.classList.add('playing'); a.onended = a.onerror = () => au.classList.remove('playing'); a.play().catch(() => { au.classList.remove('playing'); E.toast('녹음을 불러오지 못했어요. 인터넷 연결을 확인해 주세요.'); }); return; }
     const op = e.target.closest('[data-opt]');
