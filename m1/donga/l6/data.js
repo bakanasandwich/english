@@ -23,26 +23,26 @@ window.LESSON = {
   vocab: {
     hook: {en: 'How much trash do you throw away in a day?', ko: '하루에 쓰레기를 얼마나 버리나요?', note: '과자 봉지, 음료 컵, 휴지 등 오늘 버린 것을 떠올리게 한다. 그 쓰레기를 줄이는 말로 이어진다.'},
     words: [
-      {w: 'challenge', pos: 'n.', ko: '도전', ic: '🏁', ex: 'Join the zero-waste challenge!', exKo: '쓰레기 없애기 도전에 참여하세요!'},
-      {w: 'environment', pos: 'n.', ko: '환경', ic: '🌍', ex: 'We must protect the environment.', exKo: '우리는 환경을 보호해야 한다.'},
-      {w: 'reduce', pos: 'v.', ko: '줄이다', ic: '📉', ex: 'Let’s reduce food waste.', exKo: '음식물 쓰레기를 줄이자.'},
+      {w: 'challenge', pos: 'n.', ko: '도전', ic: '🏁', audio: 'assets/audio/challenge.mp3', audioCredit: 'BirdHopper · CC BY-SA 4.0 (Wikimedia Commons, US)', ex: 'Join the zero-waste challenge!', exKo: '쓰레기 없애기 도전에 참여하세요!'},
+      {w: 'environment', pos: 'n.', ko: '환경', ic: '🌍', audio: 'assets/audio/environment.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We must protect the environment.', exKo: '우리는 환경을 보호해야 한다.'},
+      {w: 'reduce', pos: 'v.', ko: '줄이다', ic: '📉', audio: 'assets/audio/reduce.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Let’s reduce food waste.', exKo: '음식물 쓰레기를 줄이자.'},
       {w: 'recycle', pos: 'v.', ko: '재활용하다', ic: '♻️', ex: 'I recycle cans and bottles.', exKo: '나는 캔과 병을 재활용한다.'},
       {w: 'produce', pos: 'v.', ko: '만들어 내다, 생산하다', ic: '🏭', ex: 'We produce a lot of trash.', exKo: '우리는 쓰레기를 많이 만들어 낸다.'},
-      {w: 'single', pos: 'adj.', ko: '단 하나의, 한 번의', ic: '1️⃣', ex: 'Say no to single-use cups.', exKo: '일회용 컵을 거절하세요.'},
+      {w: 'single', pos: 'adj.', ko: '단 하나의, 한 번의', ic: '1️⃣', audio: 'assets/audio/single.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Say no to single-use cups.', exKo: '일회용 컵을 거절하세요.'},
       {w: 'container', pos: 'n.', ko: '용기, 그릇', ic: '🥡', ex: 'Bring your own container.', exKo: '자기 용기를 가져오세요.'},
-      {w: 'own', pos: 'adj.', ko: '자기 자신의', ic: '🙋', ex: 'I use my own cup.', exKo: '나는 내 컵을 쓴다.'},
+      {w: 'own', pos: 'adj.', ko: '자기 자신의', ic: '🙋', audio: 'assets/audio/own.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I use my own cup.', exKo: '나는 내 컵을 쓴다.'},
       {w: 'secondhand', pos: 'adj.', ko: '중고의', ic: '👕', ex: 'I bought a secondhand jacket.', exKo: '나는 중고 재킷을 샀다.'},
       {w: 'plog', pos: 'v.', ko: '플로깅하다 (달리며 쓰레기 줍기)', ic: '🏃', ex: 'We plog in the park on Sundays.', exKo: '우리는 일요일마다 공원에서 플로깅을 한다.'},
-      {w: 'label', pos: 'n.', ko: '상표, 라벨', ic: '🏷️', ex: 'Take the label off the bottle.', exKo: '병에서 라벨을 떼어라.'},
-      {w: 'machine', pos: 'n.', ko: '기계', ic: '🤖', ex: 'Put the cans into the machine.', exKo: '캔을 기계에 넣어라.'},
+      {w: 'label', pos: 'n.', ko: '상표, 라벨', ic: '🏷️', audio: 'assets/audio/label.mp3', audioCredit: 'Spacecat2 · Public domain (Wikimedia Commons, US)', ex: 'Take the label off the bottle.', exKo: '병에서 라벨을 떼어라.'},
+      {w: 'machine', pos: 'n.', ko: '기계', ic: '🤖', audio: 'assets/audio/machine.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Put the cans into the machine.', exKo: '캔을 기계에 넣어라.'},
       {w: 'leftover', pos: 'n.', ko: '남은 음식', ic: '🍱', ex: 'I made lunch out of leftovers.', exKo: '나는 남은 음식으로 점심을 만들었다.'},
       {w: 'delivery', pos: 'n.', ko: '배달', ic: '🛵', ex: 'Food delivery uses a lot of plastic.', exKo: '음식 배달은 플라스틱을 많이 쓴다.'},
-      {w: 'completely', pos: 'adv.', ko: '완전히', ic: '✅', ex: 'Plastic never goes away completely.', exKo: '플라스틱은 결코 완전히 사라지지 않는다.'},
-      {w: 'plant', pos: 'v. / n.', ko: '심다; 식물', ic: '🌱', ex: 'We planted green onions.', exKo: '우리는 파를 심었다.'},
-      {w: 'leader', pos: 'n.', ko: '대표, 지도자', ic: '🧑‍✈️', ex: 'She is the leader of the green club.', exKo: '그녀는 환경 동아리 대표다.'},
-      {w: 'favor', pos: 'n.', ko: '부탁, 호의', ic: '🙏', ex: 'Can you do me a favor?', exKo: '내 부탁 하나 들어줄래?'},
+      {w: 'completely', pos: 'adv.', ko: '완전히', ic: '✅', audio: 'assets/audio/completely.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Plastic never goes away completely.', exKo: '플라스틱은 결코 완전히 사라지지 않는다.'},
+      {w: 'plant', pos: 'v. / n.', ko: '심다; 식물', ic: '🌱', audio: 'assets/audio/plant.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We planted green onions.', exKo: '우리는 파를 심었다.'},
+      {w: 'leader', pos: 'n.', ko: '대표, 지도자', ic: '🧑‍✈️', audio: 'assets/audio/leader.mp3', audioCredit: 'Wikimedia Commons contributor · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'She is the leader of the green club.', exKo: '그녀는 환경 동아리 대표다.'},
+      {w: 'favor', pos: 'n.', ko: '부탁, 호의', ic: '🙏', audio: 'assets/audio/favor.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Can you do me a favor?', exKo: '내 부탁 하나 들어줄래?'},
       {w: 'tear', pos: 'v.', ko: '찢다 (과거 tore)', ic: '✂️', ex: 'My dog tore my bag.', exKo: '우리 개가 내 가방을 찢었다.'},
-      {w: 'sew', pos: 'v.', ko: '바느질하다, 꿰매다', ic: '🪡', ex: 'I sewed the hole in my shirt.', exKo: '나는 셔츠의 구멍을 꿰맸다.'}
+      {w: 'sew', pos: 'v.', ko: '바느질하다, 꿰매다', ic: '🪡', audio: 'assets/audio/sew.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I sewed the hole in my shirt.', exKo: '나는 셔츠의 구멍을 꿰맸다.'}
     ],
     phrases: [
       {w: 'Can you please ~?', ko: '~해 줄 수 있니?', ex: 'Can you please carry this box?', exKo: '이 상자 좀 날라 줄 수 있니?'},
@@ -300,7 +300,7 @@ window.LESSON = {
     q: 'that은 어떻게 문장 하나를 통째로 목적어로 만들까?',
     pic: [{en: 'I think', ko: '생각하다'}, {en: 'that', ko: '포장지', hot: true}, {en: 'plogging is fun', ko: '생각의 내용 (문장)'}],
     core: '접속사 that은 문장 하나를 “~라는 것”이라는 명사 덩어리로 포장해 준다. 그래서 think, know, believe의 목적어 자리에 문장이 통째로 들어갈 수 있다.',
-    why: ['that 뒤에는 주어와 동사가 다 갖춰진 완전한 문장이 온다.', '목적어 자리의 that은 자주 생략된다 (I think plogging is fun).', '관계대명사 that(뒤가 불완전)과 구별: 접속사 that은 뒤가 완전하다.']
+    why: ['that 뒤에는 주어와 동사가 다 갖춰진 완전한 문장이 온다.', '목적어 자리의 that은 자주 생략된다 (I think plogging is fun).', '“~가 아니라고 생각한다”는 I don’t think that ~으로 말한다.']
   };
   g2.anim = [{title: '문장을 that으로 포장해 목적어로', states: [
     {t: 'Plastic/S#e | never goes away/V#v | completely/M#f | . | / | I/S | heard/V | it | .', note: '두 문장', ko: '플라스틱은 결코 완전히 사라지지 않는다. 나는 그것을 들었다.'},
