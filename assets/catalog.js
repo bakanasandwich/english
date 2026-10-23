@@ -32,7 +32,7 @@ window.CATALOG = [
   { id: 'm2-donga', school: '중학교', grade: '2학년', book: '영어 2', publisher: '동아출판 (윤정미)', path: 'm2/donga',
     lessons: [
       {no: 1, ready: true, title: 'The Future Is in Our Hands', ko: '미래는 우리 손에', talk: ['희망 표현하기', '안심시키기'], grammar: ['to부정사 (형용사적)', 'make + 목적어 + 형용사'], read: '십대 봉사 블로그 (교과서: Live Freely and Happily Ever After!)'},
-      {no: 2, ready: true, estimate: true, title: 'How Teens Talk Now', ko: '요즘 십대는 어떻게 말할까', talk: ['의미 묻고 설명하기', '의견 묻고 답하기'], grammar: ['접속사 that', '수여동사'], read: '청소년 잡지 기사'},
+      {no: 2, ready: true, title: 'How Teens Talk Now', ko: '요즘 십대는 어떻게 말할까', talk: ['되묻기', '철자 묻고 답하기'], grammar: ['간접의문문', 'want + 목적어 + to부정사'], read: '단체 채팅 요령 기사 (교과서: Text Better, Communicate Better!)'},
       {no: 3, ready: true, estimate: true, title: 'What a Great Idea!', ko: '정말 멋진 생각이야!', talk: ['놀람 표현하기', '방법 묻고 설명하기'], grammar: ['감탄문', '주격 관계대명사'], read: '발명 이야기 칼럼'},
       {no: 4, ready: true, estimate: true, title: 'Are You Money Smart?', ko: '나는 돈을 현명하게 쓸까?', talk: ['충고 구하고 하기', '선호 묻고 답하기'], grammar: ['to부정사 (형용사적 용법)', '비교 표현'], read: '돈 관리 상담 칼럼'},
       {no: 5, ready: true, estimate: true, title: 'The City as a Canvas', ko: '도시라는 캔버스', talk: ['감상 묻고 답하기', '길 묻고 안내하기'], grammar: ['목적격 관계대명사', 'used to'], read: '여행 잡지 특집 기사'},
