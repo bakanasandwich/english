@@ -1,0 +1,1 @@
+source: github.com/rebelytics/one-skill-to-rule-them-all @ 3463c7c (v3.7.0, CC-BY-4.0)
