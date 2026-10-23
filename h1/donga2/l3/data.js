@@ -26,8 +26,8 @@ window.LESSON = {
       {w: 'intelligence', pos: 'n.', ko: '지능', ic: '🧠', ipa: '/ɪnˈtelɪdʒəns/', audio: 'assets/audio/intelligence.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Some animals show great intelligence.', exKo: '어떤 동물들은 뛰어난 지능을 보인다.'},
       {w: 'algorithm', pos: 'n.', ko: '알고리즘(문제 해결 절차)', ic: '🔢', ipa: '/ˈælɡərɪðəm/', audio: 'assets/audio/algorithm.mp3', audioCredit: 'Dcoetzee · CC0 (Wikimedia Commons, US)', ex: 'The algorithm chooses which videos you see.', exKo: '알고리즘이 네가 볼 영상을 고른다.'},
       {w: 'predict', pos: 'v.', ko: '예측하다', ic: '🔮', ipa: '/prɪˈdɪkt/', audio: 'assets/audio/predict.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'It is hard to predict the future.', exKo: '미래를 예측하기는 어렵다.'},
-      {w: 'recommend', pos: 'v.', ko: '추천하다', ic: '👍', ipa: '/ˌrekəˈmend/', ex: 'The app recommends videos based on what I watched.', exKo: '그 앱은 내가 본 것을 바탕으로 영상을 추천한다.'},
-      {w: 'content', pos: 'n.', ko: '(온라인) 콘텐츠, 내용', ic: '🎞️', ipa: '/ˈkɑːntent/', ex: 'Algorithms decide which content we see first.', exKo: '알고리즘은 우리가 어떤 콘텐츠를 먼저 볼지 정한다.'},
+      {w: 'recommend', pos: 'v.', ko: '추천하다', ic: '👍', ipa: '/ˌrekəˈmend/', audio: 'assets/audio/recommend.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The app recommends videos based on what I watched.', exKo: '그 앱은 내가 본 것을 바탕으로 영상을 추천한다.'},
+      {w: 'content', pos: 'n.', ko: '(온라인) 콘텐츠, 내용', ic: '🎞️', ipa: '/ˈkɑːntent/', audio: 'assets/audio/content.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Algorithms decide which content we see first.', exKo: '알고리즘은 우리가 어떤 콘텐츠를 먼저 볼지 정한다.'},
       {w: 'privacy', pos: 'n.', ko: '사생활, 개인 정보', ic: '🔒', ipa: '/ˈpraɪvəsi/', ex: 'We should protect our privacy online.', exKo: '우리는 온라인에서 개인 정보를 지켜야 한다.'},
       {w: 'bias', pos: 'n.', ko: '편향, 편견', ic: '⚖️', ipa: '/ˈbaɪəs/', audio: 'assets/audio/bias.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Data can contain human bias.', exKo: '데이터에는 인간의 편향이 담길 수 있다.'},
       {w: 'reliable', pos: 'adj.', ko: '믿을 만한', ic: '✅', ipa: '/rɪˈlaɪəbl/', audio: 'assets/audio/reliable.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Is this information reliable?', exKo: '이 정보는 믿을 만한가?'},
@@ -36,7 +36,7 @@ window.LESSON = {
       {w: 'convenient', pos: 'adj.', ko: '편리한', ic: '🛋️', ipa: '/kənˈviːniənt/', audio: 'assets/audio/convenient.mp3', audioCredit: 'Dvortygirl · Public domain (Wikimedia Commons, US)', ex: 'Online banking is very convenient.', exKo: '인터넷 뱅킹은 매우 편리하다.'},
       {w: 'personalize', pos: 'v.', ko: '개인 맞춤으로 하다', ic: '🎯', ipa: '/ˈpɜːrsənəlaɪz/', ex: 'The app personalizes your feed.', exKo: '그 앱은 너의 피드를 개인 맞춤으로 만든다.'},
       {w: 'accurate', pos: 'adj.', ko: '정확한', ic: '🎯', ipa: '/ˈækjərət/', audio: 'assets/audio/accurate.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The translation was not accurate.', exKo: '그 번역은 정확하지 않았다.'},
-      {w: 'diverse', pos: 'adj.', ko: '다양한', ic: '🌈', ipa: '/daɪˈvɜːrs/', ex: 'Follow people with diverse opinions.', exKo: '다양한 의견을 가진 사람들을 팔로우하라.'},
+      {w: 'diverse', pos: 'adj.', ko: '다양한', ic: '🌈', ipa: '/daɪˈvɜːrs/', audio: 'assets/audio/diverse.mp3', audioCredit: 'Dvortygirl · GFDL (Wikimedia Commons, US)', ex: 'Follow people with diverse opinions.', exKo: '다양한 의견을 가진 사람들을 팔로우하라.'},
       {w: 'responsibility', pos: 'n.', ko: '책임', ic: '🤲', ipa: '/rɪˌspɑːnsəˈbɪləti/', audio: 'assets/audio/responsibility.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Who has responsibility for an AI’s mistake?', exKo: 'AI의 실수에 대한 책임은 누구에게 있을까?'}
     ],
     morph: [

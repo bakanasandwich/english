@@ -4110,5 +4110,77 @@
   "license": "CC BY-SA 3.0",
   "accent": "US",
   "link": "https://commons.wikimedia.org/wiki/File:En-us-participate.ogg"
+ },
+ "appetite": {
+  "file": "assets/audio/appetite.mp3",
+  "commons": "En-us-appetite.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-appetite.ogg"
+ },
+ "crave": {
+  "file": "assets/audio/crave.mp3",
+  "commons": "En-us-crave.ogg",
+  "author": "Mx. Granger",
+  "license": "CC0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-crave.ogg"
+ },
+ "portion": {
+  "file": "assets/audio/portion.mp3",
+  "commons": "En-us-portion.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-portion.ogg"
+ },
+ "relieve": {
+  "file": "assets/audio/relieve.mp3",
+  "commons": "En-us-relieve.ogg",
+  "author": "TreeMama",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-relieve.ogg"
+ },
+ "content": {
+  "file": "assets/audio/content.mp3",
+  "commons": "En-us-content.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-content.ogg"
+ },
+ "layer": {
+  "file": "assets/audio/layer.mp3",
+  "commons": "En-us-layer.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-layer.ogg"
+ },
+ "surface": {
+  "file": "assets/audio/surface.mp3",
+  "commons": "En-us-surface.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-surface.ogg"
+ },
+ "beneath": {
+  "file": "assets/audio/beneath.mp3",
+  "commons": "En-us-beneath.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-beneath.ogg"
+ },
+ "analyze": {
+  "file": "assets/audio/analyze.mp3",
+  "commons": "En-us-analyze.ogg",
+  "author": "தகவலுழவன்",
+  "license": "Public domain",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-analyze.ogg"
  }
 }
