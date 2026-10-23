@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 8, estimate: true,
   title: 'Dream Big, Start Small', ko: '크게 꿈꾸고 작게 시작하라',
   bigQ: {en: 'How can we make our dreams come true?', ko: '우리는 어떻게 꿈을 이룰 수 있을까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-05', '9영02-04'], grammar: ['9영02-04'], read1: ['9영01-05', '9영01-10'], read2: ['9영02-08']},
+    forms: ['Relative Clauses', 'Coordinating Conjunctions']
+  },
   goals: {
     vocab: ['꿈·도전과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 나의 꿈을 한 문장으로 소개할 수 있다.'],
     talk: ['앞으로의 계획을 묻고 답할 수 있다.', '상대를 격려할 수 있다.'],
@@ -269,3 +274,42 @@ window.LESSON = {
     ['글의 요지로 가장 알맞은 것은?', ['재능이 가장 중요하다', '작은 걸음이 꿈을 만든다', '실패하면 멈춰야 한다', '꿈은 하루 만에 이루어진다'], 1, 'small steps make a dream']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {dream: '/driːm/', goal: '/ɡoʊl/', achieve: '/əˈtʃiːv/', fail: '/feɪl/', failure: '/ˈfeɪljər/', reject: '/rɪˈdʒekt/', publisher: '/ˈpʌblɪʃər/', manuscript: '/ˈmænjuskrɪpt/', patient: '/ˈpeɪʃnt/', step: '/step/', progress: '/ˈprɑːɡres/', practice: '/ˈpræktɪs/', chef: '/ʃef/', recipe: '/ˈresəpi/', confident: '/ˈkɑːnfɪdənt/', future: '/ˈfjuːtʃər/', challenge: '/ˈtʃælɪndʒ/', succeed: '/səkˈsiːd/', plan: '/plæn/', graduate: '/ˈɡrædʒueɪt/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'manuscript', ko: '원고', parts: [{t: 'manu', k: 'root', m: '손'}, {t: 'script', k: 'root', m: '쓴 것'}], family: ['manual', 'describe', 'script'], note: '손(manu)으로 쓴 것(script) → 원고. manual = 손으로 하는.'},
+    {w: 'reject', ko: '거절하다', parts: [{t: 're', k: 'pre', m: '뒤로, 되돌려'}, {t: 'ject', k: 'root', m: '던지다'}], family: ['project', 'inject', 'object'], note: '뒤로 던져 버리다 → 거절하다. pro(앞으로) + ject = 계획·투사.'},
+    {w: 'failure', ko: '실패', parts: [{t: 'fail', k: 'root', m: '실패하다'}, {t: 'ure', k: 'suf', m: '~것 (명사)'}], family: ['pressure', 'departure', 'mixture'], note: '동사 + -ure = 명사 (press → pressure).'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '콤마 하나로 무엇이 달라질까?',
+    pic: [{en: 'Ms. Kim,', ko: '이미 누구인지 정해진 사람'}, {en: 'who is a famous chef', ko: '덤으로 붙이는 정보', hot: true}],
+    core: '계속적 용법은 앞의 명사가 이미 누구·무엇인지 분명할 때, 콤마 뒤에 정보를 “덧붙인다”. 고르기 위한 꾸밈(제한적 용법)이 아니라 “그런데 그 사람은 ~”처럼 이야기를 이어 간다.',
+    why: ['명사, + who/which + 동사 = and he/she/it ~.', 'that은 계속적 용법에 쓰지 않는다.', 'which는 앞 문장 전체를 받기도 한다 (He failed, which made him sad).']
+  };
+  g1.anim = [{title: 'and she → , who', states: [
+    {t: 'I/S | met/V | Ms. Kim/O#k | , | and she/D | is/V#is | a famous chef/C#c | .', note: 'and + 대명사로 정보를 덧붙임', ko: '나는 김 선생님을 만났다, 그리고 그분은 유명한 요리사다.'},
+    {t: 'I/S | met/V | Ms. Kim/O#k | , | who/X | is/V#is | a famous chef/C#c | .', note: 'and she → , who', ko: '나는 김 선생님을 만났는데, 그분은 유명한 요리사다.'}]},
+    {title: 'which가 앞 문장 전체를 받을 때', states: [
+    {t: 'He/S | failed/V | the test/O | . | / | That/S#t | made/V#m | him sad/O#s | .', note: 'That = 시험에 떨어진 일 전체', ko: '그는 시험에 떨어졌다. 그 일이 그를 슬프게 했다.'},
+    {t: 'He/S | failed/V | the test/O | , | which/X#t | made/V#m | him sad/O#s | .', note: ', which = 앞 문장 전체', ko: '그는 시험에 떨어졌는데, 그 일이 그를 슬프게 했다.'}]}];
+  g1.contrast = {title: '제한적 vs 계속적', pairs: [
+    {a: 'She has two sons {{who}} are chefs.', ka: '그녀에게는 요리사인 아들이 둘 있다. (다른 아들이 더 있을 수도)', b: 'She has two sons, {{who}} are chefs.', kb: '그녀에게는 아들이 둘 있는데, 둘 다 요리사다. (아들은 딱 둘)'}],
+    point: '콤마가 없으면 골라내는 꾸밈, 있으면 덧붙이는 설명.'};
+  g2.principle = {
+    q: 'not only A but also B는 무엇을 강조할까?',
+    pic: [{en: 'not only A', ko: '이미 아는 정보'}, {en: 'but also B', ko: '더해지는 새 정보 (강조)', hot: true}],
+    core: 'A는 당연히 포함되고, 거기에 B까지 더해진다는 뜻으로 B에 무게를 둔다. A와 B는 같은 종류(명사-명사, 동사-동사)로 맞춘다.',
+    why: ['= B as well as A (순서가 바뀜에 주의).', '주어로 쓰면 동사는 B에 맞춘다 (Not only I but also my brother wants ~).', 'A와 B의 품사·형태를 나란히 맞춘다 (병렬).']
+  };
+  g2.anim = [{title: 'not only A but also B ↔ B as well as A', states: [
+    {t: 'You/S | like/V | not only/X | science/O#a | but also/X | art/O#b | .', note: 'A뿐만 아니라 B도', ko: '너는 과학뿐만 아니라 미술도 좋아한다.'},
+    {t: 'You/S | like/V | art/O#b | as well as/X | science/O#a | .', note: 'B as well as A — 강조하는 B가 앞으로', ko: '같은 뜻'}]}];
+  g2.contrast = {title: '주어로 쓸 때 동사 일치', pairs: [
+    {a: 'Not only I but also {{my brother wants}} to be a chef.', ka: '나뿐만 아니라 내 동생도 요리사가 되고 싶어 한다. (B에 맞춤)', b: '{{My brother}} as well as I {{wants}} to be a chef.', kb: '같은 뜻 — 동사는 앞의 B(my brother)에 맞춤'}],
+    point: '동사는 강조되는 B에 맞춘다.'};
+})(window.LESSON);

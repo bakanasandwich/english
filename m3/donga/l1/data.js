@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 1, estimate: true,
   title: 'Be Yourself', ko: '나답게 살기',
   bigQ: {en: 'What makes you who you are?', ko: '무엇이 나를 나답게 만들까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-05', '9영02-06'], grammar: ['9영02-02'], read1: ['9영01-03', '9영01-09'], read2: ['9영02-08']},
+    forms: ['Relative Clauses', 'Perfectives']
+  },
   goals: {
     vocab: ['정체성·개성과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 나의 개성을 한 문장으로 표현할 수 있다.'],
     talk: ['자신의 의견을 분명하게 말할 수 있다.', '확신하는 정도를 표현할 수 있다.'],
@@ -271,3 +276,40 @@ window.LESSON = {
     ['글의 요지로 가장 알맞은 것은?', ['유행을 빨리 따르자', '소셜 미디어를 끊자', '내향적인 성격을 고치자', '남을 따라 할 필요 없다'], 3, 'you don’t have to be a copy of anyone']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {identity: '/aɪˈdentəti/', unique: '/juˈniːk/', trend: '/trend/', compare: '/kəmˈper/', confidence: '/ˈkɑːnfɪdəns/', pressure: '/ˈpreʃər/', opinion: '/əˈpɪnjən/', value: '/ˈvæljuː/', traditional: '/trəˈdɪʃənl/', instrument: '/ˈɪnstrəmənt/', ignore: '/ɪɡˈnɔːr/', accept: '/əkˈsept/', honest: '/ˈɑːnɪst/', strength: '/streŋθ/', weakness: '/ˈwiːknəs/', perfect: '/ˈpɜːrfɪkt/', judge: '/dʒʌdʒ/', courage: '/ˈkɜːrɪdʒ/', mirror: '/ˈmɪrər/', passion: '/ˈpæʃn/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'weakness', ko: '약점', parts: [{t: 'weak', k: 'root', m: '약한'}, {t: 'ness', k: 'suf', m: '~함 (명사)'}], family: ['kindness', 'happiness', 'darkness'], note: '형용사 + -ness = 그런 성질 (weak → weakness).'},
+    {w: 'confidence', ko: '자신감', parts: [{t: 'con', k: 'pre', m: '완전히'}, {t: 'fid', k: 'root', m: '믿다'}, {t: 'ence', k: 'suf', m: '~함 (명사)'}], family: ['confident', 'confide'], note: '(자신을) 완전히 믿음 → 자신감. 형용사는 confident.'},
+    {w: 'traditional', ko: '전통적인', parts: [{t: 'tradit(ion)', k: 'root', m: '전통 (넘겨준 것)'}, {t: 'al', k: 'suf', m: '~의 (형용사)'}], family: ['tradition', 'national', 'personal'], note: '명사 + -al = 형용사 (nation → national).'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: 'what은 왜 앞에 꾸밀 명사가 없을까?',
+    pic: [{en: 'the thing', ko: '명사'}, {en: 'that', ko: '관계대명사'}, {en: '= what', ko: '둘을 하나로 합친 말', hot: true}],
+    core: 'what은 “the thing(s) that”을 한 단어로 줄인 말이다. 꾸밀 명사(the thing)를 이미 품고 있어서 앞에 명사가 오지 않고, what 덩어리 전체가 문장의 주어·목적어·보어가 된다.',
+    why: ['what = the thing(s) that → “~하는 것”.', '앞에 명사가 있으면 which/that, 없으면 what.', 'what 뒤에는 목적어나 주어가 빠진 불완전한 문장이 온다 (what I love ___).']
+  };
+  g1.anim = [{title: 'the thing that → what', states: [
+    {t: 'I/S | want to show/V | the thing/O#th | that/X#that | I love/M#il | .', note: '명사 + 관계대명사', ko: '나는 내가 사랑하는 것을 보여 주고 싶다.'},
+    {t: 'I/S | want to show/V | what/X#th | I love/M#il | .', note: 'the thing + that = what (명사 포함)', ko: '같은 뜻 — what 덩어리가 목적어'},
+    {t: 'What I love/S#th | is/V | music/C | .', note: 'what 덩어리는 주어도 된다', ko: '내가 사랑하는 것은 음악이다.'}]}];
+  g1.contrast = {title: 'what vs that(which)', pairs: [
+    {a: 'This is {{what}} I wanted.', ka: '이것이 내가 원했던 것이다. (앞에 명사 없음)', b: 'This is the bag {{that}} I wanted.', kb: '이것이 내가 원했던 가방이다. (앞에 명사 the bag)'}],
+    point: '앞에 명사가 있으면 that/which, 없으면 what.'};
+  g2.principle = {
+    q: '현재완료진행형은 현재완료와 무엇이 다를까?',
+    pic: [{en: 'five years ago', ko: '시작'}, {en: '~~~~→', ko: '쉬지 않고 계속', arrow: ''}, {en: 'now (still)', ko: '지금도 하는 중', hot: true}],
+    core: 'have been + -ing는 현재완료(지금까지)와 진행형(하는 중)을 합친 것이다. 과거에 시작한 동작이 지금 이 순간에도 계속되고 있음을 생생하게 강조한다.',
+    why: ['for + 기간 / since + 시작 시점과 자주 쓴다.', 'How long have you been -ing? = 얼마나 오래 ~해 오고 있니?', 'know, have(가지다), like처럼 상태를 나타내는 동사는 진행형으로 쓰지 않는다.']
+  };
+  g2.anim = [{title: '현재완료 + 진행형 = 현재완료진행', states: [
+    {t: 'I/S | started/V#v | the gayageum/O#g | five years ago/M | . | / | I | am still playing | it | .', note: '과거에 시작 + 지금도 하는 중', ko: '나는 5년 전에 가야금을 시작했다. 지금도 하고 있다.'},
+    {t: 'I/S | have been playing/X#v | the gayageum/O#g | for five years/M | .', note: 'have been + -ing + for 기간', ko: '나는 5년 동안 가야금을 연주해 오고 있다.'}]}];
+  g2.contrast = {title: '현재완료 vs 현재완료진행', pairs: [
+    {a: 'I {{have read}} the book.', ka: '나는 그 책을 (다) 읽었다. (완료·결과)', b: 'I {{have been reading}} the book.', kb: '나는 그 책을 계속 읽고 있다. (아직 진행 중)'}],
+    point: '끝난 결과는 have + p.p., 지금도 계속 중이면 have been + -ing.'};
+})(window.LESSON);

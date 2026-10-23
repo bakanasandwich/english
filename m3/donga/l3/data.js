@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 3, estimate: true,
   title: 'Heroes Among Us', ko: '우리 곁의 영웅',
   bigQ: {en: 'What makes an ordinary person a hero?', ko: '평범한 사람을 영웅으로 만드는 것은 무엇일까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-05', '9영02-02'], grammar: ['9영02-02'], read1: ['9영01-04', '9영01-05'], read2: ['9영02-08']},
+    forms: ['Postmodification', 'Enough / Too', 'To-Infinitive']
+  },
   goals: {
     vocab: ['도움·용기와 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 내가 아는 영웅을 한 문장으로 소개할 수 있다.'],
     talk: ['들은 소식을 전하고 그에 반응할 수 있다.', '바람과 희망을 표현할 수 있다.'],
@@ -270,3 +275,45 @@ window.LESSON = {
     ['세 영웅의 공통점은?', ['모두 힘이 아주 셌다', '상을 받고 싶어 했다', '응급 구조사로 일했다', '나서는 용기가 있었다'], 3, 'the courage to step in']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {hero: '/ˈhɪroʊ/', brave: '/breɪv/', rescue: '/ˈreskjuː/', emergency: '/iˈmɜːrdʒənsi/', faint: '/feɪnt/', CPR: '/ˌsiː piː ˈɑːr/', smoke: '/smoʊk/', alarm: '/əˈlɑːrm/', resident: '/ˈrezɪdənt/', slippery: '/ˈslɪpəri/', elderly: '/ˈeldərli/', passenger: '/ˈpæsɪndʒər/', hesitate: '/ˈhezɪteɪt/', ordinary: '/ˈɔːrdneri/', thankful: '/ˈθæŋkfl/', award: '/əˈwɔːrd/', courage: '/ˈkɜːrɪdʒ/', calm: '/kɑːm/', injured: '/ˈɪndʒərd/', quick: '/kwɪk/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'slippery', ko: '미끄러운', parts: [{t: 'slipp', k: 'root', m: '미끄러지다 (slip)'}, {t: 'ery', k: 'suf', m: '~하기 쉬운 (형용사)'}], family: ['slip', 'slipper'], note: 'slip(미끄러지다)에서 온 말. 자음을 하나 더 쓴다(slip → slipp-).'},
+    {w: 'thankful', ko: '고마워하는', parts: [{t: 'thank', k: 'root', m: '감사'}, {t: 'ful', k: 'suf', m: '~이 가득한'}], family: ['helpful', 'careful', 'grateful'], note: '감사가 가득한 → 고마워하는.'},
+    {w: 'elderly', ko: '나이 든', parts: [{t: 'elder', k: 'root', m: '손위의'}, {t: 'ly', k: 'suf', m: '~다운 (형용사)'}], family: ['friendly', 'lovely', 'lonely'], note: '명사·형용사 + -ly가 형용사가 되기도 한다 (friend → friendly).'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '-ing와 p.p.는 무엇을 기준으로 고를까?',
+    pic: [{en: 'a crying child', ko: '아이가 스스로 운다 (능동)', hot: true}, {en: 'a broken window', ko: '창문이 깨뜨려졌다 (수동)'}],
+    core: '꾸밈을 받는 명사가 그 동작을 “직접 하면” 현재분사(-ing), “당하면” 과거분사(p.p.)를 쓴다. 명사와 동사 사이의 관계가 기준이다.',
+    why: ['한 단어면 명사 앞 (a crying child), 길어지면 명사 뒤 (the man lying on the floor).', '명사 뒤 분사 = 관계대명사 + be 생략 (the man who was lying → the man lying).', '감정: 감정을 주면 -ing (exciting), 느끼면 p.p. (excited).']
+  };
+  g1.anim = [{title: '관계대명사절 → 분사', states: [
+    {t: 'The man/S#m | who was/D | lying/X#ly | on the floor/M#f | didn’t move/V | .', note: '관계대명사 + be동사', ko: '바닥에 누워 있던 남자는 움직이지 않았다.'},
+    {t: 'The man/S#m | lying/X#ly | on the floor/M#f | didn’t move/V | .', note: 'who was를 빼면 분사가 명사를 바로 꾸민다', ko: '같은 뜻'}]},
+    {title: '능동 -ing vs 수동 p.p.', states: [
+    {t: 'The child/S#c | is crying/V#v | .', note: '아이가 스스로 운다', ko: '아이가 울고 있다.'},
+    {t: 'a | crying/X#v | child/O#c', note: '스스로 하면 -ing', ko: '울고 있는 아이'}]}];
+  g1.contrast = {title: '-ing vs p.p.', pairs: [
+    {a: 'He saw a {{burning}} car.', ka: '그는 불타고 있는 차를 보았다. (차가 탄다)', b: 'He helped an {{injured}} man.', kb: '그는 다친 남자를 도왔다. (남자가 다침을 당했다)'}],
+    point: '명사가 하면 -ing, 당하면 p.p.'};
+  g2.principle = {
+    q: 'too와 enough는 어떻게 “할 수 있다/없다”를 정할까?',
+    pic: [{en: 'too scared', ko: '기준을 넘음 → 못 함', hot: true}, {en: 'strong enough', ko: '기준에 닿음 → 할 수 있음'}],
+    core: 'too는 “필요한 정도를 넘어서” 그 일을 할 수 없음을, enough는 “필요한 정도에 닿아서” 할 수 있음을 나타낸다. to부정사가 그 기준이 되는 일이다.',
+    why: ['too + 형용사 + to V = 너무 ~해서 …할 수 없다.', '형용사 + enough + to V = …할 만큼 충분히 ~하다 (enough는 형용사 뒤).', '행동 주체가 다르면 for + 사람을 to 앞에 (too slippery for her to walk).']
+  };
+  g2.anim = [{title: 'so ~ that ... can’t → too ~ to', states: [
+    {t: 'She/S | was | so scared/C#c | that/D | she couldn’t/D | move/V#mv | .', note: 'so ~ that + can’t', ko: '그녀는 너무 무서워서 움직일 수 없었다.'},
+    {t: 'She/S | was | too scared/X#c | to/X | move/V#mv | .', note: 'too + 형용사 + to V', ko: '같은 뜻'}]},
+    {title: 'so ~ that ... can → enough to', states: [
+    {t: 'He/S | was | so strong/C#c | that/D | he could/D | carry/V#cr | the man/O#m | .', note: 'so ~ that + can', ko: '그는 아주 힘이 세서 그 남자를 옮길 수 있었다.'},
+    {t: 'He/S | was | strong enough/X#c | to/X | carry/V#cr | the man/O#m | .', note: '형용사 + enough + to V', ko: '그는 그 남자를 옮길 만큼 충분히 힘이 셌다.'}]}];
+  g2.contrast = {title: 'too ~ to vs enough to', pairs: [
+    {a: 'The box was {{too}} heavy {{to}} lift.', ka: '상자가 너무 무거워서 들 수 없었다. (부정)', b: 'He was strong {{enough to}} lift the box.', kb: '그는 상자를 들 만큼 충분히 힘이 셌다. (긍정)'}],
+    point: 'too는 넘쳐서 못 함, enough는 충분해서 할 수 있음. enough는 형용사 뒤.'};
+})(window.LESSON);

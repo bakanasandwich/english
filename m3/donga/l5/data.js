@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 5, estimate: true,
   title: 'When Art Meets Technology', ko: '예술이 기술을 만날 때',
   bigQ: {en: 'How is technology changing art?', ko: '기술은 예술을 어떻게 바꾸고 있을까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-02', '9영02-04'], grammar: ['9영02-06'], read1: ['9영01-08', '9영01-10'], read2: ['9영02-09']},
+    forms: ['Unreal Conditionals']
+  },
   goals: {
     vocab: ['예술·기술과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 내가 만들고 싶은 작품을 한 문장으로 소개할 수 있다.'],
     talk: ['작품에 대한 의견을 묻고 답할 수 있다.', '바라는 일을 표현할 수 있다.'],
@@ -270,3 +275,39 @@ window.LESSON = {
     ['글쓴이가 가장 중요하다고 한 것은?', ['창의적인 마음', '좋은 기계', '비싼 미술 도구', '많은 TV 모니터와 조명'], 0, 'a creative mind matters most']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {artwork: '/ˈɑːrtwɜːrk/', technology: '/tekˈnɑːlədʒi/', screen: '/skriːn/', exhibition: '/ˌeksɪˈbɪʃn/', creative: '/kriˈeɪtɪv/', imagine: '/ɪˈmædʒɪn/', pioneer: '/ˌpaɪəˈnɪr/', project: '/ˈprɑːdʒekt/', virtual: '/ˈvɜːrtʃuəl/', sculpture: '/ˈskʌlptʃər/', audience: '/ˈɔːdiəns/', interactive: '/ˌɪntərˈæktɪv/', tool: '/tuːl/', possible: '/ˈpɑːsəbl/', unique: '/juˈniːk/', express: '/ɪkˈspres/', century: '/ˈsentʃəri/', sound: '/saʊnd/', familiar: '/fəˈmɪliər/', robot: '/ˈroʊbɑːt/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'interactive', ko: '상호작용하는', parts: [{t: 'inter', k: 'pre', m: '서로, 사이에'}, {t: 'act', k: 'root', m: '행동하다'}, {t: 'ive', k: 'suf', m: '~하는 (형용사)'}], family: ['international', 'internet', 'active'], note: '서로(inter) 주고받으며 움직이는 → 관객과 작품이 반응을 주고받는.'},
+    {w: 'exhibition', ko: '전시회', parts: [{t: 'ex', k: 'pre', m: '밖으로'}, {t: 'hibit', k: 'root', m: '가지다, 보이다'}, {t: 'ion', k: 'suf', m: '~것 (명사)'}], family: ['exhibit', 'exit', 'export'], note: '밖으로 내어 보여 주는 것 → 전시회.'},
+    {w: 'technology', ko: '기술', parts: [{t: 'techno', k: 'root', m: '기술, 솜씨'}, {t: 'logy', k: 'suf', m: '학문'}], family: ['biology', 'ecology', 'technique'], note: '-logy = ~학 (bio 생명 + logy = 생물학).'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '지금 일인데 왜 과거형을 쓸까?',
+    pic: [{en: 'reality', ko: '사실: 나는 로봇이 없다'}, {en: 'If I had…', ko: '시제를 한 칸 뒤로 = 현실과 거리 두기', hot: true}],
+    core: '가정법 과거는 지금 사실이 아닌 일을 상상할 때, 동사를 일부러 한 시제 뒤로(과거로) 보내 “현실과 떨어진 이야기”임을 표시한다. 시간은 과거가 아니라 현재다.',
+    why: ['If + 주어 + 과거동사, 주어 + would/could + 동사원형.', 'be동사는 주어와 상관없이 were를 쓰는 것이 원칙 (If I were ~).', '단순 조건(If it rains, I will ~)은 실제로 일어날 수 있는 일.']
+  };
+  g1.anim = [{title: '사실 → 가정법 과거', states: [
+    {t: 'I/S | don’t have/V#h | a robot/O#r | , | so | I/S#i2 | can’t teach/V#t | it to paint/O#p | .', note: '현재 사실', ko: '나는 로봇이 없어서 그림 그리기를 가르칠 수 없다.'},
+    {t: 'If/X | I/S | had/X#h | a robot/O#r | , | I/S#i2 | would teach/X#t | it to paint/O#p | .', note: '현재 → 과거로 한 칸 (현실과 거리)', ko: '내가 로봇이 있다면 그림 그리기를 가르칠 텐데.'}]}];
+  g1.contrast = {title: '조건 vs 가정법 과거', pairs: [
+    {a: 'If it {{is}} sunny tomorrow, I {{will}} go out.', ka: '내일 맑으면 나갈 것이다. (일어날 수 있는 일)', b: 'If I {{were}} a bird, I {{would}} fly to you.', kb: '내가 새라면 너에게 날아갈 텐데. (지금 사실이 아님)'}],
+    point: '일어날 수 있으면 현재형 + will, 사실과 반대면 과거형 + would.'};
+  g2.principle = {
+    q: 'I wish 뒤에도 왜 과거형이 올까?',
+    pic: [{en: 'I can’t paint like a human.', ko: '현실'}, {en: 'I wish I could…', ko: '현실과 반대인 바람', hot: true}],
+    core: 'I wish는 이루기 어려운 현재의 바람을 말한다. 그 바람이 현실과 반대이므로, 가정법과 같은 원리로 동사를 과거형으로 한 칸 뒤로 보낸다.',
+    why: ['I wish + 주어 + 과거동사(were / could / had).', '현실은 그 반대: I wish I were tall. = I’m sorry I’m not tall.', 'I hope는 실제로 이뤄질 수 있는 바람 (I hope you win).']
+  };
+  g2.anim = [{title: '현실 → I wish', states: [
+    {t: 'I/S | can’t/D | paint/V#p | like a human/M#h | .', note: '현실: 할 수 없다', ko: '나는 사람처럼 그림을 그릴 수 없다.'},
+    {t: 'I wish/X | I/S | could/X | paint/V#p | like a human/M#h | .', note: '반대의 바람 → can을 과거형 could로', ko: '사람처럼 그림을 그릴 수 있으면 좋을 텐데.'}]}];
+  g2.contrast = {title: 'I wish vs I hope', pairs: [
+    {a: 'I {{wish}} I {{were}} taller.', ka: '내가 키가 더 크면 좋을 텐데. (이루기 어려움, 과거형)', b: 'I {{hope}} I {{pass}} the test.', kb: '시험에 합격하기를 바란다. (이뤄질 수 있음, 현재형)'}],
+    point: 'I wish + 과거형 = 현실과 반대, I hope + 현재형 = 가능한 바람.'};
+})(window.LESSON);

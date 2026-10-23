@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 7, estimate: true,
   title: 'A Greener Tomorrow', ko: '더 푸른 내일',
   bigQ: {en: 'What can one person do for the planet?', ko: '한 사람이 지구를 위해 할 수 있는 일은 무엇일까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-04', '9영02-06'], grammar: ['9영02-05'], read1: ['9영01-03', '9영01-09'], read2: ['9영02-06']},
+    forms: ['Subordinating Conjunctions', 'Comparatives']
+  },
   goals: {
     vocab: ['환경과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 내가 실천할 환경 습관을 한 문장으로 소개할 수 있다.'],
     talk: ['걱정을 묻고 표현할 수 있다.', '해결 방법을 제안하고 답할 수 있다.'],
@@ -270,3 +275,39 @@ window.LESSON = {
     ['글의 요지로 가장 알맞은 것은?', ['쓰레기차를 늘려야 한다', '바다 청소는 불가능하다', '작은 실천이 큰 변화를 만든다', '플라스틱은 쓸모가 없다고 한다'], 2, 'started with one small step']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {environment: '/ɪnˈvaɪrənmənt/', trash: '/træʃ/', plastic: '/ˈplæstɪk/', recycle: '/ˌriːˈsaɪkl/', reduce: '/rɪˈduːs/', reuse: '/ˌriːˈjuːz/', waste: '/weɪst/', ocean: '/ˈoʊʃn/', pollution: '/pəˈluːʃn/', climate: '/ˈklaɪmət/', energy: '/ˈenərdʒi/', sort: '/sɔːrt/', habit: '/ˈhæbɪt/', disposable: '/dɪˈspoʊzəbl/', container: '/kənˈteɪnər/', invent: '/ɪnˈvent/', local: '/ˈloʊkl/', planet: '/ˈplænɪt/', goal: '/ɡoʊl/', effort: '/ˈefərt/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'recycle', ko: '재활용하다', parts: [{t: 're', k: 'pre', m: '다시'}, {t: 'cycle', k: 'root', m: '순환, 돌다'}], family: ['reuse', 'reduce', 'bicycle'], note: '다시(re) 돌게 하다 → 재활용. bi(둘) + cycle = 두 바퀴 자전거.'},
+    {w: 'disposable', ko: '일회용의', parts: [{t: 'dis', k: 'pre', m: '떨어져, 멀리'}, {t: 'pos', k: 'root', m: '놓다'}, {t: 'able', k: 'suf', m: '~할 수 있는'}], family: ['dispose', 'reusable', 'washable'], note: '멀리 내다 놓을(버릴) 수 있는 → 일회용의. 반대는 reusable(재사용할 수 있는).'},
+    {w: 'pollution', ko: '오염', parts: [{t: 'pollut(e)', k: 'root', m: '더럽히다'}, {t: 'ion', k: 'suf', m: '~것 (명사)'}], family: ['pollute', 'solution', 'reduction'], note: '동사 + -ion = 명사 (pollute → pollution).'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: 'although는 but과 무엇이 다를까?',
+    pic: [{en: 'Although it sounds hard,', ko: '예상 (어렵다 → 안 하겠지?)'}, {en: 'I’ll try.', ko: '예상을 뒤집는 결과', hot: true}],
+    core: 'although/though는 “보통은 반대 결과가 예상되는” 사실을 먼저 인정하고, 그 예상과 다른 내용을 주절로 말한다. but과 뜻은 비슷하지만, 한 문장 안에서 주절을 강조하는 부사절을 만든다.',
+    why: ['Although + 주어 + 동사, 주어 + 동사 (although와 but을 함께 쓰지 않는다).', 'though는 although보다 가볍고, 문장 끝에도 온다.', 'despite / in spite of 뒤에는 명사(구)가 온다 (despite the rain).']
+  };
+  g1.anim = [{title: 'but → although', states: [
+    {t: 'It/S#it | sounds/V#s | hard/C#h | , | but/D | I’ll try/V#t | .', note: '두 절을 but으로', ko: '어려워 보인다, 하지만 해 볼게.'},
+    {t: 'Although/X | it/S#it | sounds/V#s | hard/C#h | , | I’ll try/V#t | .', note: 'although 절을 앞에, but은 빼기', ko: '어려워 보이지만 해 볼게.'}]}];
+  g1.contrast = {title: 'although vs despite', pairs: [
+    {a: '{{Although}} it was raining, we picked up trash.', ka: '비가 오고 있었지만 우리는 쓰레기를 주웠다. (+ 주어 + 동사)', b: '{{Despite}} the rain, we picked up trash.', kb: '비에도 불구하고 우리는 쓰레기를 주웠다. (+ 명사)'}],
+    point: '뒤에 절이면 although, 명사면 despite.'};
+  g2.principle = {
+    q: '“the 비교급, the 비교급”은 왜 비교급이 앞에 올까?',
+    pic: [{en: 'The more we cook at home,', ko: '한쪽이 늘면', hot: true}, {en: 'the less trash we make.', ko: '다른 쪽이 함께 변한다'}],
+    core: '두 가지가 함께 늘거나 줄어드는 비례 관계를 나타낸다. 변화하는 정도(비교급)가 핵심 정보이므로 the와 함께 각 절의 맨 앞으로 끌어낸다.',
+    why: ['The + 비교급 + 주어 + 동사, the + 비교급 + 주어 + 동사.', '비교급이 명사를 꾸미면 같이 이동 (the less trash we make).', '짧게 줄이기도 한다: The more, the better.']
+  };
+  g2.anim = [{title: '두 변화를 하나로 — 비교급을 앞으로', states: [
+    {t: 'We/S | cook/V | at home/M | more/M#m1 | . | / | We/S#w2 | make/V#mk | less trash/O#m2 | .', note: '한쪽 ↑, 다른 쪽 ↓', ko: '우리는 집에서 더 많이 요리한다. 우리는 쓰레기를 덜 만든다.'},
+    {t: 'The more/X#m1 | we/S | cook/V | at home/M | , | the less trash/X#m2 | we/S#w2 | make/V#mk | .', note: 'the + 비교급을 각 절 맨 앞으로', ko: '집에서 요리를 많이 할수록 쓰레기를 덜 만든다.'}]}];
+  g2.contrast = {title: '비교급의 자리', pairs: [
+    {a: '{{The hotter}} it gets, {{the more}} energy we use.', ka: '더워질수록 더 많은 에너지를 쓴다.', b: 'It gets hot, so we use {{more}} energy.', kb: '더워져서 우리는 더 많은 에너지를 쓴다. (비례 관계 없음)'}],
+    point: '“~할수록 더 …”는 the + 비교급을 두 절 맨 앞에.'};
+})(window.LESSON);

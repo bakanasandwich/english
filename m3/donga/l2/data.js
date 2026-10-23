@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 2, estimate: true,
   title: 'Science Is All Around', ko: '과학은 어디에나 있다',
   bigQ: {en: 'What science is hidden in everyday things?', ko: '일상의 물건 속에는 어떤 과학이 숨어 있을까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-02', '9영02-03'], grammar: ['9영02-03'], read1: ['9영01-04', '9영02-05'], read2: ['9영02-07']},
+    forms: ['Passive Voice', 'Subordinating Conjunctions']
+  },
   goals: {
     vocab: ['과학·발명과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 일상 속 과학 현상을 한 문장으로 설명할 수 있다.'],
     talk: ['궁금한 점을 표현할 수 있다.', '설명을 요청하고 설명할 수 있다.'],
@@ -270,3 +275,41 @@ window.LESSON = {
     ['글의 요지로 알맞은 것은?', ['발명은 매우 어렵다', '실험실이 꼭 필요하다', '빵은 과학으로 만들어진다', '과학은 질문에서 시작된다'], 3, 'It begins when you ask, “Why?”']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {scientist: '/ˈsaɪəntɪst/', experiment: '/ɪkˈsperɪmənt/', invent: '/ɪnˈvent/', notice: '/ˈnoʊtɪs/', microscope: '/ˈmaɪkrəskoʊp/', hook: '/hʊk/', loop: '/luːp/', melt: '/melt/', wave: '/weɪv/', heat: '/hiːt/', gas: '/ɡæs/', yeast: '/jiːst/', rise: '/raɪz/', produce: '/prəˈduːs/', patent: '/ˈpætnt/', accident: '/ˈæksɪdənt/', curious: '/ˈkjʊriəs/', explain: '/ɪkˈspleɪn/', ordinary: '/ˈɔːrdneri/', principle: '/ˈprɪnsəpl/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'microscope', ko: '현미경', parts: [{t: 'micro', k: 'pre', m: '아주 작은'}, {t: 'scope', k: 'root', m: '보는 기구'}], family: ['telescope', 'microwave', 'periscope'], note: '아주 작은 것을 보는 기구. tele(멀리) + scope = 망원경.'},
+    {w: 'invent', ko: '발명하다', parts: [{t: 'in', k: 'pre', m: '안으로, 위에'}, {t: 'vent', k: 'root', m: '오다'}], family: ['invention', 'inventor', 'event'], note: '(생각이) 안으로 들어오다 → 떠올려 만들다. -ion이 붙으면 발명, -or은 발명가.'},
+    {w: 'scientist', ko: '과학자', parts: [{t: 'scien(ce)', k: 'root', m: '과학'}, {t: 'tist', k: 'suf', m: '~하는 사람'}], family: ['artist', 'pianist', 'tourist'], note: '-ist = 그 일을 하는 사람.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '수동태는 왜 쓸까?',
+    pic: [{en: 'Velcro', ko: '관심의 중심 (받는 쪽)', hot: true}, {en: 'was invented', ko: 'be + p.p.'}, {en: '(by George)', ko: '하는 쪽 — 몰라도 됨'}],
+    core: '능동태는 “누가 했나”, 수동태는 “무엇이 어떻게 되었나”에 초점을 둔다. 행위자가 중요하지 않거나 모를 때, 받는 쪽을 주어 자리로 끌어올린다.',
+    why: ['능동의 목적어 → 수동의 주어, 동사 → be + p.p.', '행위자가 뻔하거나 중요하지 않으면 by ~를 생략한다.', '시제는 be동사로 나타낸다 (is made / was made / will be made).']
+  };
+  g1.anim = [{title: '능동태 → 수동태', states: [
+    {t: 'George de Mestral/S#by | invented/V#v | Velcro/O#vel | in the 1940s/M | .', note: '능동: 누가 했나', ko: '조르주 드 메스트랄이 1940년대에 벨크로를 발명했다.'},
+    {t: 'Velcro/S#vel | was invented/X#v | by George de Mestral/M#by | in the 1940s/M | .', note: '목적어가 주어로, 동사는 be + p.p.', ko: '벨크로는 1940년대에 조르주 드 메스트랄에 의해 발명되었다.'},
+    {t: 'Velcro/S#vel | was invented/X#v | in the 1940s/M | .', note: '행위자가 중요하지 않으면 by ~ 생략', ko: '벨크로는 1940년대에 발명되었다.'}]}];
+  g1.contrast = {title: '능동 vs 수동 — 주어가 하나, 받나', pairs: [
+    {a: 'Microwaves {{heat}} the food.', ka: '마이크로파가 음식을 데운다. (주어가 한다)', b: 'The food {{is heated}} by microwaves.', kb: '음식은 마이크로파에 의해 데워진다. (주어가 받는다)'}],
+    point: '주어가 동작을 받으면 be + p.p.'};
+  g2.principle = {
+    q: 'so that은 어떻게 “목적”을 나타낼까?',
+    pic: [{en: 'He studied the seeds', ko: '하는 일'}, {en: 'so that', ko: '그 결과가 ~되도록', hot: true}, {en: 'he could copy them', ko: '바라는 결과 (목적)'}],
+    core: 'so(그래서) + that(~라는 것)이 합쳐져, 앞의 행동이 뒤의 결과를 “노리고” 한 것임을 나타낸다. 아직 이뤄지지 않은 목적이라 뒤에 can/could/will 같은 조동사가 자주 온다.',
+    why: ['주어 + 동사 + so that + 주어 + can/could ~.', 'to부정사(목적)·in order to로 바꿀 수 있다 (주어가 같을 때).', 'so ~ that(너무 ~해서 …하다, 결과)과 구별: so와 that 사이에 형용사가 있으면 결과.']
+  };
+  g2.anim = [{title: '행동 + 목적 → so that', states: [
+    {t: 'He/S | studied/V | the seeds/O | . | / | He/S#he | wanted to copy/V#c | them/O#t | .', note: '행동 + 바라는 것', ko: '그는 씨앗을 연구했다. 그는 그것을 따라 만들고 싶었다.'},
+    {t: 'He/S | studied/V | the seeds/O | so that/X | he/S#he | could copy/V#c | them/O#t | .', note: 'so that + 주어 + could (목적)', ko: '그는 씨앗을 따라 만들 수 있도록 그것을 연구했다.'},
+    {t: 'He/S | studied/V | the seeds/O | to copy/X#c | them/O#t | .', note: '주어가 같으면 to부정사로 짧게', ko: '같은 뜻'}]}];
+  g2.contrast = {title: 'so that(목적) vs so ~ that(결과)', pairs: [
+    {a: 'I left early {{so that}} I could catch the bus.', ka: '버스를 탈 수 있도록 일찍 나섰다. (목적)', b: 'I was {{so}} tired {{that}} I missed the bus.', kb: '너무 피곤해서 버스를 놓쳤다. (결과)'}],
+    point: 'so that이 붙어 있으면 목적, so와 that 사이에 형용사가 있으면 결과.'};
+})(window.LESSON);

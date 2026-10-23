@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 6, estimate: true,
   title: 'Lessons from the Past', ko: '과거에서 배우는 것',
   bigQ: {en: 'Why do we keep records of the past?', ko: '우리는 왜 과거를 기록하고 지킬까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-02', '9영02-03'], grammar: ['9영02-05'], read1: ['9영01-04', '9영01-03'], read2: ['9영02-07']},
+    forms: ['Perfectives', 'Adverbial Participles']
+  },
   goals: {
     vocab: ['역사·기록과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 내가 아는 역사 이야기를 한 문장으로 소개할 수 있다.'],
     talk: ['어떤 일에 대해 들어 보았는지 묻고 답할 수 있다.', '설명을 요청하고 답할 수 있다.'],
@@ -269,3 +274,39 @@ window.LESSON = {
     ['두 이야기의 공통된 교훈은?', ['화산은 위험하다', '과거는 잃기 쉽다', '동굴은 안전하다', '왕의 명령은 꼭 따라야 한다'], 1, 'the past is easy to lose']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {ancient: '/ˈeɪnʃənt/', record: '/ˈrekərd/', history: '/ˈhɪstri/', volcano: '/vɑːlˈkeɪnoʊ/', erupt: '/ɪˈrʌpt/', ash: '/æʃ/', bury: '/ˈberi/', discover: '/dɪˈskʌvər/', remain: '/rɪˈmeɪn/', destroy: '/dɪˈstrɔɪ/', protect: '/prəˈtekt/', cave: '/keɪv/', invasion: '/ɪnˈveɪʒn/', scholar: '/ˈskɑːlər/', copy: '/ˈkɑːpi/', heritage: '/ˈherɪtɪdʒ/', daily: '/ˈdeɪli/', detail: '/ˈdiːteɪl/', disaster: '/dɪˈzæstər/', mistake: '/mɪˈsteɪk/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'erupt', ko: '분출하다', parts: [{t: 'e', k: 'pre', m: '밖으로 (ex)'}, {t: 'rupt', k: 'root', m: '터지다, 깨다'}], family: ['eruption', 'interrupt', 'corrupt'], note: '밖으로 터져 나오다. inter(사이) + rupt = 끼어들다(interrupt).'},
+    {w: 'discover', ko: '발견하다', parts: [{t: 'dis', k: 'pre', m: '없애다, 반대'}, {t: 'cover', k: 'root', m: '덮다'}], family: ['discovery', 'uncover', 'recover'], note: '덮개(cover)를 걷어 내다 → 발견하다.'},
+    {w: 'mistake', ko: '실수', parts: [{t: 'mis', k: 'pre', m: '잘못'}, {t: 'take', k: 'root', m: '잡다, 받아들이다'}], family: ['misunderstand', 'misuse', 'mislead'], note: '잘못(mis) 받아들이다 → 실수.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '과거보다 더 이전의 일은 어떻게 나타낼까?',
+    pic: [{en: 'had been buried', ko: '더 이전 (대과거)', hot: true}, {en: '→', ko: '', arrow: ''}, {en: 'found (past)', ko: '기준이 되는 과거'}, {en: '→ now', ko: '지금'}],
+    core: '과거완료(had + p.p.)는 “과거의 한 시점”에 서서 그보다 더 앞의 일을 돌아본다. 현재완료가 “지금”을 기준으로 하듯, 과거완료는 “그때”를 기준으로 한다.',
+    why: ['기준이 되는 과거 시점이 문장이나 앞뒤 맥락에 있어야 한다 (When people found ~).', 'had + p.p.로 먼저 일어난 일임을 표시한다.', 'before, after처럼 순서가 분명하면 단순 과거로 쓰기도 한다.']
+  };
+  g1.anim = [{title: '두 과거의 순서를 시제로', states: [
+    {t: 'The city/S#c | was buried/V#b | under ash/M#a | . | / | Centuries later | , | people | found | it | .', note: '먼저 일어난 일 + 나중 일', ko: '그 도시는 재 아래 묻혔다. 수백 년 뒤 사람들이 그것을 발견했다.'},
+    {t: 'When people found it | , | the city/S#c | had been buried/X#b | under ash/M#a | for centuries/M | .', note: '그때(found)보다 이전 → had + p.p.', ko: '사람들이 발견했을 때, 그 도시는 수백 년 동안 재 아래 묻혀 있었다.'}]}];
+  g1.contrast = {title: '현재완료 vs 과거완료 — 기준점', pairs: [
+    {a: 'I {{have lost}} my key.', ka: '나는 열쇠를 잃어버렸다. (지금 기준, 지금도 없음)', b: 'I {{had lost}} my key before I got home.', kb: '나는 집에 오기 전에 열쇠를 잃어버렸었다. (그때 기준)'}],
+    point: '기준이 지금이면 have + p.p., 과거의 그때면 had + p.p.'};
+  g2.principle = {
+    q: '분사구문은 왜 접속사와 주어를 지울까?',
+    pic: [{en: 'When the scholars heard', ko: '접속사 + 주어 + 동사'}, {en: '→ Hearing', ko: '겹치는 정보를 빼고 -ing만', hot: true}],
+    core: '두 절의 주어가 같으면 앞 절의 접속사와 주어는 반복되는 정보다. 이를 지우고 동사를 -ing로 바꿔 짧고 간결하게 만든 것이 분사구문이다. 뜻(때·이유·동시 동작)은 문맥으로 읽는다.',
+    why: ['① 접속사 지우기 ② 같은 주어 지우기 ③ 동사 → -ing.', '주어가 다르면 지울 수 없다.', '부정은 Not을 맨 앞에 (Not knowing the answer, ~).']
+  };
+  g2.anim = [{title: '부사절 → 분사구문', states: [
+    {t: 'When/D | the scholars/D | heard/V#h | the news/O#n | , | the scholars/S | moved/V | the books/O | .', note: '접속사·주어가 겹친다', ko: '선비들은 그 소식을 들었을 때 책을 옮겼다.'},
+    {t: 'Hearing/X#h | the news/O#n | , | the scholars/S | moved/V | the books/O | .', note: '접속사·주어를 빼고 동사 → -ing', ko: '그 소식을 듣고, 선비들은 책을 옮겼다.'}]}];
+  g2.contrast = {title: '분사구문의 뜻은 문맥으로', pairs: [
+    {a: '{{Walking}} through the city, we saw old paintings.', ka: '도시를 걸으면서 오래된 그림을 보았다. (동시 동작)', b: '{{Feeling}} tired, I went to bed early.', kb: '피곤해서 일찍 잤다. (이유)'}],
+    point: '분사구문 = 접속사·주어 생략 + -ing. 뜻은 앞뒤 관계로 판단.'};
+})(window.LESSON);

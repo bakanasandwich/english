@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'm3-donga', no: 4, estimate: true,
   title: 'The Power of Words', ko: '말의 힘',
   bigQ: {en: 'How can words change people?', ko: '말은 어떻게 사람을 바꿀 수 있을까?'},
+  align: {
+    tb: {note: '2022 개정 중3 영어 교과서(동아·윤정미)는 2026년 8월 검정을 거쳐 2027학년도부터 쓰인다. 아직 목차·본문이 공개되지 않아 단원명·의사소통 기능·언어 형식은 중1·중2 교과서의 흐름과 교육과정 [별표 4] 중학교 권장 언어 형식을 바탕으로 추정했다. 교과서가 공개되면 다시 대조한다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-06', '9영02-11'], grammar: ['9영02-03'], read1: ['9영01-07', '9영01-03'], read2: ['9영02-06']},
+    forms: ['Reports of Questions and Statements', 'Relative Clauses']
+  },
   goals: {
     vocab: ['말·소통과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 기억에 남는 말을 한 문장으로 소개할 수 있다.'],
     talk: ['기억하는지 묻고 답할 수 있다.', '사과하고 사과에 답할 수 있다.'],
@@ -270,3 +275,43 @@ window.LESSON = {
     ['글의 요지로 가장 알맞은 것은?', ['연설을 잘해야 한다', '쪽지는 익명이어야 한다', '온라인에는 댓글을 쓰지 말아야 한다', '말은 사람을 바꿀 힘이 있다'], 3, 'they all changed someone']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {speech: '/spiːtʃ/', encourage: '/ɪnˈkɜːrɪdʒ/', hurt: '/hɜːrt/', note: '/noʊt/', crowd: '/kraʊd/', equal: '/ˈiːkwəl/', freedom: '/ˈfriːdəm/', inspire: '/ɪnˈspaɪər/', remember: '/rɪˈmembər/', apologize: '/əˈpɑːlədʒaɪz/', compliment: '/ˈkɑːmplɪmənt/', rude: '/ruːd/', respect: '/rɪˈspekt/', silence: '/ˈsaɪləns/', courage: '/ˈkɜːrɪdʒ/', dream: '/driːm/', wall: '/wɔːl/', anonymous: '/əˈnɑːnɪməs/', impact: '/ˈɪmpækt/', promise: '/ˈprɑːmɪs/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'encourage', ko: '격려하다', parts: [{t: 'en', k: 'pre', m: '~하게 만들다'}, {t: 'courage', k: 'root', m: '용기'}], family: ['enjoy', 'enable', 'discourage'], note: '용기(courage)를 갖게 만들다 → 격려하다. dis-가 붙으면 낙담시키다.'},
+    {w: 'freedom', ko: '자유', parts: [{t: 'free', k: 'root', m: '자유로운'}, {t: 'dom', k: 'suf', m: '~한 상태 (명사)'}], family: ['kingdom', 'wisdom', 'boredom'], note: '-dom = 상태·영역 (wise → wisdom).'},
+    {w: 'anonymous', ko: '익명의', parts: [{t: 'an', k: 'pre', m: '없는'}, {t: 'onym', k: 'root', m: '이름'}, {t: 'ous', k: 'suf', m: '~한 (형용사)'}], family: ['synonym', 'antonym'], note: '이름이 없는 → 익명의. syn(같은) + onym = 동의어.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '질문이 문장 속으로 들어가면 왜 어순이 바뀔까?',
+    pic: [{en: 'Why did he keep ~?', ko: '혼자 서는 질문 (뒤집힌 어순)'}, {en: 'why he kept ~', ko: '문장 속 명사 덩어리 (평서문 어순)', hot: true}],
+    core: '질문이 다른 문장 속에 들어가면 더 이상 묻는 문장이 아니라 “~인지”라는 명사 덩어리(목적어)가 된다. 그래서 의문문 어순을 풀고 평범한 “주어 + 동사” 순서로 돌아간다.',
+    why: ['의문사 + 주어 + 동사 (do/does/did는 빼고 시제는 동사에).', '의문사가 없으면 if/whether + 주어 + 동사 (~인지 아닌지).', '의문사가 주어면 그대로: Who called? → I wonder who called.']
+  };
+  g1.anim = [{title: '직접 질문 → 문장 속 질문', states: [
+    {t: 'Why/X#why | did/D | he/S#he | keep/V#k | the letters/O#l | ?', note: '혼자 서는 질문: 조동사 + 주어 + 동사', ko: '그는 왜 그 편지들을 간직했니?'},
+    {t: 'Do you know | why/X#why | he/S#he | kept/V#k | the letters/O#l | ?', note: 'did가 빠지고 시제는 kept로, 주어 + 동사 순서', ko: '그가 왜 그 편지들을 간직했는지 아니?'}]},
+    {title: '의문사가 없을 때 — if', states: [
+    {t: 'Is/V#is | the test/S#t | on Friday/M#f | ?', note: 'Yes/No 질문', ko: '시험이 금요일이니?'},
+    {t: 'Can you tell me | if/X | the test/S#t | is/V#is | on Friday/M#f | ?', note: 'if + 주어 + 동사', ko: '시험이 금요일인지 말해 줄래?'}]}];
+  g1.contrast = {title: '어순 비교', pairs: [
+    {a: 'Where {{does she live}}?', ka: '그녀는 어디에 사니? (직접 질문)', b: 'I don’t know where {{she lives}}.', kb: '나는 그녀가 어디 사는지 모른다. (does가 빠지고 lives)'}],
+    point: '문장 속 질문은 “의문사 + 주어 + 동사”.'};
+  g2.principle = {
+    q: '관계부사는 관계대명사와 무엇이 다를까?',
+    pic: [{en: 'the place', ko: '장소 명사'}, {en: 'where = in which', ko: '전치사 + which를 한 단어로', hot: true}, {en: 'he gave his speech', ko: '빠진 것 없는 완전한 문장'}],
+    core: '관계부사(where, when, why)는 “전치사 + which”를 한 단어로 줄인 것이다. 부사 노릇(어디서·언제·왜)을 대신하므로, 뒤에는 주어·목적어가 다 갖춰진 완전한 문장이 온다.',
+    why: ['장소 + where (= at/in which), 때 + when (= on/at which), the reason + why (= for which).', '관계대명사 뒤에는 무언가 빠진 문장, 관계부사 뒤에는 완전한 문장.', 'the place / the reason 같은 일반적인 말은 생략되기도 한다 (That’s why ~).']
+  };
+  g2.anim = [{title: '두 문장 → 관계부사 where', states: [
+    {t: 'This is | the place/O#pl | . | / | He/S#he | gave/V#g | his speech/O#sp | there/M#where | .', note: 'there = 그곳에서 (부사)', ko: '이곳이 그 장소다. 그는 그곳에서 연설을 했다.'},
+    {t: 'This is | the place/O#pl | in which/X#where | he/S#he | gave/V#g | his speech/O#sp | .', note: 'there → 전치사 + which', ko: '이곳이 그가 연설을 한 장소다.'},
+    {t: 'This is | the place/O#pl | where/X#where | he/S#he | gave/V#g | his speech/O#sp | .', note: 'in which = where (뒤는 완전한 문장)', ko: '같은 뜻'}]}];
+  g2.contrast = {title: '관계부사 vs 관계대명사', pairs: [
+    {a: 'This is the city {{where}} I was born.', ka: '이곳이 내가 태어난 도시다. (I was born — 완전한 문장)', b: 'This is the city {{which}} I visited.', kb: '이곳이 내가 방문한 도시다. (I visited ___ — 목적어 빠짐)'}],
+    point: '뒤가 완전한 문장이면 관계부사, 무언가 빠졌으면 관계대명사.'};
+})(window.LESSON);
