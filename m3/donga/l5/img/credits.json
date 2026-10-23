@@ -1,0 +1,50 @@
+{
+ "r-p0": {
+  "file": "r-p4.jpg",
+  "title": "Paint Brushes Close-Up",
+  "creator": "Tech109",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/78809678@N00/4687453830",
+  "source": "flickr"
+ },
+ "r-p1": {
+  "file": "r-p0.jpg",
+  "title": "Old Television",
+  "creator": "Beige Alert",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/53332339@N00/323448870",
+  "source": "flickr"
+ },
+ "r-p2": {
+  "file": "r-cover2.jpg",
+  "title": "Pennie Long",
+  "creator": "Dominic's pics",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/64097751@N00/7436056676",
+  "source": "flickr"
+ },
+ "r-p3": {
+  "file": "r-p1.jpg",
+  "title": "CYNETART 2009 :: rehearsals for European Tele-Plateaus",
+  "creator": "tma_ev",
+  "license": "CC BY-SA 2.0",
+  "link": "https://www.flickr.com/photos/30421043@N07/4133106313",
+  "source": "flickr"
+ },
+ "r-p4": {
+  "file": "r-p2.jpg",
+  "title": "Drawing tablet",
+  "creator": "Al Pavangkanan",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/46612246@N00/2303739186",
+  "source": "flickr"
+ },
+ "r-p6": {
+  "file": "r-p3.jpg",
+  "title": "artist's paint box",
+  "creator": "normanack",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/29278394@N00/213507248",
+  "source": "flickr"
+ }
+}

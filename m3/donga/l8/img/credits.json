@@ -1,0 +1,50 @@
+{
+ "r-p0": {
+  "file": "r-cover.jpg",
+  "title": "Sideling Hill Stairway",
+  "creator": "Bold Frontiers",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/82955120@N05/15683286130",
+  "source": "flickr"
+ },
+ "r-p1": {
+  "file": "r-cover2.jpg",
+  "title": "Chapter One",
+  "creator": "Anton Vakulenko",
+  "license": "CC BY-SA 2.0",
+  "link": "https://www.flickr.com/photos/59043180@N08/18804755512",
+  "source": "flickr"
+ },
+ "r-p2": {
+  "file": "r-p0.jpg",
+  "title": "no mail today",
+  "creator": "spinster cardigan",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/84906483@N08/8048786622",
+  "source": "flickr"
+ },
+ "r-p3": {
+  "file": "r-p1.jpg",
+  "title": "Man cooking, kitchen, bacon :)",
+  "creator": "Epicantus",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/36076466@N08/28226990412",
+  "source": "flickr"
+ },
+ "r-p4": {
+  "file": "r-p3.jpg",
+  "title": "Recipe Book - Dorothea Dunzinger, Steyr, Austria, Jun 1948 - Feb 1949",
+  "creator": "Photographer: Deborah Tout-Smith",
+  "license": "CC BY 4.0",
+  "link": "https://collections.museumsvictoria.com.au/items/2024645",
+  "source": "museumsvictoria"
+ },
+ "r-p5": {
+  "file": "r-p2.jpg",
+  "title": "'Farmers omelet'",
+  "creator": "roolrool",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/71317184@N00/4134673124",
+  "source": "flickr"
+ }
+}
