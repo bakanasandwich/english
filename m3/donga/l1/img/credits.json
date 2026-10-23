@@ -1,0 +1,50 @@
+{
+ "r-p0": {
+  "file": "r-cover.jpg",
+  "title": "Mirror Reflection",
+  "creator": "IQRemix",
+  "license": "CC BY-SA 2.0",
+  "link": "https://www.flickr.com/photos/46021126@N00/15678594478",
+  "source": "flickr"
+ },
+ "r-p1": {
+  "file": "r-p0.jpg",
+  "title": "Welcome to Twitter",
+  "creator": "freestocks.org",
+  "license": "CC0 1.0",
+  "link": "https://www.flickr.com/photos/135396164@N05/25314591330",
+  "source": "flickr"
+ },
+ "r-p2": {
+  "file": "r-p1.jpg",
+  "title": "writing diary blog - Credit to informedmag.com",
+  "creator": "Informedmag",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/146791570@N05/32889030796",
+  "source": "flickr"
+ },
+ "r-p3": {
+  "file": "r-p2.jpg",
+  "title": "Jouer du gayageum",
+  "creator": "Tonio Vega",
+  "license": "CC BY-SA 2.0",
+  "link": "https://www.flickr.com/photos/71368551@N00/6013981041",
+  "source": "flickr"
+ },
+ "r-p4": {
+  "file": "r-p3.jpg",
+  "title": "Green Day Concert Stage (Montreal) - Green Day is Ever Green",
+  "creator": "Anirudh Koul",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/84856173@N00/3735171010",
+  "source": "flickr"
+ },
+ "r-p6": {
+  "file": "r-cover2.jpg",
+  "title": "Unique flower with 'pizza slice'",
+  "creator": "miss Murasaki",
+  "license": "CC BY-SA 2.0",
+  "link": "https://www.flickr.com/photos/48329800@N02/19798884116",
+  "source": "flickr"
+ }
+}

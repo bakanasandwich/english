@@ -1,0 +1,42 @@
+{
+ "r-p1": {
+  "file": "r-p0.jpg",
+  "title": "Burrs",
+  "creator": "grongar",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/70757891@N00/7986055065",
+  "source": "flickr"
+ },
+ "r-p2": {
+  "file": "r-p1.jpg",
+  "title": "Velcro",
+  "creator": "AMagill",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/85473033@N00/89623378",
+  "source": "flickr"
+ },
+ "r-p3": {
+  "file": "r-p2.jpg",
+  "title": "microwave oven",
+  "creator": "Mr Thinktank",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/34621580@N00/4047915319",
+  "source": "flickr"
+ },
+ "r-p5": {
+  "file": "r-p3.jpg",
+  "title": "Baking!",
+  "creator": "Mrs. Gemstone",
+  "license": "CC BY-SA 2.0",
+  "link": "https://www.flickr.com/photos/21893264@N00/8267257473",
+  "source": "flickr"
+ },
+ "r-p6": {
+  "file": "r-p4.jpg",
+  "title": "The curious child",
+  "creator": "Henry Söderlund",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/46563758@N04/15674892508",
+  "source": "flickr"
+ }
+}
