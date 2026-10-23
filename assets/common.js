@@ -62,7 +62,7 @@
   /* 단원 정보: 페이지의 data-root(사이트 루트까지 상대 경로)와 LESSON */
   function lessonMeta() {
     const L = window.LESSON || {}, B = (window.CATALOG || []).find(b => b.id === L.book) || {};
-    return {L, B, short: `${B.grade ? '중' + B.grade[0] : ''} 영어 (${(B.publisher || '').split(' ')[0]}) · Lesson ${L.no || ''}`};
+    return {L, B, short: `${(B.school || '').startsWith('고') ? B.book : B.grade ? '중' + B.grade[0] + ' 영어' : ''} (${(B.publisher || '').split(' ')[0]}) · Lesson ${L.no || ''}`};
   }
 
   /* 위 막대: <header class="topbar" data-topbar="이름|이름"> */

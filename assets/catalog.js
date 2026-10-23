@@ -8,7 +8,7 @@ window.SITE = {
   note: '교과서 원문은 싣지 않았습니다. 단원 주제·의사소통 기능·언어 형식에 맞춰 새로 쓴 대화문과 읽기 글입니다.'
 };
 
-/* 차시 순서: 어휘 → 대화문 → 문법 → 본문(2차시) */
+/* 차시 순서: 어휘 → 대화문 → 문법 → 본문(2차시)  (고등학교는 단원별 기출 탭이 따로 있음) */
 window.PERIODS = [
   {key: 'vocab',   n: 1, name: '어휘',   en: 'Words',      color: 'var(--word)', deck: 'slides1.html', lab: 'words'},
   {key: 'talk',    n: 2, name: '대화문', en: 'Listen & Talk · Let’s Watch', color: 'var(--talk)', deck: 'slides2.html', lab: 'talk'},
@@ -50,5 +50,19 @@ window.CATALOG = [
       {no: 6, ready: true, estimate: true, title: 'Lessons from the Past', ko: '과거에서 배우는 것', talk: ['들어 보았는지 묻고 답하기', '설명 요청하기'], grammar: ['과거완료', '분사구문'], read: '역사 이야기'},
       {no: 7, ready: true, estimate: true, title: 'A Greener Tomorrow', ko: '더 푸른 내일', talk: ['걱정 묻고 표현하기', '제안하고 답하기'], grammar: ['although', 'the 비교급'], read: '정보문'},
       {no: 8, ready: true, estimate: true, title: 'Dream Big, Start Small', ko: '크게 꿈꾸고 작게 시작하라', talk: ['계획 묻고 답하기', '격려하기'], grammar: ['계속적 용법', 'not only ~'], read: '수필'}
+    ]},
+  { id: 'h1a-donga', school: '고등학교', grade: '1학년', book: '공통영어1', publisher: '동아출판 (이병민)', path: 'h1/donga1', hsEstimate: true,
+    lessons: [
+      {no: 1, ready: true, gichul: true, title: 'Life Is Experience', ko: '경험이 곧 삶이다', talk: ['경험 묻고 답하기', '감정 묻고 표현하기'], grammar: ['관계대명사 what', '현재완료'], read: '용기에 관한 세 사람의 이야기'},
+      {no: 2, ready: false, gichul: true, title: 'Journey Through the Pages', ko: '책장 사이로 떠나는 여행', talk: ['책 추천하고 까닭 말하기', '선호 묻고 답하기'], grammar: ['분사구문', '과거완료'], read: '소설의 첫 문장에 관한 글'},
+      {no: 3, ready: false, gichul: true, title: 'Small Things Matter', ko: '작은 것이 중요하다', talk: ['걱정 표현하기', '해결책 제안하기'], grammar: ['수동태', '주어·동사 수일치'], read: '분리배출에 관한 칼럼'},
+      {no: 4, ready: false, gichul: true, title: 'Everyday Decisions', ko: '매일의 선택', talk: ['의견 묻고 답하기', '동의·반대 표현하기'], grammar: ['사역·지각동사', 'It ~ that 강조'], read: '소비 심리에 관한 기사'}
+    ]},
+  { id: 'h1b-donga', school: '고등학교', grade: '1학년', book: '공통영어2', publisher: '동아출판 (이병민)', path: 'h1/donga2', hsEstimate: true,
+    lessons: [
+      {no: 1, ready: false, gichul: true, title: 'Love Yourself', ko: '너 자신을 사랑하라', talk: ['위로·격려하기', '조언 구하고 하기'], grammar: ['to부정사·동명사 목적어', '가정법'], read: '자기 연민에 관한 글'},
+      {no: 2, ready: false, gichul: true, title: 'Beyond Borders', ko: '경계를 넘어', talk: ['계획 묻고 답하기', '기대 표현하기'], grammar: ['관계부사', '명사절 whether·if'], read: '해외 봉사 여름 이야기'},
+      {no: 3, ready: false, gichul: true, title: 'Into the Smart Future', ko: '스마트한 미래로', talk: ['가능성 말하기', '확신 정도 표현하기'], grammar: ['조동사 + have p.p.', '도치'], read: '인공지능과 미래 사회'},
+      {no: 4, ready: false, gichul: true, title: 'Explore the World of Art', ko: '예술의 세계를 탐험하라', talk: ['감상 묻고 답하기', '묘사하기'], grammar: ['복합관계사', 'with + 명사 + 분사'], read: '미술 작품 감상 에세이'}
     ]}
 ];

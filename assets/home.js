@@ -11,17 +11,19 @@
     E.store.set('book', cur);
     const B = books.find(b => b.id === cur);
     $('#books').innerHTML = books.map(b => `<button type="button" class="btn" aria-pressed="${b.id === cur}" data-b="${b.id}">${esc(b.school)} ${esc(b.grade)} · ${esc(b.book)} <span class="muted" style="font-weight:400">${esc(b.publisher)}</span></button>`).join('') +
-      ['중학교 3학년', '고등학교'].filter(t => !books.some(b => `${b.school} ${b.grade}` === t)).map(t => `<span class="btn" style="opacity:.5;cursor:default" title="준비 중">${t} · 준비 중</span>`).join('');
+      '';
     $('#books').querySelectorAll('[data-b]').forEach(b => b.onclick = () => { cur = b.dataset.b; render(); });
     $('#units').innerHTML = B.lessons.map(l => {
       const base = `${B.path}/l${l.no}/`;
       if (!l.ready) return `<section class="card unit soon" id="${B.id}-${l.no}"><header><span class="no">L${l.no}</span><h2>Lesson ${l.no}${l.title ? ' · ' + esc(l.title) : ''}<small>${l.grammar ? esc(l.grammar.join(' · ')) + ' · ' : ''}만드는 중</small></h2><div class="meta"></div></header></section>`;
-      return `<section class="card unit" id="${B.id}-${l.no}"><header><span class="no">L${l.no}</span><h2 class="en">${esc(l.title)}<small>${esc(l.ko)}${B.draft ? ' · 교과서 공개 전 가안 (중3 문법 순서 기준)' : l.estimate ? ' · 의사소통 기능·문법 일부 추정 (교과서 구성표 확인 전)' : ''}</small></h2>
+      return `<section class="card unit" id="${B.id}-${l.no}"><header><span class="no">L${l.no}</span><h2 class="en">${esc(l.title)}<small>${esc(l.ko)}${B.draft ? ' · 교과서 공개 전 가안 (중3 문법 순서 기준)' : B.hsEstimate ? ' · 단원명·본문 주제는 교과서 기준, 의사소통 기능·문법은 추정' : l.estimate ? ' · 의사소통 기능·문법 일부 추정 (교과서 구성표 확인 전)' : ''}</small></h2>
         <div class="meta">${(l.talk || []).map(t => `<span class="chip">${esc(t)}</span>`).join('')}${(l.grammar || []).map(t => `<span class="chip">${esc(t)}</span>`).join('')}</div></header>
         <div class="rows">${PER.map(p => `<div class="row"><div class="k"><i style="background:${p.color}"></i>${p.n}차시 ${esc(p.name)}</div><div class="t"><b class="en">${esc(p.en)}</b><span>${esc(desc[p.key](l))}</span></div>
           <div class="go"><a class="btn primary" href="${base}${p.deck}">슬라이드</a><a class="btn" href="${base}sim.html#${labTab[p.key]}">연습실</a></div></div>`).join('')}
           <div class="row unitwide"><div class="k"><i style="background:var(--quiz)"></i>단원 자료</div><div class="t"><b>학습지 · 게임 · 골든벨</b><span>A4 학습지 8쪽(정답지 겸용) · 모둠 대결 게임 3종 · 골든벨</span></div>
-          <div class="go"><a class="btn" href="${base}worksheet.html">학습지</a><a class="btn" href="${base}game.html">게임</a><a class="btn" href="quiz/bell.html?b=${B.id}&n=${l.no}">골든벨</a></div></div></div></section>`;
+          <div class="go"><a class="btn" href="${base}worksheet.html">학습지</a><a class="btn" href="${base}game.html">게임</a><a class="btn" href="quiz/bell.html?b=${B.id}&n=${l.no}">골든벨</a></div></div>
+          ${l.gichul ? `<div class="row unitwide"><div class="k"><i style="background:var(--gichul,#b3261e)"></i>기출 연결</div><div class="t"><b>3월·6월·9월 학력평가 · 수능</b><span>실제 기출 문항을 어휘·대화문·문법·본문 차시별로 분류 · 기출 유형으로 다시 풀기</span></div>
+          <div class="go"><a class="btn primary" href="${base}gichul.html">기출 탭</a></div></div>` : ''}</div></section>`;
     }).join('');
     if (h) { const el = document.getElementById(h); if (el) el.scrollIntoView(); }
   }

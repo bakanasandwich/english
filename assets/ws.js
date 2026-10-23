@@ -7,7 +7,7 @@
   const blank = s => esc(s).replace(/\{\{(.+?)\}\}/g, (m, a) => `<span class="blank"><i>${a}</i></span>`);
   const bl = a => `<span class="blank"><i>${esc(a)}</i></span>`;
   const line = a => `<div class="line">${a ? `<span class="ans-only en">${esc(a)}</span>` : ''}</div>`;
-  const book = `중${(B.grade || '2')[0]} 영어 · ${(B.publisher || '').replace(/\s*\(.*\)/, '')}`;
+  const book = `${(B.school || '').startsWith('고') ? B.book : `중${(B.grade || '2')[0]} 영어`} · ${(B.publisher || '').replace(/\s*\(.*\)/, '')}`;
   // 섞되 매번 같은 순서(인쇄할 때마다 바뀌지 않게)
   const seeded = (arr, seed) => { const a = arr.slice(); let s = seed; for (let i = a.length - 1; i > 0; i--) { s = (s * 9301 + 49297) % 233280; const j = Math.floor(s / 233280 * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const pages = [];

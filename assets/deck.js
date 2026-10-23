@@ -12,10 +12,12 @@
   document.body.classList.add(dark ? 'deck-dark' : 'deck-light');
   const PC = {vocab: '#2a56c6', talk: '#2e8a50', grammar: '#7d45b8', read1: '#c06a1a', read2: '#c06a1a'}[kind];
   document.documentElement.style.setProperty('--pc', PC);
-  const bookShort = `중${(B.grade || '2')[0]} 영어 · ${(B.publisher || '').replace(/\s*\(.*\)/, '')}`;
+  const hs = (B.school || '').startsWith('고');
+  const bookShort = hs ? `${B.book} · ${(B.publisher || '').replace(/\s*\(.*\)/, '')}` : `중${(B.grade || '2')[0]} 영어 · ${(B.publisher || '').replace(/\s*\(.*\)/, '')}`;
   const meta = `${bookShort} · Lesson ${L.no} ${L.title} · ${P.n}차시 ${P.name}`;
   document.title = `${P.name} · Lesson ${L.no} ${L.title} · ${SITE.name}`;
   const listHref = `${root}index.html#${L.book}-${L.no}`;
+  const asset = p => /^(https?:|data:|\/)/.test(p) ? p : root + p;   // 그림·녹음 경로는 사이트 루트 기준
 
   /* ── 글 도구 ── */
   // {{정답}} → 빈칸(넘기면 정답)
@@ -53,6 +55,91 @@
     <ul class="b" style="margin-top:34px;font-size:27px"><li class="f">짝에게 읽어 주고, 짝의 문장에서 오늘 배운 표현을 찾아 주기</li><li class="f">연습실에서 오늘 차시 연습 이어 하기</li></ul>`,
     note('정리', '학생 두세 명의 문장을 읽게 하고, 틀린 부분은 다시 말해 주기(recast)로 고쳐 준다.'));
 
+  /* ── 모션 그래픽 ──
+     넘길 때마다 슬라이드에 st1, st2 … 클래스가 쌓인다(.f 단계 수만큼). 모션 요소는 이 단계에 맞춰 움직인다.
+     ticks(n): 단계를 만들기 위한 보이지 않는 조각 */
+  const ticks = n => Array.from({length: n}, () => '<i class="f tick" aria-hidden="true"></i>').join('');
+  // 낱말 만들기: 어근이 먼저 보이고, 접두사·접미사가 차례로 날아와 붙은 뒤 하나의 낱말로 합쳐진다
+  // m = {w, ko, parts: [{t, k: 'pre'|'root'|'suf', m}], family: [...], note}
+  const KIND = {pre: '접두사', root: '어근', suf: '접미사'};
+  function morphSlide(m, i, n) {
+    let at = 0;
+    const order = m.parts.map((p, k) => ({p, k})).sort((a, b) => (a.p.k === 'root' ? -1 : 0) - (b.p.k === 'root' ? -1 : 0));
+    const when = {}; order.forEach((o, j) => { when[o.k] = o.p.k === 'root' && j === 0 ? 0 : ++at; });
+    const merge = at + 1, steps = merge + (m.family && m.family.length ? 1 : 0);
+    add(`${tag(`Word Building ${n > 1 ? `${i + 1} / ${n}` : ''}`)}<h2>낱말을 쪼개 보면</h2>
+      <div class="morph" data-merge="${merge}">
+        <div class="mo-row">${m.parts.map((p, k) => `<div class="mo-part ${p.k}" data-at="${when[k]}" style="--from:${p.k === 'pre' ? -220 : p.k === 'suf' ? 220 : 0}px"><b class="en">${esc(p.t)}</b><small>${KIND[p.k] || ''}</small><span>${esc(p.m || '')}</span></div>`).join('')}</div>
+        <div class="mo-word" data-at="${merge}"><b class="en">${esc(m.w)}</b>${say(m.w)}<span>${esc(m.ko)}</span></div>
+        ${m.family && m.family.length ? `<div class="mo-fam" data-at="${merge + 1}"><em>같은 뿌리</em>${m.family.map(f => `<span class="en">${esc(f)}</span>`).join('')}</div>` : ''}
+      </div>${ticks(steps)}`,
+      note('낱말 만들기', '어근의 뜻을 먼저 확인하고, 붙는 조각마다 뜻이 어떻게 바뀌는지 예측하게 한 뒤 넘긴다.', m.note ? `<p>${esc(m.note)}</p>` : '', `<p class="tr">${m.parts.map(p => `<b>${esc(p.t)}</b> ${esc(p.m || '')}`).join(' + ')} = <b>${esc(m.w)}</b> ${esc(m.ko)}</p>`));
+  }
+  /* 문장 변형: 같은 낱말 조각이 자리를 옮겨 다니는 모습을 보여 준다(FLIP)
+     a = {title, states: [{t: 'The chef/S | cooks/V | the pasta/O | .', note, ko}], why}
+     조각 끝의 /S /V /O /C /M 은 문장 성분 색, /X 는 새로 생긴 말, /D 는 사라질 말 */
+  const ROLE = {S: '주어', V: '동사', O: '목적어', C: '보어', M: '수식어', X: '새로 붙는 말'};
+  const parseState = st => {
+    const seen = {};
+    return st.t.split(/\s*\|\s*/).filter(Boolean).map(raw => {
+      if (raw === '/') return {br: true};
+      const m = raw.match(/^(.*?)(?:\/([SVOCMXD]))?(?:#(\w+))?$/);
+      const text = m[1], role = m[2] || '', base = (m[3] || text.toLowerCase().replace(/[^a-z0-9가-힣' ]/g, '').trim() || text);
+      seen[base] = (seen[base] || 0) + 1;
+      return {text, role, key: base + (seen[base] > 1 ? '~' + seen[base] : '')};
+    });
+  };
+  function transformSlide(a, label) {
+    const states = a.states.map(s => ({...s, toks: parseState(s)}));
+    const roles = [...new Set(states.flatMap(s => s.toks.map(t => t.role)).filter(r => r && r !== 'D'))];
+    add(`${tag(label || 'Grammar in Motion')}<h2>${esc(a.title || '문장이 바뀌는 모습')}</h2>
+      <div class="tfm"><div class="tfm-line en" aria-live="polite"></div><div class="tfm-note"></div>
+      ${roles.length ? `<div class="tfm-legend">${roles.map(r => `<span class="r-${r}">${ROLE[r]}</span>`).join('')}</div>` : ''}</div>${ticks(states.length - 1)}`,
+      note('움직이는 문법', '넘길 때마다 낱말 조각이 자리를 옮긴다. 움직이기 전에 “무엇이 어디로 갈까?”를 먼저 묻는다.', a.why ? `<p>${esc(a.why)}</p>` : '',
+        `<p class="tr">${states.map((s, k) => `${k + 1}. ${esc(s.toks.filter(t => !t.br).map(t => t.text).join(' '))}${s.note ? ` — ${esc(s.note)}` : ''}`).join('<br>')}</p>`));
+    S[S.length - 1].tfm = states;
+  }
+  function drawTransform(sec, states, step, animate) {
+    const line = sec.querySelector('.tfm-line'), noteEl = sec.querySelector('.tfm-note');
+    const st = states[Math.min(step, states.length - 1)];
+    const before = {}, gone = [];
+    const scale = sec.getBoundingClientRect().width / sec.offsetWidth || 1;
+    if (animate) {
+      const lr = line.getBoundingClientRect(), keep = new Set(st.toks.map(t => t.key));
+      line.querySelectorAll('[data-k]').forEach(el => {
+        const r = el.getBoundingClientRect(); before[el.dataset.k] = r;
+        if (!keep.has(el.dataset.k)) gone.push({html: el.outerHTML, x: (r.left - lr.left) / scale, y: (r.top - lr.top) / scale});
+      });
+    }
+    line.innerHTML = st.toks.map(t => t.br ? '<span class="tfm-br"></span>' : `<span class="tok r-${t.role || 'n'}" data-k="${esc(t.key)}">${esc(t.text)}</span>`).join('');
+    noteEl.innerHTML = `${st.note ? `<b>${esc(st.note)}</b>` : ''}${st.ko ? `<span>${esc(st.ko)}</span>` : ''}`;
+    if (!animate || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    gone.forEach(g => {
+      line.insertAdjacentHTML('beforeend', g.html); const el = line.lastElementChild;
+      el.removeAttribute('data-k'); el.classList.add('ghost'); el.style.left = g.x + 'px'; el.style.top = g.y + 'px';
+      el.animate([{opacity: 1, transform: 'none'}, {opacity: 0, transform: 'translateY(40px) scale(.8)'}], {duration: 500, easing: 'ease-in', fill: 'forwards'}).onfinish = () => el.remove();
+    });
+    line.querySelectorAll('[data-k]').forEach(el => {
+      const b = before[el.dataset.k], r = el.getBoundingClientRect();
+      if (b) {
+        const dx = (b.left - r.left) / scale, dy = (b.top - r.top) / scale;
+        if (Math.abs(dx) + Math.abs(dy) < 1) return;
+        el.animate([{transform: `translate(${dx}px,${dy}px)`}, {transform: 'none'}], {duration: 700, easing: 'cubic-bezier(.2,.8,.2,1)'});
+      } else {
+        el.animate([{opacity: 0, transform: 'translateY(-36px) scale(1.3)'}, {opacity: 1, transform: 'none'}], {duration: 600, delay: 250, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards'});
+      }
+    });
+  }
+
+  /* 낱말 카드: 그림(사진 또는 그림 문자) · 발음 기호 · 기계 음성 · 원어민 녹음 */
+  const PERSON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M18 8a4 4 0 0 1 0 6"/><path d="M20.5 5.5a8 8 0 0 1 0 11"/></svg>';
+  const recBtn = w => w.audio ? `<button type="button" class="say rec" data-audio="${esc(asset(w.audio))}" aria-label="원어민 녹음 듣기: ${esc(w.w)}" title="원어민 녹음">${PERSON}</button>` : '';
+  const pic = w => w.img ? `<div class="ph"><img src="${esc(asset(w.img.src))}" alt="${esc(w.img.alt || w.w)}" loading="lazy"></div>` : `<div class="ic" aria-hidden="true">${w.ic || ''}</div>`;
+  const wordCard = w => `<div class="wcard${w.img ? ' has-ph' : ''}">${pic(w)}<div class="w en">${esc(w.w)} <small>${esc(w.pos)}</small></div><div class="btns">${say(w.w)}${recBtn(w)}</div>
+    ${w.ipa ? `<div class="ipa en">${esc(w.ipa)}</div>` : ''}<div class="m f">${esc(w.ko)}</div></div>`;
+  const dictLinks = w => `${esc(w)}: <a href="https://dictionary.cambridge.org/dictionary/english/${encodeURIComponent(w.toLowerCase())}" target="_blank" rel="noopener">Cambridge 사전</a> · <a href="https://youglish.com/pronounce/${encodeURIComponent(w)}/english" target="_blank" rel="noopener">YouGlish(실제 영상 속 발음)</a> · <a href="https://en.dict.naver.com/#/search?query=${encodeURIComponent(w)}" target="_blank" rel="noopener">네이버 사전</a>`;
+  const credits = imgs => { const c = imgs.filter(i => i && i.credit); return c.length ? `<p style="font-size:12px;color:#8a8577">그림 출처: ${c.map(i => i.link ? `<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.credit)}</a>` : esc(i.credit)).join(' · ')}</p>` : ''; };
+
   /* ═════ 1차시 · 어휘 ═════ */
   function buildVocab() {
     const V = L.vocab;
@@ -62,14 +149,19 @@
     const ws = V.words;
     for (let i = 0; i < ws.length; i += 4) {
       const g = ws.slice(i, i + 4), part = `${i / 4 + 1} / ${Math.ceil(ws.length / 4)}`;
-      add(`${tag(`New Words ${part}`)}<h2>듣고 따라 읽기</h2><div class="wgrid">${g.map(w => `<div class="wcard"><div class="ic" aria-hidden="true">${w.ic || ''}</div>
-        <div class="w en">${esc(w.w)} <small>${esc(w.pos)}</small></div>${say(w.w)}<div class="m f">${esc(w.ko)}</div></div>`).join('')}</div>`,
-        note('낱말 익히기', '① 스피커 단추로 발음 듣기 → ② 두 번 따라 읽기 → ③ 뜻을 먼저 추측하게 한 뒤 넘겨서 확인.', `<p class="tr">${g.map(w => `<b>${esc(w.w)}</b> ${esc(w.ko)}`).join(' · ')}</p>`));
+      add(`${tag(`New Words ${part}`)}<h2>듣고 따라 읽기</h2><div class="wgrid">${g.map(wordCard).join('')}</div>`,
+        note('낱말 익히기', '① 그림을 보고 뜻 짐작하기 → ② 스피커(기계 음성)·사람 단추(원어민 녹음)로 발음 듣기 → ③ 두 번 따라 읽기 → ④ 넘겨서 뜻 확인. 발음 기호의 강세(ˈ)를 손뼉으로 짚어 준다.',
+          `<p class="tr">${g.map(w => `<b>${esc(w.w)}</b> ${esc(w.ipa || '')} ${esc(w.ko)}`).join('<br>')}</p>`, `<p>${g.map(w => dictLinks(w.w)).join('<br>')}</p>`, credits(g.map(w => w.img))));
       add(`${tag(`In Sentences ${part}`)}<h2>문장 속에서 만나기</h2><div class="sents">${g.map((w, k) => {
         const re = new RegExp(`\\b(${w.w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*)`, 'i');
         const s = w.ex.replace(re, '{{$1}}');
         return `<div class="row"><span class="n">${k + 1}</span><div class="en">${blank(s)}<span class="k">${esc(w.exKo)}</span></div>${say(w.ex)}</div>`; }).join('')}</div>`,
         note('문장 속 낱말', '한국어 해석을 보고 빈칸 낱말을 말하게 한다. 넘길 때마다 빈칸이 하나씩 채워진다.'));
+    }
+    if (V.morph && V.morph.length) {
+      add(`${tag('Word Building')}<h2>조각을 알면 낱말이 보여요</h2><div class="cols three">${[['접두사', 'pre', '낱말 앞에 붙어 뜻을 바꾼다'], ['어근', 'root', '낱말의 중심 뜻'], ['접미사', 'suf', '뒤에 붙어 품사·뜻을 바꾼다']].map(([k, c, d], j) => `<div class="panel mo-key ${c}${j ? ' f' : ''}"><h3>${k}</h3><p>${d}</p></div>`).join('')}</div>`,
+        note('낱말 만들기', '영어 낱말의 상당수는 조각(접두사·어근·접미사)의 조합이다. 조각의 뜻을 알면 처음 보는 낱말도 짐작할 수 있다.'));
+      V.morph.forEach((m, i) => morphSlide(m, i, V.morph.length));
     }
     const ph = V.phrases;
     for (let i = 0; i < ph.length; i += 3) {
@@ -130,6 +222,24 @@
     wrapSlide(T.wrap);
   }
 
+  /* 원리: 규칙을 외우기 전에 “왜 이런 모양이 생겼는가”를 먼저 이해한다
+     g.principle = {q: 질문, core: 한 문장 원리, why: [근거…], pic: {from, to, label}} */
+  function principleSlide(g, gi) {
+    const P = g.principle;
+    add(`${tag(`Grammar ${gi + 1} · Principle`)}<h2>${esc(P.q || '왜 이런 모양일까?')}</h2>
+      ${P.pic ? `<div class="pdiag">${P.pic.map((x, k) => `<div class="pbox${x.hot ? ' hot' : ''}"><b class="en">${esc(x.en)}</b><span>${esc(x.ko || '')}</span></div>${k < P.pic.length - 1 ? `<i>${esc(x.arrow || '→')}</i>` : ''}`).join('')}</div>` : ''}
+      <div class="pcore f"><em>원리</em>${esc(P.core)}</div>
+      ${(P.why || []).length ? `<ul class="b pwhy">${P.why.map(w => `<li class="f">${esc(w)}</li>`).join('')}</ul>` : ''}`,
+      note('원리 이해', '공식을 보여 주기 전에 원리를 먼저 묻는다. 학생이 Notice에서 찾은 공통점을 원리 문장과 연결한다.', P.note ? `<p>${esc(P.note)}</p>` : ''));
+  }
+  // 뜻 비교: 모양이 조금 다르면 뜻이 어떻게 달라지는지 짝지어 본다
+  function contrastSlide(c, gi) {
+    add(`${tag(`Grammar ${gi + 1} · Contrast`)}<h2>${esc(c.title || '모양이 다르면 뜻도 다르다')}</h2>
+      <div class="cpairs">${c.pairs.map(p => `<div class="cpair"><div><div class="en">${mark(p.a)}</div><span class="k f">${esc(p.ka)}</span></div><i>vs</i><div><div class="en">${mark(p.b)}</div><span class="k f">${esc(p.kb)}</span></div></div>`).join('')}</div>
+      ${c.point ? `<div class="pcore f" style="margin-top:22px"><em>정리</em>${esc(c.point)}</div>` : ''}`,
+      note('뜻 비교', '두 문장의 뜻 차이를 먼저 말해 보게 한 뒤 넘긴다. 차이를 만든 낱말(색칠)에 주목하게 한다.'));
+  }
+
   /* ═════ 3차시 · 문법 ═════ */
   function buildGrammar() {
     const G = L.grammar;
@@ -141,11 +251,14 @@
       add(`${tag(`Grammar ${gi + 1} · Notice`)}<h2>무엇이 보이나요?</h2><div class="sents">${g.notice.map((n, k) => `<div class="row"><span class="n">${k + 1}</span><div class="en">${mark(n.en)}<span class="k">${esc(n.ko)}</span></div>${say(n.en)}</div>`).join('')}</div>
         <div class="qbox f" style="margin-top:26px;padding:18px 28px"><div class="q" style="font-size:30px"><b>Q.</b>색칠된 부분은 어떤 모양이고, 무슨 뜻일까?</div></div>`,
         note('규칙 발견', '규칙을 먼저 말해 주지 않는다. 예문을 읽고 학생이 공통점을 찾게 한 뒤 다음 장에서 정리한다.'));
+      if (g.principle) principleSlide(g, gi);
+      [].concat(g.anim || []).forEach(a => transformSlide(a, `Grammar ${gi + 1} · In Motion`));
+      if (g.contrast) contrastSlide(g.contrast, gi);
       add(`${tag(`Grammar ${gi + 1} · ${g.name}`)}<h2>${esc(g.name)}</h2><div class="formula en" style="font-size:${g.form.length > 34 ? 32 : g.form.length > 24 ? 38 : 46}px"><em>${esc(g.form)}</em><small>= ${esc(g.meaning)}</small></div>
         <div class="rules">${g.rule.map(r => `<div class="rule f"><b>${esc(r.k)}</b><div class="en">${esc(r.v)}<span class="ex">${esc(r.ex)}</span></div></div>`).join('')}</div>`,
         note('규칙 정리', '자리(목적어·보어·주어)를 기준으로 정리한다. 각 줄의 예문을 함께 읽는다.'));
       add(`${tag(`Grammar ${gi + 1} · Check`)}<h2>알맞은 형태로 바꾸기</h2><div class="sents">${g.check.map((c, k) => `<div class="row"><span class="n">${k + 1}</span><div class="en">${esc(c.q).replace('____', `<span class="bl f"><i>${esc(c.a)}</i></span>`)}</div></div>`).join('')}</div>`,
-        note('확인 문제', '괄호 속 동사를 바꾸게 한다. 틀린 학생에게는 앞의 동사(want/enjoy 등)를 다시 보게 한다.'));
+        note('확인 문제', '괄호 속 낱말을 알맞은 형태로 바꾸게 한다. 틀린 학생에게는 원리 장면(왜 이런 모양인가)을 다시 떠올리게 한다.'));
       if (g.compare) add(`${tag(`Grammar ${gi + 1} · Compare`)}<h2>${esc(g.compare.title || '어떻게 구별할까?')}</h2><table class="cmp en"><tr>${g.compare.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr>
         ${g.compare.cols[0].map((_, r) => `<tr>${g.compare.cols.map(c => `<td class="f">${esc(c[r] || '')}</td>`).join('')}</tr>`).join('')}</table>`,
         note('비교', g.compare.note || '열마다 공통점을 찾게 한 뒤 예문을 만들어 보게 한다.'));
@@ -164,13 +277,15 @@
   function dcover(word, sub) {
     add(`<div class="dcover"><div class="ghost" aria-hidden="true">${esc(word[0] || '')}</div><div class="eyebrow tline">${esc(meta)}</div>
       <div class="word">${esc(word)}</div><div class="sub">${esc(L.reading.title)} · ${esc(sub)}</div></div>`,
-      note('표지', kind === 'read1' ? '제목과 큰 낱말만 보여 주고 “무엇에 관한 글일까?”를 묻는다.' : '지난 시간 다인의 이야기를 떠올리며 시작한다.'));
+      note('표지', kind === 'read1' ? '제목과 큰 낱말, 사진만 보여 주고 “무엇에 관한 글일까?”를 묻는다.' : '지난 시간에 읽은 내용을 떠올리며 시작한다.'), L.reading.coverImg ? 'has-bg' : '');
+    S[S.length - 1].bg = kind === 'read2' ? (L.reading.coverImg2 || L.reading.coverImg) : L.reading.coverImg;
   }
   function paraSlide(p, i) {
     const len = p.en.split(' ').length;
     add(`<div class="para"><div><div class="who">${esc(p.who ? p.who.toUpperCase() : 'INTRO')} ${say(p.en, '문단 듣기')}</div><div class="txt${len > 52 ? ' sm' : ''} en">${gloss(p.en)}</div></div>
       <div class="side"><p class="f"><b>CHECK</b>${esc(p.check.q)}</p><p class="f ans">${esc(p.check.a)}</p><p class="f"><b>THINK</b>${esc(p.think)}</p></div></div>`,
-      note(`문단 ${i + 1}`, '① 스피커로 듣기 → ② 점선 낱말을 눌러 뜻 확인 → ③ CHECK 질문에 답할 근거 문장 찾기 → ④ THINK는 짝과 이야기.', `<p class="tr">${esc(p.ko)}</p>`));
+      note(`문단 ${i + 1}`, '① 스피커로 듣기 → ② 점선 낱말을 눌러 뜻 확인 → ③ CHECK 질문에 답할 근거 문장 찾기 → ④ THINK는 짝과 이야기.', `<p class="tr">${esc(p.ko)}</p>`, p.bg && p.bg.about ? `<p><b>배경 사진</b> ${esc(p.bg.about)}</p>` : ''), p.bg ? 'has-bg' : '');
+    S[S.length - 1].bg = p.bg;
   }
   function buildRead(part) {
     const R = L.reading, cut = R.split, ps = R.paras.map((p, i) => ({p, i}));
@@ -199,7 +314,7 @@
     if (part === 1) add(`<div class="center"><div class="eyebrow">NEXT</div><h2 style="margin-top:20px">${esc(R.next || '다음 이야기는 어떻게 이어질까?').replace(/\n/g, '<br>')}</h2></div>`, note('다음 시간', '다음 차시 예고.'));
     if (part === 2) {
       (R.key || []).forEach((k, i) => add(`<div class="center"><div class="eyebrow">KEY SENTENCE ${i + 1}</div><div class="keyline en" style="margin-top:28px">${mark(k.en)}</div><div class="keynote f">${esc(k.note)}</div> <div style="margin-top:24px">${say(k.en)}</div></div>`,
-        note('핵심 문장', '색칠되는 부분이 3차시 문법과 어떻게 이어지는지 묻는다.' + (k.g ? ` (문법 ${k.g === 'g1' ? '1 · to부정사' : '2 · 동명사'})` : ''))));
+        note('핵심 문장', '색칠되는 부분이 3차시 문법과 어떻게 이어지는지 묻는다.' + (k.g ? ` (문법 ${k.g === 'g1' ? 1 : 2} · ${((L.grammar.points.find(p => p.id === k.g) || {}).name) || ''})` : ''))));
       if (R.chart) add(`<div class="center"><div class="eyebrow">${esc(R.chart.title)}</div><div class="trio" style="grid-template-columns:repeat(${R.chart.rows.length},1fr)">${R.chart.rows.map(r => `<div><h3 class="en">${esc(r.name)}</h3>${r.cells.map((c, k) => `<p class="f en"><b>${esc(R.chart.cols[k].toUpperCase())}</b>${esc(c)}</p>`).join('')}</div>`).join('')}</div></div>`,
         note('비교하기', R.chart.note || '공통점과 차이점을 찾게 한다.'));
       add(`<div class="center"><div class="eyebrow">SUMMARY</div><div class="sumtext en" style="margin-top:28px">${blank(R.summary.text)}</div></div>`, note('요약', '빈칸을 먼저 짝과 채운 뒤 하나씩 확인한다.'));
@@ -212,7 +327,7 @@
 
   /* ── 화면 만들기 ── */
   const total = S.length;
-  document.body.insertAdjacentHTML('afterbegin', `<div class="viewport"><div class="stage" id="stage">${S.map((s, i) => `<section class="s ${s.cls}" data-i="${i}" aria-label="${i + 1}번째 장">${s.html}${dark ? '' : `<div class="meta"><span>${esc(meta)}</span><span class="pg">${i + 1} / ${total}</span></div>`}</section>`).join('')}</div></div>
+  document.body.insertAdjacentHTML('afterbegin', `<div class="viewport"><div class="stage" id="stage">${S.map((s, i) => `<section class="s ${s.cls}" data-i="${i}" aria-label="${i + 1}번째 장"${s.bg ? ` style="--bgimg:url('${esc(asset(s.bg.src))}');--bgpos:${esc(s.bg.pos || 'center')}"` : ''}>${s.bg ? `<div class="bgimg" aria-hidden="true"></div>${s.bg.credit ? `<div class="credit">사진: ${esc(s.bg.credit)}</div>` : ''}` : ''}${s.html}${dark ? '' : `<div class="meta"><span>${esc(meta)}</span><span class="pg">${i + 1} / ${total}</span></div>`}</section>`).join('')}</div></div>
     <aside class="notes" id="notes" aria-live="polite"></aside><div class="overview" id="ov" aria-label="전체 보기"></div>` +
     (dark ? `<div class="dchrome"><a class="home" href="${listHref}">← 목록</a><div class="right"><button type="button" id="bN">발문 메모 (N)</button><button type="button" id="bF">전체 화면 (F)</button></div><div class="pgn" id="pgn"></div></div><div class="dprogress" id="prog"></div>`
       : `<div class="progress" id="prog"></div><nav class="bar"><a href="${listHref}">← 목록</a><span class="t">${esc(meta)}</span>
@@ -233,6 +348,7 @@
     autofit(secs[i]);
     const fs = frags[i]; step = st === 'all' ? fs.length : Math.max(0, Math.min(fs.length, st || 0));
     fs.forEach((f, k) => f.classList.toggle('shown', k < step));
+    stepped(i, false);
     document.getElementById('pgn').textContent = `${i + 1} / ${total}`;
     document.getElementById('prog').style.width = `${(i + 1) / total * 100}%`;
     notes.innerHTML = (S[i].note || '<p>메모 없음</p>') + `<p style="margin-top:14px;color:#8a8577;font-size:13px">${i + 1} / ${total}</p>`;
@@ -247,8 +363,15 @@
     const over = () => { const mt = meta.getBoundingClientRect().top; let mx = 0; [...sec.children].forEach(c => { if (c !== meta && !c.classList.contains('cover')) mx = Math.max(mx, c.getBoundingClientRect().bottom); }); return mx > mt - 6; };
     let k = 1; while (over() && k > .62) { k -= .05; targets.forEach(t => { t.style.zoom = k; }); }
   }
-  function next() { const fs = frags[cur]; if (step < fs.length) { fs[step++].classList.add('shown'); } else if (cur < total - 1) show(cur + 1, 0); }
-  function prev() { if (step > 0) { frags[cur][--step].classList.remove('shown'); } else if (cur > 0) show(cur - 1, 'all'); }
+  function next() { const fs = frags[cur]; if (step < fs.length) { fs[step++].classList.add('shown'); stepped(cur, true); } else if (cur < total - 1) show(cur + 1, 0); }
+  function prev() { if (step > 0) { frags[cur][--step].classList.remove('shown'); stepped(cur, true); } else if (cur > 0) show(cur - 1, 'all'); }
+  /* 단계 표시: st1…stN 클래스(모션 그래픽이 이 단계를 보고 움직인다) */
+  function stepped(i, animate) {
+    const sec = secs[i];
+    for (let k = 1; k <= Math.max(frags[i].length, 1); k++) sec.classList.toggle('st' + k, k <= step);
+    if (S[i].tfm) drawTransform(sec, S[i].tfm, step, animate);
+  }
+  S.forEach((s, i) => { if (s.tfm) drawTransform(secs[i], s.tfm, 0, false); });
 
   /* 대화 전체 듣기 */
   let playing = null;
@@ -260,6 +383,8 @@
       pa.classList.add('playing');
       playing = E.sequence(lines.map((l, i) => ({text: plain(l.en), voice: (SPK[l.s] || {}).voice || i % 2, pitch: (SPK[l.s] || {}).pitch, before: () => rows.forEach((r, k) => r.classList.toggle('cur', k === i))})), () => stopAll());
       return; }
+    const au = e.target.closest('[data-audio]');
+    if (au) { e.stopPropagation(); E.stop(); const a = new Audio(au.dataset.audio); au.classList.add('playing'); a.onended = a.onerror = () => au.classList.remove('playing'); a.play().catch(() => { au.classList.remove('playing'); E.toast('녹음을 불러오지 못했어요. 인터넷 연결을 확인해 주세요.'); }); return; }
     const op = e.target.closest('[data-opt]');
     if (op) { e.stopPropagation(); const sec = op.closest('.s'); sec.querySelectorAll('[data-opt]').forEach(b => b.classList.toggle('on', b === op));
       sec.querySelectorAll('.slot').forEach(s => s.textContent = op.dataset.opt);
