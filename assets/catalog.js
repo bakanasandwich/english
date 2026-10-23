@@ -25,7 +25,7 @@ window.CATALOG = [
       {no: 3, ready: true, title: 'Let\u2019s Be Positive', ko: '긍정적으로 생각하자', talk: ['감정이나 상태 말하기', '공감·위로하기'], grammar: ['과거시제', '명령문'], read: '두 상황 비교 이야기 (교과서: Different Attitudes, Different Results)'},
       {no: 4, ready: true, title: 'The Joy of Traveling', ko: '여행의 즐거움', talk: ['계획 묻고 답하기', '기대·희망 표현하기'], grammar: ['동명사', 'be going to'], read: '여행 엽서 (교과서: The Colorful Villages of the World)'},
       {no: 5, ready: true, title: 'Think like Sherlock Holmes!', ko: '셜록 홈스처럼 생각해!', talk: ['허락 구하고 답하기', '금지하기'], grammar: ['비교급', '최상급'], read: '추리 이야기 (교과서: Who Threw a Cake at the Monalisa?)'},
-      {no: 6, ready: true, estimate: true, title: 'Good for the Earth, Good for Us', ko: '지구에 좋은 것이 우리에게도 좋다', talk: ['도움 요청하고 답하기', '금지·주의 표현하기'], grammar: ['should · must', '접속사 when'], read: '학교 소식지 기사'},
+      {no: 6, ready: true, title: 'Good for the Earth, Good for Us', ko: '지구에 좋은 것이 우리에게도 좋다', talk: ['도움 요청하고 답하기', '거절의 이유 말하기'], grammar: ['to부정사 (명사적)', '접속사 that'], read: '환경 동아리 게시판 (교과서: Join the Zero-Waste Challenge)'},
       {no: 7, ready: true, estimate: true, title: 'Find Your Dream', ko: '나의 꿈을 찾아서', talk: ['장래 희망 묻고 답하기', '잘하는 것 묻고 답하기'], grammar: ['to부정사', 'because'], read: '학교 신문 기사'},
       {no: 8, ready: true, estimate: true, title: 'Be Smart Online', ko: '온라인에서 똑똑하게', talk: ['허락 구하고 답하기', '동의하고 반대하기'], grammar: ['최상급', 'if (조건)'], read: '정보 안내문'}
     ]},

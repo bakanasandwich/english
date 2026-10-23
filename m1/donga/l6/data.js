@@ -1,260 +1,312 @@
 /* 중1 영어(동아·윤정미) Lesson 6 · Good for the Earth, Good for Us
-   단원명은 교과서·문제집 목차 기준. 의사소통 기능과 문법은 추정(estimate: true).
-   대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글입니다. */
+   교과서 대조(2026-10): 의사소통 기능(도움 요청하고 답하기 · 거절의 이유 말하기), 언어 형식(to부정사 명사적 용법 · 명사절 접속사 that),
+   읽기 주제(Join the Zero-Waste Challenge — 쓰레기 줄이기 도전 이야기), 단원 어휘를 교과서 목차·단어 목록과 맞췄다.
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식·교과서 어휘로 새로 쓴 글이다. */
 window.LESSON = {
-  book: 'm1-donga', no: 6, estimate: true,
+  book: 'm1-donga', no: 6,
   title: 'Good for the Earth, Good for Us', ko: '지구에 좋은 것이 우리에게도 좋다',
-  bigQ: {en: 'What is good for both the Earth and us?', ko: '지구와 우리 모두에게 좋은 것은 무엇일까?'},
+  bigQ: {en: 'What small things can we do for the Earth?', ko: '지구를 위해 우리가 할 수 있는 작은 일은 무엇일까?'},
+  align: {
+    tb: {reading: 'Join the Zero-Waste Challenge', funcs: ['도움 요청하고 답하기', '거절의 이유 말하기'], forms: ['to부정사 명사적 용법 (want to save)', '접속사 that (I heard that ~)'],
+      note: '교과서 읽기는 네 사람이 음식물 쓰레기 줄이기·다시 쓰기·일회용 플라스틱 안 쓰기·재활용 도전을 한 경험을 나누는 글. 여기 본문은 다른 네 가지 도전(중고 장터, 플로깅, 라벨 떼기, 채소 다시 키우기)으로 새로 쓴 글이다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-06', '9영02-11'], grammar: ['9영02-04'], read1: ['9영01-02', '9영01-09'], read2: ['9영02-06', '9영02-09']},
+    forms: ['To-Infinitive', 'Reports of Questions and Statements']
+  },
   goals: {
-    vocab: ['음식·텃밭·환경과 관련된 낱말 16개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 지구를 위한 실천을 한 문장으로 말할 수 있다.'],
-    talk: ['도움을 요청하고 그에 답할 수 있다.', '금지와 주의를 표현할 수 있다.'],
-    grammar: ['조동사 should와 must로 충고와 의무를 말할 수 있다.', '접속사 when으로 ‘~할 때’를 표현할 수 있다.'],
-    read1: ['학교 텃밭 이야기의 앞부분을 읽고 텃밭을 시작한 까닭을 이해할 수 있다.'],
-    read2: ['텃밭이 지구와 우리에게 준 좋은 점을 정리하고, 나의 실천을 영어로 쓸 수 있다.']
+    vocab: ['환경과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 내가 할 수 있는 환경 보호 실천을 한 문장으로 말할 수 있다.'],
+    talk: ['도움을 요청하고 답할 수 있다. (Can you please ~? — Sure. No problem.)', '거절하면서 그 이유를 말할 수 있다. (I’m sorry, but I can’t. I’m ~.)'],
+    grammar: ['want, decide, plan 뒤에 to부정사를 써서 하고 싶은 일·결심을 말할 수 있다.', 'think, know, hear, learn 뒤에 접속사 that절을 써서 생각이나 들은 내용을 말할 수 있다.'],
+    read1: ['쓰레기 줄이기 도전 글을 읽고 첫 두 사람이 한 일을 파악할 수 있다.'],
+    read2: ['네 가지 도전을 비교하고, 내가 해 볼 도전과 그 까닭을 쓸 수 있다.']
   },
 
   vocab: {
-    hook: {en: 'Where does your lunch come from?', ko: '여러분의 점심은 어디에서 올까요?', note: '급식 재료가 어디서 왔을지 추측하게 한다(멀리서 트럭·배로). 가까운 곳에서 키운 음식과 비교하며 단원을 연다.'},
+    hook: {en: 'How much trash do you throw away in a day?', ko: '하루에 쓰레기를 얼마나 버리나요?', note: '과자 봉지, 음료 컵, 휴지 등 오늘 버린 것을 떠올리게 한다. 그 쓰레기를 줄이는 말로 이어진다.'},
     words: [
-      {w: 'earth', pos: 'n.', ko: '지구; 흙', ic: '🌍', audio: 'assets/audio/earth.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We live on the Earth.', exKo: '우리는 지구에 산다.'},
-      {w: 'garden', pos: 'n.', ko: '정원, 텃밭', ic: '🪴', audio: 'assets/audio/garden.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Our school has a small garden.', exKo: '우리 학교에는 작은 텃밭이 있다.'},
-      {w: 'plant', pos: 'v./n.', ko: '심다; 식물', ic: '🌱', audio: 'assets/audio/plant.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We planted tomatoes.', exKo: '우리는 토마토를 심었다.'},
-      {w: 'grow', pos: 'v.', ko: '기르다, 자라다', ic: '📈', audio: 'assets/audio/grow.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Plants grow fast in summer.', exKo: '식물은 여름에 빨리 자란다.'},
-      {w: 'water', pos: 'v./n.', ko: '물을 주다; 물', ic: '💧', audio: 'assets/audio/water.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Water the plants every morning.', exKo: '매일 아침 식물에 물을 줘라.'},
-      {w: 'seed', pos: 'n.', ko: '씨앗', ic: '🌰', audio: 'assets/audio/seed.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I put a seed in the soil.', exKo: '나는 흙에 씨앗 하나를 넣었다.'},
-      {w: 'soil', pos: 'n.', ko: '흙, 토양', ic: '🟫', audio: 'assets/audio/soil.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Good soil helps plants grow.', exKo: '좋은 흙은 식물이 자라는 것을 돕는다.'},
-      {w: 'fresh', pos: 'adj.', ko: '신선한', ic: '🥬', audio: 'assets/audio/fresh.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'These vegetables are fresh.', exKo: '이 채소들은 신선하다.'},
-      {w: 'local', pos: 'adj.', ko: '지역의', ic: '📍', audio: 'assets/audio/local.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Local food is fresher.', exKo: '지역 음식이 더 신선하다.'},
-      {w: 'pick', pos: 'v.', ko: '따다, 고르다', ic: '🍅', audio: 'assets/audio/pick.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We picked the red tomatoes.', exKo: '우리는 빨간 토마토를 땄다.'},
-      {w: 'compost', pos: 'n.', ko: '퇴비', ic: '🪱', ex: 'We make compost from food waste.', exKo: '우리는 음식물 쓰레기로 퇴비를 만든다.'},
-      {w: 'insect', pos: 'n.', ko: '곤충', ic: '🐞', audio: 'assets/audio/insect.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Some insects help the garden.', exKo: '어떤 곤충은 텃밭에 도움이 된다.'},
-      {w: 'chemical', pos: 'n.', ko: '화학 물질', ic: '🧪', audio: 'assets/audio/chemical.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We don’t use chemicals.', exKo: '우리는 화학 물질을 쓰지 않는다.'},
-      {w: 'share', pos: 'v.', ko: '나누다', ic: '🤲', audio: 'assets/audio/share.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We shared the lettuce with our neighbors.', exKo: '우리는 상추를 이웃과 나눴다.'},
-      {w: 'harvest', pos: 'n./v.', ko: '수확; 수확하다', ic: '🧺', audio: 'assets/audio/harvest.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The harvest was big this year.', exKo: '올해는 수확이 많았다.'},
-      {w: 'rooftop', pos: 'n.', ko: '옥상', ic: '🏢', ex: 'There is a garden on the rooftop.', exKo: '옥상에 텃밭이 있다.'}
+      {w: 'challenge', pos: 'n.', ko: '도전', ic: '🏁', ex: 'Join the zero-waste challenge!', exKo: '쓰레기 없애기 도전에 참여하세요!'},
+      {w: 'environment', pos: 'n.', ko: '환경', ic: '🌍', ex: 'We must protect the environment.', exKo: '우리는 환경을 보호해야 한다.'},
+      {w: 'reduce', pos: 'v.', ko: '줄이다', ic: '📉', ex: 'Let’s reduce food waste.', exKo: '음식물 쓰레기를 줄이자.'},
+      {w: 'recycle', pos: 'v.', ko: '재활용하다', ic: '♻️', ex: 'I recycle cans and bottles.', exKo: '나는 캔과 병을 재활용한다.'},
+      {w: 'produce', pos: 'v.', ko: '만들어 내다, 생산하다', ic: '🏭', ex: 'We produce a lot of trash.', exKo: '우리는 쓰레기를 많이 만들어 낸다.'},
+      {w: 'single', pos: 'adj.', ko: '단 하나의, 한 번의', ic: '1️⃣', ex: 'Say no to single-use cups.', exKo: '일회용 컵을 거절하세요.'},
+      {w: 'container', pos: 'n.', ko: '용기, 그릇', ic: '🥡', ex: 'Bring your own container.', exKo: '자기 용기를 가져오세요.'},
+      {w: 'own', pos: 'adj.', ko: '자기 자신의', ic: '🙋', ex: 'I use my own cup.', exKo: '나는 내 컵을 쓴다.'},
+      {w: 'secondhand', pos: 'adj.', ko: '중고의', ic: '👕', ex: 'I bought a secondhand jacket.', exKo: '나는 중고 재킷을 샀다.'},
+      {w: 'plog', pos: 'v.', ko: '플로깅하다 (달리며 쓰레기 줍기)', ic: '🏃', ex: 'We plog in the park on Sundays.', exKo: '우리는 일요일마다 공원에서 플로깅을 한다.'},
+      {w: 'label', pos: 'n.', ko: '상표, 라벨', ic: '🏷️', ex: 'Take the label off the bottle.', exKo: '병에서 라벨을 떼어라.'},
+      {w: 'machine', pos: 'n.', ko: '기계', ic: '🤖', ex: 'Put the cans into the machine.', exKo: '캔을 기계에 넣어라.'},
+      {w: 'leftover', pos: 'n.', ko: '남은 음식', ic: '🍱', ex: 'I made lunch out of leftovers.', exKo: '나는 남은 음식으로 점심을 만들었다.'},
+      {w: 'delivery', pos: 'n.', ko: '배달', ic: '🛵', ex: 'Food delivery uses a lot of plastic.', exKo: '음식 배달은 플라스틱을 많이 쓴다.'},
+      {w: 'completely', pos: 'adv.', ko: '완전히', ic: '✅', ex: 'Plastic never goes away completely.', exKo: '플라스틱은 결코 완전히 사라지지 않는다.'},
+      {w: 'plant', pos: 'v. / n.', ko: '심다; 식물', ic: '🌱', ex: 'We planted green onions.', exKo: '우리는 파를 심었다.'},
+      {w: 'leader', pos: 'n.', ko: '대표, 지도자', ic: '🧑‍✈️', ex: 'She is the leader of the green club.', exKo: '그녀는 환경 동아리 대표다.'},
+      {w: 'favor', pos: 'n.', ko: '부탁, 호의', ic: '🙏', ex: 'Can you do me a favor?', exKo: '내 부탁 하나 들어줄래?'},
+      {w: 'tear', pos: 'v.', ko: '찢다 (과거 tore)', ic: '✂️', ex: 'My dog tore my bag.', exKo: '우리 개가 내 가방을 찢었다.'},
+      {w: 'sew', pos: 'v.', ko: '바느질하다, 꿰매다', ic: '🪡', ex: 'I sewed the hole in my shirt.', exKo: '나는 셔츠의 구멍을 꿰맸다.'}
     ],
     phrases: [
-      {w: 'take care of', ko: '~을 돌보다', ex: 'We take care of the plants.', exKo: '우리는 식물을 돌본다.'},
-      {w: 'come from', ko: '~에서 오다', ex: 'This rice comes from our town.', exKo: '이 쌀은 우리 마을에서 온다.'},
-      {w: 'throw away', ko: '버리다', ex: 'Don’t throw away food.', exKo: '음식을 버리지 마라.'},
-      {w: 'be good for', ko: '~에 좋다', ex: 'Fresh food is good for you.', exKo: '신선한 음식은 너에게 좋다.'},
-      {w: 'a little', ko: '조금', ex: 'Give the plants a little water.', exKo: '식물에 물을 조금 줘라.'},
-      {w: 'little by little', ko: '조금씩', ex: 'The seeds grew little by little.', exKo: '씨앗이 조금씩 자랐다.'}
+      {w: 'Can you please ~?', ko: '~해 줄 수 있니?', ex: 'Can you please carry this box?', exKo: '이 상자 좀 날라 줄 수 있니?'},
+      {w: 'I’m sorry, but I can’t.', ko: '미안하지만 안 돼.', ex: 'I’m sorry, but I can’t. I’m busy.', exKo: '미안하지만 못 해. 바빠.'},
+      {w: 'eat out', ko: '외식하다', ex: 'We ate out last night.', exKo: '우리는 어젯밤 외식했다.'},
+      {w: 'in return', ko: '보답으로, 대신에', ex: 'I got points in return.', exKo: '나는 그 대가로 포인트를 받았다.'},
+      {w: 'one by one', ko: '하나씩', ex: 'Put the bottles in one by one.', exKo: '병을 하나씩 넣어라.'},
+      {w: 'go away', ko: '사라지다', ex: 'The smell didn’t go away.', exKo: '냄새가 사라지지 않았다.'}
     ],
     pairs: [
-      {a: 'fresh', b: 'old', rel: '반대말'},
-      {a: 'plant', b: 'harvest', rel: '심다 / 거두다'},
-      {a: 'grow', b: 'raise', rel: '비슷한 말'},
-      {a: 'garden', b: 'gardener', rel: '장소 / 사람'}
+      {a: 'reduce', b: 'increase', rel: '반대말'},
+      {a: 'use', b: 'reuse', rel: '쓰다 / 다시 쓰다 (re- = 다시)'},
+      {a: 'deliver', b: 'delivery', rel: '동사 / 명사'},
+      {a: 'complete', b: 'completely', rel: '형용사 / 부사'}
     ],
-    wrap: {en: 'I want to grow ______. It is good for ______.', ko: '오늘 배운 낱말로 키우고 싶은 식물과 그 까닭 쓰기'}
+    wrap: {en: 'I want to ______ for the Earth. I think that ______.', ko: '오늘 배운 낱말로 내가 할 수 있는 환경 보호 실천 쓰기'}
   },
 
   talk: {
-    hook: {en: 'Have you ever grown a plant?', ko: '식물을 키워 본 적이 있나요?', note: '강낭콩, 화분, 다육이 등 경험을 나눈다. 키우면서 누구에게 도움을 받았는지 물으며 Can you help me ~?로 연결한다.'},
-    speakers: {Yejin: {voice: 0, pitch: 1.15}, Owen: {voice: 1, pitch: 1}, 'Mr. Jang': {voice: 2, pitch: .9}, Hani: {voice: 0, pitch: 1.1}, Lucas: {voice: 1, pitch: .95}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
+    hook: {en: 'When do you ask your friends for help?', ko: '친구에게 언제 도움을 부탁하나요?', note: '무거운 짐, 숙제, 청소 등 상황을 모은다. 부탁하고, 들어주거나 이유를 대며 거절하는 영어 표현으로 이어진다.'},
+    speakers: {Yuna: {voice: 0, pitch: 1.15}, Alex: {voice: 1, pitch: 1}, Dad: {voice: 2, pitch: .9}, Seho: {voice: 1, pitch: .95}, 'Ms. Lim': {voice: 2, pitch: 1.05}, Jia: {voice: 0, pitch: 1.1}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
     sets: [
       { id: 'lt1', label: 'Listen & Talk 1', func: '도움 요청하고 답하기',
-        key: {q: ['Can you help me ~?', 'Could you ~?'], a: ['Sure. / Of course.', 'No problem.', 'Sorry, I can’t. I’m busy.']},
-        note: 'Could you ~?는 Can you ~?보다 공손하다. 거절할 때도 Sorry 뒤에 까닭을 말하게 한다.',
+        key: {q: ['Can you please ~?', 'Can you do me a favor?', 'Can you help me ~?'], a: ['Sure. No problem.', 'Of course.', 'OK. What is it?']},
+        note: 'Can you please + 동사원형 ~?은 부탁하는 말. please를 넣으면 더 공손하다. 들어줄 때는 Sure. / No problem.',
         dialogs: [
-          { title: 'Dialogue A', setting: '아침, 옥상 텃밭', lines: [
-            {s: 'Yejin', en: 'Owen, {{can you help me}} carry this water can?', ko: '오웬, 이 물뿌리개 옮기는 거 도와줄래?'},
-            {s: 'Owen', en: '{{Sure}}. Wow, it’s heavy!', ko: '물론이지. 와, 무겁다!'},
-            {s: 'Yejin', en: 'We should water the tomatoes before class.', ko: '수업 전에 토마토에 물을 줘야 해.'},
-            {s: 'Owen', en: 'Look! There’s a small green tomato.', ko: '봐! 작은 초록 토마토가 있어.'},
-            {s: 'Yejin', en: 'When it turns red, we can pick it.', ko: '빨개지면 딸 수 있어.'}
+          { title: 'Dialogue A', setting: '방과 후, 환경 동아리 방', lines: [
+            {s: 'Yuna', en: 'Alex, {{can you do me a favor}}?', ko: '알렉스, 부탁 하나 들어줄래?'},
+            {s: 'Alex', en: '{{Sure}}. What is it?', ko: '물론이지. 뭔데?'},
+            {s: 'Yuna', en: '{{Can you please}} take the labels off these bottles?', ko: '이 병들에서 라벨 좀 떼어 줄 수 있어?'},
+            {s: 'Alex', en: '{{No problem}}. Why do we take them off?', ko: '문제없어. 왜 떼는 거야?'},
+            {s: 'Yuna', en: 'Clean bottles are easier to recycle.', ko: '깨끗한 병이 재활용하기 더 쉽거든.'}
+          ]},
+          { title: 'Dialogue B', setting: '토요일 아침, 공원 입구', lines: [
+            {s: 'A', en: 'Can you please hold this bag for me? I’m going to pick up that can.', ko: '이 봉투 좀 들어 줄래? 저 캔을 주우려고.'},
+            {s: 'B', en: 'Of course. Are you plogging?', ko: '물론이지. 플로깅하는 중이야?'},
+            {s: 'A', en: 'Yes. I jog and pick up trash at the same time.', ko: '응. 조깅하면서 동시에 쓰레기를 주워.'},
+            {s: 'B', en: 'Cool. Can I join you?', ko: '멋지다. 나도 같이 해도 돼?'}
+          ]}
+        ],
+        check: [
+          {q: 'What does Yuna ask Alex to do?', a: 'Take the labels off the bottles.'},
+          {q: 'Why do they take the labels off?', a: 'Clean bottles are easier to recycle.'},
+          {q: 'What is plogging?', a: 'Jogging and picking up trash at the same time.'}
+        ],
+        drill: {frame: ['A: Can you please ____?', 'B: Sure. No problem.'], opts: ['open the door', 'carry this box', 'turn off the light', 'help me with this', 'hold my bag', 'close the window']}
+      },
+      { id: 'lt2', label: 'Listen & Talk 2', func: '거절의 이유 말하기',
+        key: {q: ['Can you please ~?'], a: ['I’m sorry, but I can’t. I’m busy now.', 'I’m afraid I can’t. I have to ~.', 'Sorry. Maybe next time.']},
+        note: '거절할 때는 I’m sorry, but I can’t.로 먼저 미안함을 말하고, 바로 이유를 붙인다. 이유가 있으면 상대가 덜 서운하다.',
+        dialogs: [
+          { title: 'Dialogue A', setting: '저녁, 집 부엌', lines: [
+            {s: 'Dad', en: 'Seho, can you please take out the recycling?', ko: '세호야, 재활용 쓰레기 좀 내다 줄래?'},
+            {s: 'Seho', en: '{{I’m sorry, but I can’t}}, Dad. {{I’m late for}} my piano lesson.', ko: '죄송하지만 못 해요, 아빠. 피아노 수업에 늦었어요.'},
+            {s: 'Dad', en: 'Oh, I see. Then I’ll do it.', ko: '아, 그렇구나. 그럼 내가 할게.'},
+            {s: 'Seho', en: 'Thanks, Dad. I’ll do it tomorrow.', ko: '고마워요, 아빠. 내일은 제가 할게요.'}
           ]},
           { title: 'Dialogue B', setting: '쉬는 시간, 교실', lines: [
-            {s: 'A', en: '{{Could you}} make a poster for our garden club?', ko: '우리 텃밭 동아리 포스터 좀 만들어 줄 수 있어?'},
-            {s: 'B', en: '{{Sorry, I can’t}}. I have a math test today.', ko: '미안, 못 해. 오늘 수학 시험이 있어.'},
-            {s: 'A', en: 'How about tomorrow?', ko: '내일은 어때?'},
-            {s: 'B', en: '{{No problem}}. I’ll do it tomorrow.', ko: '문제없어. 내일 할게.'}
+            {s: 'Jia', en: 'Can you please come to the secondhand market on Saturday? We need more helpers.', ko: '토요일에 중고 장터에 와 줄 수 있어? 도우미가 더 필요해.'},
+            {s: 'B', en: '{{I’m afraid I can’t}}. {{I have to}} visit my grandma.', ko: '안 될 것 같아. 할머니 댁에 가야 하거든.'},
+            {s: 'Jia', en: 'That’s OK. Can you give us some old books, then?', ko: '괜찮아. 그럼 헌책을 좀 줄 수 있어?'},
+            {s: 'B', en: 'Sure. No problem.', ko: '물론이지. 문제없어.'}
           ]}
         ],
         check: [
-          {q: 'What does Yejin ask Owen to do?', a: 'To help her carry the water can.'},
-          {q: 'When can they pick the tomato?', a: 'When it turns red.'},
-          {q: 'Why can’t B make a poster today?', a: 'B has a math test today.'}
+          {q: 'Why can’t Seho take out the recycling?', a: 'He is late for his piano lesson.'},
+          {q: 'Why can’t B go to the secondhand market?', a: 'B has to visit B’s grandma.'},
+          {q: 'What will B give Jia?', a: 'Some old books.'}
         ],
-        drill: {frame: ['A: Can you help me ____?', 'B: Sure. No problem.'], opts: ['water the plants', 'carry this box', 'pick the tomatoes', 'clean the garden', 'make a poster', 'plant the seeds']}
-      },
-      { id: 'lt2', label: 'Listen & Talk 2', func: '금지·주의 표현하기',
-        key: {q: ['Can I ~?', 'Is it okay to ~?'], a: ['You must not ~.', 'You shouldn’t ~.', 'Be careful! / Don’t ~.']},
-        note: 'must not은 강한 금지, shouldn’t는 충고에 가까운 금지. 3차시 should / must와 이어진다.',
-        dialogs: [
-          { title: 'Dialogue A', setting: '방과 후, 텃밭', lines: [
-            {s: 'Lucas', en: 'Mr. Jang, {{can I}} use this spray on the bugs?', ko: '장 선생님, 벌레에 이 스프레이 뿌려도 돼요?'},
-            {s: 'Mr. Jang', en: 'No, {{you must not}} use it. It has chemicals.', ko: '아니, 그건 쓰면 안 돼. 화학 물질이 들어 있어.'},
-            {s: 'Lucas', en: 'Then what should I do?', ko: '그럼 어떻게 해야 해요?'},
-            {s: 'Mr. Jang', en: 'Pick them off by hand. And {{be careful}}. Some insects help our garden.', ko: '손으로 떼어 내렴. 그리고 조심해. 어떤 곤충은 텃밭을 도와주거든.'},
-            {s: 'Lucas', en: 'Oh, like ladybugs!', ko: '아, 무당벌레처럼요!'}
-          ]},
-          { title: 'Dialogue B', setting: '점심시간, 급식실', lines: [
-            {s: 'A', en: '{{Is it okay to}} throw away my vegetables?', ko: '채소 버려도 돼?'},
-            {s: 'B', en: '{{You shouldn’t}} waste food. Try one bite.', ko: '음식을 낭비하면 안 돼. 한 입만 먹어 봐.'},
-            {s: 'A', en: 'Okay. Hmm, it’s not bad.', ko: '알겠어. 음, 나쁘지 않네.'},
-            {s: 'B', en: 'It’s from our school garden!', ko: '그거 우리 학교 텃밭에서 온 거야!'}
-          ]}
-        ],
-        check: [
-          {q: 'Why must Lucas not use the spray?', a: 'It has chemicals.'},
-          {q: 'What should Lucas do with the bugs?', a: 'Pick them off by hand.'},
-          {q: 'Where are the vegetables from?', a: 'From the school garden.'}
-        ],
-        drill: {frame: ['A: Can I ____?', 'B: No, you must not.'], opts: ['throw away food', 'pick the flowers', 'use chemicals', 'step on the plants', 'leave the water on', 'feed the cat chocolate']}
+        drill: {frame: ['A: Can you please help me?', 'B: I’m sorry, but I can’t. I ____.'], opts: ['am busy now', 'have a lot of homework', 'am late for class', 'have to go home', 'am sick today', 'have soccer practice']}
       }
     ],
-    interviewEx: 'Jiu asked me to help her plant seeds. I said, “Sure.”',
+    interviewEx: 'Minji asked me to plog with her. I said, “I’m sorry, but I can’t. I have a piano lesson.”',
     watch: {
-      label: 'Let’s Watch', title: 'The Compost Box', setting: '텃밭 동아리 시간. 하니와 장 선생님이 퇴비 상자 앞에 서 있다.',
+      label: 'Let’s Watch', title: 'Green Club Meeting', setting: '환경 동아리 회의. 임 선생님과 학생들이 역할을 나눈다.',
       lines: [
-        {s: 'Hani', en: 'Mr. Jang, what is this box? It smells strange.', ko: '장 선생님, 이 상자는 뭐예요? 냄새가 이상해요.'},
-        {s: 'Mr. Jang', en: 'It’s a compost box. We put fruit peels and leaves in it.', ko: '퇴비 상자야. 과일 껍질이랑 나뭇잎을 넣지.'},
-        {s: 'Hani', en: 'Why? Can you tell me?', ko: '왜요? 알려 주실래요?'},
-        {s: 'Mr. Jang', en: 'When they break down, they become good soil for our plants.', ko: '그것들이 분해되면 우리 식물을 위한 좋은 흙이 된단다.'},
-        {s: 'Hani', en: 'Cool! Can I put my banana peel in it?', ko: '멋져요! 제 바나나 껍질 넣어도 돼요?'},
-        {s: 'Mr. Jang', en: 'Sure. But you must not put plastic in it.', ko: '물론이지. 하지만 플라스틱은 넣으면 안 돼.'}
+        {s: 'Ms. Lim', en: 'Our Green Week starts on Monday. Jia, can you please make the posters?', ko: '그린 주간이 월요일에 시작해요. 지아, 포스터를 만들어 줄 수 있니?'},
+        {s: 'Jia', en: 'Sure. No problem. I want to use old paper for them.', ko: '물론이죠. 문제없어요. 헌 종이로 만들고 싶어요.'},
+        {s: 'Ms. Lim', en: 'Great idea! Alex, can you please be the leader of the plogging team?', ko: '좋은 생각이야! 알렉스, 플로깅 팀 대표를 맡아 줄 수 있니?'},
+        {s: 'Alex', en: 'I’m sorry, but I can’t. I have soccer practice every morning. But I can help on Saturday.', ko: '죄송하지만 못 해요. 매일 아침 축구 연습이 있어요. 하지만 토요일에는 도울 수 있어요.'},
+        {s: 'Ms. Lim', en: 'OK. Thank you, everyone. I think that we can make a big change!', ko: '알겠어. 모두 고마워요. 우리가 큰 변화를 만들 수 있을 거라고 생각해요!'}
       ],
       check: [
-        {q: 'What do they put in the compost box?', a: 'Fruit peels and leaves.'},
-        {q: 'What happens when they break down?', a: 'They become good soil for the plants.'},
-        {q: 'What must Hani not put in the box?', a: 'Plastic.'}
+        {q: 'What will Jia make?', a: 'The posters (with old paper).'},
+        {q: 'Why can’t Alex be the leader?', a: 'He has soccer practice every morning.'},
+        {q: 'When can Alex help?', a: 'On Saturday.'}
       ]
     },
-    wrap: {en: 'Ask your partner for help with a garden job, and tell one thing they must not do.', ko: '텃밭 일을 도와 달라고 부탁하고, 해서는 안 되는 일 하나를 말하기'}
+    wrap: {en: 'Ask your partner for help with a green activity. Accept, or refuse and give a reason.', ko: '짝에게 환경 활동을 도와 달라고 부탁하고, 들어주거나 이유를 대며 거절하기'}
   },
 
   grammar: {
-    cover: 'should · when',
-    hook: {en: 'We {{should}} eat local food.  /  {{When}} the tomato turns red, we can pick it.', ko: '빈칸에 들어갈 말은 각각 어떤 뜻을 더해 줄까?', answer: 'should는 ‘~해야 한다(충고)’, When은 ‘~할 때’(시간)', note: '첫 문장은 조언, 두 번째 문장은 ‘언제’를 말한다는 점을 찾게 한다.'},
+    cover: 'to · that',
+    hook: {en: 'Do you {{want to}} save the Earth?  /  I heard {{that}} plastic never goes away completely.', ko: 'want 뒤의 to save, heard 뒤의 that은 각각 어떤 덩어리를 만들까?', answer: 'to save → “구하는 것”(want의 목적어) / that + 주어 + 동사 → “~라는 것”(heard의 목적어)', note: '교과서 언어 형식(Do you want to save the Earth? / I heard that plastic never goes away completely.)과 같은 짜임이다.'},
     points: [
-      { id: 'g1', name: '조동사 should · must', short: 'should · must', form: 'should / must + 동사원형', meaning: '~해야 한다 (충고 / 의무)',
+      { id: 'g1', name: 'to부정사 (명사적 용법)', short: 'to부정사', form: 'want / plan / decide / hope / need + to + 동사원형', meaning: '~하는 것, ~하기를',
         notice: [
-          {en: 'You {{should}} eat more vegetables.', ko: '너는 채소를 더 먹어야 한다. (충고)'},
-          {en: 'We {{must}} water the plants every day.', ko: '우리는 매일 식물에 물을 줘야 한다. (의무)'},
-          {en: 'You {{must not}} use chemicals.', ko: '너는 화학 물질을 쓰면 안 된다. (금지)'}
+          {en: 'I {{want to}} reduce my trash.', ko: '나는 쓰레기를 줄이고 싶다.'},
+          {en: 'She {{decided to}} fix her old bag.', ko: '그녀는 낡은 가방을 고치기로 결심했다.'},
+          {en: 'We {{need to}} bring our own cups.', ko: '우리는 자기 컵을 가져와야 한다.'}
         ],
         rule: [
-          {k: 'should', v: '좋은 생각이니 ~하는 게 좋다 (부정 shouldn’t)', ex: 'You shouldn’t waste food.'},
-          {k: 'must', v: '꼭 해야 한다 / must not: ~하면 안 된다', ex: 'You must wear gloves.'},
-          {k: '주의', v: '뒤에 동사원형, 3인칭이어도 -s 없음', ex: 'She should drink water. (○) / shoulds (✗)'}
+          {k: '형태', v: 'to + 동사원형 (주어·시제와 상관없이 늘 원형)', ex: 'He wants to plog. (wants to plogs ✗)'},
+          {k: '목적어', v: 'want, hope, plan, decide, need, learn + to부정사', ex: 'I learned to sew.'},
+          {k: '주어·보어', v: 'To recycle is easy. / My plan is to plant seeds.', ex: 'My goal is to reduce waste.'}
         ],
+        compare: {
+          title: '목적어로 무엇을 쓸까?', note: 'want, decide는 to부정사만, enjoy, finish는 동명사만, like, start는 둘 다.',
+          head: ['to부정사만', '동명사만', '둘 다'],
+          cols: [['want to ~', 'decide to ~', 'plan to ~'], ['enjoy -ing', 'finish -ing', 'mind -ing'], ['like', 'love', 'start']]
+        },
         check: [
-          {q: 'You ____ wash your hands. (충고)', a: 'should'},
-          {q: 'We must ____ the seeds today. (plant)', a: 'plant'},
-          {q: 'You ____ ____ step on the plants. (금지, must)', a: 'must not'},
-          {q: 'He shouldn’t ____ away food. (throw)', a: 'throw'},
-          {q: 'She ____ wear a hat in the sun. (should)', a: 'should'}
+          {q: 'I want ____ the Earth. (save)', a: 'to save'},
+          {q: 'She decided ____ her bag. (fix)', a: 'to fix'},
+          {q: 'We plan ____ a secondhand market. (open)', a: 'to open'},
+          {q: 'He needs ____ less plastic. (use)', a: 'to use'},
+          {q: 'My goal is ____ food waste. (reduce)', a: 'to reduce'}
         ],
-        trap: {bad: 'You should to eat fresh food.', good: 'You should eat fresh food.', why: 'should 뒤에는 to 없이 동사원형.'},
+        trap: {bad: 'I decided fixing my bag.', good: 'I decided to fix my bag.', why: 'decide는 to부정사를 목적어로 쓴다.'},
         scramble: [
-          {ko: '우리는 음식을 낭비하면 안 된다.', en: 'We should not waste food.'},
-          {ko: '너는 매일 아침 식물에 물을 줘야 한다.', en: 'You must water the plants every morning.'},
-          {ko: '우리는 지역 음식을 먹어야 한다.', en: 'We should eat local food.'}
+          {ko: '나는 쓰레기를 줄이고 싶다.', en: 'I want to reduce my trash.'},
+          {ko: '그는 낡은 셔츠를 꿰매기로 결심했다.', en: 'He decided to sew his old shirt.'},
+          {ko: '우리는 자기 용기를 가져와야 한다.', en: 'We need to bring our own containers.'}
         ]
       },
-      { id: 'g2', name: '접속사 when', short: '접속사 when', form: 'When + 주어 + 동사, 주어 + 동사', meaning: '~할 때',
+      { id: 'g2', name: '접속사 that', short: '접속사 that', form: 'think / know / hear / learn + (that) + 주어 + 동사', meaning: '~라는 것을, ~라고',
         notice: [
-          {en: '{{When}} the tomato turns red, we pick it.', ko: '토마토가 빨개지면 우리는 그것을 딴다.'},
-          {en: 'I feel happy {{when}} I work in the garden.', ko: '나는 텃밭에서 일할 때 행복하다.'},
-          {en: '{{When}} it rains, we don’t water the plants.', ko: '비가 올 때 우리는 식물에 물을 주지 않는다.'}
+          {en: 'I heard {{that}} plastic never goes away completely.', ko: '나는 플라스틱이 결코 완전히 사라지지 않는다고 들었다.'},
+          {en: 'I think {{that}} plogging is fun.', ko: '나는 플로깅이 재미있다고 생각한다.'},
+          {en: 'We learned {{that}} labels make recycling hard.', ko: '우리는 라벨이 재활용을 어렵게 한다는 것을 배웠다.'}
         ],
         rule: [
-          {k: '자리', v: 'When절이 앞이면 쉼표(,) / 뒤에 오면 쉼표 없음', ex: 'We pick it when it turns red.'},
-          {k: '구별', v: '의문사 When? (언제?)과 다르다', ex: 'When do you water them? (언제)'},
-          {k: '시제', v: '앞일이 미래라도 when절은 현재시제', ex: 'When summer comes, we will harvest.'}
+          {k: '역할', v: 'that + 주어 + 동사 = “~라는 것” (동사의 목적어가 되는 문장 덩어리)', ex: 'I know that you are busy.'},
+          {k: '생략', v: '목적어 자리의 that은 자주 생략한다', ex: 'I think (that) it’s a good idea.'},
+          {k: '부정', v: '“~가 아니라고 생각한다”는 보통 I don’t think that ~', ex: 'I don’t think that the bag looks perfect.'}
         ],
         check: [
-          {q: '____ I get home, I eat a snack. (~할 때)', a: 'When'},
-          {q: 'We were happy when we ____ the corn. (pick, 과거)', a: 'picked'},
-          {q: 'When it ____ hot, the plants need more water. (be)', a: 'is'},
-          {q: 'I wear gloves ____ I work in the garden.', a: 'when'},
-          {q: 'When the seeds ____, we will be excited. (grow)', a: 'grow'}
+          {q: 'I think ____ recycling is important. (접속사)', a: 'that'},
+          {q: 'She knows that I ____ a reusable cup. (use)', a: 'use'},
+          {q: 'I heard that he ____ a new bag yesterday. (buy)', a: 'bought'},
+          {q: 'I ____ think that it is perfect. (부정)', a: 'don’t'},
+          {q: 'We learned ____ plastic hurts sea animals. (접속사)', a: 'that'}
         ],
-        trap: {bad: 'When it will rain, we will stay inside.', good: 'When it rains, we will stay inside.', why: '시간을 나타내는 when절에서는 미래 일도 현재시제로 쓴다.'},
+        trap: {bad: 'I think that is plogging fun.', good: 'I think that plogging is fun.', why: 'that 뒤에는 평서문 어순(주어 + 동사).'},
         scramble: [
-          {ko: '나는 텃밭에 있을 때 행복하다.', en: 'I am happy when I am in the garden.'},
-          {ko: '토마토가 빨개지면 우리는 그것을 딴다.', en: 'When the tomatoes turn red, we pick them.'},
-          {ko: '비가 올 때 우리는 물을 주지 않는다.', en: 'When it rains, we don’t water.'}
+          {ko: '나는 플라스틱이 사라지지 않는다고 들었다.', en: 'I heard that plastic doesn’t go away.'},
+          {ko: '나는 중고 옷이 멋지다고 생각한다.', en: 'I think that secondhand clothes are cool.'},
+          {ko: '나는 그 가방이 완벽해 보인다고 생각하지 않는다.', en: 'I don’t think that the bag looks perfect.'}
         ]
       }
     ],
-    wrap: {en: 'We should ______. When ______, I ______.', ko: 'should 한 문장, when 한 문장으로 지구를 위한 실천 쓰기'},
-    wrapEx: 'We should not throw away food. When I eat lunch, I finish my vegetables.'
+    wrap: {en: 'I want to ______. I think that ______.', ko: '내가 해 보고 싶은 환경 실천(to부정사)과 그에 대한 내 생각(that절) 쓰기'},
+    wrapEx: 'I want to bring my own container to the bakery. I think that it can reduce a lot of plastic.'
   },
 
   reading: {
-    title: 'Our Rooftop Garden', kind: '학교 소식지 기사', cover: 'Seed', coverKo: '옥상 위의 작은 밭', cover2: 'Harvest', coverKo2: '우리가 거둔 것',
+    title: 'Our Green Week Stories', kind: '환경 동아리 게시판', cover: 'Green', coverKo: '쓰레기 줄이기 도전', cover2: 'Zero Waste', coverKo2: '작은 실천, 큰 변화',
     before: [
-      {q: 'Look at the title. Where is the garden?', a: '옥상 (rooftop)'},
-      {q: 'Why do people grow food at school?', a: '자유롭게 예측한 뒤 글에서 확인'}
+      {q: 'Look at the title. What did the students do for a week?', a: '쓰레기를 줄이는 도전'},
+      {q: 'What can you do to reduce trash?', a: '자기 컵 쓰기, 재활용, 중고 물건 쓰기 등'}
     ],
-    gloss: {'gray': '회색의', 'boxes': '상자들', 'lettuce': '상추', 'peppers': '고추', 'sprout': '싹', 'ladybugs': '무당벌레', 'trucks': '트럭', 'salad': '샐러드', 'neighbors': '이웃', 'proud': '자랑스러운'},
+    gloss: {'Green Week': '그린 주간(환경 실천 주간)', 'market': '장터', 'swap': '맞바꾸다', 'bottle cap': '병뚜껑', 'glue': '접착제', 'root': '뿌리', 'green onion': '파', 'scrap': '조각, 남은 것'},
     paras: [
-      {who: 'Spring', en: 'Our school rooftop used to be empty and gray. This spring, the garden club changed it. We put twenty wooden boxes on the rooftop and filled them with soil.',
-       ko: '우리 학교 옥상은 예전에 텅 비고 회색이었다. 올봄 텃밭 동아리가 그곳을 바꿨다. 우리는 옥상에 나무 상자 스무 개를 놓고 흙을 채웠다.',
-       check: {q: 'What did the garden club put on the rooftop?', a: 'Twenty wooden boxes (filled with soil).'}, think: '우리 학교에서 텃밭을 만들 수 있는 곳은?'},
-      {who: 'Why a Garden?', en: 'Why did we start a garden? Food in stores often comes from far away. Big trucks carry it for a long time, and they make air pollution. When we grow our own food, it travels zero kilometers!',
-       ko: '왜 텃밭을 시작했을까? 가게의 음식은 흔히 먼 곳에서 온다. 큰 트럭이 오랫동안 실어 나르고, 트럭은 대기 오염을 만든다. 우리가 먹을 것을 직접 기르면 음식이 이동하는 거리는 0킬로미터다!',
-       check: {q: 'Why is store food not always good for the Earth?', a: 'Big trucks carry it from far away and make air pollution.'}, think: '‘0킬로미터 음식’은 무슨 뜻일까?'},
-      {who: 'Rules', en: 'Our teacher, Mr. Jang, gave us some rules. “You must water the plants every day. You must not use chemicals. And you should be patient.” We planted lettuce, tomatoes, and peppers.',
-       ko: '장 선생님은 우리에게 몇 가지 규칙을 주셨다. “매일 식물에 물을 줘야 한다. 화학 물질은 쓰면 안 된다. 그리고 참을성을 가져야 한다.” 우리는 상추, 토마토, 고추를 심었다.',
-       check: {q: 'What did they plant?', a: 'Lettuce, tomatoes, and peppers.'}, think: '왜 참을성이 필요할까?'},
-      {who: 'Summer', en: 'At first, nothing happened. Then one morning, we saw tiny green sprouts. When bugs ate the leaves, we didn’t use sprays. We picked off the bugs and welcomed ladybugs. Little by little, the plants grew.',
-       ko: '처음에는 아무 일도 일어나지 않았다. 그러다 어느 아침, 아주 작은 초록 싹이 보였다. 벌레가 잎을 먹었을 때 우리는 스프레이를 쓰지 않았다. 벌레를 손으로 떼어 내고 무당벌레를 반겼다. 조금씩 식물이 자랐다.',
-       check: {q: 'What did they do when bugs ate the leaves?', a: 'They picked off the bugs and welcomed ladybugs.'}, think: '무당벌레를 반긴 까닭은?'},
-      {who: 'Harvest', en: 'In July, we had our first harvest. We made a big salad with our lettuce and tomatoes. It tasted fresher than store salad! We also shared some vegetables with our neighbors.',
-       ko: '7월에 첫 수확을 했다. 우리가 키운 상추와 토마토로 큰 샐러드를 만들었다. 가게 샐러드보다 더 신선한 맛이 났다! 채소 일부는 이웃과 나누기도 했다.',
-       check: {q: 'What did they make with their vegetables?', a: 'A big salad.'}, think: '직접 기른 음식이 더 맛있게 느껴지는 까닭은?'},
-      {who: 'What We Learned', en: 'Our garden is good for the Earth because it saves energy. It is good for us, too. We eat fresh food, we work together, and we feel proud. What can you grow?',
-       ko: '우리 텃밭은 에너지를 아끼기 때문에 지구에 좋다. 우리에게도 좋다. 우리는 신선한 음식을 먹고, 함께 일하고, 뿌듯함을 느낀다. 여러분은 무엇을 기를 수 있나요?',
-       check: {q: 'How is the garden good for the students?', a: 'They eat fresh food, work together, and feel proud.'}, think: '집에서 기를 수 있는 식물은?'}
+      {who: 'Green Club', en: 'Every day, we produce a lot of trash. Last week, our class joined Green Week. Do you want to know about our challenges? Here are four stories from our members.',
+       ko: '우리는 날마다 쓰레기를 많이 만들어 낸다. 지난주에 우리 반은 그린 주간에 참여했다. 우리의 도전에 대해 알고 싶나요? 동아리 회원 네 명의 이야기를 소개한다.',
+       check: {q: 'What did the class join last week?', a: 'Green Week.'}, think: '우리 반이 그린 주간을 연다면 무엇을 할까?'},
+      {who: 'Jia', en: 'I love new clothes, but I learned that making one T-shirt uses a lot of water. So I decided to try a secondhand market. I brought my old jacket and swapped it for a cool secondhand shirt. I think that it looks better on me!',
+       ko: '나는 새 옷을 좋아하지만, 티셔츠 한 장을 만드는 데 물이 많이 든다는 것을 알게 되었다. 그래서 중고 장터에 가 보기로 했다. 내 낡은 재킷을 가져가서 멋진 중고 셔츠와 바꿨다. 이 셔츠가 나한테 더 잘 어울리는 것 같다!',
+       check: {q: 'What did Jia swap her old jacket for?', a: 'A (cool) secondhand shirt.'}, think: '중고 옷을 사면 환경에 어떤 도움이 될까?'},
+      {who: 'Alex', en: 'On Saturday, I went plogging with my soccer team. We jogged along the river and picked up trash one by one. In one hour, we filled five bags! I hope to plog every month.',
+       ko: '토요일에 나는 축구 팀과 플로깅을 했다. 강을 따라 달리면서 쓰레기를 하나씩 주웠다. 한 시간 만에 봉투 다섯 개를 채웠다! 나는 매달 플로깅을 하고 싶다.',
+       check: {q: 'How many bags did Alex’s team fill?', a: 'Five bags.'}, think: '플로깅은 무엇과 무엇을 합친 활동일까?'},
+      {who: 'Seho', en: 'I heard that dirty bottles are hard to recycle. So I washed all our plastic bottles and took the labels off. Then I put them into a recycling machine near my house. I got some points in return. I want to use them at the school store.',
+       ko: '나는 더러운 병은 재활용하기 어렵다고 들었다. 그래서 우리 집 플라스틱병을 모두 씻고 라벨을 뗐다. 그리고 집 근처 재활용 기계에 넣었다. 그 대가로 포인트를 받았다. 그 포인트를 학교 매점에서 쓰고 싶다.',
+       check: {q: 'What did Seho get in return?', a: 'Some points.'}, think: '왜 라벨을 떼고 병을 씻어야 할까?'},
+      {who: 'Yuna', en: 'My family often throws away the roots of green onions. This time, I decided to plant them in a container with water. In a week, they grew again! Now we don’t need to buy green onions. I don’t think that my little garden looks perfect, but I love it.',
+       ko: '우리 가족은 파 뿌리를 자주 버린다. 이번에는 그것을 물이 담긴 용기에 심어 보기로 했다. 일주일 만에 파가 다시 자랐다! 이제 우리는 파를 살 필요가 없다. 내 작은 텃밭이 완벽해 보이지는 않지만 나는 정말 좋다.',
+       check: {q: 'What did Yuna plant?', a: 'The roots of green onions.'}, think: '버리는 것 가운데 다시 쓸 수 있는 것은?'},
+      {who: 'Green Club', en: 'Our challenges were small, but we learned that small things can make a big change. What do you want to try? Join our challenge, and share your story!',
+       ko: '우리의 도전은 작았지만, 작은 일이 큰 변화를 만들 수 있다는 것을 배웠다. 여러분은 무엇을 해 보고 싶나요? 우리 도전에 참여하고 이야기를 나눠 주세요!',
+       check: {q: 'What did the club learn?', a: 'Small things can make a big change.'}, think: '내가 이번 주에 해 볼 수 있는 도전은?'}
     ],
     split: 3,
-    next: '텃밭의 식물들은\n어떻게 자랐을까?',
-    recap: {q: '옥상 텃밭은 어떻게 시작됐을까?', items: [{k: 'BEFORE', v: 'an empty, gray rooftop'}, {k: 'WHY', v: 'store food travels far and trucks make pollution'}, {k: 'RULES', v: 'water every day · no chemicals · be patient'}]},
+    next: '세호와 유나는\n어떤 도전을 했을까?',
+    recap: {q: '지아와 알렉스는 어떤 도전을 했을까?', items: [{k: 'JIA', v: 'secondhand market · swapped an old jacket'}, {k: 'ALEX', v: 'plogging along the river · five bags in one hour'}]},
     tf: [
-      {p: 0, s: 'The rooftop used to be empty.', a: true},
-      {p: 1, s: 'Food in stores always comes from nearby.', a: false, why: '흔히 먼 곳에서 온다.'},
-      {p: 2, s: 'Mr. Jang said, “You must use chemicals.”', a: false, why: '화학 물질을 쓰면 안 된다.'},
-      {p: 3, s: 'The students used sprays on the bugs.', a: false, why: '손으로 떼어 냈다.'},
-      {p: 4, s: 'They shared vegetables with their neighbors.', a: true},
-      {p: 5, s: 'The garden is good for the Earth and for the students.', a: true}
+      {p: 1, s: 'Jia bought a new T-shirt.', a: false, why: 'She swapped her old jacket for a secondhand shirt.'},
+      {p: 1, s: 'Making one T-shirt uses a lot of water.', a: true},
+      {p: 2, s: 'Alex plogged alone.', a: false, why: 'He went plogging with his soccer team.'},
+      {p: 3, s: 'Seho took the labels off the bottles.', a: true},
+      {p: 4, s: 'Yuna’s green onions grew again in a week.', a: true},
+      {p: 4, s: 'Yuna thinks that her garden looks perfect.', a: false, why: 'I don’t think that my little garden looks perfect.'}
     ],
     key: [
-      {en: '{{When}} we grow our own food, it travels zero kilometers!', note: 'When + 주어 + 동사: ~할 때', g: 'g2'},
-      {en: 'You {{must water}} the plants every day.', note: 'must + 동사원형: 의무', g: 'g1'},
-      {en: 'You {{must not use}} chemicals.', note: 'must not: 금지', g: 'g1'},
-      {en: 'You {{should be}} patient.', note: 'should + be + 형용사', g: 'g1'},
-      {en: '{{When}} bugs ate the leaves, we didn’t use sprays.', note: 'When절 (과거)', g: 'g2'},
-      {en: 'It {{tasted fresher}} than store salad!', note: '감각동사 + 비교급', g: ''}
+      {en: 'Do you {{want to know}} about our challenges?', note: 'want + to부정사', g: 'g1'},
+      {en: 'I learned {{that}} making one T-shirt uses a lot of water.', note: 'learn + that절', g: 'g2'},
+      {en: 'So I {{decided to try}} a secondhand market.', note: 'decide + to부정사', g: 'g1'},
+      {en: 'I {{hope to plog}} every month.', note: 'hope + to부정사', g: 'g1'},
+      {en: 'I heard {{that}} dirty bottles are hard to recycle.', note: 'hear + that절', g: 'g2'},
+      {en: 'I don’t think {{that}} my little garden looks perfect.', note: 'don’t think + that절', g: 'g2'}
     ],
-    summary: {text: 'The garden club made a {{rooftop}} garden. Food from far away needs {{trucks}}, so growing our own food is good for the Earth. The students must {{water}} the plants and must not use {{chemicals}}. In July, they made a {{salad}} and shared vegetables with their {{neighbors}}.'},
-    order: ['They put boxes on the rooftop.', 'They planted lettuce and tomatoes.', 'Tiny green sprouts came up.', 'They had their first harvest.'],
-    chart: {title: 'GOOD FOR...', ko: '텃밭의 좋은 점 정리하기', cols: ['How?'], note: '‘지구에 좋은 점’과 ‘우리에게 좋은 점’을 나누어 말하게 하고 관통 질문에 답한다.', rows: [
-      {name: 'The Earth', cells: ['no trucks, no chemicals, saves energy']},
-      {name: 'Our body', cells: ['fresh, healthy food']},
-      {name: 'Our mind', cells: ['work together, feel proud']}
+    summary: {text: 'Jia swapped her jacket for a {{secondhand}} shirt. Alex went {{plogging}} and filled five bags. Seho took the {{labels}} off bottles and got points in {{return}}. Yuna decided to {{plant}} green onion roots. They learned {{that}} small things can make a big change.'},
+    order: ['Seho heard that dirty bottles are hard to recycle.', 'He washed the plastic bottles.', 'He put them into a recycling machine.', 'He got some points in return.'],
+    chart: {title: 'GREEN WEEK', ko: '네 가지 도전 정리하기', cols: ['Challenge', 'What they learned / want'], note: '표를 보고 He/She decided to ~. He/She learned that ~. 문장으로 말하게 한다.', rows: [
+      {name: 'Jia', cells: ['secondhand market', 'making a T-shirt uses a lot of water']},
+      {name: 'Alex', cells: ['plogging', 'hopes to plog every month']},
+      {name: 'Seho', cells: ['washing bottles, removing labels', 'dirty bottles are hard to recycle']},
+      {name: 'Yuna', cells: ['planting green onion roots', 'doesn’t need to buy green onions']}
     ]},
-    wrap: {en: 'We should ______ for the Earth. When I ______, I feel ______. It is good for the Earth and good for us!', ko: '관통 질문으로 돌아가기: 지구와 나 모두에게 좋은 실천 쓰기'}
+    wrap: {en: 'I want to try ______. I think that ______.', ko: '관통 질문으로 돌아가기: 내가 해 볼 쓰레기 줄이기 도전과 그 까닭 쓰기'}
   },
 
   quiz: [
-    ['“씨앗”을 뜻하는 낱말은?', ['soil', 'seed', 'plant', 'insect'], 1, 'seed: 씨앗'],
-    ['“fresh”의 반대말은?', ['old', 'local', 'green', 'healthy'], 0, 'fresh ↔ old'],
-    ['“We take care ___ the plants.”', ['to', 'for', 'of', 'with'], 2, 'take care of'],
-    ['“수확”을 뜻하는 낱말은?', ['garden', 'rooftop', 'compost', 'harvest'], 3, 'harvest: 수확'],
-    ['도움을 요청하는 표현은?', ['Be careful!', 'Can you help me?', 'You must not go.', 'That sounds great.'], 1, 'Can you help me ~?'],
-    ['금지를 나타내는 표현은?', ['Sure, I can.', 'No problem at all.', 'Of course, I can help.', 'You must not do that.'], 3, 'You must not ~'],
-    ['Let’s Watch에서 퇴비 상자에 넣으면 안 되는 것은?', ['나뭇잎', '과일 껍질', '플라스틱', '바나나 껍질'], 2, 'you must not put plastic in it'],
-    ['빈칸에 알맞은 것은? “You ___ eat more vegetables.” (충고)', ['should', 'shoulds', 'should to', 'are should'], 0, 'should + 동사원형'],
-    ['빈칸에 알맞은 것은? “___ it rains, we don’t water.”', ['If', 'Why', 'What', 'When'], 3, '~할 때: When'],
-    ['어법상 틀린 문장은?', ['You must wear gloves.', 'She should drink water.', 'We should to save water.', 'You must not run in here.'], 2, 'should 뒤에 to를 쓰지 않는다.'],
-    ['빈칸에 알맞은 것은? “When summer ___, we will harvest.”', ['come', 'comes', 'came', 'will come'], 1, 'when절은 미래도 현재시제'],
-    ['옥상 텃밭을 만들기 전 옥상의 모습은?', ['텅 비고 회색이었다', '작은 창고였다', '넓은 운동장이었다', '꽃과 나무가 가득했다'], 0, 'empty and gray'],
-    ['가게 음식이 지구에 좋지 않은 까닭은?', ['값이 너무 비싸서', '맛이 별로 없어서', '트럭이 오염을 만들어서', '포장 쓰레기가 너무 많아서'], 2, 'Big trucks ... make air pollution.'],
-    ['벌레가 잎을 먹었을 때 학생들이 한 일은?', ['식물을 모두 뽑았다', '선생님께 다 맡겼다', '벌레에 스프레이를 뿌렸다', '손으로 벌레를 떼어 냈다'], 3, 'We picked off the bugs.'],
-    ['첫 수확으로 만든 것은?', ['피자', '샐러드', '김밥', '주스'], 1, 'a big salad']
+    ['“중고의”를 뜻하는 낱말은?', ['single', 'secondhand', 'completely', 'own'], 1, 'secondhand: 중고의'],
+    ['“reduce”의 반대말은?', ['recycle', 'produce', 'increase', 'reuse'], 2, 'reduce ↔ increase'],
+    ['“I got some points in ___.”', ['back', 'return', 'turn', 'time'], 1, 'in return: 보답으로'],
+    ['도움을 요청하는 표현은?', ['Can you please carry this?', 'I’m sorry, but I can’t.', 'Sure. No problem.', 'I think that it’s fun.'], 0, 'Can you please ~?'],
+    ['부탁을 들어주는 대답은?', ['I’m afraid I can’t.', 'Sure. No problem.', 'Maybe next time.', 'I’m busy now.'], 1, 'Sure. No problem.'],
+    ['거절하며 이유를 말한 것은?', ['Of course.', 'Sure.', 'I’m sorry, but I can’t. I’m busy.', 'OK. What is it?'], 2, 'I’m sorry, but I can’t. + 이유'],
+    ['Let’s Watch에서 알렉스가 대표를 맡지 못하는 까닭은?', ['아파서', '매일 아침 축구 연습이 있어서', '포스터를 만들어야 해서', '할머니 댁에 가야 해서'], 1, 'I have soccer practice every morning.'],
+    ['빈칸에 알맞은 것은? “I want ___ the Earth.”', ['save', 'saving', 'to save', 'saved'], 2, 'want + to부정사'],
+    ['빈칸에 알맞은 것은? “I heard ___ plastic never goes away.”', ['what', 'that', 'to', 'it'], 1, 'hear + that절'],
+    ['어법상 틀린 문장은?', ['I decided to fix it.', 'She wants to plog.', 'I enjoy to recycle.', 'I think that it’s cool.'], 2, 'I enjoy recycling.'],
+    ['빈칸에 알맞은 것은? “I don’t think that it ___ perfect.”', ['look', 'looks', 'looking', 'to look'], 1, 'that절의 주어 it + looks'],
+    ['지아가 중고 장터에 간 까닭은?', ['새 옷이 비싸서', '티셔츠를 만드는 데 물이 많이 든다는 것을 알아서', '재킷이 작아져서', '친구가 불러서'], 1, 'I learned that making one T-shirt uses a lot of water.'],
+    ['알렉스 팀이 한 시간 동안 채운 봉투 수는?', ['한 개', '세 개', '다섯 개', '열 개'], 2, 'we filled five bags'],
+    ['세호가 재활용 전에 한 일은?', ['병을 찢었다', '병을 씻고 라벨을 뗐다', '병을 중고로 팔았다', '병에 파를 심었다'], 1, 'I washed all our plastic bottles and took the labels off.'],
+    ['글의 요지로 알맞은 것은?', ['쓰레기는 기계로 줄인다', '작은 실천이 큰 변화를 만든다', '새 옷을 사지 말자', '플로깅은 힘들다'], 1, 'small things can make a big change']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {challenge: '/ˈtʃælɪndʒ/', environment: '/ɪnˈvaɪrənmənt/', reduce: '/rɪˈduːs/', recycle: '/ˌriːˈsaɪkl/', produce: '/prəˈduːs/', single: '/ˈsɪŋɡl/', container: '/kənˈteɪnər/', own: '/oʊn/', secondhand: '/ˌsekəndˈhænd/', plog: '/plɑːɡ/', label: '/ˈleɪbl/', machine: '/məˈʃiːn/', leftover: '/ˈleftoʊvər/', delivery: '/dɪˈlɪvəri/', completely: '/kəmˈpliːtli/', plant: '/plænt/', leader: '/ˈliːdər/', favor: '/ˈfeɪvər/', tear: '/ter/', sew: '/soʊ/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'recycle', ko: '재활용하다', parts: [{t: 're', k: 'pre', m: '다시'}, {t: 'cycle', k: 'root', m: '돌다, 순환'}], family: ['reuse', 'reduce', 'bicycle'], note: '다시(re) 돌게 하다 → 재활용하다.'},
+    {w: 'secondhand', ko: '중고의', parts: [{t: 'second', k: 'root', m: '두 번째'}, {t: 'hand', k: 'root', m: '손'}], family: ['handmade', 'handwriting'], note: '두 번째 사람의 손에 들어간 → 중고의.'},
+    {w: 'leftover', ko: '남은 음식', parts: [{t: 'left', k: 'root', m: '남겨진 (leave의 과거분사)'}, {t: 'over', k: 'root', m: '넘어서, 남아서'}], family: ['leave', 'left', 'takeover'], note: '먹고 남겨진(left) 것 → 남은 음식. 보통 복수형 leftovers.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: 'want 뒤에는 왜 to가 붙을까?',
+    pic: [{en: 'I want', ko: '바라다'}, {en: 'to →', ko: '~쪽으로 (앞으로 할 일)', hot: true}, {en: 'save the Earth', ko: '하고 싶은 일'}],
+    core: 'to의 원래 뜻은 “~쪽으로”다. to + 동사원형은 아직 하지 않은 “앞으로 할 일”을 가리키므로, want·hope·plan·decide처럼 앞을 바라보는 동사와 함께 쓰인다.',
+    why: ['to 뒤에는 늘 동사원형 (to becomes ✗ → to become).', 'want to, hope to, plan to, decide to = ~하고 싶다/~하기를 바라다/~할 계획이다/~하기로 결심하다.', '“~하는 것”이라는 명사 역할을 하므로 명사적 용법이라고 부른다.']
+  };
+  g1.anim = [{title: '하고 싶은 일을 to 뒤에 붙이면', states: [
+    {t: 'I/S | want/V | a new bag/O#o | .', note: '목적어 = 명사', ko: '나는 새 가방을 원한다.'},
+    {t: 'I/S | want/V | to fix/X#o | my old bag | .', note: '목적어 자리에 to + 동사원형 (앞으로 할 일)', ko: '나는 낡은 가방을 고치고 싶다.'}]}];
+  g1.contrast = {title: 'to 뒤에는 동사원형', pairs: [
+    {a: 'She decided {{to plant}} the roots.', ka: '그녀는 뿌리를 심기로 결심했다. (to + 원형)', b: 'She {{planted}} the roots last week.', kb: '그녀는 지난주에 뿌리를 심었다. (과거 동사)'}],
+    point: 'to 뒤에서는 시제·주어와 상관없이 동사원형.'};
+  g2.principle = {
+    q: 'that은 어떻게 문장 하나를 통째로 목적어로 만들까?',
+    pic: [{en: 'I think', ko: '생각하다'}, {en: 'that', ko: '포장지', hot: true}, {en: 'plogging is fun', ko: '생각의 내용 (문장)'}],
+    core: '접속사 that은 문장 하나를 “~라는 것”이라는 명사 덩어리로 포장해 준다. 그래서 think, know, believe의 목적어 자리에 문장이 통째로 들어갈 수 있다.',
+    why: ['that 뒤에는 주어와 동사가 다 갖춰진 완전한 문장이 온다.', '목적어 자리의 that은 자주 생략된다 (I think plogging is fun).', '관계대명사 that(뒤가 불완전)과 구별: 접속사 that은 뒤가 완전하다.']
+  };
+  g2.anim = [{title: '문장을 that으로 포장해 목적어로', states: [
+    {t: 'Plastic/S#e | never goes away/V#v | completely/M#f | . | / | I/S | heard/V | it | .', note: '두 문장', ko: '플라스틱은 결코 완전히 사라지지 않는다. 나는 그것을 들었다.'},
+    {t: 'I/S | heard/V | that/X | plastic/S#e | never goes away/V#v | completely/M#f | .', note: 'that + 문장 = heard의 목적어', ko: '나는 플라스틱이 결코 완전히 사라지지 않는다고 들었다.'},
+    {t: 'I/S | heard/V | plastic/S#e | never goes away/V#v | completely/M#f | .', note: '목적어 that은 생략할 수 있다', ko: '같은 뜻'}]}];
+  g2.contrast = {title: '접속사 that vs 관계대명사 that', pairs: [
+    {a: 'I think {{that}} plogging is fun.', ka: '나는 플로깅이 재미있다고 생각한다. (that + 주어 + 동사)', b: 'I think {{so}}.', kb: '나는 그렇게 생각한다. (짧게 받는 말)'}],
+    point: 'think, know, hear, learn 뒤의 that + 주어 + 동사 = “~라는 것”.'};
+})(window.LESSON);
