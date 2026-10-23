@@ -35,7 +35,7 @@ window.CATALOG = [
       {no: 2, ready: true, title: 'How Teens Talk Now', ko: '요즘 십대는 어떻게 말할까', talk: ['되묻기', '철자 묻고 답하기'], grammar: ['간접의문문', 'want + 목적어 + to부정사'], read: '단체 채팅 요령 기사 (교과서: Text Better, Communicate Better!)'},
       {no: 3, ready: true, title: 'What a Great Idea!', ko: '정말 멋진 생각이야!', talk: ['확신 여부 묻고 답하기', '정보 묻기'], grammar: ['수동태', 'have to · had to'], read: '발명 이야기 칼럼 (교과서: Necessity Is the Mother of Invention)'},
       {no: 4, ready: true, title: 'Are You Money Smart?', ko: '나는 돈을 현명하게 쓸까?', talk: ['물건 사기 (찾기 · 다른 것 보기)', '물건 사기 (가격 · 사기)'], grammar: ['주격 관계대명사', '조건의 if'], read: '소비자 교육 기사 (교과서: Be a Smart Shopper)'},
-      {no: 5, ready: true, estimate: true, title: 'The City as a Canvas', ko: '도시라는 캔버스', talk: ['감상 묻고 답하기', '길 묻고 안내하기'], grammar: ['목적격 관계대명사', 'used to'], read: '여행 잡지 특집 기사'},
+      {no: 5, ready: true, title: 'The City as a Canvas', ko: '도시라는 캔버스', talk: ['교통수단 묻고 답하기', '소요 시간 묻고 답하기'], grammar: ['목적격 관계대명사', 'used to'], read: '벽화 거리 특집 기사 (교과서: Street Art in London)'},
       {no: 6, ready: true, estimate: true, title: 'The Greatest Love for All', ko: '모두를 위한 가장 큰 사랑', talk: ['감사 표현하기', '위로·격려하기'], grammar: ['지각동사 + 목적어 + 동사원형/-ing', 'so ~ that'], read: '단편 이야기'},
       {no: 7, ready: true, estimate: true, title: 'Let\u2019s Enjoy Festivals', ko: '축제를 즐겨요', talk: ['알고 있는지 묻기', '초대하고 답하기'], grammar: ['It ~ to부정사', 'call A B'], read: '세계 축제 소개 기사'},
       {no: 8, ready: true, estimate: true, title: 'Time Travel', ko: '시간 여행', talk: ['경험 묻고 답하기', '기대 표현하기'], grammar: ['현재완료', 'something + 형용사'], read: '단편 이야기 (판타지)'}

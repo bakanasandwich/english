@@ -1,14 +1,21 @@
 /* 중2 영어(동아·윤정미) Lesson 5 · The City as a Canvas
-   단원명과 문법(목적격 관계대명사, used to)은 교과서 목차·문제집 목차 기준.
-   의사소통 기능은 추정(estimate: true). 대화문·읽기 글은 교과서 원문이 아니라 새로 쓴 글입니다.
+   교과서 대조(2026-10): 의사소통 기능(교통수단 묻고 답하기 · 소요 시간 묻고 답하기), 언어 형식(목적격 관계대명사 · used to),
+   읽기 주제(Street Art in London — 도시의 거리 예술을 둘러보는 투어), 단원 어휘를 교과서 본문 어휘와 맞췄다.
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식으로 새로 쓴 글이다.
    읽기 글의 장소(감천문화마을, 윈우드 월스, 이화 벽화마을)는 널리 알려진 사실을 바탕으로 했습니다. */
 window.LESSON = {
-  book: 'm2-donga', no: 5, estimate: true,
+  book: 'm2-donga', no: 5,
   title: 'The City as a Canvas', ko: '도시라는 캔버스',
   bigQ: {en: 'Who is art in the city for?', ko: '도시의 예술은 누구를 위한 것일까?'},
+  align: {
+    tb: {reading: 'Street Art in London', funcs: ['교통수단 묻고 답하기', '소요 시간 묻고 답하기'], forms: ['목적격 관계대명사 (The place that we are going to visit)', 'used to (Poor workers used to live in this area.)'],
+      note: '교과서 읽기는 안내원과 함께 런던의 거리 예술(쇼디치, 핀즈버리 파크, 머즈웰 힐)을 둘러보는 투어 글. 여기 본문은 세 도시의 벽화 거리(부산 감천, 마이애미 윈우드, 서울 이화)를 다룬 특집 기사로, 같은 주제와 같은 언어 형식으로 새로 쓴 글이다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-02', '9영02-03'], grammar: ['9영02-04'], read1: ['9영01-03', '9영01-04'], read2: ['9영01-09', '9영02-06']},
+    forms: ['Relative Clauses', 'Modals']
+  },
   goals: {
-    vocab: ['도시·예술과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 우리 동네의 장소를 한 문장으로 설명할 수 있다.'],
-    talk: ['작품이나 장소에 대한 감상을 묻고 답할 수 있다.', '길을 묻고 안내할 수 있다.'],
+    vocab: ['거리 예술·도시와 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 우리 동네의 장소를 한 문장으로 설명할 수 있다.'],
+    talk: ['교통수단을 묻고 답할 수 있다. (How can I get to ~? — You can get there by ~.)', '걸리는 시간을 묻고 답할 수 있다. (How long will it take? — It’ll take about ~.)'],
     grammar: ['목적격 관계대명사로 사람·사물을 자세히 설명할 수 있다.', 'used to로 과거의 습관이나 상태를 말할 수 있다.'],
     read1: ['글의 주제를 예측하고, 감천문화마을이 바뀐 과정을 이해할 수 있다.'],
     read2: ['세 장소의 과거와 현재를 비교하고, 공공 예술에 대한 나의 생각을 영어로 쓸 수 있다.']
@@ -21,30 +28,30 @@ window.LESSON = {
       {w: 'mural', pos: 'n.', ko: '벽화', ic: '🎨', audio: 'assets/audio/mural.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Students painted a mural at school.', exKo: '학생들이 학교에 벽화를 그렸다.'},
       {w: 'artist', pos: 'n.', ko: '예술가, 화가', ic: '👩‍🎨', audio: 'assets/audio/artist.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The artist used bright colors.', exKo: '그 화가는 밝은 색을 썼다.'},
       {w: 'neighborhood', pos: 'n.', ko: '동네, 이웃', ic: '🏘️', audio: 'assets/audio/neighborhood.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Our neighborhood is quiet.', exKo: '우리 동네는 조용하다.'},
-      {w: 'village', pos: 'n.', ko: '마을', ic: '🏡', audio: 'assets/audio/village.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The village is on a hill.', exKo: '그 마을은 언덕 위에 있다.'},
       {w: 'resident', pos: 'n.', ko: '주민', ic: '🧑‍🤝‍🧑', ex: 'The residents painted their houses.', exKo: '주민들이 집을 칠했다.'},
       {w: 'visitor', pos: 'n.', ko: '방문객', ic: '🧳', audio: 'assets/audio/visitor.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Many visitors take photos here.', exKo: '많은 방문객이 여기서 사진을 찍는다.'},
+      {w: 'warehouse', pos: 'n.', ko: '창고', ic: '🏭', ex: 'The old warehouse is now a gallery.', exKo: '그 오래된 창고는 이제 미술관이다.'},
+      {w: 'popular', pos: 'adj.', ko: '인기 있는', ic: '⭐', audio: 'assets/audio/popular.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'This place is popular with tourists.', exKo: '이곳은 관광객에게 인기 있다.'},
       {w: 'colorful', pos: 'adj.', ko: '다채로운, 알록달록한', ic: '🌈', ex: 'The houses are colorful.', exKo: '집들이 알록달록하다.'},
       {w: 'empty', pos: 'adj.', ko: '텅 빈', ic: '🫙', audio: 'assets/audio/empty.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The street used to be empty.', exKo: '그 거리는 예전에 텅 비어 있었다.'},
-      {w: 'gray', pos: 'adj.', ko: '회색의', ic: '🩶', audio: 'assets/audio/gray.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The old walls were gray.', exKo: '오래된 벽은 회색이었다.'},
-      {w: 'public', pos: 'adj.', ko: '공공의', ic: '🏛️', audio: 'assets/audio/public.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Public art is for everyone.', exKo: '공공 예술은 모두를 위한 것이다.'},
-      {w: 'turn', pos: 'v.', ko: '바뀌다, 변하다', ic: '🔄', audio: 'assets/audio/turn.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The area turned into an art street.', exKo: '그 지역은 예술 거리로 바뀌었다.'},
-      {w: 'noise', pos: 'n.', ko: '소음', ic: '🔊', audio: 'assets/audio/noise.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The noise kept me awake.', exKo: '소음 때문에 잠을 못 잤다.'},
-      {w: 'respect', pos: 'v./n.', ko: '존중하다; 존중', ic: '🤝', ex: 'Respect the people who live here.', exKo: '여기 사는 사람들을 존중하라.'},
-      {w: 'local', pos: 'adj.', ko: '지역의', ic: '📍', audio: 'assets/audio/local.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Local artists joined the project.', exKo: '지역 예술가들이 그 사업에 참여했다.'},
-      {w: 'warehouse', pos: 'n.', ko: '창고', ic: '🏭', ex: 'The old warehouse is now a gallery.', exKo: '그 오래된 창고는 이제 미술관이다.'},
-      {w: 'gallery', pos: 'n.', ko: '미술관, 화랑', ic: '🖌️', ex: 'We visited a small gallery.', exKo: '우리는 작은 미술관을 방문했다.'},
-      {w: 'stair', pos: 'n.', ko: '계단 (한 칸)', ic: '🪜', audio: 'assets/audio/stair.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Flowers were painted on the stairs.', exKo: '계단에 꽃이 그려져 있었다.'},
-      {w: 'remove', pos: 'v.', ko: '없애다, 제거하다', ic: '🧽', audio: 'assets/audio/remove.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'They removed the old posters.', exKo: '그들은 오래된 포스터를 떼어 냈다.'},
-      {w: 'popular', pos: 'adj.', ko: '인기 있는', ic: '⭐', audio: 'assets/audio/popular.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'This place is popular with tourists.', exKo: '이곳은 관광객에게 인기 있다.'}
+      {w: 'artwork', pos: 'n.', ko: '예술 작품', ic: '🖼️', ex: 'This artwork is by a famous street artist.', exKo: '이 작품은 유명한 거리 예술가의 것이다.'},
+      {w: 'lively', pos: 'adj.', ko: '활기찬', ic: '🎉', ex: 'Street art makes the city lively.', exKo: '거리 예술은 도시를 활기차게 만든다.'},
+      {w: 'well-known', pos: 'adj.', ko: '잘 알려진, 유명한', ic: '⭐', ex: 'It is a well-known mural.', exKo: '그것은 잘 알려진 벽화다.'},
+      {w: 'form', pos: 'n.', ko: '형태, 종류', ic: '🔷', ex: 'Street art comes in many forms.', exKo: '거리 예술에는 여러 형태가 있다.'},
+      {w: 'represent', pos: 'v.', ko: '나타내다, 상징하다', ic: '🔣', ex: 'The three figures represent the past, present, and future.', exKo: '세 인물은 과거, 현재, 미래를 나타낸다.'},
+      {w: 'figure', pos: 'n.', ko: '인물, 모양', ic: '🧍', ex: 'Look at the eyes of the figure.', exKo: '그 인물의 눈을 보아라.'},
+      {w: 'spray', pos: 'v.', ko: '(물감 등을) 뿌리다', ic: '🎨', ex: 'He sprayed green paint on the wall.', exKo: '그는 벽에 초록 물감을 뿌렸다.'},
+      {w: 'message', pos: 'n.', ko: '메시지, 전하는 뜻', ic: '💬', ex: 'His art carries a social message.', exKo: '그의 작품은 사회적 메시지를 담고 있다.'},
+      {w: 'tiny', pos: 'adj.', ko: '아주 작은', ic: '🔍', ex: 'The paintings are tiny.', exKo: '그 그림들은 아주 작다.'},
+      {w: 'pleasure', pos: 'n.', ko: '기쁨, 즐거움', ic: '😊', ex: 'Art gives pleasure to many people.', exKo: '예술은 많은 사람에게 기쁨을 준다.'}
     ],
     phrases: [
-      {w: 'used to', ko: '(예전에) ~하곤 했다, ~이었다', ex: 'This street used to be dark.', exKo: '이 거리는 예전에 어두웠다.'},
-      {w: 'turn A into B', ko: 'A를 B로 바꾸다', ex: 'They turned the wall into art.', exKo: '그들은 벽을 예술로 바꾸었다.'},
-      {w: 'take a picture', ko: '사진을 찍다', ex: 'Let’s take a picture here.', exKo: '여기서 사진 찍자.'},
-      {w: 'get lost', ko: '길을 잃다', ex: 'It’s easy to get lost in the alleys.', exKo: '골목에서 길을 잃기 쉽다.'},
-      {w: 'paint over', ko: '(그림 위를) 덧칠해 지우다', ex: 'They painted over the mural.', exKo: '그들은 벽화를 덧칠해 지웠다.'},
-      {w: 'be proud of', ko: '~을 자랑스러워하다', ex: 'The residents are proud of their village.', exKo: '주민들은 마을을 자랑스러워한다.'}
+      {w: 'used to', ko: '(예전에) ~하곤 했다, ~였다', ex: 'Poor workers used to live here.', exKo: '예전에는 가난한 노동자들이 여기 살았다.'},
+      {w: 'How can I get to ~?', ko: '~에 어떻게 가나요?', ex: 'How can I get to the museum?', exKo: '박물관에 어떻게 가나요?'},
+      {w: 'How long will it take?', ko: '얼마나 걸릴까요?', ex: 'How long will it take by bus?', exKo: '버스로 얼마나 걸릴까요?'},
+      {w: 'be famous for', ko: '~으로 유명하다', ex: 'The area is famous for street art.', exKo: '그 지역은 거리 예술로 유명하다.'},
+      {w: 'paint over', ko: '덧칠해 지우다', ex: 'They painted over the mural.', exKo: '그들은 벽화를 덧칠해 지웠다.'},
+      {w: 'be proud of', ko: '~을 자랑스러워하다', ex: 'The residents are proud of their village.', exKo: '주민들은 자기 마을을 자랑스러워한다.'}
     ],
     pairs: [
       {a: 'empty', b: 'full', rel: '반대말'},
@@ -56,60 +63,56 @@ window.LESSON = {
   },
 
   talk: {
-    hook: {en: 'What place in your town do you want to show a visitor?', ko: '우리 동네에서 방문객에게 보여 주고 싶은 곳은?', note: '장소를 고르고 까닭을 말하게 한다. 그곳까지 가는 길을 영어로 설명해야 한다면? 으로 Listen & Talk 2를 예고한다.'},
+    hook: {en: 'How do you get to school every day? How long does it take?', ko: '날마다 학교에 어떻게 가나요? 얼마나 걸리나요?', note: '버스, 지하철, 걸어서, 자전거 등 답을 모으고 걸리는 시간도 함께 말하게 한다. 교통수단과 소요 시간을 묻는 표현으로 이어진다.'},
     speakers: {Haeun: {voice: 0, pitch: 1.1}, Noah: {voice: 1, pitch: .95}, Tourist: {voice: 2, pitch: 1}, Junho: {voice: 1, pitch: .9}, Mia: {voice: 0, pitch: 1.15}, Guide: {voice: 2, pitch: .95}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
     sets: [
-      { id: 'lt1', label: 'Listen & Talk 1', func: '감상 묻고 답하기',
-        key: {q: ['How do you like ~?', 'What do you think of ~?', 'What do you like about ~?'], a: ['I love it. / It’s great.', 'I like the ~ the most.', 'It’s not my style.']},
-        note: 'How do you like ~?는 ‘마음에 드니?’라는 감상 질문. 좋거나 싫은 까닭을 덧붙이게 한다.',
+      { id: 'lt1', label: 'Listen & Talk 1', func: '교통수단 묻고 답하기',
+        key: {q: ['How can I get to ~?', 'Can I walk there?'], a: ['You can get there by bus / subway / taxi.', 'Take bus No. ~.', 'You can walk, but it’s a little far.']},
+        note: 'How can I get to + 장소?로 가는 방법을 묻는다. 교통수단은 by + 교통수단(관사 없음): by bus, by subway. 걸어가면 on foot.',
         dialogs: [
-          { title: 'Dialogue A', setting: '벽화 거리, 큰 고래 그림 앞', lines: [
-            {s: 'Haeun', en: 'Noah, {{how do you like}} this mural?', ko: '노아, 이 벽화 어때?'},
-            {s: 'Noah', en: 'I love it! The whale looks like it’s swimming in the sky.', ko: '정말 좋아! 고래가 하늘에서 헤엄치는 것 같아.'},
-            {s: 'Haeun', en: '{{What do you like about}} it the most?', ko: '어떤 점이 가장 좋아?'},
-            {s: 'Noah', en: '{{I like}} the colors {{the most}}. They’re so bright.', ko: '색이 가장 좋아. 정말 밝잖아.'},
-            {s: 'Haeun', en: 'This wall used to be gray and dirty.', ko: '이 벽은 예전에 회색이고 더러웠어.'},
-            {s: 'Noah', en: 'Really? It’s hard to believe.', ko: '정말? 믿기 어렵다.'}
+          { title: 'Dialogue A', setting: '지하철역 앞, 관광 안내소', lines: [
+            {s: 'Tourist', en: 'Excuse me. {{How can I get to}} the mural street?', ko: '실례합니다. 벽화 거리에 어떻게 가나요?'},
+            {s: 'Haeun', en: '{{You can get there by}} subway. Take Line 2 and get off at Art Station.', ko: '지하철로 갈 수 있어요. 2호선을 타고 아트역에서 내리세요.'},
+            {s: 'Tourist', en: '{{Can I walk there}}?', ko: '걸어갈 수 있나요?'},
+            {s: 'Haeun', en: 'You can, but it’s a little far. The subway is faster.', ko: '갈 수는 있지만 조금 멀어요. 지하철이 더 빨라요.'}
           ]},
-          { title: 'Dialogue B', setting: '미술관 야외 조각 앞', lines: [
-            {s: 'A', en: '{{What do you think of}} this sculpture?', ko: '이 조각 어떻게 생각해?'},
-            {s: 'B', en: 'Honestly, {{it’s not my style}}. It looks too strange.', ko: '솔직히 내 취향은 아니야. 너무 이상해 보여.'},
-            {s: 'A', en: 'I think it’s interesting. It changes with the light.', ko: '난 흥미로운데. 빛에 따라 바뀌잖아.'},
-            {s: 'B', en: 'Oh, I didn’t notice that.', ko: '아, 그건 몰랐어.'}
+          { title: 'Dialogue B', setting: '토요일 오전, 버스 정류장', lines: [
+            {s: 'A', en: 'How can I get to the city art museum from here?', ko: '여기서 시립 미술관에 어떻게 가?'},
+            {s: 'B', en: '{{Take bus No. 7}}. It stops right in front of the museum.', ko: '7번 버스를 타. 미술관 바로 앞에 서.'},
+            {s: 'A', en: 'Great. Where can I take it?', ko: '좋아. 어디서 타면 돼?'},
+            {s: 'B', en: 'Right here. Oh, look! Here it comes.', ko: '바로 여기서. 아, 봐! 저기 온다.'}
           ]}
         ],
         check: [
-          {q: 'What does the whale look like?', a: 'It looks like it’s swimming in the sky.'},
-          {q: 'What does Noah like the most?', a: 'The colors.'},
-          {q: 'What did the wall use to look like?', a: 'It used to be gray and dirty.'}
+          {q: 'How can the tourist get to the mural street?', a: 'By subway (Line 2, get off at Art Station).'},
+          {q: 'Why is the subway better than walking?', a: 'It’s a little far to walk, and the subway is faster.'},
+          {q: 'Which bus goes to the art museum?', a: 'Bus No. 7.'}
         ],
-        drill: {frame: ['A: How do you like ____?', 'B: I love it. I like the colors.'], opts: ['this mural', 'the new park', 'my drawing', 'the street art', 'this photo', 'the city map']}
+        drill: {frame: ['A: How can I get to ____?', 'B: You can get there by ____.'], opts: ['the library / bus', 'the station / subway', 'the beach / bike', 'the mall / taxi', 'the park / on foot', 'the airport / train']}
       },
-      { id: 'lt2', label: 'Listen & Talk 2', func: '길 묻고 안내하기',
-        key: {q: ['How can I get to ~?', 'Where is ~?', 'Is there ~ near here?'], a: ['Go straight (two blocks).', 'Turn left/right at ~.', 'It’s next to / across from ~.']},
-        note: '길을 안내할 때 Go straight → Turn left/right at ~ → It’s next to ~ 순서로 말하게 한다. 지도를 함께 띄워 손가락으로 따라가면 좋다.',
+      { id: 'lt2', label: 'Listen & Talk 2', func: '소요 시간 묻고 답하기',
+        key: {q: ['How long will it take?', 'How long does it take to get there?'], a: ['It’ll take about 20 minutes.', 'It takes less than 10 minutes.', 'About half an hour by bus.']},
+        note: '시간이 걸리다는 take. 앞으로 걸릴 시간은 It’ll take ~, 늘 걸리는 시간은 It takes ~.',
         dialogs: [
-          { title: 'Dialogue A', setting: '감천문화마을 입구', lines: [
-            {s: 'Tourist', en: 'Excuse me. {{How can I get to}} the Little Prince statue?', ko: '실례합니다. 어린 왕자 조형물에 어떻게 가나요?'},
-            {s: 'Junho', en: '{{Go straight}} for two blocks.', ko: '두 블록 곧장 가세요.'},
-            {s: 'Tourist', en: 'Two blocks. And then?', ko: '두 블록이요. 그다음은요?'},
-            {s: 'Junho', en: '{{Turn right at}} the blue house. It’s {{next to}} a small café.', ko: '파란 집에서 오른쪽으로 도세요. 작은 카페 옆에 있어요.'},
-            {s: 'Tourist', en: 'Thank you so much!', ko: '정말 고맙습니다!'},
-            {s: 'Junho', en: 'You’re welcome. Please be quiet in the alleys. People live there.', ko: '천만에요. 골목에서는 조용히 해 주세요. 사람들이 살거든요.'}
+          { title: 'Dialogue A', setting: '벽화 거리 입구', lines: [
+            {s: 'Noah', en: 'Haeun, I want to see the famous whale mural. Is it far from here?', ko: '하은아, 유명한 고래 벽화를 보고 싶어. 여기서 멀어?'},
+            {s: 'Haeun', en: 'Not really. We can walk there.', ko: '별로. 걸어갈 수 있어.'},
+            {s: 'Noah', en: 'OK. {{How long will it take}}?', ko: '좋아. 얼마나 걸릴까?'},
+            {s: 'Haeun', en: '{{It’ll take less than}} 10 minutes on foot.', ko: '걸어서 10분도 안 걸릴 거야.'}
           ]},
-          { title: 'Dialogue B', setting: '시내, 지하철역 앞', lines: [
-            {s: 'A', en: '{{Is there}} an art gallery {{near here}}?', ko: '이 근처에 미술관이 있나요?'},
-            {s: 'B', en: 'Yes. Turn left at the bank. It’s {{across from}} the library.', ko: '네. 은행에서 왼쪽으로 도세요. 도서관 맞은편에 있어요.'},
-            {s: 'A', en: 'Is it far?', ko: '먼가요?'},
-            {s: 'B', en: 'No, it’s only a five-minute walk.', ko: '아니요, 걸어서 5분이면 돼요.'}
+          { title: 'Dialogue B', setting: '호텔 로비', lines: [
+            {s: 'Junho', en: 'How can I get to the old factory gallery?', ko: '옛 공장 미술관에 어떻게 가나요?'},
+            {s: 'Guide', en: 'It’s not far, but it’s a little hard to find. Why don’t you take a taxi?', ko: '멀지 않지만 찾기가 좀 어려워요. 택시를 타는 게 어때요?'},
+            {s: 'Junho', en: 'OK. {{How long will it take}} by taxi?', ko: '좋아요. 택시로 얼마나 걸릴까요?'},
+            {s: 'Guide', en: '{{About}} 15 {{minutes}}.', ko: '15분쯤이요.'}
           ]}
         ],
         check: [
-          {q: 'Where does the tourist want to go?', a: 'To the Little Prince statue.'},
-          {q: 'Where is the statue?', a: 'It’s next to a small café (after turning right at the blue house).'},
-          {q: 'Where is the art gallery?', a: 'It’s across from the library.'}
+          {q: 'How will Noah and Haeun get to the whale mural?', a: 'On foot (They will walk).'},
+          {q: 'How long will it take to the whale mural?', a: 'Less than 10 minutes.'},
+          {q: 'How long will it take to the gallery by taxi?', a: 'About 15 minutes.'}
         ],
-        drill: {frame: ['A: How can I get to ____?', 'B: Go straight and turn left.'], opts: ['the museum', 'the bus stop', 'the park', 'the library', 'the mural street', 'the subway station']}
+        drill: {frame: ['A: How long will it take?', 'B: It’ll take about ____.'], opts: ['5 minutes', '10 minutes on foot', '20 minutes by bus', 'half an hour', 'an hour by train', 'two hours']}
       }
     ],
     interviewEx: 'Sumin likes the mural near our school. To get there, go straight and turn left at the bakery.',
@@ -264,8 +267,8 @@ window.LESSON = {
     ['“empty”의 반대말은?', ['full', 'gray', 'public', 'colorful'], 0, 'empty(빈) ↔ full(가득 찬)'],
     ['“They ___ over the mural.” (덧칠해 지웠다)', ['took', 'turned', 'painted', 'removed'], 2, 'paint over: 덧칠해 지우다'],
     ['“The residents are proud ___ their village.”', ['in', 'at', 'for', 'of'], 3, 'be proud of'],
-    ['감상을 묻는 표현은?', ['Where is it?', 'How can I get there?', 'How do you like it?', 'Is there a bank near here?'], 2, 'How do you like ~?'],
-    ['길을 안내하는 표현이 아닌 것은?', ['Go straight.', 'Turn left at the bank.', 'It’s next to the café.', 'It’s not my style.'], 3, 'It’s not my style.은 감상을 말하는 표현.'],
+    ['교통수단을 묻는 표현은?', ['How long will it take?', 'How can I get to the museum?', 'How do you like it?', 'How much is it?'], 1, 'How can I get to ~?'],
+    ['“How long will it take?”에 알맞은 대답은?', ['By bus.', 'It’s next to the café.', 'It’ll take about 20 minutes.', 'Take bus No. 7.'], 2, 'It’ll take about ~.'],
     ['Let’s Watch에서 미아가 먼저 하자고 한 일은?', ['물감 사기', '벽 청소하기', '정원 그리기', '이웃에게 묻기'], 3, 'Let’s ask them first.'],
     ['빈칸에 알맞은 것은? “This is the photo ___ I took.”', ['who', 'which', 'what', 'where'], 1, '사물 + 목적격 관계대명사 which'],
     ['다음 문장에서 생략할 수 있는 낱말은? “The artist who I met was kind.”', ['I', 'who', 'met', 'was'], 1, '목적격 관계대명사는 생략 가능'],
@@ -276,3 +279,40 @@ window.LESSON = {
     ['이화동 이야기가 주는 교훈은?', ['벽화는 비싸다', '관광객이 많을수록 좋다', '사진은 집 앞에서 찍어야 한다', '동네는 누군가의 집이라는 것'], 3, 'It is someone’s home.']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {canvas: '/ˈkænvəs/', mural: '/ˈmjʊrəl/', artist: '/ˈɑːrtɪst/', neighborhood: '/ˈneɪbərhʊd/', resident: '/ˈrezɪdənt/', visitor: '/ˈvɪzɪtər/', warehouse: '/ˈwerhaʊs/', popular: '/ˈpɑːpjələr/', colorful: '/ˈkʌlərfl/', empty: '/ˈempti/', artwork: '/ˈɑːrtwɜːrk/', lively: '/ˈlaɪvli/', 'well-known': '/ˌwel ˈnoʊn/', form: '/fɔːrm/', represent: '/ˌreprɪˈzent/', figure: '/ˈfɪɡjər/', spray: '/spreɪ/', message: '/ˈmesɪdʒ/', tiny: '/ˈtaɪni/', pleasure: '/ˈpleʒər/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'neighborhood', ko: '동네, 이웃', parts: [{t: 'neighbor', k: 'root', m: '이웃 사람'}, {t: 'hood', k: 'suf', m: '~의 상태·집단'}], family: ['childhood', 'brotherhood'], note: '-hood = 상태·무리(child → childhood 어린 시절).'},
+    {w: 'represent', ko: '나타내다', parts: [{t: 're', k: 'pre', m: '다시'}, {t: 'present', k: 'root', m: '보여 주다, 내놓다'}], family: ['present', 'presentation', 'representative'], note: '다시(re) 눈앞에 내놓다(present) → 나타내다, 상징하다.'},
+    {w: 'warehouse', ko: '창고', parts: [{t: 'ware', k: 'root', m: '물건, 상품'}, {t: 'house', k: 'root', m: '집'}], family: ['software', 'hardware'], note: '물건(ware)을 두는 집(house) → 창고.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '목적격 관계대명사는 왜 생략할 수 있을까?',
+    pic: [{en: 'the art', ko: '꾸밈을 받는 명사'}, {en: '(which)', ko: '목적어 노릇 — 생략 가능', hot: true}, {en: 'visitors loved', ko: '주어 + 동사'}],
+    core: '목적격 관계대명사는 뒤 문장의 목적어를 대신하면서 앞 명사를 꾸미는 문장을 붙여 준다. 뒤에 “주어 + 동사”가 바로 와서 관계가 분명하므로 자주 생략한다.',
+    why: ['사람이면 who(m), 사물이면 which, 둘 다 that.', '뒤 문장에는 목적어가 빠져 있다 (visitors loved ___).', '주격 관계대명사(뒤에 바로 동사)는 생략할 수 없다.']
+  };
+  g1.anim = [{title: '두 문장을 which로 묶고, 생략하기', states: [
+    {t: 'The art/S#art | was | removed/V | . | / | Visitors/S#v | loved/V#l | it/O#it | .', note: '같은 것(the art = it)이 두 번', ko: '그 예술은 지워졌다. 방문객들은 그것을 사랑했다.'},
+    {t: 'The art/S#art | which/X#it | visitors/S#v | loved/V#l | was | removed/V | .', note: 'it → which (목적어 노릇), 명사 바로 뒤로', ko: '방문객들이 사랑한 예술은 지워졌다.'},
+    {t: 'The art/S#art | visitors/S#v | loved/V#l | was | removed/V | .', note: '목적격은 생략 가능 (명사 + 주어 + 동사)', ko: '같은 뜻'}]}];
+  g1.contrast = {title: '주격 vs 목적격 — 뒤에 무엇이 오나', pairs: [
+    {a: 'the artist {{who}} painted the wall', ka: '벽을 칠한 화가 (뒤에 바로 동사 → 주격, 생략 ✗)', b: 'the wall {{(which)}} the artist painted', kb: '화가가 칠한 벽 (뒤에 주어 + 동사 → 목적격, 생략 가능)'}],
+    point: '관계대명사 뒤가 “주어 + 동사”면 목적격이고 생략할 수 있다.'};
+  g2.principle = {
+    q: 'used to는 왜 “예전에는 ~했다(지금은 아니다)”일까?',
+    pic: [{en: 'past', ko: '예전에 늘 그랬다', hot: true}, {en: '→ now', ko: '지금은 아니다'}],
+    core: 'used to + 동사원형은 과거에 반복되던 습관이나 상태가 지금은 계속되지 않음을 나타낸다. 과거와 현재의 대비가 핵심이다.',
+    why: ['used to 뒤에는 동사원형 (used to be, used to live).', '부정·의문: didn’t use to ~ / Did you use to ~?', 'be used to -ing(~에 익숙하다)와 모양이 비슷하니 주의.']
+  };
+  g2.anim = [{title: '예전과 지금을 한 문장에', states: [
+    {t: 'The walls/S | were/V#v | gray/C#c | before | . | / | They | are not | gray | now | .', note: '예전 상태 + 지금은 아님', ko: '벽은 예전에 회색이었다. 지금은 회색이 아니다.'},
+    {t: 'The walls/S | used to/X | be/V#v | gray/C#c | .', note: 'used to + 동사원형 = 예전엔 ~였다 (지금은 아님)', ko: '그 벽들은 예전에는 회색이었다.'}]}];
+  g2.contrast = {title: 'used to vs be used to', pairs: [
+    {a: 'I {{used to}} live in Busan.', ka: '나는 예전에 부산에 살았다. (지금은 아님, + 동사원형)', b: 'I {{am used to}} living in Seoul.', kb: '나는 서울에 사는 데 익숙하다. (+ -ing)'}],
+    point: 'used to + 원형 = 예전엔 ~했다 / be used to + -ing = ~에 익숙하다.'};
+})(window.LESSON);
