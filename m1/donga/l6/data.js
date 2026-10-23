@@ -208,13 +208,15 @@ window.LESSON = {
     paras: [
       {who: 'Green Club', en: 'Every day, we produce a lot of trash. Last week, our class joined Green Week. Do you want to know about our challenges? Here are four stories from our members.',
        ko: '우리는 날마다 쓰레기를 많이 만들어 낸다. 지난주에 우리 반은 그린 주간에 참여했다. 우리의 도전에 대해 알고 싶나요? 동아리 회원 네 명의 이야기를 소개한다.',
-       check: {q: 'What did the class join last week?', a: 'Green Week.'}, think: '우리 반이 그린 주간을 연다면 무엇을 할까?'},
+       check: {q: 'What did the class join last week?', a: 'Green Week.'}, think: '우리 반이 그린 주간을 연다면 무엇을 할까?',
+       bg: {src: 'm1/donga/l6/img/r-p0.jpg', credit: 'Gareth1953 All Right Now · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/40837632@N05/15467429560', about: '중고 물건을 파는 거리 장터'}},
       {who: 'Jia', en: 'I love new clothes, but I learned that making one T-shirt uses a lot of water. So I decided to try a secondhand market. I brought my old jacket and swapped it for a cool secondhand shirt. I think that it looks better on me!',
        ko: '나는 새 옷을 좋아하지만, 티셔츠 한 장을 만드는 데 물이 많이 든다는 것을 알게 되었다. 그래서 중고 장터에 가 보기로 했다. 내 낡은 재킷을 가져가서 멋진 중고 셔츠와 바꿨다. 이 셔츠가 나한테 더 잘 어울리는 것 같다!',
        check: {q: 'What did Jia swap her old jacket for?', a: 'A (cool) secondhand shirt.'}, think: '중고 옷을 사면 환경에 어떤 도움이 될까?'},
       {who: 'Alex', en: 'On Saturday, I went plogging with my soccer team. We jogged along the river and picked up trash one by one. In one hour, we filled five bags! I hope to plog every month.',
        ko: '토요일에 나는 축구 팀과 플로깅을 했다. 강을 따라 달리면서 쓰레기를 하나씩 주웠다. 한 시간 만에 봉투 다섯 개를 채웠다! 나는 매달 플로깅을 하고 싶다.',
-       check: {q: 'How many bags did Alex’s team fill?', a: 'Five bags.'}, think: '플로깅은 무엇과 무엇을 합친 활동일까?'},
+       check: {q: 'How many bags did Alex’s team fill?', a: 'Five bags.'}, think: '플로깅은 무엇과 무엇을 합친 활동일까?',
+       bg: {src: 'm1/donga/l6/img/r-p2.jpg', credit: 'Thad Zajdowicz · CC0 1.0 (Flickr)', link: 'https://www.flickr.com/photos/40632439@N00/16466809032', about: '플라스틱 병'}},
       {who: 'Seho', en: 'I heard that dirty bottles are hard to recycle. So I washed all our plastic bottles and took the labels off. Then I put them into a recycling machine near my house. I got some points in return. I want to use them at the school store.',
        ko: '나는 더러운 병은 재활용하기 어렵다고 들었다. 그래서 우리 집 플라스틱병을 모두 씻고 라벨을 뗐다. 그리고 집 근처 재활용 기계에 넣었다. 그 대가로 포인트를 받았다. 그 포인트를 학교 매점에서 쓰고 싶다.',
        check: {q: 'What did Seho get in return?', a: 'Some points.'}, think: '왜 라벨을 떼고 병을 씻어야 할까?'},
@@ -223,7 +225,8 @@ window.LESSON = {
        check: {q: 'What did Yuna plant?', a: 'The roots of green onions.'}, think: '버리는 것 가운데 다시 쓸 수 있는 것은?'},
       {who: 'Green Club', en: 'Our challenges were small, but we learned that small things can make a big change. What do you want to try? Join our challenge, and share your story!',
        ko: '우리의 도전은 작았지만, 작은 일이 큰 변화를 만들 수 있다는 것을 배웠다. 여러분은 무엇을 해 보고 싶나요? 우리 도전에 참여하고 이야기를 나눠 주세요!',
-       check: {q: 'What did the club learn?', a: 'Small things can make a big change.'}, think: '내가 이번 주에 해 볼 수 있는 도전은?'}
+       check: {q: 'What did the club learn?', a: 'Small things can make a big change.'}, think: '내가 이번 주에 해 볼 수 있는 도전은?',
+       bg: {src: 'm1/donga/l6/img/r-p5.jpg', credit: 'Seattle Parks & Recreation · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/48268815@N02/12176927313', about: '쓰레기를 나눠 버리는 사람들'}}
     ],
     split: 3,
     next: '세호와 유나는\n어떤 도전을 했을까?',
