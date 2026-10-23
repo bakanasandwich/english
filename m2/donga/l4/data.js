@@ -1,278 +1,311 @@
 /* 중2 영어(동아·윤정미) Lesson 4 · Are You Money Smart?
-   단원명은 교과서 목차 기준. 대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글입니다.
-   의사소통 기능과 문법은 교과서 구성표 확인 전 추정(estimate: true). */
+   교과서 대조(2026-10): 의사소통 기능(물건 사기 — 찾는 물건 말하기 · 다른 물건 보여 달라고 하기 · 사겠다고 말하기), 언어 형식(주격 관계대명사 which/who · 조건의 if),
+   읽기 주제(Be a Smart Shopper — 소비자의 결정에 영향을 주는 마케팅 전략), 단원 어휘를 교과서 본문 어휘와 맞췄다.
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식·교과서 어휘로 새로 쓴 글이다. */
 window.LESSON = {
-  book: 'm2-donga', no: 4, estimate: true,
+  book: 'm2-donga', no: 4,
   title: 'Are You Money Smart?', ko: '나는 돈을 현명하게 쓸까?',
-  bigQ: {en: 'How can we use money wisely?', ko: '돈을 어떻게 현명하게 쓸 수 있을까?'},
+  bigQ: {en: 'How can we make smart choices when we shop?', ko: '물건을 살 때 어떻게 현명하게 선택할 수 있을까?'},
+  align: {
+    tb: {reading: 'Be a Smart Shopper', funcs: ['물건 사기 1 (I’m looking for ~.)', '물건 사기 2 (Can you show me something else?)', '물건 사기 3 (I’ll take it.)'], forms: ['주격 관계대명사 which / who', '조건의 if'],
+      note: '교과서 읽기는 소비자의 결정에 영향을 주는 마케팅 전략 세 가지(바이럴 마케팅, 헝거 마케팅, 앵커링 효과)를 사례로 설명하는 글. 여기 본문은 다른 세 전략(끝자리 9 가격, 미끼 상품, 계산대 앞 진열)으로 새로 쓴 글이다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-02', '9영02-10'], grammar: ['9영02-05'], read1: ['9영01-04', '9영01-06'], read2: ['9영01-09', '9영02-06']},
+    forms: ['Relative Clauses', 'Real Conditionals']
+  },
   goals: {
-    vocab: ['돈·소비와 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 나의 소비 습관을 한 문장으로 말할 수 있다.'],
-    talk: ['충고를 구하고 충고할 수 있다.', '두 가지 중 더 좋아하는 것을 묻고 답할 수 있다.'],
-    grammar: ['to부정사가 명사를 꾸미는 형용사적 용법을 쓸 수 있다.', '비교급과 as ~ as로 두 대상을 비교할 수 있다.'],
-    read1: ['글의 형식(상담 칼럼)을 파악하고, 첫 번째 고민과 조언을 이해할 수 있다.'],
-    read2: ['세 학생의 고민과 조언을 비교하고 글의 요지를 요약할 수 있다.', '나의 돈 관리 계획을 영어로 쓸 수 있다.']
+    vocab: ['소비·마케팅과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 나의 소비 습관을 한 문장으로 말할 수 있다.'],
+    talk: ['가게에서 찾는 물건을 말하고(I’m looking for ~.), 다른 물건을 보여 달라고 하고(Can you show me something else?), 사겠다고 말할 수 있다(I’ll take it.).', '가격을 묻고 답할 수 있다. (How much is it? — It’s ~.)'],
+    grammar: ['주격 관계대명사 which / who / that으로 명사를 뒤에서 꾸밀 수 있다.', '조건의 if절(현재형)과 주절(will)로 조건과 결과를 말할 수 있다.'],
+    read1: ['마케팅 전략을 설명하는 글을 읽고 첫 번째 전략이 어떻게 소비자를 움직이는지 파악할 수 있다.'],
+    read2: ['세 가지 전략을 비교하고, 현명한 소비자가 되기 위한 나의 규칙을 쓸 수 있다.']
   },
 
   vocab: {
-    hook: {en: 'What did you buy last week?', ko: '지난주에 무엇을 샀나요?', note: '간식, 문구, 게임 아이템 등. 산 것을 ‘꼭 필요한 것’과 ‘갖고 싶었던 것’으로 나눠 보게 하면 need / want 구분으로 이어진다.'},
+    hook: {en: 'Why did you buy the last thing you bought?', ko: '가장 최근에 산 물건은 왜 샀나요?', note: '필요해서, 할인해서, 친구가 사서, 광고를 봐서 등 까닭을 모은다. 내 결정에 영향을 준 것이 무엇인지 생각해 보게 한다.'},
     words: [
-      {w: 'allowance', pos: 'n.', ko: '용돈', ic: '💵', audio: 'assets/audio/allowance.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I get my allowance every Monday.', exKo: '나는 월요일마다 용돈을 받는다.'},
-      {w: 'spend', pos: 'v.', ko: '(돈·시간을) 쓰다', ic: '💸', audio: 'assets/audio/spend.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I spent all my money on snacks.', exKo: '나는 간식에 돈을 다 썼다.'},
-      {w: 'save', pos: 'v.', ko: '저축하다, 모으다', ic: '🐷', audio: 'assets/audio/save.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'She saves 5,000 won a week.', exKo: '그녀는 일주일에 5천 원을 모은다.'},
-      {w: 'budget', pos: 'n.', ko: '예산', ic: '📒', audio: 'assets/audio/budget.mp3', audioCredit: 'Wikimedia Commons contributor · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Make a budget before you go shopping.', exKo: '쇼핑하러 가기 전에 예산을 짜라.'},
-      {w: 'price', pos: 'n.', ko: '가격', ic: '🏷️', audio: 'assets/audio/price.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Compare the prices first.', exKo: '먼저 가격을 비교해라.'},
-      {w: 'expensive', pos: 'adj.', ko: '비싼', ic: '💎', audio: 'assets/audio/expensive.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'These sneakers are too expensive.', exKo: '이 운동화는 너무 비싸다.'},
-      {w: 'cheap', pos: 'adj.', ko: '싼', ic: '🪙', audio: 'assets/audio/cheap.mp3', audioCredit: 'Association Shtooka, Judith Franck · CC BY 3.0 (Wikimedia Commons, UK)', ex: 'Cheap things can break easily.', exKo: '싼 물건은 쉽게 망가질 수 있다.'},
-      {w: 'compare', pos: 'v.', ko: '비교하다', ic: '⚖️', audio: 'assets/audio/compare.mp3', audioCredit: 'TreeMama · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I compared two phones online.', exKo: '나는 온라인에서 두 휴대폰을 비교했다.'},
-      {w: 'need', pos: 'n./v.', ko: '필요(한 것); 필요하다', ic: '✅', audio: 'assets/audio/need.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Food is a need, not a want.', exKo: '음식은 원하는 것이 아니라 필요한 것이다.'},
-      {w: 'want', pos: 'n./v.', ko: '원하는 것; 원하다', ic: '🎁', audio: 'assets/audio/want.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'A new game is a want.', exKo: '새 게임은 원하는 것이다.'},
-      {w: 'goal', pos: 'n.', ko: '목표', ic: '🎯', audio: 'assets/audio/goal.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'My saving goal is 100,000 won.', exKo: '내 저축 목표는 10만 원이다.'},
-      {w: 'wisely', pos: 'adv.', ko: '현명하게', ic: '🦉', ex: 'Use your money wisely.', exKo: '돈을 현명하게 써라.'},
-      {w: 'regret', pos: 'v./n.', ko: '후회하다; 후회', ic: '😞', audio: 'assets/audio/regret.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I regret buying that shirt.', exKo: '나는 그 셔츠를 산 것을 후회한다.'},
-      {w: 'discount', pos: 'n.', ko: '할인', ic: '🔖', audio: 'assets/audio/discount.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'There’s a 20% discount today.', exKo: '오늘 20퍼센트 할인이 있다.'},
-      {w: 'account', pos: 'n.', ko: '계좌', ic: '🏦', audio: 'assets/audio/account.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I opened a bank account.', exKo: '나는 은행 계좌를 만들었다.'},
-      {w: 'receipt', pos: 'n.', ko: '영수증', ic: '🧾', audio: 'assets/audio/receipt.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Keep the receipt.', exKo: '영수증을 보관해라.'},
-      {w: 'list', pos: 'n.', ko: '목록', ic: '📝', audio: 'assets/audio/list.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Write a shopping list.', exKo: '쇼핑 목록을 써라.'},
-      {w: 'impulse', pos: 'n.', ko: '충동', ic: '⚡', audio: 'assets/audio/impulse.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Don’t buy things on impulse.', exKo: '충동적으로 물건을 사지 마라.'},
-      {w: 'advice', pos: 'n.', ko: '조언', ic: '🗣️', audio: 'assets/audio/advice.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Thanks for your advice.', exKo: '조언 고마워.'},
-      {w: 'habit', pos: 'n.', ko: '습관', ic: '🔁', audio: 'assets/audio/habit.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Saving is a good habit.', exKo: '저축은 좋은 습관이다.'}
+      {w: 'marketing', pos: 'n.', ko: '마케팅, 판매 활동', ic: '📣', ex: 'Stores use smart marketing.', exKo: '가게들은 영리한 마케팅을 쓴다.'},
+      {w: 'strategy', pos: 'n.', ko: '전략', ic: '♟️', ex: 'This is a popular strategy.', exKo: '이것은 인기 있는 전략이다.'},
+      {w: 'influence', pos: 'v. / n.', ko: '영향을 주다; 영향', ic: '🧲', ex: 'Ads influence our decisions.', exKo: '광고는 우리의 결정에 영향을 준다.'},
+      {w: 'decision', pos: 'n.', ko: '결정', ic: '⚖️', ex: 'It was a quick decision.', exKo: '그것은 빠른 결정이었다.'},
+      {w: 'product', pos: 'n.', ko: '제품, 상품', ic: '📦', ex: 'This product is very popular.', exKo: '이 제품은 아주 인기 있다.'},
+      {w: 'customer', pos: 'n.', ko: '손님, 고객', ic: '🧑‍🤝‍🧑', ex: 'The store was full of customers.', exKo: '가게는 손님으로 가득했다.'},
+      {w: 'salesperson', pos: 'n.', ko: '판매원', ic: '🧑‍💼', ex: 'The salesperson showed me a cap.', exKo: '판매원이 나에게 모자를 보여 주었다.'},
+      {w: 'price', pos: 'n.', ko: '가격', ic: '🏷️', ex: 'Check the price first.', exKo: '먼저 가격을 확인해라.'},
+      {w: 'budget', pos: 'n.', ko: '예산', ic: '💰', ex: 'My budget is 20,000 won.', exKo: '내 예산은 2만 원이다.'},
+      {w: 'discount', pos: 'n.', ko: '할인', ic: '🔻', ex: 'There is a 30% discount today.', exKo: '오늘 30퍼센트 할인이 있다.'},
+      {w: 'limited', pos: 'adj.', ko: '한정된, 제한된', ic: '⏳', ex: 'It’s a limited sale.', exKo: '그것은 기간 한정 할인이다.'},
+      {w: 'similar', pos: 'adj.', ko: '비슷한', ic: '🟰', ex: 'These two bags look similar.', exKo: '이 두 가방은 비슷해 보인다.'},
+      {w: 'compare', pos: 'v.', ko: '비교하다', ic: '🔍', ex: 'Compare the prices before you buy.', exKo: '사기 전에 가격을 비교해라.'},
+      {w: 'choose', pos: 'v.', ko: '고르다 (과거 chose)', ic: '👆', ex: 'Most people choose the large size.', exKo: '대부분의 사람은 큰 사이즈를 고른다.'},
+      {w: 'effect', pos: 'n.', ko: '효과', ic: '✨', ex: 'This is called the decoy effect.', exKo: '이것은 미끼 효과라고 불린다.'},
+      {w: 'realize', pos: 'v.', ko: '깨닫다', ic: '💡', ex: 'I realized it was too expensive.', exKo: '나는 그것이 너무 비싸다는 것을 깨달았다.'},
+      {w: 'spread', pos: 'v.', ko: '퍼지다 (과거 spread)', ic: '📶', ex: 'News spreads quickly online.', exKo: '소식은 온라인에서 빠르게 퍼진다.'},
+      {w: 'checkout', pos: 'n.', ko: '계산대', ic: '🛒', ex: 'There is candy near the checkout.', exKo: '계산대 근처에 사탕이 있다.'},
+      {w: 'popular', pos: 'adj.', ko: '인기 있는', ic: '🔥', ex: 'It’s the most popular size.', exKo: '그것이 가장 인기 있는 사이즈다.'},
+      {w: 'naturally', pos: 'adv.', ko: '자연스럽게, 당연히', ic: '🌿', ex: 'People naturally look at the middle shelf.', exKo: '사람들은 자연스럽게 가운데 선반을 본다.'}
     ],
     phrases: [
-      {w: 'spend A on B', ko: 'B에 A(돈·시간)를 쓰다', ex: 'He spends a lot of money on games.', exKo: '그는 게임에 돈을 많이 쓴다.'},
-      {w: 'run out of', ko: '~이 다 떨어지다', ex: 'I ran out of money on Wednesday.', exKo: '나는 수요일에 돈이 다 떨어졌다.'},
-      {w: 'keep track of', ko: '~을 기록하다, 놓치지 않다', ex: 'Keep track of what you spend.', exKo: '쓴 돈을 기록해라.'},
-      {w: 'put aside', ko: '(돈을) 따로 떼어 두다', ex: 'Put aside some money each week.', exKo: '매주 돈을 조금씩 떼어 두어라.'},
-      {w: 'on sale', ko: '할인 중인', ex: 'These pens are on sale.', exKo: '이 펜들은 할인 중이다.'},
-      {w: 'at least', ko: '적어도', ex: 'Wait at least one day before you buy.', exKo: '사기 전에 적어도 하루는 기다려라.'}
+      {w: 'I’m looking for ~.', ko: '~을 찾고 있어요.', ex: 'I’m looking for a gift for my sister.', exKo: '여동생 선물을 찾고 있어요.'},
+      {w: 'Can you show me something else?', ko: '다른 것을 보여 주시겠어요?', ex: 'Well, can you show me something else?', exKo: '음, 다른 걸 보여 주시겠어요?'},
+      {w: 'I’ll take it.', ko: '그걸로 살게요.', ex: 'It’s perfect. I’ll take it.', exKo: '딱 좋아요. 그걸로 살게요.'},
+      {w: 'fall for', ko: '~에 속아 넘어가다', ex: 'Don’t fall for that trick.', exKo: '그 속임수에 넘어가지 마라.'},
+      {w: 'Hold on!', ko: '잠깐만!', ex: 'Hold on! Check the price first.', exKo: '잠깐! 먼저 가격을 확인해.'},
+      {w: 'on sale', ko: '할인 중인', ex: 'These shoes are on sale.', exKo: '이 신발은 할인 중이다.'}
     ],
     pairs: [
+      {a: 'decide', b: 'decision', rel: '동사 / 명사'},
       {a: 'expensive', b: 'cheap', rel: '반대말'},
-      {a: 'spend', b: 'save', rel: '반대말'},
-      {a: 'need', b: 'want', rel: '구별하기', note: 'need: 꼭 필요한 것 / want: 갖고 싶은 것'},
-      {a: 'wise', b: 'wisely', rel: '형용사 / 부사'}
+      {a: 'limit', b: 'limited', rel: '명사 / 형용사'},
+      {a: 'natural', b: 'naturally', rel: '형용사 / 부사'}
     ],
-    wrap: {en: 'I spend most of my allowance on ______. My saving goal is ______.', ko: '오늘 배운 낱말을 넣어 나의 소비 습관과 저축 목표 쓰기'}
+    wrap: {en: 'When I shop, I ______. A smart shopper ______.', ko: '오늘 배운 낱말로 나의 소비 습관과 현명한 소비자의 모습 쓰기'}
   },
 
   talk: {
-    hook: {en: 'Have you ever regretted buying something?', ko: '무언가를 사고 후회한 적이 있나요?', note: '후회한 물건과 까닭을 짝과 나누게 한다. “그때 누군가 조언해 줬다면?”으로 What should I do?를 이끈다.'},
-    speakers: {Minjae: {voice: 1, pitch: .95}, Olivia: {voice: 0, pitch: 1.1}, Yena: {voice: 0, pitch: 1.15}, Chris: {voice: 1, pitch: .9}, Mom: {voice: 2, pitch: 1.05}, Seho: {voice: 1, pitch: 1}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
+    hook: {en: 'What do you say in a store?', ko: '가게에서 물건을 살 때 어떤 말을 하나요?', note: '“이거 얼마예요?”, “다른 색 있어요?”, “이걸로 할게요.” 같은 말을 모은다. 물건을 사는 순서대로 영어 표현을 정리한다.'},
+    speakers: {Junho: {voice: 1, pitch: 1}, Clerk: {voice: 2, pitch: 1.05}, Somi: {voice: 0, pitch: 1.15}, Ben: {voice: 1, pitch: .95}, Mom: {voice: 2, pitch: 1.1}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
     sets: [
-      { id: 'lt1', label: 'Listen & Talk 1', func: '충고 구하고 하기',
-        key: {q: ['What should I do?', 'Can you give me some advice?'], a: ['You should ~.', 'Why don’t you ~?', 'You’d better ~.']},
-        note: 'should, had better 뒤에는 동사원형. You’d better는 강한 충고라 친구 사이에서 조심해서 쓴다.',
+      { id: 'lt1', label: 'Listen & Talk 1', func: '물건 사기 1 · 2 (찾는 물건 말하기 · 다른 것 보여 달라고 하기)',
+        key: {q: ['May I help you?', 'How about this one?'], a: ['I’m looking for ~.', 'Can you show me something else?', 'Do you have it in a different color?']},
+        note: '찾는 물건은 I’m looking for ~.로 말한다. 마음에 들지 않으면 Can you show me something else?로 다른 것을 보여 달라고 한다.',
         dialogs: [
-          { title: 'Dialogue A', setting: '수요일 쉬는 시간, 매점 앞', lines: [
-            {s: 'Minjae', en: 'Olivia, I already ran out of money. {{What should I do}}?', ko: '올리비아, 벌써 돈이 다 떨어졌어. 어떻게 해야 하지?'},
-            {s: 'Olivia', en: 'Again? What did you spend it on?', ko: '또? 뭐에 썼는데?'},
-            {s: 'Minjae', en: 'Mostly snacks and game items.', ko: '주로 간식이랑 게임 아이템.'},
-            {s: 'Olivia', en: '{{You should}} keep track of your spending.', ko: '쓴 돈을 기록해 봐.'},
-            {s: 'Minjae', en: 'That’s a good idea. Anything else?', ko: '좋은 생각이다. 또 다른 건?'},
-            {s: 'Olivia', en: '{{Why don’t you}} make a budget for each week?', ko: '주마다 예산을 짜 보는 게 어때?'}
+          { title: 'Dialogue A', setting: '토요일 오후, 문구점', lines: [
+            {s: 'Clerk', en: 'Hello. May I help you?', ko: '안녕하세요. 도와드릴까요?'},
+            {s: 'Junho', en: 'Yes, please. {{I’m looking for}} a birthday gift for my sister. She’s twelve.', ko: '네. 여동생 생일 선물을 찾고 있어요. 열두 살이에요.'},
+            {s: 'Clerk', en: 'How about this pencil case?', ko: '이 필통은 어때요?'},
+            {s: 'Junho', en: 'Hmm, she already has one. {{Can you show me something else}}?', ko: '음, 이미 하나 있어요. 다른 걸 보여 주시겠어요?'},
+            {s: 'Clerk', en: 'Sure. How about these hairpins, then?', ko: '물론이죠. 그럼 이 머리핀들은 어때요?'}
           ]},
-          { title: 'Dialogue B', setting: '저녁, 거실', lines: [
-            {s: 'A', en: 'Mom, {{can you give me some advice}}? I want to buy a new phone case.', ko: '엄마, 조언 좀 해 주실래요? 새 휴대폰 케이스를 사고 싶어요.'},
-            {s: 'B', en: '{{You’d better}} compare prices online first.', ko: '먼저 온라인에서 가격을 비교해 보는 게 좋겠어.'},
-            {s: 'A', en: 'Okay. I’ll look for one on sale.', ko: '알겠어요. 할인하는 걸 찾아볼게요.'},
-            {s: 'B', en: 'Good. And keep the receipt.', ko: '좋아. 그리고 영수증은 보관하렴.'}
+          { title: 'Dialogue B', setting: '운동화 가게', lines: [
+            {s: 'A', en: 'I’m looking for running shoes.', ko: '운동화를 찾고 있어요.'},
+            {s: 'B', en: 'These are very popular these days.', ko: '이게 요즘 아주 인기 있어요.'},
+            {s: 'A', en: 'They look nice. {{Do you have them in a different color}}?', ko: '멋지네요. 다른 색깔도 있나요?'},
+            {s: 'B', en: 'Yes. We have them in blue and black.', ko: '네. 파란색과 검은색이 있어요.'}
           ]}
         ],
         check: [
-          {q: 'What is Minjae’s problem?', a: 'He already ran out of money.'},
-          {q: 'What did Minjae spend his money on?', a: 'Mostly snacks and game items.'},
-          {q: 'What advice does Mom give?', a: 'Compare prices online first (and keep the receipt).'}
+          {q: 'What is Junho looking for?', a: 'A birthday gift for his sister.'},
+          {q: 'Why doesn’t Junho want the pencil case?', a: 'His sister already has one.'},
+          {q: 'What colors do the shoes come in?', a: 'Blue and black.'}
         ],
-        drill: {frame: ['A: I always run out of money. What should I do?', 'B: You should ____.'], opts: ['make a budget', 'write a list', 'save a little each week', 'buy fewer snacks', 'compare prices', 'wait a day']}
+        drill: {frame: ['A: May I help you?', 'B: Yes. I’m looking for ____.'], opts: ['a cap', 'a gift for my mom', 'a backpack', 'a phone case', 'running shoes', 'a notebook']}
       },
-      { id: 'lt2', label: 'Listen & Talk 2', func: '선호 묻고 답하기',
-        key: {q: ['Which do you prefer, A or B?', 'Do you prefer A or B?'], a: ['I prefer A (to B).', 'I like A better.', 'A is better because ~.']},
-        note: 'prefer A to B: B보다 A를 더 좋아하다. 까닭을 because로 덧붙이면 더 좋은 답이 된다. 비교급과 이어진다.',
+      { id: 'lt2', label: 'Listen & Talk 2', func: '물건 사기 3 (가격 묻기 · 사겠다고 말하기)',
+        key: {q: ['How much is it? / How much are they?'], a: ['It’s ~ won.', 'They’re ~ dollars each.', 'I’ll take it. / I’ll take two of them.']},
+        note: '한 개면 How much is it?, 여러 개면 How much are they?. 사기로 정했으면 I’ll take it(them).',
         dialogs: [
-          { title: 'Dialogue A', setting: '주말, 신발 가게', lines: [
-            {s: 'Chris', en: 'Yena, {{which do you prefer}}, the white sneakers or the black ones?', ko: '예나야, 흰 운동화랑 검은 운동화 중에 뭐가 더 좋아?'},
-            {s: 'Yena', en: '{{I prefer}} the black ones.', ko: '검은 게 더 좋아.'},
-            {s: 'Chris', en: 'Why? The white ones are cheaper.', ko: '왜? 흰 게 더 싼데.'},
-            {s: 'Yena', en: 'Black shoes don’t get dirty as quickly as white ones.', ko: '검은 신발은 흰 신발만큼 빨리 더러워지지 않잖아.'},
-            {s: 'Chris', en: 'Good point. They’re only 3,000 won more expensive.', ko: '일리 있네. 3천 원밖에 더 비싸지 않아.'},
-            {s: 'Yena', en: 'Then I think they’re the smarter choice.', ko: '그럼 그게 더 현명한 선택인 것 같아.'}
+          { title: 'Dialogue A', setting: '문구점 (Dialogue A에 이어서)', lines: [
+            {s: 'Junho', en: 'Oh, they’re so pretty! {{How much are they}}?', ko: '와, 정말 예쁘다! 얼마예요?'},
+            {s: 'Clerk', en: '{{They’re}} 3,000 won each. If you buy two, you’ll get a discount.', ko: '하나에 3천 원이에요. 두 개 사시면 할인해 드려요.'},
+            {s: 'Junho', en: 'Then {{I’ll take two of them}}.', ko: '그럼 두 개 살게요.'},
+            {s: 'Clerk', en: 'That’s 5,000 won.', ko: '5천 원입니다.'}
           ]},
-          { title: 'Dialogue B', setting: '방과 후, 분식집', lines: [
-            {s: 'A', en: '{{Do you prefer}} tteokbokki {{or}} gimbap?', ko: '떡볶이가 좋아, 김밥이 좋아?'},
-            {s: 'B', en: '{{I like}} gimbap {{better}}. It’s cheaper and healthier.', ko: '김밥이 더 좋아. 더 싸고 건강에 좋아.'},
-            {s: 'A', en: 'Let’s share both, then!', ko: '그럼 둘 다 나눠 먹자!'},
-            {s: 'B', en: 'Deal!', ko: '좋아!'}
+          { title: 'Dialogue B', setting: '전통 과자 가게', lines: [
+            {s: 'Somi', en: 'I’m looking for traditional Korean cookies.', ko: '한국 전통 과자를 찾고 있어요.'},
+            {s: 'Clerk', en: 'We have many kinds. Here, try one of these.', ko: '여러 가지가 있어요. 여기, 하나 드셔 보세요.'},
+            {s: 'Somi', en: 'It’s sweet and delicious. {{How much is}} this box?', ko: '달고 맛있네요. 이 상자는 얼마예요?'},
+            {s: 'Clerk', en: 'It’s 8,000 won. We’re having a sale today.', ko: '8천 원이에요. 오늘 할인 중이에요.'},
+            {s: 'Somi', en: 'OK, {{I’ll take it}}.', ko: '좋아요, 그걸로 살게요.'}
           ]}
         ],
         check: [
-          {q: 'Which sneakers does Yena prefer?', a: 'The black ones.'},
-          {q: 'Why does she prefer them?', a: 'They don’t get dirty as quickly as white ones.'},
-          {q: 'Why does B like gimbap better?', a: 'Because it’s cheaper and healthier.'}
+          {q: 'How much is one hairpin?', a: '3,000 won.'},
+          {q: 'How much does Junho pay for two hairpins?', a: '5,000 won.'},
+          {q: 'How much is the box of cookies?', a: '8,000 won.'}
         ],
-        drill: {frame: ['A: Which do you prefer, ____?', 'B: I prefer the first one.'], opts: ['saving or spending', 'cash or a card', 'new or used books', 'online or offline shopping', 'snacks or fruit', 'buses or bikes']}
+        drill: {frame: ['A: How much is ____?', 'B: It’s ____ won.', 'A: I’ll take it.'], opts: ['this cap', 'that bag', 'this notebook', 'the blue one', 'this T-shirt', 'that umbrella']}
       }
     ],
-    interviewEx: 'Doyun always runs out of money, so I told him to make a budget. He prefers cash to a card.',
+    interviewEx: 'Somi bought a box of cookies for 8,000 won. She said, “I’ll take it.”',
     watch: {
-      label: 'Let’s Watch', title: 'The 24-Hour Rule', setting: '저녁, 세호가 휴대폰 쇼핑 앱을 보고 있다. 엄마가 다가온다.',
+      label: 'Let’s Watch', title: 'Is It Really a Good Deal?', setting: '영화관 매점. 벤과 엄마가 팝콘 크기를 고른다.',
       lines: [
-        {s: 'Seho', en: 'Mom, look! This headset is on sale. I want to buy it right now.', ko: '엄마, 보세요! 이 헤드셋 할인해요. 지금 바로 사고 싶어요.'},
-        {s: 'Mom', en: 'Do you need it, or do you just want it?', ko: '그게 필요한 거니, 아니면 그냥 갖고 싶은 거니?'},
-        {s: 'Seho', en: 'Hmm. My old one still works.', ko: '음. 예전 것도 아직 되긴 해요.'},
-        {s: 'Mom', en: 'Then why don’t you try the 24-hour rule?', ko: '그럼 24시간 규칙을 써 보는 건 어때?'},
-        {s: 'Seho', en: 'What’s that?', ko: '그게 뭐예요?'},
-        {s: 'Mom', en: 'You wait at least one day before you buy something. If you still want it tomorrow, you can buy it.', ko: '무언가를 사기 전에 적어도 하루를 기다리는 거야. 내일도 여전히 갖고 싶으면 사도 돼.'},
-        {s: 'Seho', en: 'Okay. I’ll put it on my list and decide tomorrow.', ko: '알겠어요. 목록에 적어 두고 내일 정할게요.'}
+        {s: 'Ben', en: 'Mom, I want a small popcorn. It’s 3,000 won.', ko: '엄마, 작은 팝콘 먹을래요. 3천 원이에요.'},
+        {s: 'Mom', en: 'Look. The medium one is 6,000 won, and the large one is 6,500 won.', ko: '봐. 중간 크기는 6천 원이고 큰 건 6천5백 원이야.'},
+        {s: 'Ben', en: 'Wow, the large one is only 500 won more! I’ll take the large one.', ko: '와, 큰 게 겨우 5백 원 더 비싸요! 큰 걸로 할래요.'},
+        {s: 'Mom', en: 'Hold on, Ben. Can you eat all of it?', ko: '잠깐, 벤. 그걸 다 먹을 수 있니?'},
+        {s: 'Ben', en: 'Hmm, no. Maybe I’m falling for a strategy. I’ll take the small one.', ko: '음, 아니요. 전략에 넘어가는 건지도 몰라요. 작은 걸로 할게요.'}
       ],
       check: [
-        {q: 'What does Seho want to buy?', a: 'A headset (on sale).'},
-        {q: 'What is the 24-hour rule?', a: 'Wait at least one day before you buy something.'},
-        {q: 'What will Seho do?', a: 'He will put it on his list and decide tomorrow.'}
+        {q: 'How much is the large popcorn?', a: '6,500 won.'},
+        {q: 'Why did Ben want the large one?', a: 'It was only 500 won more than the medium one.'},
+        {q: 'What did Ben choose in the end?', a: 'The small one.'}
       ]
     },
-    wrap: {en: 'Ask your partner for money advice, and ask which they prefer: saving or spending.', ko: '돈 관리 조언을 구하고, 저축과 소비 중 무엇을 더 좋아하는지 묻고 답한 뒤 두 문장으로 쓰기'}
+    wrap: {en: 'Role-play a shop: look for something, ask for something else, ask the price, and decide.', ko: '가게 역할극: 찾는 물건 말하기 → 다른 것 보여 달라고 하기 → 가격 묻기 → 사기'}
   },
 
   grammar: {
-    cover: 'to · -er than',
-    hook: {en: 'I have no money {{to spend}}.  /  Gimbap is {{cheaper than}} pizza.', ko: '빈칸에 들어갈 말은 각각 어떤 뜻을 더해 줄까?', answer: 'to spend는 money를 꾸며 ‘쓸 돈’, cheaper than은 ‘~보다 더 싼’(비교)', note: '첫 문장은 “어떤 돈?”이라고 묻고, 두 번째 문장은 “무엇과 비교?”라고 물어 학생이 뜻을 찾게 한다.'},
+    cover: 'which · if',
+    hook: {en: 'There are strategies {{which}} influence your decisions.  /  {{If}} a product becomes popular, people naturally want it.', ko: 'which는 어떤 말을 설명할까? If 덩어리는 무엇을 알려 줄까?', answer: 'which influence ~ → 앞의 strategies를 꾸밈(주격 관계대명사) / If ~ → 조건(만약 ~하면)', note: '교과서 언어 형식(There are marketing strategies which influence your decisions. / If a product becomes hot, people naturally want to have it.)과 같은 짜임이다.'},
     points: [
-      { id: 'g1', name: 'to부정사의 형용사적 용법', short: 'to부정사 (형용사)', form: '명사 + to + 동사원형', meaning: '~할 (명사)',
+      { id: 'g1', name: '주격 관계대명사', short: '주격 관계대명사', form: '명사(사물) + which / that + 동사 / 명사(사람) + who / that + 동사', meaning: '~하는 (명사)',
         notice: [
-          {en: 'I have some money {{to spend}}.', ko: '나는 쓸 돈이 조금 있다.'},
-          {en: 'We need a plan {{to save}} money.', ko: '우리는 돈을 모을 계획이 필요하다.'},
-          {en: 'There is nothing {{to buy}} here.', ko: '여기에는 살 것이 없다.'}
+          {en: 'There are strategies {{which}} influence your decisions.', ko: '여러분의 결정에 영향을 주는 전략들이 있다.'},
+          {en: 'Customers {{who}} see “9,900 won” think it is cheap.', ko: '“9,900원”을 보는 손님들은 그것이 싸다고 생각한다.'},
+          {en: 'Look at the candy {{that}} is near the checkout.', ko: '계산대 근처에 있는 사탕을 보아라.'}
         ],
         rule: [
-          {k: '자리', v: '꾸미는 명사 바로 뒤', ex: 'I need a pen to write with.'},
-          {k: '-thing', v: 'something / nothing + to V', ex: 'Do you want something to drink?'},
-          {k: '구별', v: '‘~하기 위해’(목적)와 다르게 앞 명사를 꾸민다', ex: 'a book to read (읽을 책)'}
-        ],
-        check: [
-          {q: 'I don’t have time ____ shopping. (go)', a: 'to go'},
-          {q: 'She made a list ____ at the store. (use)', a: 'to use'},
-          {q: 'Is there anything ____? (eat)', a: 'to eat'},
-          {q: 'He has a lot of homework ____. (do)', a: 'to do'},
-          {q: 'We found a good way ____ money. (save)', a: 'to save'}
-        ],
-        trap: {bad: 'I want to drink something cold to.', good: 'I want something cold to drink.', why: '꾸미는 to부정사는 명사(something cold) 바로 뒤에 온다.'},
-        scramble: [
-          {ko: '나는 이번 주에 쓸 돈이 없다.', en: 'I have no money to spend this week.'},
-          {ko: '그녀는 저축할 좋은 방법을 찾았다.', en: 'She found a good way to save.'},
-          {ko: '먹을 것 좀 줄래?', en: 'Can you give me something to eat?'}
-        ]
-      },
-      { id: 'g2', name: '비교 표현', short: '비교급 · as ~ as', form: '비교급 + than / as + 원급 + as', meaning: '~보다 더 … / ~만큼 …한',
-        notice: [
-          {en: 'The black shoes are {{more expensive than}} the white ones.', ko: '검은 신발이 흰 신발보다 더 비싸다.'},
-          {en: 'Gimbap is {{cheaper than}} pizza.', ko: '김밥은 피자보다 싸다.'},
-          {en: 'This bag is {{as useful as}} that one.', ko: '이 가방은 저것만큼 쓸모 있다.'}
-        ],
-        rule: [
-          {k: '짧은 말', v: '형용사 + -er + than', ex: 'cheap → cheaper than'},
-          {k: '긴 말', v: 'more + 형용사 + than', ex: 'expensive → more expensive than'},
-          {k: '같을 때', v: 'as + 원급 + as / 부정: not as ~ as', ex: 'It is not as cheap as I thought.'}
+          {k: '고르기', v: '꾸밈을 받는 명사가 사람이면 who, 사물·동물이면 which, 둘 다 that', ex: 'a salesperson who smiles / a product which sells well'},
+          {k: '뒤에 오는 것', v: '주격 관계대명사 바로 뒤에는 동사 (관계대명사가 주어 노릇)', ex: 'the cap which is on sale'},
+          {k: '동사 수', v: '관계대명사 뒤 동사는 앞 명사에 맞춘다', ex: 'a strategy which works / strategies which work'}
         ],
         compare: {
-          title: '비교급 만드는 법', note: '불규칙(good-better, bad-worse)은 따로 외우게 한다. 자음+y는 y를 i로 바꾸고 -er.',
-          head: ['-er / -r', '자음 하나 더 + -er · y → ier', 'more + 원급 · 불규칙'],
-          cols: [['cheap → cheaper', 'small → smaller', 'nice → nicer'], ['big → bigger', 'hot → hotter', 'easy → easier'], ['useful → more useful', 'expensive → more expensive', 'good → better']]
+          title: 'who vs which', note: '앞 명사가 사람인지 사물인지 먼저 보게 한다. that은 둘 다 된다.',
+          head: ['사람 + who', '사물 + which'],
+          cols: [['the customer who buys it', 'a friend who saves money'], ['the shoes which are popular', 'a sale which ends today']]
         },
         check: [
-          {q: 'This pen is ____ than that one. (cheap)', a: 'cheaper'},
-          {q: 'My room is ____ than yours. (small)', a: 'smaller'},
-          {q: 'Saving is ____ ____ than spending. (important)', a: 'more important'},
-          {q: 'My bag is as ____ as yours. (big)', a: 'big'},
-          {q: 'This plan is ____ than the old one. (good)', a: 'better'}
+          {q: 'I know a shop ____ sells cheap snacks. (사물)', a: 'which'},
+          {q: 'The salesperson ____ helped me was kind. (사람)', a: 'who'},
+          {q: 'Look at the shoes which ____ on sale. (be)', a: 'are'},
+          {q: 'He is a shopper who always ____ prices. (compare)', a: 'compares'},
+          {q: 'This is the box ____ costs 8,000 won. (사람·사물 모두)', a: 'that'}
         ],
-        trap: {bad: 'This phone is more cheaper than that one.', good: 'This phone is cheaper than that one.', why: '-er 비교급 앞에 more를 또 쓰지 않는다.'},
+        trap: {bad: 'I bought a cap who was on sale.', good: 'I bought a cap which was on sale.', why: '꾸밈을 받는 명사(cap)가 사물이면 which(또는 that).'},
         scramble: [
-          {ko: '중고책은 새 책보다 싸다.', en: 'Used books are cheaper than new books.'},
-          {ko: '저축은 소비보다 더 어렵다.', en: 'Saving is more difficult than spending.'},
-          {ko: '이 가방은 저것만큼 비싸다.', en: 'This bag is as expensive as that one.'}
+          {ko: '결정에 영향을 주는 전략들이 있다.', en: 'There are strategies which influence decisions.'},
+          {ko: '나는 가격을 비교하는 친구가 있다.', en: 'I have a friend who compares prices.'},
+          {ko: '계산대 근처에 있는 사탕을 보아라.', en: 'Look at the candy that is near the checkout.'}
+        ]
+      },
+      { id: 'g2', name: '조건의 if', short: '조건의 if', form: 'If + 주어 + 현재형, 주어 + will + 동사원형', meaning: '만약 ~하면, …할 것이다',
+        notice: [
+          {en: '{{If}} a product becomes popular, people naturally want it.', ko: '어떤 제품이 인기를 얻으면, 사람들은 자연스럽게 그것을 원한다.'},
+          {en: '{{If}} you buy two, you’ll get a discount.', ko: '두 개를 사면 할인을 받을 것이다.'},
+          {en: 'You’ll save money {{if}} you make a list.', ko: '목록을 만들면 돈을 아낄 것이다.'}
+        ],
+        rule: [
+          {k: '시제', v: 'if절은 미래의 일이어도 현재형 (If you buy ✔ / If you will buy ✘)', ex: 'If it rains tomorrow, I’ll stay home.'},
+          {k: '자리', v: 'if절이 앞에 오면 쉼표(,)를 찍는다. 뒤에 오면 쉼표 없음', ex: 'I’ll buy it if it’s on sale.'},
+          {k: '부정', v: 'If + 주어 + don’t / doesn’t ~', ex: 'If you don’t hurry, you’ll miss the sale.'}
+        ],
+        check: [
+          {q: 'If you ____ a list, you won’t buy extra things. (make)', a: 'make'},
+          {q: 'If it ____ on sale, I’ll buy it. (be)', a: 'is'},
+          {q: 'If you buy two, you ____ a discount. (get, 미래)', a: 'will get'},
+          {q: 'If you ____ compare prices, you may pay more. (부정)', a: 'don’t'},
+          {q: 'She’ll be happy ____ you give her the hairpins. (조건)', a: 'if'}
+        ],
+        trap: {bad: 'If you will buy two, you will get a discount.', good: 'If you buy two, you will get a discount.', why: '조건을 나타내는 if절에서는 미래의 일도 현재형으로 쓴다.'},
+        scramble: [
+          {ko: '두 개를 사면 할인을 받을 것이다.', en: 'If you buy two, you will get a discount.'},
+          {ko: '목록을 만들면 돈을 아낄 것이다.', en: 'You will save money if you make a list.'},
+          {ko: '서두르지 않으면 할인을 놓칠 것이다.', en: 'If you don’t hurry, you will miss the sale.'}
         ]
       }
     ],
-    wrap: {en: 'I need a plan to ______. ______ is cheaper than ______.', ko: 'to부정사(형용사) 한 문장, 비교 표현 한 문장으로 나의 돈 관리 쓰기'},
-    wrapEx: 'I need a plan to save 50,000 won. Bringing a water bottle is cheaper than buying drinks.'
+    wrap: {en: 'A smart shopper is someone who ______. If I ______, I will ______.', ko: '현명한 소비자를 관계대명사로 정의하고, 나의 소비 규칙을 if 조건문으로 쓰기'},
+    wrapEx: 'A smart shopper is someone who compares prices. If I see a big sale, I will check my budget first.'
   },
 
   reading: {
-    title: 'Ask Money Mentor', kind: '청소년 돈 관리 상담 칼럼', cover: '₩', coverKo: '내 돈의 주인 되기', cover2: 'Wise', coverKo2: '현명한 소비 습관',
+    title: 'Don’t Fall for It!', kind: '소비자 교육 기사', cover: 'Smart', coverKo: '현명한 소비자 되기', cover2: 'Strategies', coverKo2: '마케팅 전략 알아보기',
     before: [
-      {q: 'Look at the title. What does a “mentor” do?', a: '조언하고 이끌어 주는 사람'},
-      {q: 'What money problems do teens have?', a: '용돈이 금방 떨어진다, 비싼 물건, 충동구매 등'}
+      {q: 'Look at the title. What shouldn’t we fall for?', a: '물건을 사게 만드는 마케팅 전략'},
+      {q: 'Did you ever buy something you didn’t need?', a: '할인, 사은품, 광고 때문에 산 경험'}
     ],
-    gloss: {
-      mentor: '조언자, 멘토', 'by Wednesday': '수요일까지는', 'every penny': '한 푼까지 모두', jar: '병, 단지', 'divide': '나누다',
-      sneakers: '운동화', 'cost': '(값이) ~이다', 'checkout': '계산(하기)', 'shopping cart': '장바구니', boss: '주인, 상사', 'the rest': '나머지'
-    },
+    gloss: {'charm pricing': '매력 가격(끝자리 9 가격)', 'left digit': '맨 앞자리 숫자', 'decoy': '미끼', 'medium': '중간 크기', 'impulse buying': '충동구매', 'eye level': '눈높이', 'line': '줄', 'shopping list': '장보기 목록'},
     paras: [
-      {who: '', en: 'Do you often have no money to spend by Wednesday? Do you buy things and regret it later? You are not alone. This week, Money Mentor answers questions from three teens.',
-       ko: '수요일쯤이면 쓸 돈이 하나도 없는 일이 잦나요? 물건을 사고 나중에 후회하나요? 여러분만 그런 게 아니에요. 이번 주 ‘머니 멘토’가 세 십대의 질문에 답합니다.',
-       check: {q: 'Who answers the questions?', a: 'Money Mentor.'}, think: '여러분의 돈 고민은 무엇인가요?'},
-      {who: 'Q. from Jiwoo, 14', en: '“I get 20,000 won a week, but it disappears in three days. I don’t even know where it goes. What should I do?”',
-       ko: '“저는 일주일에 2만 원을 받는데 사흘이면 사라져요. 어디에 쓰는지도 모르겠어요. 어떻게 해야 할까요?”',
-       check: {q: 'What is Jiwoo’s problem?', a: 'Her money disappears in three days.'}, think: '지우에게 가장 먼저 필요한 것은?'},
-      {who: 'A. Money Mentor', en: 'First, keep track of every penny for a week. Then, make a budget with three jars: one for needs, one for wants, and one to save. If you divide your money first, it will last longer than before.',
-       ko: '먼저 일주일 동안 쓴 돈을 한 푼도 빠짐없이 기록하세요. 그다음 병 세 개로 예산을 짜세요. 하나는 필요한 것, 하나는 원하는 것, 하나는 저축할 돈이에요. 돈을 먼저 나눠 두면 전보다 더 오래갈 거예요.',
-       check: {q: 'What are the three jars for?', a: 'Needs, wants, and saving.'}, think: '세 병에 돈을 어떻게 나누면 좋을까?'},
-      {who: 'Q. from Daniel, 15', en: '“I want sneakers which cost 120,000 won. They’re much more expensive than my old ones. My parents said no. Is there any way to buy them?”',
-       ko: '“12만 원짜리 운동화를 갖고 싶어요. 예전 운동화보다 훨씬 비싸요. 부모님은 안 된다고 하셨어요. 그걸 살 방법이 있을까요?”',
-       check: {q: 'How much do the sneakers cost?', a: '120,000 won.'}, think: '여러분이라면 부모님을 어떻게 설득할까?'},
-      {who: 'A. Money Mentor', en: 'Set a saving goal. If you put aside 10,000 won every week, you will have enough in three months. Also, wait for a sale. The same shoes are often cheaper in spring than in winter.',
-       ko: '저축 목표를 세우세요. 매주 1만 원씩 떼어 두면 석 달이면 충분히 모일 거예요. 또 할인을 기다리세요. 같은 신발도 겨울보다 봄에 더 싼 경우가 많아요.',
-       check: {q: 'How long will Daniel need to save?', a: 'About three months.'}, think: '목표를 위해 기다려 본 경험이 있나요?'},
-      {who: 'Q. from Hayun, 13', en: '“When I shop online, I buy things on impulse. Later, I find nothing to use in the box. How can I stop?”',
-       ko: '“온라인 쇼핑을 하면 충동적으로 사요. 나중에 상자를 열어 보면 쓸 게 하나도 없어요. 어떻게 하면 멈출 수 있을까요?”',
-       check: {q: 'What is Hayun’s problem?', a: 'She buys things on impulse online.'}, think: '온라인 쇼핑이 충동구매를 부르는 까닭은?'},
-      {who: 'A. Money Mentor', en: 'Try the 24-hour rule. Put things in your shopping cart and wait a day before checkout. Ask yourself, “Is this a need or a want?” Remember, money smart people are not the ones with the most money. They are the boss of their money.',
-       ko: '24시간 규칙을 써 보세요. 물건을 장바구니에 담고 계산하기 전에 하루를 기다리세요. 스스로 물어보세요. “이건 필요한 걸까, 원하는 걸까?” 기억하세요. 돈에 현명한 사람은 돈이 가장 많은 사람이 아니라 자기 돈의 주인인 사람이에요.',
-       check: {q: 'What should Hayun ask herself?', a: '“Is this a need or a want?”'}, think: '“돈의 주인”이 된다는 것은 무슨 뜻일까?'}
+      {who: '', en: 'Do you think you are a smart shopper? You may think you are, but hold on! Stores use many strategies which influence your decisions. If you learn about them, you will become a smarter shopper. Let’s look at three of them.',
+       ko: '여러분은 자신이 현명한 소비자라고 생각하나요? 그렇다고 생각할지도 모르지만 잠깐! 가게들은 여러분의 결정에 영향을 주는 전략을 많이 쓴다. 그것을 알면 더 현명한 소비자가 될 것이다. 그중 세 가지를 살펴보자.',
+       check: {q: 'What do stores use?', a: 'Many strategies which influence our decisions.'}, think: '가게가 쓰는 전략으로 떠오르는 것은?'},
+      {who: 'Charm Pricing', en: 'Minji: This earphone case is only 9,900 won. That’s cheap! — Wait, Minji. It’s almost 10,000 won. Why does it look cheaper? We read prices from left to right. The first number is 9, not 10, so our brain thinks the price is much lower.',
+       ko: '민지: 이 이어폰 케이스는 겨우 9,900원이야. 싸다! — 잠깐, 민지야. 그건 거의 1만 원이야. 왜 더 싸 보일까? 우리는 가격을 왼쪽에서 오른쪽으로 읽는다. 첫 숫자가 10이 아니라 9이므로, 우리 뇌는 가격이 훨씬 낮다고 생각한다.',
+       check: {q: 'Why does 9,900 won look cheap?', a: 'The first number is 9, not 10.'}, think: '끝자리가 900인 가격을 본 적이 있나요?'},
+      {who: 'Charm Pricing', en: 'This is called charm pricing. Customers who see 9,900 won often buy more quickly. So, if you see a price which ends in 9, round it up in your head. Then you will see the real price.',
+       ko: '이것을 매력 가격이라고 부른다. 9,900원을 본 손님들은 더 빨리 사는 경우가 많다. 그러니 끝이 9로 끝나는 가격을 보면 머릿속에서 올려 생각해 보라. 그러면 진짜 가격이 보일 것이다.',
+       check: {q: 'What should you do with a price which ends in 9?', a: 'Round it up in your head.'}, think: '9,900원은 머릿속에서 얼마로 생각하면 될까?'},
+      {who: 'The Decoy', en: 'Ben: A small popcorn is 3,000 won, a medium is 6,000 won, and a large is 6,500 won. The large one is a great deal! — Hold on, Ben. Nobody really buys the medium one. It is a “decoy.” It is there only to make the large one look cheap. If you only want a snack, the small one is enough.',
+       ko: '벤: 작은 팝콘은 3천 원, 중간은 6천 원, 큰 건 6천5백 원이야. 큰 게 정말 이득이다! — 잠깐, 벤. 사실 중간 크기는 아무도 사지 않는다. 그것은 ‘미끼’다. 큰 것을 싸 보이게 하려고 거기 있을 뿐이다. 간식만 원한다면 작은 것으로 충분하다.',
+       check: {q: 'Why is the medium popcorn there?', a: 'To make the large one look cheap (it is a decoy).'}, think: '미끼 상품을 본 다른 예는?'},
+      {who: 'At the Checkout', en: 'Somi: I’m waiting in line. Oh, these gummies look good. I’ll take one! — Stop, Somi! Stores put small, cheap things near the checkout. Customers who are waiting in line get bored, so they pick them up. This is called impulse buying.',
+       ko: '소미: 줄을 서서 기다리는 중이야. 아, 이 젤리 맛있어 보인다. 하나 살래! — 멈춰, 소미야! 가게는 작고 싼 물건을 계산대 근처에 둔다. 줄을 서서 기다리는 손님들은 지루해서 그것을 집어 든다. 이것을 충동구매라고 부른다.',
+       check: {q: 'Why do stores put small things near the checkout?', a: 'Customers who are waiting in line get bored and pick them up.'}, think: '계산대 앞에서 무엇을 산 적이 있나요?'},
+      {who: '', en: 'Strategies like these are not always bad, but you need to know about them. Make a shopping list, check your budget, and ask yourself, “Do I really need this?” If you do, you won’t fall for them easily.',
+       ko: '이런 전략이 늘 나쁜 것은 아니지만, 그것에 대해 알아야 한다. 장보기 목록을 만들고, 예산을 확인하고, 스스로에게 물어보라. “이게 정말 필요할까?” 그렇게 하면 전략에 쉽게 넘어가지 않을 것이다.',
+       check: {q: 'What question should you ask yourself?', a: '“Do I really need this?”'}, think: '나만의 현명한 소비 규칙 한 가지는?'}
     ],
     split: 3,
-    next: '비싼 운동화와 충동구매,\n멘토는 어떻게 답했을까?',
-    recap: {q: '지우의 고민과 멘토의 조언은?', items: [{k: 'PROBLEM', v: 'Her money disappears in three days.'}, {k: 'ADVICE 1', v: 'Keep track of every penny.'}, {k: 'ADVICE 2', v: 'Make a budget with three jars.'}]},
+    next: '팝콘 크기와 계산대 앞 젤리에는\n어떤 전략이 숨어 있을까?',
+    recap: {q: '첫 번째 전략은 무엇이고, 어떻게 대처할까?', items: [{k: 'CHARM PRICING', v: '9,900 won looks much cheaper than 10,000 won'}, {k: 'TIP', v: 'round the price up in your head'}]},
     tf: [
-      {p: 1, s: 'Jiwoo gets 20,000 won a week.', a: true},
-      {p: 2, s: 'Money Mentor tells Jiwoo to use two jars.', a: false, why: '병 세 개(필요·원함·저축).'},
-      {p: 3, s: 'Daniel’s parents said yes to the sneakers.', a: false, why: '부모님은 안 된다고 하셨다.'},
-      {p: 4, s: 'Shoes are often cheaper in spring than in winter.', a: true},
-      {p: 5, s: 'Hayun buys things on impulse online.', a: true},
-      {p: 6, s: 'Money smart people have the most money.', a: false, why: '돈이 가장 많은 사람이 아니라 돈의 주인인 사람.'}
+      {p: 1, s: 'We read prices from right to left.', a: false, why: 'We read prices from left to right.'},
+      {p: 2, s: 'Customers who see 9,900 won often buy more quickly.', a: true},
+      {p: 4, s: 'Many people buy the medium popcorn.', a: false, why: 'Nobody really buys the medium one.'},
+      {p: 4, s: 'The medium popcorn makes the large one look cheap.', a: true},
+      {p: 5, s: 'Stores put expensive things near the checkout.', a: false, why: 'Stores put small, cheap things near the checkout.'},
+      {p: 6, s: 'The writer says all strategies are bad.', a: false, why: 'Strategies like these are not always bad.'}
     ],
     key: [
-      {en: 'Do you often have no money {{to spend}} by Wednesday?', note: '명사 + to부정사: ~할 (돈)', g: 'g1'},
-      {en: 'Make a budget with three jars: one for needs, one for wants, and one {{to save}}.', note: 'one(병) + to save: 저축할 (병)', g: 'g1'},
-      {en: 'It will last {{longer than}} before.', note: '비교급 + than', g: 'g2'},
-      {en: 'They’re much {{more expensive than}} my old ones.', note: 'much + 비교급: 훨씬 더', g: 'g2'},
-      {en: 'Is there any way {{to buy}} them?', note: 'way + to부정사: ~할 방법', g: 'g1'},
-      {en: 'I find nothing {{to use}} in the box.', note: 'nothing + to부정사: ~할 것이 없다', g: 'g1'}
+      {en: 'Stores use many strategies {{which}} influence your decisions.', note: '사물 + which + 동사', g: 'g1'},
+      {en: '{{If}} you learn about them, you {{will}} become a smarter shopper.', note: 'If + 현재형, will + 동사원형', g: 'g2'},
+      {en: 'Customers {{who}} see 9,900 won often buy more quickly.', note: '사람 + who + 동사', g: 'g1'},
+      {en: '{{If}} you see a price {{which}} ends in 9, round it up.', note: 'if 조건 + which 관계대명사', g: 'g2'},
+      {en: 'Customers {{who}} are waiting in line get bored.', note: '사람 + who + 동사', g: 'g1'},
+      {en: '{{If}} you do, you {{won’t}} fall for them easily.', note: 'If + 현재형, won’t + 동사원형', g: 'g2'}
     ],
-    summary: {text: 'Jiwoo should keep {{track}} of her spending and make a {{budget}} with three jars. Daniel should set a saving {{goal}} and wait for a {{sale}}. Hayun should try the {{24-hour}} rule. Money smart people are the {{boss}} of their money.'},
-    order: ['Jiwoo gets her allowance.', 'Her money disappears in three days.', 'She keeps track of her spending.', 'She makes a budget with three jars.'],
-    chart: {title: 'THREE QUESTIONS', ko: '세 고민과 조언 정리하기', cols: ['Problem', 'Advice', 'Key word'], note: '세 조언 모두 ‘사기 전에 멈추고 생각하기’라는 공통점을 찾게 한다.', rows: [
-      {name: 'Jiwoo', cells: ['money disappears fast', 'track spending · three jars', 'budget']},
-      {name: 'Daniel', cells: ['wants expensive sneakers', 'save 10,000 won a week · wait for a sale', 'goal']},
-      {name: 'Hayun', cells: ['buys on impulse online', 'wait 24 hours · need or want?', 'rule']}
+    summary: {text: 'Stores use {{strategies}} which influence our decisions. A price which ends in 9 looks much {{cheaper}}. A medium popcorn can be a {{decoy}} which makes the large one look like a great deal. Small things near the {{checkout}} cause impulse buying. If you make a list and check your {{budget}}, you won’t fall for them easily.'},
+    order: ['Somi waited in line.', 'She got bored.', 'She saw gummies near the checkout.', 'She almost bought them.'],
+    chart: {title: 'THREE STRATEGIES', ko: '세 가지 전략 비교하기', cols: ['How it works', 'Smart tip'], note: '표를 보고 “It is a strategy which ~.”, “If you ~, you will ~.” 문장으로 말하게 한다.', rows: [
+      {name: 'Charm pricing', cells: ['9,900 won looks much cheaper', 'round it up in your head']},
+      {name: 'The decoy', cells: ['the medium makes the large look cheap', 'buy what you need']},
+      {name: 'Checkout', cells: ['bored customers pick up small things', 'stick to your shopping list']}
     ]},
-    wrap: {en: 'I need a plan to ______. Before I buy something, I will ______. ______ is better than ______.', ko: '관통 질문으로 돌아가기: 나의 돈 관리 계획을 세 문장으로 쓰기'}
+    wrap: {en: 'My rule: If I ______, I will ______. A smart shopper is someone who ______.', ko: '관통 질문으로 돌아가기: 현명한 소비자가 되기 위한 나의 규칙 쓰기'}
   },
 
   quiz: [
-    ['“용돈”을 뜻하는 낱말은?', ['budget', 'receipt', 'account', 'allowance'], 3, 'allowance: 용돈'],
-    ['“expensive”의 반대말은?', ['cheap', 'useful', 'wisely', 'popular'], 0, 'expensive(비싼) ↔ cheap(싼)'],
-    ['빈칸에 알맞은 것은? “I ran ___ of money.”', ['up', 'out', 'off', 'into'], 1, 'run out of: 다 떨어지다'],
-    ['“Keep ___ of what you spend.” (기록하다)', ['list', 'goal', 'track', 'habit'], 2, 'keep track of: 기록하다'],
-    ['“Is it a need or a ___?” (원하는 것)', ['save', 'price', 'impulse', 'want'], 3, 'need ↔ want'],
-    ['충고를 구하는 표현은?', ['You should go.', 'What should I do?', 'I prefer this one.', 'Why don’t you wait?'], 1, 'What should I do? / Can you give me some advice?'],
-    ['“Which do you prefer, cash or a card?”에 알맞은 대답은?', ['I prefer cash.', 'Yes, I do.', 'You should save.', 'It costs 5,000 won.'], 0, 'I prefer A (to B).'],
-    ['Let’s Watch에서 엄마가 알려 준 규칙은?', ['할인 규칙', '목록 규칙', '영수증 규칙', '24시간 규칙'], 3, 'the 24-hour rule'],
-    ['빈칸에 알맞은 것은? “I have nothing ___.”', ['eat', 'ate', 'to eat', 'eating'], 2, 'nothing + to부정사: 먹을 것'],
-    ['빈칸에 알맞은 것은? “Gimbap is ___ than pizza.”', ['cheap', 'cheaper', 'cheapest', 'more cheap'], 1, 'cheap → cheaper than'],
-    ['어법상 틀린 문장은?', ['It is as big as mine.', 'I need a pen to use.', 'Saving is more important.', 'This is more cheaper.'], 3, 'more cheaper → cheaper'],
-    ['“good”의 비교급은?', ['gooder', 'better', 'more good', 'best'], 1, 'good – better – best'],
-    ['멘토가 지우에게 권한 병의 개수는?', ['한 개', '두 개', '세 개', '네 개'], 2, 'needs, wants, save'],
-    ['글쓴이가 말하는 ‘돈에 현명한 사람’은?', ['돈이 많은 사람', '할인만 사는 사람', '자기 돈의 주인인 사람', '용돈을 많이 받는 사람'], 2, 'They are the boss of their money.'],
-    ['다니엘이 매주 떼어 둘 돈은?', ['1만 원', '2만 원', '3만 원', '12만 원'], 0, 'put aside 10,000 won every week']
+    ['“예산”을 뜻하는 낱말은?', ['budget', 'price', 'discount', 'product'], 0, 'budget: 예산'],
+    ['“decide”의 명사형은?', ['decided', 'decision', 'deciding', 'decisive'], 1, 'decide → decision'],
+    ['“Don’t fall ___ that trick.”', ['for', 'in', 'on', 'at'], 0, 'fall for: ~에 속아 넘어가다'],
+    ['찾는 물건을 말하는 표현은?', ['I’ll take it.', 'I’m looking for a cap.', 'How much is it?', 'Hold on!'], 1, 'I’m looking for ~.'],
+    ['다른 물건을 보여 달라는 표현은?', ['Can you show me something else?', 'I’ll take two of them.', 'How much are they?', 'May I help you?'], 0, 'Can you show me something else?'],
+    ['“How much are they?”에 알맞은 대답은?', ['It’s blue.', 'They’re 3,000 won each.', 'I’ll take it.', 'Yes, they are.'], 1, '가격 대답'],
+    ['Let’s Watch에서 벤이 결국 고른 팝콘은?', ['작은 것', '중간', '큰 것', '사지 않았다'], 0, 'I’ll take the small one.'],
+    ['빈칸에 알맞은 것은? “I have a friend ___ compares prices.”', ['which', 'who', 'what', 'when'], 1, '사람 + who'],
+    ['빈칸에 알맞은 것은? “If you ___ two, you’ll get a discount.”', ['buy', 'will buy', 'bought', 'buying'], 0, 'if 조건절은 현재형'],
+    ['어법상 틀린 문장은?', ['It’s a cap which is on sale.', 'If it rains, I’ll stay home.', 'She is a girl which likes shopping.', 'I know a shop that sells gum.'], 2, 'She is a girl who likes shopping.'],
+    ['빈칸에 알맞은 것은? “Look at the shoes which ___ popular.”', ['is', 'are', 'be', 'being'], 1, '앞 명사(shoes)가 복수 → are'],
+    ['9,900원이 싸 보이는 까닭은?', ['품질이 낮아서', '첫 숫자가 9라서', '할인 중이라서', '작은 물건이라서'], 1, 'The first number is 9, not 10.'],
+    ['중간 크기 팝콘의 역할은?', ['가장 잘 팔리는 상품', '큰 것을 싸 보이게 하는 미끼', '어린이용 상품', '할인 상품'], 1, 'It is there only to make the large one look cheap.'],
+    ['계산대 근처에 작은 물건을 두는 까닭은?', ['손님이 기다리다 지루해서 집어 들기 때문에', '물건이 가벼워서', '계산이 빨라서', '창고가 없어서'], 0, 'Customers who are waiting in line get bored.'],
+    ['글의 요지로 알맞은 것은?', ['쇼핑을 하지 말자', '마케팅 전략을 알면 더 현명한 소비자가 된다', '큰 것을 사는 게 이득이다', '9로 끝나는 가격은 싸다'], 1, 'If you learn about them, you will become a smarter shopper.']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {marketing: '/ˈmɑːrkɪtɪŋ/', strategy: '/ˈstrætədʒi/', influence: '/ˈɪnfluəns/', decision: '/dɪˈsɪʒn/', product: '/ˈprɑːdʌkt/', customer: '/ˈkʌstəmər/', salesperson: '/ˈseɪlzpɜːrsn/', price: '/praɪs/', budget: '/ˈbʌdʒɪt/', discount: '/ˈdɪskaʊnt/', limited: '/ˈlɪmɪtɪd/', similar: '/ˈsɪmələr/', compare: '/kəmˈper/', choose: '/tʃuːz/', effect: '/ɪˈfekt/', realize: '/ˈriːəlaɪz/', spread: '/spred/', checkout: '/ˈtʃekaʊt/', popular: '/ˈpɑːpjələr/', naturally: '/ˈnætʃrəli/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'discount', ko: '할인', parts: [{t: 'dis', k: 'pre', m: '떨어져, 빼고'}, {t: 'count', k: 'root', m: '세다, 계산'}], family: ['count', 'account', 'counter'], note: '가격에서 빼고(dis) 계산하다(count) → 할인.'},
+    {w: 'salesperson', ko: '판매원', parts: [{t: 'sales', k: 'root', m: '판매'}, {t: 'person', k: 'root', m: '사람'}], family: ['sale', 'sell', 'chairperson'], note: '판매(sales)하는 사람(person). 남녀 구분 없이 쓰는 말.'},
+    {w: 'decision', ko: '결정', parts: [{t: 'decid(e)', k: 'root', m: '결정하다'}, {t: 'sion', k: 'suf', m: '~것 (명사)'}], family: ['decide', 'conclusion', 'television'], note: 'decide의 de가 s로 바뀌며 -sion이 붙는다 → 결정.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '관계대명사 who·which는 두 문장을 어떻게 하나로 묶을까?',
+    pic: [{en: 'customers', ko: '꾸밈을 받는 명사'}, {en: 'who', ko: '앞 명사를 받아 주어 노릇', hot: true}, {en: 'see 9,900 won', ko: '설명'}],
+    core: '주격 관계대명사는 앞 명사(선행사)를 다시 받아 뒤 문장의 주어 역할을 하면서, 그 문장을 명사를 꾸미는 설명으로 붙여 준다.',
+    why: ['사람이면 who, 사물·동물이면 which, 둘 다 that도 가능.', '관계대명사가 주어이므로 바로 뒤에 동사가 온다.', '동사의 수는 선행사에 맞춘다 (a girl who loves / girls who love).']
+  };
+  g1.anim = [{title: '두 문장을 who로 묶기', states: [
+    {t: 'Customers/S#girl | buy/V | quickly/M | . | / | They/S#she | see/V#v | 9,900 won/O#mk | .', note: '같은 사람들(customers = They)이 두 번', ko: '손님들은 빨리 산다. 그들은 9,900원을 본다.'},
+    {t: 'Customers/S#girl | who/X#she | see/V#v | 9,900 won/O#mk | buy/V | quickly/M | .', note: 'They → who (주어 노릇) + 바로 동사', ko: '9,900원을 보는 손님들은 빨리 산다.'}]}];
+  g1.contrast = {title: 'who? which?', pairs: [
+    {a: 'He is a shopper {{who}} compares prices.', ka: '그는 가격을 비교하는 소비자다. (사람 → who)', b: 'It is a strategy {{which}} works well.', kb: '그것은 효과가 좋은 전략이다. (사물 → which)'}],
+    point: '사람은 who, 사물은 which, 둘 다 that.'};
+  g2.principle = {
+    q: 'if절에서는 왜 미래인데 현재형을 쓸까?',
+    pic: [{en: 'If you buy two,', ko: '조건 (현재형)', hot: true}, {en: 'you will get a discount.', ko: '결과 (will)'}],
+    core: 'if절은 “그 일이 일어난다고 치면”이라는 조건이다. 조건은 사실처럼 두고 말하므로 현재형, 그 결과는 will로 말한다.',
+    why: ['If + 주어 + 현재형, 주어 + will + 동사원형.', 'if절에는 will을 쓰지 않는다.', '결과 자리에 명령문·조동사(can, should)도 올 수 있다.']
+  };
+  g2.anim = [{title: '조건 + 결과', states: [
+    {t: 'You/S | will make/V#u | a list/O#t | . | / | You/S#we | will save/V#s | money/O#p | .', note: '두 미래 문장', ko: '너는 목록을 만들 것이다. 너는 돈을 아낄 것이다.'},
+    {t: 'If/X | you/S | make/X#u | a list/O#t | , | you/S#we | will save/V#s | money/O#p | .', note: 'if절은 현재형(make), 결과는 will', ko: '목록을 만들면 돈을 아낄 것이다.'}]}];
+  g2.contrast = {title: 'if절의 시제', pairs: [
+    {a: 'If it {{is}} on sale, I will buy it.', ka: '그것이 할인 중이면 살 것이다.', b: 'If it {{will be}} on sale, …', kb: '✗ 조건의 if절에는 will을 쓰지 않는다'}],
+    point: '조건의 if절은 미래라도 현재형.'};
+})(window.LESSON);
