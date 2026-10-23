@@ -1,266 +1,313 @@
 /* 중1 영어(동아·윤정미) Lesson 8 · Be Smart Online
-   단원명은 교과서·문제집 목차 기준. 의사소통 기능과 문법은 추정(estimate: true).
-   대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글입니다. */
+   교과서 대조(2026-10): 의사소통 기능(의견 묻고 답하기 · 동의·비동의하기), 언어 형식(수여동사 give A B · 과거진행형 / start to),
+   읽기 주제(Goldilocks Learns Her Lesson — 옛이야기를 바꿔 쓴 SNS 예절 이야기), 단원 어휘를 교과서 목차·단어 목록과 맞췄다.
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식·교과서 어휘로 새로 쓴 글이다. */
 window.LESSON = {
-  book: 'm1-donga', no: 8, estimate: true,
+  book: 'm1-donga', no: 8,
   title: 'Be Smart Online', ko: '온라인에서 똑똑하게',
-  bigQ: {en: 'How can we be safe and kind online?', ko: '온라인에서 어떻게 안전하고 친절할 수 있을까?'},
+  bigQ: {en: 'How can we be smart and kind online?', ko: '온라인에서 어떻게 똑똑하고 바르게 행동할 수 있을까?'},
+  align: {
+    tb: {reading: 'Goldilocks Learns Her Lesson', funcs: ['의견 묻고 답하기', '동의·비동의하기'], forms: ['수여동사 (give A B)', '과거진행형 · start to'],
+      note: '교과서 읽기는 “골디락스와 곰 세 마리”를 바꿔 쓴 이야기로, ‘좋아요’를 얻으려고 남의 집 사진을 허락 없이 올린 아이가 교훈을 얻는다. 여기 본문은 “양치기 소년”을 바꿔 쓴 이야기로 같은 주제(온라인 게시물의 책임)를 다룬다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-09', '9영02-06'], grammar: ['9영02-05'], read1: ['9영01-04', '9영01-05'], read2: ['9영01-07', '9영02-09']},
+    forms: ['Sentence Patterns', 'Progressives', 'To-Infinitive']
+  },
   goals: {
-    vocab: ['인터넷·디지털 생활과 관련된 낱말 16개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 나의 온라인 습관을 한 문장으로 말할 수 있다.'],
-    talk: ['허락을 구하고 답할 수 있다.', '의견에 동의하거나 반대할 수 있다.'],
-    grammar: ['최상급으로 가장 ~한 것을 말할 수 있다.', '조건의 if로 ‘~하면’을 표현할 수 있다.'],
-    read1: ['안전한 온라인 생활 팁 글의 앞부분을 읽고 비밀번호와 게시물에 관한 조언을 이해할 수 있다.'],
-    read2: ['다섯 가지 팁을 정리하고, 나의 온라인 약속을 영어로 쓸 수 있다.']
+    vocab: ['온라인 생활과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 나의 온라인 습관을 한 문장으로 말할 수 있다.'],
+    talk: ['의견을 묻고 답할 수 있다. (What do you think about ~? — I think ~.)', '상대의 의견에 동의하거나 반대할 수 있다. (I agree. / I don’t think so.)'],
+    grammar: ['수여동사(give, send, show, tell + 사람 + 물건)를 쓸 수 있다.', '과거진행형(was/were + -ing)으로 과거의 어느 순간 하고 있던 일을 말할 수 있다.'],
+    read1: ['바꿔 쓴 옛이야기를 읽고 주인공이 왜 거짓 게시물을 올렸는지 파악할 수 있다.'],
+    read2: ['이야기의 교훈을 찾고, 온라인에 글을 올리기 전 지킬 약속을 쓸 수 있다.']
   },
 
   vocab: {
-    hook: {en: 'How many hours do you spend online a day?', ko: '하루에 몇 시간 온라인에 있나요?', note: '손가락으로 대략 시간을 표시하게 한다. 무엇을 하며 보내는지(게임, 영상, 채팅) 물어 오늘 낱말로 잇는다.'},
+    hook: {en: 'What do you post online? Why?', ko: '온라인에 무엇을 올리나요? 왜 올리나요?', note: '사진, 영상, 댓글 등을 모으고, ‘좋아요’를 받으면 기분이 어떤지 묻는다.'},
     words: [
-      {w: 'online', pos: 'adj./adv.', ko: '온라인의; 온라인으로', ic: '🌐', audio: 'assets/audio/online.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We chat online every day.', exKo: '우리는 매일 온라인으로 대화한다.'},
-      {w: 'password', pos: 'n.', ko: '비밀번호', ic: '🔑', ex: 'Make a strong password.', exKo: '강한 비밀번호를 만들어라.'},
-      {w: 'post', pos: 'v./n.', ko: '게시하다; 게시물', ic: '📝', audio: 'assets/audio/post.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Think before you post.', exKo: '게시하기 전에 생각해라.'},
-      {w: 'comment', pos: 'n.', ko: '댓글', ic: '💬', ex: 'She left a kind comment.', exKo: '그녀는 친절한 댓글을 남겼다.'},
-      {w: 'share', pos: 'v.', ko: '공유하다', ic: '📤', audio: 'assets/audio/share.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Don’t share your address.', exKo: '주소를 공유하지 마라.'},
-      {w: 'safe', pos: 'adj.', ko: '안전한', ic: '🛡️', audio: 'assets/audio/safe.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Stay safe online.', exKo: '온라인에서 안전하게 지내라.'},
-      {w: 'personal', pos: 'adj.', ko: '개인의', ic: '👤', audio: 'assets/audio/personal.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Keep personal information secret.', exKo: '개인 정보는 비밀로 해라.'},
-      {w: 'information', pos: 'n.', ko: '정보', ic: 'ℹ️', audio: 'assets/audio/information.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Check the information first.', exKo: '먼저 정보를 확인해라.'},
-      {w: 'fake', pos: 'adj.', ko: '가짜의', ic: '🎭', audio: 'assets/audio/fake.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'That is fake news.', exKo: '그건 가짜 뉴스다.'},
-      {w: 'true', pos: 'adj.', ko: '사실인, 진짜의', ic: '✔️', audio: 'assets/audio/true.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Is the story true?', exKo: '그 이야기는 사실이니?'},
-      {w: 'mean', pos: 'adj.', ko: '못된, 심술궂은', ic: '😠', audio: 'assets/audio/mean.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Don’t write mean words.', exKo: '못된 말을 쓰지 마라.'},
-      {w: 'report', pos: 'v.', ko: '신고하다, 알리다', ic: '🚩', audio: 'assets/audio/report.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Report bad comments to an adult.', exKo: '나쁜 댓글은 어른에게 알려라.'},
-      {w: 'screen', pos: 'n.', ko: '화면', ic: '📱', audio: 'assets/audio/screen.mp3', audioCredit: 'Jelkner · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Take a break from the screen.', exKo: '화면에서 잠시 쉬어라.'},
-      {w: 'stranger', pos: 'n.', ko: '낯선 사람', ic: '🧍', audio: 'assets/audio/stranger.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Don’t meet strangers from online.', exKo: '온라인에서 만난 낯선 사람을 만나지 마라.'},
-      {w: 'download', pos: 'v.', ko: '내려받다', ic: '⬇️', audio: 'assets/audio/download.mp3', audioCredit: 'EncycloPetey · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Don’t download strange files.', exKo: '이상한 파일을 내려받지 마라.'},
-      {w: 'rule', pos: 'n.', ko: '규칙', ic: '📏', audio: 'assets/audio/rule.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Let’s make online rules.', exKo: '온라인 규칙을 만들자.'}
+      {w: 'post', pos: 'v. / n.', ko: '게시하다; 게시물', ic: '📤', ex: 'He posted a video online.', exKo: '그는 온라인에 영상을 올렸다.'},
+      {w: 'social', pos: 'adj.', ko: '사회의, 사교의', ic: '🌐', ex: 'She uses social media every day.', exKo: '그녀는 날마다 소셜 미디어를 쓴다.'},
+      {w: 'follower', pos: 'n.', ko: '팔로워, 따르는 사람', ic: '👥', ex: 'He has many followers.', exKo: '그는 팔로워가 많다.'},
+      {w: 'selfie', pos: 'n.', ko: '셀카', ic: '🤳', ex: 'She took a selfie.', exKo: '그녀는 셀카를 찍었다.'},
+      {w: 'shocking', pos: 'adj.', ko: '충격적인', ic: '😱', ex: 'The news was shocking.', exKo: '그 소식은 충격적이었다.'},
+      {w: 'boring', pos: 'adj.', ko: '지루한', ic: '🥱', ex: 'His videos were boring.', exKo: '그의 영상은 지루했다.'},
+      {w: 'personal', pos: 'adj.', ko: '개인의, 개인적인', ic: '🔐', ex: 'Don’t post personal information.', exKo: '개인 정보를 올리지 마라.'},
+      {w: 'permission', pos: 'n.', ko: '허락', ic: '✅', ex: 'Ask for permission first.', exKo: '먼저 허락을 구해라.'},
+      {w: 'forgive', pos: 'v.', ko: '용서하다', ic: '🤝', ex: 'Please forgive me.', exKo: '저를 용서해 주세요.'},
+      {w: 'shout', pos: 'v.', ko: '소리치다', ic: '📢', ex: 'He shouted for help.', exKo: '그는 도와 달라고 소리쳤다.'},
+      {w: 'knock', pos: 'v.', ko: '두드리다', ic: '🚪', ex: 'Someone knocked on the door.', exKo: '누군가 문을 두드렸다.'},
+      {w: 'asleep', pos: 'adj.', ko: '잠든', ic: '😴', ex: 'The sheep were asleep.', exKo: '양들이 잠들어 있었다.'},
+      {w: 'upstairs', pos: 'adv.', ko: '위층으로', ic: '⬆️', ex: 'She went upstairs.', exKo: '그녀는 위층으로 올라갔다.'},
+      {w: 'noisy', pos: 'adj.', ko: '시끄러운', ic: '🔊', ex: 'The room was noisy.', exKo: '방이 시끄러웠다.'},
+      {w: 'press', pos: 'v.', ko: '누르다', ic: '👆', ex: 'Think before you press the button.', exKo: '버튼을 누르기 전에 생각해라.'},
+      {w: 'forever', pos: 'adv.', ko: '영원히', ic: '♾️', ex: 'Posts can stay online forever.', exKo: '게시물은 온라인에 영원히 남을 수 있다.'},
+      {w: 'review', pos: 'n.', ko: '후기, 평가', ic: '⭐', ex: 'I read the reviews before I buy.', exKo: '나는 사기 전에 후기를 읽는다.'},
+      {w: 'list', pos: 'n.', ko: '목록', ic: '📝', ex: 'Make a list of rules.', exKo: '규칙 목록을 만들어라.'},
+      {w: 'unique', pos: 'adj.', ko: '독특한, 유일한', ic: '🦄', ex: 'Make a unique password.', exKo: '독특한 비밀번호를 만들어라.'},
+      {w: 'smart', pos: 'adj.', ko: '똑똑한, 현명한', ic: '🧠', ex: 'Be a smart user.', exKo: '현명한 사용자가 되어라.'}
     ],
     phrases: [
-      {w: 'think before you post', ko: '게시하기 전에 생각하다', ex: 'Always think before you post.', exKo: '늘 게시하기 전에 생각해라.'},
-      {w: 'take a break', ko: '잠시 쉬다', ex: 'Take a break every hour.', exKo: '한 시간마다 잠시 쉬어라.'},
-      {w: 'keep ~ secret', ko: '~을 비밀로 하다', ex: 'Keep your password secret.', exKo: '비밀번호를 비밀로 해라.'},
-      {w: 'be careful with', ko: '~을 조심하다', ex: 'Be careful with links.', exKo: '링크를 조심해라.'},
-      {w: 'make sure', ko: '확실히 하다, 꼭 ~하다', ex: 'Make sure the news is true.', exKo: '그 뉴스가 사실인지 꼭 확인해라.'},
-      {w: 'ask for help', ko: '도움을 요청하다', ex: 'Ask for help from an adult.', exKo: '어른에게 도움을 요청해라.'}
+      {w: 'What do you think about ~?', ko: '~에 대해 어떻게 생각하니?', ex: 'What do you think about this video?', exKo: '이 영상에 대해 어떻게 생각해?'},
+      {w: 'I agree. / I don’t think so.', ko: '동의해. / 나는 그렇게 생각하지 않아.', ex: 'I agree. It’s really funny.', exKo: '동의해. 정말 웃겨.'},
+      {w: 'break into', ko: '~에 침입하다', ex: 'Someone broke into the house.', exKo: '누군가 그 집에 침입했다.'},
+      {w: 'in surprise', ko: '놀라서', ex: 'He jumped up in surprise.', exKo: '그는 놀라서 펄쩍 뛰었다.'},
+      {w: 'get bored', ko: '지루해하다', ex: 'His followers got bored.', exKo: '그의 팔로워들은 지루해했다.'},
+      {w: 'from now on', ko: '지금부터', ex: 'From now on, I’ll check the facts.', exKo: '지금부터 나는 사실을 확인할 것이다.'}
     ],
     pairs: [
-      {a: 'fake', b: 'real', rel: '반대말'},
-      {a: 'safe', b: 'dangerous', rel: '반대말'},
-      {a: 'mean', b: 'kind', rel: '반대말'},
-      {a: 'download', b: 'upload', rel: '반대말'}
+      {a: 'boring', b: 'bored', rel: '지루하게 하는 / 지루해하는'},
+      {a: 'shocking', b: 'shocked', rel: '충격적인 / 충격받은'},
+      {a: 'asleep', b: 'awake', rel: '반대말'},
+      {a: 'noisy', b: 'quiet', rel: '반대말'}
     ],
-    wrap: {en: 'Online, I usually ______. I should keep my ______ secret.', ko: '오늘 배운 낱말로 나의 온라인 습관과 다짐 쓰기'}
+    wrap: {en: 'I post ______ online. Before I press POST, I ______.', ko: '오늘 배운 낱말로 나의 온라인 습관과 약속 쓰기'}
   },
 
   talk: {
-    hook: {en: 'Have you ever seen a mean comment online?', ko: '온라인에서 못된 댓글을 본 적이 있나요?', note: '구체적인 내용보다 그때의 기분을 묻는다. 학생 개인의 경험을 캐묻지 않도록 주의한다.'},
-    speakers: {Sena: {voice: 0, pitch: 1.15}, Dad: {voice: 2, pitch: .85}, Leo: {voice: 1, pitch: 1}, Mira: {voice: 0, pitch: 1.1}, 'Mr. Han': {voice: 2, pitch: .95}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
+    hook: {en: 'Do you believe everything online?', ko: '온라인에 있는 모든 것을 믿나요?', note: '가짜 뉴스나 과장된 광고를 본 경험을 나눈다. 서로의 의견을 묻고 동의·반대하는 표현으로 이어진다.'},
+    speakers: {Jiwoo: {voice: 0, pitch: 1.15}, Ben: {voice: 1, pitch: 1}, Mom: {voice: 2, pitch: 1.1}, Sam: {voice: 1, pitch: .95}, 'Ms. Ahn': {voice: 2, pitch: 1.05}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
     sets: [
-      { id: 'lt1', label: 'Listen & Talk 1', func: '허락 구하고 답하기',
-        key: {q: ['Can I ~?', 'May I ~?', 'Is it okay if I ~?'], a: ['Sure. Go ahead.', 'Yes, you can.', 'Sorry, you can’t.']},
-        note: 'May I ~?는 Can I ~?보다 공손하다. 허락하지 않을 때는 Sorry, you can’t. 뒤에 까닭을 말한다.',
+      { id: 'lt1', label: 'Listen & Talk 1', func: '의견 묻고 답하기',
+        key: {q: ['What do you think about ~?', 'What do you think of ~?', 'How do you like ~?'], a: ['I think (that) ~.', 'In my opinion, ~.', 'I like it. It’s ~.']},
+        note: 'What do you think about + 명사(-ing)?로 의견을 묻는다. 대답은 I think (that) + 주어 + 동사. 그 까닭을 한 문장 더 붙이면 좋다.',
         dialogs: [
-          { title: 'Dialogue A', setting: '저녁, 거실', lines: [
-            {s: 'Sena', en: 'Dad, {{can I}} download this game?', ko: '아빠, 이 게임 내려받아도 돼요?'},
-            {s: 'Dad', en: 'Let me see. Hmm, it’s from a strange website.', ko: '어디 보자. 음, 이상한 사이트에서 온 거구나.'},
-            {s: 'Sena', en: 'Is that bad?', ko: '그게 나빠요?'},
-            {s: 'Dad', en: 'Yes. It can have a virus. {{Sorry, you can’t}}.', ko: '응. 바이러스가 있을 수 있어. 미안하지만 안 돼.'},
-            {s: 'Sena', en: 'Okay. {{May I}} download it from the app store?', ko: '알겠어요. 앱 스토어에서 내려받아도 돼요?'},
-            {s: 'Dad', en: '{{Sure. Go ahead}}.', ko: '물론이지. 그렇게 하렴.'}
+          { title: 'Dialogue A', setting: '방과 후, 휴대폰 가게', lines: [
+            {s: 'Jiwoo', en: 'I need a new phone. {{What do you think about}} this one?', ko: '새 휴대폰이 필요해. 이건 어떻게 생각해?'},
+            {s: 'Ben', en: '{{I think}} it’s great. The camera is really good.', ko: '좋은 것 같아. 카메라가 정말 좋아.'},
+            {s: 'Jiwoo', en: 'But it’s expensive. Let’s read the reviews.', ko: '그런데 비싸. 후기를 읽어 보자.'},
+            {s: 'Ben', en: 'Good idea. Most people gave it five stars.', ko: '좋은 생각이야. 대부분 별 다섯 개를 줬네.'}
           ]},
-          { title: 'Dialogue B', setting: '교실, 사진 찍기 전', lines: [
-            {s: 'A', en: '{{Is it okay if I}} post our class photo online?', ko: '우리 반 사진 온라인에 올려도 될까?'},
-            {s: 'B', en: 'Let’s ask everyone first. Some people may not want it.', ko: '먼저 모두에게 물어보자. 원하지 않는 사람도 있을 수 있어.'},
-            {s: 'A', en: 'Good point. I’ll ask them.', ko: '좋은 지적이야. 물어볼게.'},
-            {s: 'B', en: 'Thanks!', ko: '고마워!'}
+          { title: 'Dialogue B', setting: '저녁, 집 거실', lines: [
+            {s: 'A', en: 'Mom, what do you think about this video? A cat is driving a car!', ko: '엄마, 이 영상 어떻게 생각해요? 고양이가 차를 운전해요!'},
+            {s: 'B', en: '{{In my opinion}}, it’s not real. Someone made it with an app.', ko: '내 생각에 그건 진짜가 아니야. 누가 앱으로 만들었어.'},
+            {s: 'A', en: 'Really? It has two million views.', ko: '정말요? 조회 수가 2백만이에요.'},
+            {s: 'B', en: 'Many views don’t make it true.', ko: '조회 수가 많다고 사실이 되는 건 아니란다.'}
           ]}
         ],
         check: [
-          {q: 'Why can’t Sena download the game at first?', a: 'It’s from a strange website, and it can have a virus.'},
-          {q: 'Where can Sena download it?', a: 'From the app store.'},
-          {q: 'What will A do before posting the photo?', a: 'A will ask everyone first.'}
+          {q: 'What does Ben think about the phone?', a: 'He thinks it’s great (the camera is really good).'},
+          {q: 'How many stars did most people give the phone?', a: 'Five stars.'},
+          {q: 'What does Mom think about the video?', a: 'She thinks it’s not real.'}
         ],
-        drill: {frame: ['A: Can I ____?', 'B: Sure. Go ahead.'], opts: ['use your phone', 'post this photo', 'watch one more video', 'download this app', 'use your computer', 'join the group chat']}
+        drill: {frame: ['A: What do you think about ____?', 'B: I think it’s ...'], opts: ['online games', 'this selfie', 'cleaning robots', 'short videos', 'school uniforms', 'smart watches']}
       },
-      { id: 'lt2', label: 'Listen & Talk 2', func: '동의하고 반대하기',
-        key: {q: ['I think ~. What do you think?', 'Do you agree?'], a: ['I agree (with you).', 'I don’t agree.', 'You’re right. / I don’t think so.']},
-        note: '반대할 때도 I don’t agree. 뒤에 Because ~로 까닭을 말하면 예의 있게 들린다.',
+      { id: 'lt2', label: 'Listen & Talk 2', func: '동의·비동의하기',
+        key: {q: ['I think ~.'], a: ['I think so, too. / I agree (with you).', 'I don’t think so. / I don’t agree.', 'You’re right.']},
+        note: '반대할 때는 I don’t think so.로 부드럽게 말하고 이유를 덧붙인다. 상대 의견을 존중하는 태도가 중요하다.',
         dialogs: [
-          { title: 'Dialogue A', setting: '정보 시간, 토론 활동', lines: [
-            {s: 'Mr. Han', en: 'Leo, I think phones are the most useful tool for students. {{What do you think}}?', ko: '레오, 나는 휴대폰이 학생들에게 가장 쓸모 있는 도구라고 생각해. 너는 어떻게 생각하니?'},
-            {s: 'Leo', en: '{{I agree}}. We can find information quickly.', ko: '동의해요. 정보를 빨리 찾을 수 있잖아요.'},
-            {s: 'Mira', en: '{{I don’t agree}}. Some students use them for games all day.', ko: '저는 동의하지 않아요. 하루 종일 게임만 하는 학생도 있어요.'},
-            {s: 'Mr. Han', en: 'Good points. So how should we use them?', ko: '좋은 의견들이구나. 그럼 어떻게 써야 할까?'},
-            {s: 'Mira', en: 'If we make rules, phones can be useful.', ko: '규칙을 만들면 휴대폰이 쓸모 있을 수 있어요.'}
+          { title: 'Dialogue A', setting: '점심시간, 교실', lines: [
+            {s: 'Sam', en: 'I think cleaning robots are perfect for people like us.', ko: '청소 로봇은 우리 같은 사람한테 딱인 것 같아.'},
+            {s: 'Jiwoo', en: '{{I agree}}. I don’t like cleaning my room.', ko: '동의해. 나는 방 청소하는 거 싫어.'},
+            {s: 'Sam', en: 'I think robots will do all the housework soon.', ko: '로봇이 곧 집안일을 전부 할 것 같아.'},
+            {s: 'Jiwoo', en: '{{I don’t think so}}. They can’t cook or fold clothes yet.', ko: '나는 그렇게 생각 안 해. 아직 요리나 빨래 개기는 못 하잖아.'}
           ]},
-          { title: 'Dialogue B', setting: '쉬는 시간', lines: [
-            {s: 'A', en: 'Online friends are the same as real friends. {{Do you agree}}?', ko: '온라인 친구는 진짜 친구랑 똑같아. 동의해?'},
-            {s: 'B', en: '{{I don’t think so}}. We don’t really know them.', ko: '그렇게 생각 안 해. 우리는 그들을 잘 모르잖아.'},
-            {s: 'A', en: 'Hmm, {{you’re right}}. We should be careful.', ko: '음, 네 말이 맞아. 조심해야겠다.'},
-            {s: 'B', en: 'Yes. Never share personal information with them.', ko: '응. 개인 정보는 절대 공유하지 마.'}
+          { title: 'Dialogue B', setting: '디지털 시민 수업', lines: [
+            {s: 'Ms. Ahn', en: 'Some people think that posting friends’ photos is OK. What do you think?', ko: '친구 사진을 올려도 괜찮다고 생각하는 사람들이 있어요. 여러분은 어떻게 생각해요?'},
+            {s: 'Ben', en: '{{I don’t agree}}. We need permission first.', ko: '저는 동의하지 않아요. 먼저 허락을 받아야 해요.'},
+            {s: 'Sam', en: '{{I think so, too}}. Photos are personal.', ko: '저도 그렇게 생각해요. 사진은 개인적인 거예요.'},
+            {s: 'Ms. Ahn', en: '{{You’re right}}. Always ask first.', ko: '맞아요. 늘 먼저 물어보세요.'}
           ]}
         ],
         check: [
-          {q: 'Why does Leo agree?', a: 'Because students can find information quickly.'},
-          {q: 'Why doesn’t Mira agree?', a: 'Some students use phones for games all day.'},
-          {q: 'What should we never share with online friends?', a: 'Personal information.'}
+          {q: 'Does Jiwoo agree that robots will do all the housework soon?', a: 'No, she doesn’t.'},
+          {q: 'Why does Jiwoo disagree?', a: 'Robots can’t cook or fold clothes yet.'},
+          {q: 'What do we need before we post friends’ photos?', a: 'Permission.'}
         ],
-        drill: {frame: ['A: I think ____. What do you think?', 'B: I agree. / I don’t agree.'], opts: ['games are fun', 'phones are useful', 'videos are too long', 'online classes are easy', 'emojis are cute', 'chatting is good']}
+        drill: {frame: ['A: I think ____.', 'B: I agree. / I don’t think so.'], opts: ['games are good for us', 'selfies are fun', 'online classes are easy', 'phones are bad for sleep', 'robots are smart', 'reviews are always true']}
       }
     ],
-    interviewEx: 'Minjun thinks phones are useful. I don’t agree because he plays games too much.',
+    interviewEx: 'Minji thinks short videos are fun. I don’t agree because they waste time.',
     watch: {
-      label: 'Let’s Watch', title: 'The Shocking News', setting: '점심시간. 미라가 휴대폰을 들고 놀란 얼굴로 레오에게 달려온다.',
+      label: 'Let’s Watch', title: 'Is It True?', setting: '방과 후, 학교 앞. 벤이 휴대폰으로 충격적인 게시물을 보여 준다.',
       lines: [
-        {s: 'Mira', en: 'Leo, look! This post says school is closed tomorrow!', ko: '레오, 봐! 이 게시물에 내일 학교가 쉰대!'},
-        {s: 'Leo', en: 'Really? Who posted it?', ko: '정말? 누가 올렸어?'},
-        {s: 'Mira', en: 'I don’t know. Can I share it with our class chat?', ko: '몰라. 우리 반 단톡방에 공유해도 될까?'},
-        {s: 'Leo', en: 'Wait. If it’s fake, everyone will be confused. Let’s check the school website first.', ko: '잠깐. 만약 가짜면 모두가 혼란스러울 거야. 먼저 학교 홈페이지를 확인하자.'},
-        {s: 'Mira', en: 'Oh, the website says nothing about it.', ko: '어, 홈페이지에는 아무 말도 없네.'},
-        {s: 'Leo', en: 'See? It’s fake news. Checking is the smartest thing to do.', ko: '봤지? 가짜 뉴스야. 확인하는 게 가장 똑똑한 일이야.'}
+        {s: 'Ben', en: 'Look! This post says our school will close tomorrow.', ko: '봐! 이 게시물에 내일 우리 학교가 문을 닫는대.'},
+        {s: 'Jiwoo', en: 'Really? What do you think about it?', ko: '정말? 너는 어떻게 생각해?'},
+        {s: 'Ben', en: 'I think it’s true. Many people shared it.', ko: '사실인 것 같아. 많은 사람이 공유했어.'},
+        {s: 'Jiwoo', en: 'I don’t think so. Let’s check the school website first.', ko: '나는 그렇게 생각 안 해. 먼저 학교 누리집을 확인해 보자.'},
+        {s: 'Ben', en: 'You’re right. Oh, it was a fake post!', ko: '네 말이 맞아. 아, 가짜 게시물이었어!'}
       ],
       check: [
-        {q: 'What did the post say?', a: 'School is closed tomorrow.'},
-        {q: 'What did Leo want to check first?', a: 'The school website.'},
-        {q: 'Was the news true?', a: 'No, it was fake news.'}
+        {q: 'What did the post say?', a: 'Their school will close tomorrow.'},
+        {q: 'Why did Ben believe it?', a: 'Many people shared it.'},
+        {q: 'Was the post true?', a: 'No, it was a fake post.'}
       ]
     },
-    wrap: {en: 'Ask your partner for permission, then share an opinion and agree or disagree.', ko: '허락을 구하는 대화와 의견에 동의·반대하는 대화를 짝과 해 보기'}
+    wrap: {en: 'Share your opinion about one online habit. Your partner agrees or disagrees and gives a reason.', ko: '온라인 습관 하나에 대한 의견을 말하고, 짝은 동의·반대와 그 까닭을 말하기'}
   },
 
   grammar: {
-    cover: 'the -est · if',
-    hook: {en: 'This is {{the strongest}} password.  /  {{If}} you see a mean comment, tell an adult.', ko: '빈칸에 들어갈 말은 각각 어떤 뜻을 더해 줄까?', answer: 'the strongest는 ‘가장 강한’(최상급), If는 ‘만약 ~하면’(조건)', note: '비교급(stronger)과 최상급(the strongest)의 차이를 먼저 묻는다.'},
+    cover: 'give A B · was -ing',
+    hook: {en: 'People didn’t {{give}} Leo many likes.  /  It {{was getting}} dark, and it {{started to}} snow.', ko: '첫 문장에서 give 뒤에 오는 두 말은 무엇일까? 둘째 문장의 was getting은 언제의 일일까?', answer: 'give + Leo(사람) + many likes(물건) / was getting → 과거의 그 순간 진행 중이던 일', note: '교과서 언어 형식(People didn’t give Goldilocks many likes. / It was getting dark, and it started to rain.)과 같은 짜임이다.'},
     points: [
-      { id: 'g1', name: '최상급', short: '최상급', form: 'the + 형용사-est / the most + 형용사', meaning: '가장 ~한',
+      { id: 'g1', name: '수여동사 (give A B)', short: '수여동사', form: 'give / send / show / tell / buy + 사람(~에게) + 물건(~을)', meaning: '(사람)에게 (물건)을 ~해 주다',
         notice: [
-          {en: 'This is {{the strongest}} password.', ko: '이것이 가장 강한 비밀번호다.'},
-          {en: 'Being kind is {{the most important}} rule.', ko: '친절하기가 가장 중요한 규칙이다.'},
-          {en: 'Checking facts is {{the best}} way.', ko: '사실 확인이 가장 좋은 방법이다.'}
+          {en: 'People didn’t {{give Leo many likes}}.', ko: '사람들은 레오에게 ‘좋아요’를 많이 주지 않았다.'},
+          {en: 'His followers {{sent him messages}}.', ko: '팔로워들이 그에게 메시지를 보냈다.'},
+          {en: 'He {{showed the villagers the video}}.', ko: '그는 마을 사람들에게 그 영상을 보여 주었다.'}
         ],
         rule: [
-          {k: '짧은 말', v: 'the + -est (big → the biggest, easy → the easiest)', ex: 'It’s the easiest game.'},
-          {k: '긴 말', v: 'the most + 형용사', ex: 'the most useful app'},
-          {k: '불규칙', v: 'good → the best, bad → the worst', ex: 'That was the worst day.'}
+          {k: '순서', v: '동사 + 사람 + 물건 (사람이 먼저!)', ex: 'She told me a secret.'},
+          {k: '바꿔 쓰기', v: '동사 + 물건 + to + 사람 (give, send, show, tell)', ex: 'He gave the phone to me.'},
+          {k: 'for를 쓰는 동사', v: 'buy, make, cook + 물건 + for + 사람', ex: 'Mom made a cake for me.'}
         ],
         compare: {
-          title: '원급 · 비교급 · 최상급', note: '세 단계를 소리 내어 읽게 한다. 최상급 앞의 the를 빠뜨리지 않게 한다.',
-          head: ['원급', '비교급 (than)', '최상급 (the)'],
-          cols: [['strong', 'easy', 'important'], ['stronger', 'easier', 'more important'], ['the strongest', 'the easiest', 'the most important']]
+          title: '사람 먼저 / 물건 먼저', note: '물건을 먼저 쓰면 사람 앞에 to나 for를 붙인다.',
+          head: ['동사 + 사람 + 물건', '동사 + 물건 + to/for + 사람'],
+          cols: [['give him likes', 'show me the post', 'buy her a phone'], ['give likes to him', 'show the post to me', 'buy a phone for her']]
         },
         check: [
-          {q: 'This is the ____ rule. (important)', a: 'most important'},
-          {q: 'He is the ____ boy in our class. (tall)', a: 'tallest'},
-          {q: 'This is the ____ way. (easy)', a: 'easiest'},
-          {q: 'It was the ____ news of the year. (bad)', a: 'worst'},
-          {q: 'She is ____ best player. (the)', a: 'the'}
+          {q: 'People gave ____ many likes. (he)', a: 'him'},
+          {q: 'He showed ____ the video. (우리에게)', a: 'us'},
+          {q: 'She sent a message ____ me. (전치사)', a: 'to'},
+          {q: 'Dad bought a new phone ____ me. (전치사)', a: 'for'},
+          {q: 'Can you tell ____ the truth? (나에게)', a: 'me'}
         ],
-        trap: {bad: 'This is the most strong password.', good: 'This is the strongest password.', why: '짧은 형용사는 the most가 아니라 the -est.'},
+        trap: {bad: 'He gave many likes him.', good: 'He gave him many likes. / He gave many likes to him.', why: '물건을 먼저 쓰면 사람 앞에 to가 필요하다.'},
         scramble: [
-          {ko: '친절하기가 가장 중요한 규칙이다.', en: 'Being kind is the most important rule.'},
-          {ko: '이것이 가장 긴 비밀번호다.', en: 'This is the longest password.'},
-          {ko: '확인하는 것이 가장 좋은 방법이다.', en: 'Checking is the best way.'}
+          {ko: '사람들은 그에게 ‘좋아요’를 많이 주었다.', en: 'People gave him many likes.'},
+          {ko: '그녀는 나에게 그 게시물을 보여 주었다.', en: 'She showed me the post.'},
+          {ko: '팔로워들이 그에게 메시지를 보냈다.', en: 'His followers sent him messages.'}
         ]
       },
-      { id: 'g2', name: '조건의 if', short: 'if (조건)', form: 'If + 주어 + 현재시제, 주어 + will / 명령문', meaning: '만약 ~하면',
+      { id: 'g2', name: '과거진행형 · start to', short: '과거진행형', form: 'was / were + 동사-ing / start + to부정사', meaning: '(그때) ~하고 있었다 / ~하기 시작하다',
         notice: [
-          {en: '{{If}} you see a mean comment, tell an adult.', ko: '못된 댓글을 보면 어른에게 말해라.'},
-          {en: '{{If}} you share your password, someone can use your account.', ko: '비밀번호를 공유하면 누군가 네 계정을 쓸 수 있다.'},
-          {en: 'You will feel better {{if}} you take a break.', ko: '잠시 쉬면 기분이 나아질 것이다.'}
+          {en: 'Leo {{was watching}} the sheep on the hill.', ko: '레오는 언덕에서 양을 지켜보고 있었다.'},
+          {en: 'It {{was getting}} dark, and it {{started to}} snow.', ko: '날이 어두워지고 있었고, 눈이 내리기 시작했다.'},
+          {en: 'His posts {{were getting}} a lot of likes.', ko: '그의 게시물은 ‘좋아요’를 많이 받고 있었다.'}
         ],
         rule: [
-          {k: '자리', v: 'If절이 앞이면 쉼표(,) / 뒤면 쉼표 없음', ex: 'Ask for help if you are not sure.'},
-          {k: '시제', v: 'If절은 미래 일이라도 현재시제', ex: 'If it rains tomorrow, I will stay home.'},
-          {k: '결과', v: '주절: will + 동사원형 / can / 명령문', ex: 'If you’re tired, take a break.'}
+          {k: '형태', v: 'I / he / she / it → was + -ing, you / we / they → were + -ing', ex: 'They were sleeping.'},
+          {k: '뜻', v: '과거의 어느 한 순간에 진행 중이던 동작 (배경 장면)', ex: 'When the wolf came, the sheep were sleeping.'},
+          {k: 'start to', v: 'start / begin + to부정사(또는 -ing) = ~하기 시작하다', ex: 'It started to rain. (= It started raining.)'}
         ],
         check: [
-          {q: '____ you are not sure, ask an adult. (만약 ~하면)', a: 'If'},
-          {q: 'If you post it, everyone ____ see it. (will)', a: 'will'},
-          {q: 'If it ____ fake, don’t share it. (be)', a: 'is'},
-          {q: 'If you ____ a break, you will feel better. (take)', a: 'take'},
-          {q: 'You can’t log in if you ____ your password. (forget)', a: 'forget'}
+          {q: 'Leo ____ a video at that time. (make)', a: 'was making'},
+          {q: 'The villagers ____ dinner. (eat)', a: 'were eating'},
+          {q: 'It was getting dark, and it started ____. (snow)', a: 'to snow'},
+          {q: 'The sheep ____ sleeping. (be, 복수)', a: 'were'},
+          {q: 'He ____ watching the sheep. (be 부정)', a: 'wasn’t'}
         ],
-        trap: {bad: 'If you will share it, it will spread fast.', good: 'If you share it, it will spread fast.', why: '조건의 If절에서는 will을 쓰지 않고 현재시제를 쓴다.'},
+        trap: {bad: 'The sheep was sleeping. (양 여러 마리)', good: 'The sheep were sleeping.', why: '주어가 복수면 were + -ing. (sheep은 단수·복수 모양이 같다)'},
         scramble: [
-          {ko: '확실하지 않으면 공유하지 마라.', en: 'If you are not sure, don’t share it.'},
-          {ko: '잠시 쉬면 눈이 편해질 것이다.', en: 'If you take a break, your eyes will feel better.'},
-          {ko: '못된 댓글을 보면 신고해라.', en: 'If you see a mean comment, report it.'}
+          {ko: '그는 그때 양을 지켜보고 있었다.', en: 'He was watching the sheep then.'},
+          {ko: '날이 어두워지고 있었다.', en: 'It was getting dark.'},
+          {ko: '눈이 내리기 시작했다.', en: 'It started to snow.'}
         ]
       }
     ],
-    wrap: {en: 'The most important online rule is ______. If ______, ______.', ko: '최상급 한 문장, if 조건문 한 문장으로 나의 온라인 약속 쓰기'},
-    wrapEx: 'The most important online rule is being kind. If I see a mean comment, I will tell my teacher.'
+    wrap: {en: 'Yesterday at 8 p.m., I was ______ing. My friend sent me ______.', ko: '어제 저녁 하고 있던 일(과거진행형)과 친구가 보내 준 것(수여동사) 쓰기'},
+    wrapEx: 'Yesterday at 8 p.m., I was doing my homework. My friend sent me a funny video.'
   },
 
   reading: {
-    title: 'Five Tips for a Smart Online Life', kind: '정보 안내문', cover: 'Click', coverKo: '누르기 전에 생각하기', cover2: 'Kind', coverKo2: '똑똑하고 친절한 온라인',
+    title: 'The Boy Who Posted “Wolf!”', kind: '바꿔 쓴 옛이야기', cover: 'Wolf!', coverKo: '양치기 소년, 다시 쓰기', cover2: 'Think First', coverKo2: '누르기 전에 생각하기',
     before: [
-      {q: 'Look at the title. What will the five tips be about?', a: '온라인에서 안전하고 똑똑하게 지내는 방법'},
-      {q: 'What is one online rule you know?', a: '비밀번호 지키기, 낯선 사람 조심 등'}
+      {q: 'Do you know the story “The Boy Who Cried Wolf”?', a: '거짓말을 하던 소년이 진짜 늑대가 왔을 때 아무도 믿어 주지 않았다'},
+      {q: 'Look at the title. What is different in this story?', a: '소년이 소리치는 대신 온라인에 글을 올린다'}
     ],
-    gloss: {'tips': '조언, 요령', 'birthday': '생일', 'symbols': '기호', 'forever': '영원히', 'screenshot': '화면 캡처', 'headline': '(기사) 제목', 'sources': '출처', 'behind': '~ 뒤에', 'eyes': '눈', 'blink': '눈을 깜빡이다'},
+    gloss: {'shepherd': '양치기', 'sheep': '양 (단수·복수 같음)', 'hill': '언덕', 'like': '‘좋아요’', 'villager': '마을 사람', 'fake': '가짜의', 'wolf': '늑대', 'screenshot': '화면 캡처'},
     paras: [
-      {who: '', en: 'The internet is the biggest library in the world. We learn, play, and talk there every day. But it can also be dangerous. Here are five tips for a smart online life.',
-       ko: '인터넷은 세상에서 가장 큰 도서관입니다. 우리는 날마다 그곳에서 배우고 놀고 이야기하죠. 하지만 위험할 수도 있습니다. 똑똑한 온라인 생활을 위한 다섯 가지 팁을 소개합니다.',
-       check: {q: 'What is the internet compared to?', a: 'The biggest library in the world.'}, think: '인터넷이 도서관과 닮은 점과 다른 점은?'},
-      {who: 'Tip 1 · Passwords', en: 'Make a strong password. Your birthday is the worst password because it’s easy to guess. Use letters, numbers, and symbols. And keep it secret, even from your best friend.',
-       ko: '강한 비밀번호를 만드세요. 생일은 추측하기 쉬워서 최악의 비밀번호입니다. 글자, 숫자, 기호를 섞어 쓰세요. 그리고 가장 친한 친구에게도 비밀로 하세요.',
-       check: {q: 'Why is your birthday the worst password?', a: 'Because it’s easy to guess.'}, think: '강한 비밀번호의 조건 세 가지는?'},
-      {who: 'Tip 2 · Posts', en: 'Think before you post. If you post a photo, it can stay online forever. Someone can take a screenshot. So ask yourself, “Is it okay if my teacher or my grandma sees this?”',
-       ko: '게시하기 전에 생각하세요. 사진을 올리면 그것은 온라인에 영원히 남을 수 있습니다. 누군가 화면을 캡처할 수도 있어요. 그러니 스스로 물어보세요. “선생님이나 할머니가 이걸 보셔도 괜찮을까?”',
-       check: {q: 'What can happen if you post a photo?', a: 'It can stay online forever (someone can take a screenshot).'}, think: '올리기 전에 던질 다른 질문은?'},
-      {who: 'Tip 3 · Facts', en: 'Not everything online is true. Fake news often has the most shocking headlines. If you are not sure, check other sources before you share it.',
-       ko: '온라인의 모든 것이 사실은 아닙니다. 가짜 뉴스는 흔히 가장 충격적인 제목을 달고 있어요. 확실하지 않으면 공유하기 전에 다른 출처를 확인하세요.',
-       check: {q: 'What should you do if you are not sure?', a: 'Check other sources before you share it.'}, think: '가짜 뉴스를 구별하는 방법은?'},
-      {who: 'Tip 4 · Kindness', en: 'Remember there is a real person behind every screen. Don’t write mean comments. If someone is mean to you, don’t answer. Take a screenshot and tell an adult.',
-       ko: '모든 화면 뒤에는 진짜 사람이 있다는 걸 기억하세요. 못된 댓글을 쓰지 마세요. 누군가 여러분에게 못되게 굴면 대꾸하지 마세요. 화면을 캡처하고 어른에게 알리세요.',
-       check: {q: 'What should you do if someone is mean to you?', a: 'Don’t answer. Take a screenshot and tell an adult.'}, think: '친구가 그런 일을 겪는다면 어떻게 도울까?'},
-      {who: 'Tip 5 · Breaks', en: 'Take a break. Your eyes get tired when you look at a screen for a long time. Every 30 minutes, look far away and blink. The most important tip? Be safe, be smart, and be kind!',
-       ko: '쉬세요. 화면을 오래 보면 눈이 피곤해집니다. 30분마다 먼 곳을 보고 눈을 깜빡이세요. 가장 중요한 팁은? 안전하게, 똑똑하게, 그리고 친절하게!',
-       check: {q: 'What should you do every 30 minutes?', a: 'Look far away and blink.'}, think: '다섯 팁 중 나에게 가장 필요한 것은?'}
+      {who: '', en: 'There was a shepherd boy in a small mountain village. His name was Leo. Every day, he watched the sheep on the hill and posted videos on social media. But the videos were boring, and people didn’t give him many likes.',
+       ko: '작은 산골 마을에 양치기 소년이 있었다. 이름은 레오였다. 날마다 그는 언덕에서 양을 지켜보며 소셜 미디어에 영상을 올렸다. 하지만 영상은 지루했고, 사람들은 그에게 ‘좋아요’를 많이 주지 않았다.',
+       check: {q: 'Why didn’t people give Leo many likes?', a: 'His videos were boring.'}, think: '‘좋아요’를 많이 받으려고 레오는 무엇을 할까?'},
+      {who: '', en: '“How can I get more likes?” he thought. “I know! I’ll post something shocking.” He posted a video: “Help! A wolf is coming!” The villagers ran up the hill in surprise, but there was no wolf. Leo laughed. His followers gave him a lot of likes.',
+       ko: '“어떻게 하면 ‘좋아요’를 더 받을까?” 그는 생각했다. “알았다! 충격적인 걸 올려야지.” 그는 영상을 올렸다. “도와줘요! 늑대가 와요!” 마을 사람들이 놀라서 언덕으로 뛰어 올라왔지만 늑대는 없었다. 레오는 웃었다. 팔로워들은 그에게 ‘좋아요’를 잔뜩 주었다.',
+       check: {q: 'What did Leo post?', a: '“Help! A wolf is coming!”'}, think: '마을 사람들의 기분은 어땠을까?'},
+      {who: '', en: 'Leo did it again and again. His posts were getting more and more likes, but the villagers stopped coming. “That boy is lying again,” they said.',
+       ko: '레오는 그 일을 계속 되풀이했다. 그의 게시물은 ‘좋아요’를 점점 더 많이 받고 있었지만, 마을 사람들은 더 이상 오지 않았다. “저 아이가 또 거짓말을 하는군.” 그들이 말했다.',
+       check: {q: 'Why did the villagers stop coming?', a: 'They thought Leo was lying again.'}, think: '‘좋아요’와 마을 사람들의 믿음 중 무엇이 더 중요할까?'},
+      {who: '', en: 'One evening, Leo was watching the sheep. It was getting dark, and it started to snow. Suddenly, a real wolf came out of the forest! Leo posted, “A real wolf! Please help!” But nobody came. Some people even sent him messages: “Not again. So boring!”',
+       ko: '어느 날 저녁, 레오는 양을 지켜보고 있었다. 날이 어두워지고 있었고, 눈이 내리기 시작했다. 갑자기 진짜 늑대가 숲에서 나왔다! 레오는 글을 올렸다. “진짜 늑대예요! 도와주세요!” 하지만 아무도 오지 않았다. 어떤 사람들은 심지어 그에게 메시지를 보냈다. “또야? 지루해!”',
+       check: {q: 'What was Leo doing that evening?', a: 'He was watching the sheep.'}, think: '왜 아무도 레오를 믿지 않았을까?'},
+      {who: '', en: 'The next morning, Leo knocked on every door in the village. “Please forgive me. I lost three sheep because of my fake posts.” He deleted all of them. But his friend Mina showed him her phone. “Look. People took screenshots. Your posts will stay online forever.”',
+       ko: '다음 날 아침, 레오는 마을의 모든 집 문을 두드렸다. “용서해 주세요. 제 가짜 게시물 때문에 양을 세 마리 잃었어요.” 그는 게시물을 모두 지웠다. 하지만 친구 미나가 레오에게 휴대폰을 보여 주었다. “봐. 사람들이 화면을 캡처했어. 네 게시물은 온라인에 영원히 남을 거야.”',
+       check: {q: 'What did Mina show Leo?', a: 'Her phone (screenshots of his posts).'}, think: '지운 게시물이 왜 영원히 남을까?'},
+      {who: '', en: '“I didn’t think about that,” said Leo. “From now on, I’ll check the truth before I press POST.” What do you think about Leo’s promise? Do you agree with him?',
+       ko: '“그건 생각 못 했어.” 레오가 말했다. “지금부터는 ‘게시’를 누르기 전에 사실인지 확인할 거야.” 레오의 약속에 대해 어떻게 생각하나요? 레오에게 동의하나요?',
+       check: {q: 'What is Leo’s promise?', a: 'He will check the truth before he presses POST.'}, think: '내가 글을 올리기 전에 지킬 약속은?'}
     ],
     split: 3,
-    next: '나머지 세 가지 팁은\n무엇일까?',
-    recap: {q: '앞의 두 가지 팁은?', items: [{k: 'TIP 1', v: 'make a strong password and keep it secret'}, {k: 'TIP 2', v: 'think before you post'}]},
+    next: '진짜 늑대가 나타나면\n누가 레오를 믿어 줄까?',
+    recap: {q: '레오는 왜 거짓 게시물을 올렸을까?', items: [{k: 'BEFORE', v: 'boring videos · not many likes'}, {k: 'FAKE POSTS', v: '“A wolf is coming!” · many likes · villagers stopped coming'}]},
     tf: [
-      {p: 0, s: 'The writer says the internet is never dangerous.', a: false, why: '위험할 수도 있다.'},
-      {p: 1, s: 'Your birthday is a strong password.', a: false, why: '추측하기 쉬워 최악이다.'},
-      {p: 2, s: 'A photo can stay online forever.', a: true},
-      {p: 3, s: 'Fake news often has shocking headlines.', a: true},
-      {p: 4, s: 'You should answer mean comments.', a: false, why: '대꾸하지 말고 어른에게 알린다.'},
-      {p: 5, s: 'You should take a break every 30 minutes.', a: true}
+      {p: 0, s: 'Leo’s first videos got a lot of likes.', a: false, why: 'People didn’t give him many likes.'},
+      {p: 1, s: 'There was a wolf the first time.', a: false, why: 'There was no wolf.'},
+      {p: 2, s: 'The villagers stopped coming.', a: true},
+      {p: 3, s: 'It started to snow that evening.', a: true},
+      {p: 4, s: 'Leo lost three sheep.', a: true},
+      {p: 4, s: 'Leo’s posts disappeared completely.', a: false, why: 'People took screenshots. Your posts will stay online forever.'}
     ],
     key: [
-      {en: 'The internet is {{the biggest}} library in the world.', note: '최상급: the + -est', g: 'g1'},
-      {en: 'Your birthday is {{the worst}} password.', note: '불규칙 최상급: bad → the worst', g: 'g1'},
-      {en: '{{If}} you {{post}} a photo, it can stay online forever.', note: 'If + 현재시제', g: 'g2'},
-      {en: 'Fake news often has {{the most shocking}} headlines.', note: 'the most + 긴 형용사', g: 'g1'},
-      {en: '{{If}} someone is mean to you, {{don’t answer}}.', note: 'If절 + 명령문', g: 'g2'},
-      {en: '{{The most important}} tip? Be safe, be smart, and be kind!', note: 'the most important', g: 'g1'}
+      {en: 'People didn’t {{give him many likes}}.', note: '수여동사 give + 사람 + 물건', g: 'g1'},
+      {en: 'His followers {{gave him a lot of likes}}.', note: '수여동사 give + 사람 + 물건', g: 'g1'},
+      {en: 'His posts {{were getting}} more and more likes.', note: '과거진행형 were + -ing', g: 'g2'},
+      {en: 'It {{was getting}} dark, and it {{started to snow}}.', note: '과거진행형 / start + to부정사', g: 'g2'},
+      {en: 'Some people even {{sent him messages}}.', note: '수여동사 send + 사람 + 물건', g: 'g1'},
+      {en: 'His friend Mina {{showed him her phone}}.', note: '수여동사 show + 사람 + 물건', g: 'g1'}
     ],
-    summary: {text: 'Make a strong {{password}} and keep it secret. Think before you {{post}}. If you are not sure, check other {{sources}}. Don’t write {{mean}} comments, and tell an adult about bad ones. Take a {{break}} every 30 minutes. Be safe, be smart, and be {{kind}}!'},
-    order: ['Someone writes a mean comment.', 'You don’t answer it.', 'You take a screenshot.', 'You tell an adult.'],
-    chart: {title: 'FIVE TIPS', ko: '다섯 가지 팁 정리하기', cols: ['Do', 'Don’t'], note: '각 팁을 Do / Don’t로 나누어 정리한 뒤 if 문장으로 말하게 한다.', rows: [
-      {name: 'Password', cells: ['letters, numbers, symbols', 'use your birthday']},
-      {name: 'Posts & facts', cells: ['think and check sources', 'share before checking']},
-      {name: 'People & breaks', cells: ['be kind, take breaks', 'write mean comments']}
+    summary: {text: 'Leo’s videos were {{boring}}, so he posted a {{shocking}} fake video about a wolf. His followers gave him many likes, but the villagers stopped believing him. When a real wolf came, nobody helped. He asked the villagers to {{forgive}} him, but his posts will stay online {{forever}}. Now he checks the truth before he {{presses}} POST.'},
+    order: ['Leo posted boring videos.', 'He posted a fake video about a wolf.', 'A real wolf came out of the forest.', 'Leo knocked on every door in the village.'],
+    chart: {title: 'LEO’S LESSON', ko: '레오의 변화 정리하기', cols: ['What he did', 'What happened'], note: '표를 보고 과거진행형과 수여동사로 이야기를 다시 말하게 한다.', rows: [
+      {name: 'At first', cells: ['posted boring videos', 'people didn’t give him many likes']},
+      {name: 'Fake posts', cells: ['posted “A wolf is coming!”', 'many likes, but no trust']},
+      {name: 'Real wolf', cells: ['posted “Please help!”', 'nobody came, lost three sheep']},
+      {name: 'Now', cells: ['deleted the posts, said sorry', 'checks the truth before posting']}
     ]},
-    wrap: {en: 'The most important online rule for me is ______. If ______, I will ______.', ko: '관통 질문으로 돌아가기: 나의 온라인 약속 쓰기'}
+    wrap: {en: 'Before I press POST, I will ______. I think that ______.', ko: '관통 질문으로 돌아가기: 온라인에 글을 올리기 전 나의 약속 쓰기'}
   },
 
   quiz: [
-    ['“비밀번호”를 뜻하는 낱말은?', ['post', 'screen', 'comment', 'password'], 3, 'password: 비밀번호'],
-    ['“fake”의 반대말은?', ['real', 'mean', 'safe', 'online'], 0, 'fake ↔ real'],
-    ['“Take a ___ every hour.” (잠시 쉬다)', ['rest', 'break', 'stop', 'time'], 1, 'take a break'],
-    ['“Keep your password ___.” (비밀로)', ['safe', 'true', 'online', 'secret'], 3, 'keep ~ secret'],
-    ['허락을 구하는 표현은?', ['I agree.', 'May I use it?', 'Go ahead.', 'You’re right.'], 1, 'May I ~? / Can I ~?'],
-    ['반대 의견을 나타내는 표현은?', ['I agree.', 'Sure, go ahead.', 'I don’t think so.', 'You’re right about it.'], 2, 'I don’t agree. / I don’t think so.'],
-    ['Let’s Watch에서 레오가 먼저 확인하자고 한 것은?', ['반 단톡방', '학교 홈페이지', '친구의 휴대폰', '선생님의 메일'], 1, 'Let’s check the school website first.'],
-    ['빈칸에 알맞은 것은? “This is the ___ password.”', ['strong', 'stronger', 'most strong', 'strongest'], 3, 'the + 최상급'],
-    ['“bad”의 최상급은?', ['the worst', 'the baddest', 'the most bad', 'the worse'], 0, 'bad – worse – the worst'],
-    ['빈칸에 알맞은 것은? “If it ___ fake, don’t share it.”', ['be', 'is', 'will be', 'being'], 1, 'If절은 현재시제'],
-    ['어법상 틀린 문장은?', ['It is the best way.', 'If you see it, tell me.', 'If it will rain, stay home.', 'This is the most useful app.'], 2, 'If it rains, stay home.으로 고쳐야 한다.'],
-    ['생일이 최악의 비밀번호인 까닭은?', ['추측하기 쉬워서', '너무 길어서', '숫자가 없어서', '잊어버리기 쉬워서'], 0, 'it’s easy to guess'],
-    ['가짜 뉴스의 특징으로 글에 나온 것은?', ['출처가 아주 많다', '글이 아주 짧다', '제목이 충격적이다', '사진이 꼭 들어 있다'], 2, 'the most shocking headlines'],
-    ['못된 댓글을 받았을 때 하면 안 되는 것은?', ['대꾸하기', '어른에게 알리기', '화면 캡처하기', '대꾸하지 않기'], 0, 'don’t answer'],
-    ['30분마다 하라고 한 것은?', ['비밀번호 바꾸기', '댓글 모두 확인하기', '먼 곳 보고 깜빡이기', '사진을 많이 올리기'], 2, 'look far away and blink']
+    ['“허락”을 뜻하는 낱말은?', ['permission', 'review', 'follower', 'personal'], 0, 'permission: 허락'],
+    ['“asleep”의 반대말은?', ['noisy', 'awake', 'boring', 'smart'], 1, 'asleep ↔ awake'],
+    ['“He jumped up in ___.”', ['surprise', 'surprised', 'surprising', 'surprises'], 0, 'in surprise: 놀라서'],
+    ['의견을 묻는 표현은?', ['What do you think about it?', 'May I use it?', 'How often do you use it?', 'Can you please use it?'], 0, 'What do you think about ~?'],
+    ['동의하는 표현은?', ['I don’t think so.', 'I don’t agree.', 'I think so, too.', 'I’m sorry, but I can’t.'], 2, 'I think so, too. / I agree.'],
+    ['반대하는 표현은?', ['You’re right.', 'I agree with you.', 'I don’t think so.', 'Me, too.'], 2, 'I don’t think so.'],
+    ['Let’s Watch에서 두 사람이 확인한 곳은?', ['뉴스', '학교 누리집', '친구 게시물', '선생님'], 1, 'Let’s check the school website first.'],
+    ['빈칸에 알맞은 것은? “People gave ___ many likes.”', ['he', 'his', 'him', 'he’s'], 2, '수여동사 + 사람(목적격) + 물건'],
+    ['빈칸에 알맞은 것은? “It was ___ dark.”', ['get', 'gets', 'getting', 'got'], 2, '과거진행형 was + -ing'],
+    ['어법상 틀린 문장은?', ['She showed me the post.', 'He gave the phone to me.', 'They was sleeping.', 'It started to snow.'], 2, 'They were sleeping.'],
+    ['빈칸에 알맞은 것은? “Mom made a cake ___ me.”', ['to', 'for', 'of', 'with'], 1, 'make + 물건 + for + 사람'],
+    ['레오가 처음에 ‘좋아요’를 많이 못 받은 까닭은?', ['영상이 지루해서', '늑대가 무서워서', '휴대폰이 없어서', '양이 없어서'], 0, 'the videos were boring'],
+    ['진짜 늑대가 왔을 때 마을 사람들의 반응은?', ['모두 도우러 왔다', '아무도 오지 않았다', '경찰을 불렀다', '늑대를 쫓아냈다'], 1, 'But nobody came.'],
+    ['레오의 게시물이 영원히 남는 까닭은?', ['지우지 않아서', '사람들이 화면을 캡처해서', '미나가 다시 올려서', '양이 공유해서'], 1, 'People took screenshots.'],
+    ['글의 교훈으로 알맞은 것은?', ['‘좋아요’를 많이 받자', '글을 올리기 전에 사실을 확인하자', '양은 밤에 지키자', '휴대폰을 쓰지 말자'], 1, 'I’ll check the truth before I press POST.']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {post: '/poʊst/', social: '/ˈsoʊʃl/', follower: '/ˈfɑːloʊər/', selfie: '/ˈselfi/', shocking: '/ˈʃɑːkɪŋ/', boring: '/ˈbɔːrɪŋ/', personal: '/ˈpɜːrsənl/', permission: '/pərˈmɪʃn/', forgive: '/fərˈɡɪv/', shout: '/ʃaʊt/', knock: '/nɑːk/', asleep: '/əˈsliːp/', upstairs: '/ˌʌpˈsterz/', noisy: '/ˈnɔɪzi/', press: '/pres/', forever: '/fərˈevər/', review: '/rɪˈvjuː/', list: '/lɪst/', unique: '/juˈniːk/', smart: '/smɑːrt/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'follower', ko: '팔로워, 따르는 사람', parts: [{t: 'follow', k: 'root', m: '따르다'}, {t: 'er', k: 'suf', m: '~하는 사람'}], family: ['player', 'reader', 'writer'], note: '동사 + -er = 그 일을 하는 사람.'},
+    {w: 'permission', ko: '허락', parts: [{t: 'permit', k: 'root', m: '허락하다'}, {t: 'sion', k: 'suf', m: '~것 (명사)'}], family: ['permit', 'decision', 'television'], note: '동사 permit의 t가 s로 바뀌며 -sion이 붙는다 → 허락.'},
+    {w: 'upstairs', ko: '위층으로', parts: [{t: 'up', k: 'pre', m: '위로'}, {t: 'stairs', k: 'root', m: '계단'}], family: ['downstairs', 'staircase'], note: '계단(stairs) 위로(up) → 위층으로. 반대는 downstairs.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '수여동사는 왜 목적어가 두 개일까?',
+    pic: [{en: 'People gave', ko: '주다 류의 동사'}, {en: 'Leo', ko: '받는 사람 (~에게)', hot: true}, {en: 'many likes', ko: '주는 것 (…을)'}],
+    core: 'give, send, show, tell 같은 “주는” 동사는 “누구에게”와 “무엇을”이 둘 다 필요하다. 그래서 동사 + 사람 + 물건 순서로 목적어 두 개를 쓴다.',
+    why: ['순서: 동사 + 간접목적어(사람, ~에게) + 직접목적어(물건, …을).', '물건을 먼저 쓰면 사람 앞에 전치사를 넣는다: send a message to her mom.', 'give, send, show, tell → to / buy, make, cook → for.']
+  };
+  g1.anim = [{title: '사람과 물건의 자리 바꾸기', states: [
+    {t: 'People/S | gave/V | Leo/O#mom | many likes/O#msg | .', note: '동사 + 사람 + 물건', ko: '사람들은 레오에게 ‘좋아요’를 많이 주었다.'},
+    {t: 'People/S | gave/V | many likes/O#msg | to/X | Leo/O#mom | .', note: '물건이 앞으로 오면 사람 앞에 to', ko: '사람들은 ‘좋아요’를 레오에게 많이 주었다.'}]}];
+  g1.contrast = {title: 'to? for?', pairs: [
+    {a: 'He showed his drawing {{to}} me.', ka: '그는 나에게 그림을 보여 주었다. (show → to)', b: 'He made a card {{for}} me.', kb: '그는 나를 위해 카드를 만들었다. (make → for)'}],
+    point: '전해 주는 동사는 to, 만들어 주는 동사는 for.'};
+  g2.principle = {
+    q: '과거진행형은 과거형과 무엇이 다를까?',
+    pic: [{en: 'was watching', ko: '그 순간 이어지던 장면 (배경)', hot: true}, {en: 'came', ko: '그 사이에 툭 일어난 일'}],
+    core: '과거진행형(was/were + -ing)은 과거의 어느 한 순간을 사진처럼 멈춰 “그때 하고 있던 중”인 장면을 보여 준다. 그 위에 갑자기 일어난 일은 과거형으로 쓴다.',
+    why: ['be동사를 과거형(was/were)으로 바꾸면 진행형도 과거가 된다.', '이야기에서 배경(was getting dark)은 진행형, 사건(a wolf came)은 과거형.', 'start to + 동사원형 = ~하기 시작하다 (start -ing와 뜻이 같다).']
+  };
+  g2.anim = [{title: '현재진행 → 과거진행', states: [
+    {t: 'Leo/S | is/X#be | watching/V#v | the sheep/O | now/M#t | .', note: '지금 하는 중', ko: '레오는 지금 양을 지켜보고 있다.'},
+    {t: 'Leo/S | was/X#be | watching/V#v | the sheep/O | then/M#t | .', note: 'be동사만 과거로 → 그때 하는 중이었다', ko: '레오는 그때 양을 지켜보고 있었다.'}]},
+    {title: '배경 장면 + 갑자기 일어난 일', states: [
+    {t: 'Leo/S | was watching/V#bg | the sheep/O | . | / | A wolf/S#w | came/V#c | out/M | .', note: '두 문장', ko: '레오는 양을 지켜보고 있었다. 늑대가 나왔다.'},
+    {t: 'Leo/S | was watching/V#bg | the sheep/O | when/X | a wolf/S#w | came/V#c | out/M | .', note: '진행 중(배경) + when + 과거(사건)', ko: '늑대가 나왔을 때 레오는 양을 지켜보고 있었다.'}]}];
+  g2.contrast = {title: '과거형 vs 과거진행형', pairs: [
+    {a: 'It {{snowed}} last night.', ka: '어젯밤 눈이 왔다. (끝난 일)', b: 'It {{was snowing}} at 9 p.m.', kb: '밤 9시에 눈이 내리고 있었다. (그 순간 진행 중)'}],
+    point: '그 순간 이어지던 장면은 was/were + -ing, 툭 일어난 일은 과거형.'};
+})(window.LESSON);

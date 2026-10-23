@@ -27,7 +27,7 @@ window.CATALOG = [
       {no: 5, ready: true, title: 'Think like Sherlock Holmes!', ko: '셜록 홈스처럼 생각해!', talk: ['허락 구하고 답하기', '금지하기'], grammar: ['비교급', '최상급'], read: '추리 이야기 (교과서: Who Threw a Cake at the Monalisa?)'},
       {no: 6, ready: true, title: 'Good for the Earth, Good for Us', ko: '지구에 좋은 것이 우리에게도 좋다', talk: ['도움 요청하고 답하기', '거절의 이유 말하기'], grammar: ['to부정사 (명사적)', '접속사 that'], read: '환경 동아리 게시판 (교과서: Join the Zero-Waste Challenge)'},
       {no: 7, ready: true, title: 'Find Your Dream', ko: '나의 꿈을 찾아서', talk: ['관심 묻고 답하기', '장래 희망 묻고 답하기'], grammar: ['to부정사 (목적)', '접속사 when'], read: '촬영장 인터뷰 기사 (교과서: Let’s Make a Movie!)'},
-      {no: 8, ready: true, estimate: true, title: 'Be Smart Online', ko: '온라인에서 똑똑하게', talk: ['허락 구하고 답하기', '동의하고 반대하기'], grammar: ['최상급', 'if (조건)'], read: '정보 안내문'}
+      {no: 8, ready: true, title: 'Be Smart Online', ko: '온라인에서 똑똑하게', talk: ['의견 묻고 답하기', '동의·비동의하기'], grammar: ['수여동사', '과거진행형'], read: '바꿔 쓴 옛이야기 (교과서: Goldilocks Learns Her Lesson)'}
     ]},
   { id: 'm2-donga', school: '중학교', grade: '2학년', book: '영어 2', publisher: '동아출판 (윤정미)', path: 'm2/donga',
     lessons: [
