@@ -1,4 +1,4 @@
-/* 2022 개정 영어과 교육과정 원문 발췌 — 성취기준(중학교, 공통영어1·2)과 [별표 4] 의사소통에 필요한 언어 형식(초·중 학습 시작 권장 항목).
+/* 2022 개정 영어과 교육과정 원문 발췌 — 성취기준(중학교, 공통영어1·2)과 [별표 4] 의사소통에 필요한 언어 형식(학습 시작 권장 학교급: 초·중·고).
    출처: 교육부 고시 제2022-33호 [별책 14]. 교육부 누리집 첨부 원문(HWP)에서 그대로 옮김. */
 window.CURRICULUM = {
  "source": "교육부 고시 제2022-33호 [별책 14] 영어과 교육과정 (2022.12.22.)",
@@ -120,6 +120,14 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "The audience is/are enjoying the show.",
+    "고"
+   ],
+   [
+    "The news is very interesting.",
+    "고"
+   ],
+   [
     "Mathematics is my favorite subject.",
     "중"
    ]
@@ -198,6 +206,10 @@ window.CURRICULUM = {
    [
     "Germans are good musicians.",
     "중"
+   ],
+   [
+    "The Germans are diligent.",
+    "고"
    ]
   ],
   "4. Pronouns": [
@@ -242,6 +254,10 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "I myself took this picture.",
+    "고"
+   ],
+   [
     "They’re talking to each other.",
     "중"
    ]
@@ -270,6 +286,10 @@ window.CURRICULUM = {
    [
     "The ears of rabbits are longer than those of squirrels.",
     "중"
+   ],
+   [
+    "I’d like to write a diary, but I’m too busy to do so.",
+    "고"
    ]
   ],
   "6. Nonreferential It": [
@@ -332,6 +352,14 @@ window.CURRICULUM = {
    [
     "I’m thinking about the problem.",
     "중"
+   ],
+   [
+    "He’s being very rude.",
+    "고"
+   ],
+   [
+    "We are hoping you will be with us.",
+    "고"
    ]
   ],
   "9. Perfectives": [
@@ -358,6 +386,10 @@ window.CURRICULUM = {
    [
     "He had already left when we arrived.",
     "중"
+   ],
+   [
+    "I will have finished my homework by the time you get here.",
+    "고"
    ]
   ],
   "10. Sentence Patterns": [
@@ -402,6 +434,14 @@ window.CURRICULUM = {
    [
     "These bags are too expensive.",
     "중"
+   ],
+   [
+    "We cannot thank you enough.",
+    "고"
+   ],
+   [
+    "You cannot be too careful to drive a car.",
+    "고"
    ]
   ],
   "12. Equatives": [
@@ -414,8 +454,16 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "I don’t know as many people as you (do).",
+    "고"
+   ],
+   [
     "You can run as fast as Billy can.",
     "중"
+   ],
+   [
+    "I arrived at the same time as Tom (did).",
+    "고"
    ]
   ],
   "13. Comparatives": [
@@ -460,6 +508,10 @@ window.CURRICULUM = {
    [
     "It is the most interesting speech I’ve ever heard.",
     "중"
+   ],
+   [
+    "She is one of the smartest students in my class.",
+    "고"
    ]
   ],
   "15. Causative Verbs / Sensory Perception Verbs": [
@@ -522,6 +574,10 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "He seemed to have been ill (for some time).",
+    "고"
+   ],
+   [
     "This new ship is big enough (to cross the Pacific).",
     "중"
    ],
@@ -548,6 +604,14 @@ window.CURRICULUM = {
    [
     "I helped my mom (to) wash the dishes.",
     "중"
+   ],
+   [
+    "Bill promised Jane to work out with her.",
+    "고"
+   ],
+   [
+    "Bill persuaded Jane to work out with him.",
+    "고"
    ]
   ],
   "17. To-Infinitive as an adjective complement": [
@@ -582,6 +646,10 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "I remembered John/John’s coming late for class.",
+    "고"
+   ],
+   [
     "Did you go fishing last weekend?",
     "초"
    ],
@@ -592,6 +660,18 @@ window.CURRICULUM = {
    [
     "I cannot help doing things like that.",
     "중"
+   ],
+   [
+    "It’s no use trying to persuade me.",
+    "고"
+   ],
+   [
+    "There is no use crying over the spilt milk.",
+    "고"
+   ],
+   [
+    "It goes without saying that time is money.",
+    "고"
    ],
    [
     "Life is worth living.",
@@ -798,6 +878,14 @@ window.CURRICULUM = {
    [
     "How good a dancer is she?",
     "중"
+   ],
+   [
+    "Who cares?",
+    "고"
+   ],
+   [
+    "It cost how much?",
+    "고"
    ]
   ],
   "22. Direct Speech / Indirect Speech": [
@@ -816,6 +904,30 @@ window.CURRICULUM = {
    [
     "He told me that he had been busy lately.",
     "중"
+   ],
+   [
+    "He said to me, “I will come tomorrow.”",
+    "고"
+   ],
+   [
+    "He told me that he would come the next day.",
+    "고"
+   ],
+   [
+    "He said to me, “Please come at once.”",
+    "고"
+   ],
+   [
+    "He asked me to come at once.",
+    "고"
+   ],
+   [
+    "He said, “Do you need a pen?”",
+    "고"
+   ],
+   [
+    "He asked if/whether I needed a pen.",
+    "고"
    ],
    [
     "Emma asked, “Where do you live?”",
@@ -864,6 +976,22 @@ window.CURRICULUM = {
    [
     "If you feel seasick, take one of these pills.",
     "중"
+   ],
+   [
+    "We’re going to play baseball tomorrow unless it rains.",
+    "고"
+   ],
+   [
+    "Take these pills in case you feel ill on the bus.",
+    "고"
+   ],
+   [
+    "I’ll lend you the book on condition that you return it within two weeks.",
+    "고"
+   ],
+   [
+    "Provided that/As long as they had plenty to eat, the crew seemed to be happy.",
+    "고"
    ]
   ],
   "25. Unreal Conditionals": [
@@ -876,12 +1004,40 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "If Joe should have time, he would go to Spain.",
+    "고"
+   ],
+   [
+    "Had I had enough money, I would have bought a cell phone.",
+    "고"
+   ],
+   [
+    "If it were not for you, I would be lonely.",
+    "고"
+   ],
+   [
+    "Without/But for your advice, I would have failed.",
+    "고"
+   ],
+   [
     "It’s time you were in bed.",
     "중"
    ],
    [
     "I wish I spoke English well.",
     "중"
+   ],
+   [
+    "I wish I had learned swimming last summer.",
+    "고"
+   ],
+   [
+    "He acts as if he knew you.",
+    "고"
+   ],
+   [
+    "He acts as if he had been there.",
+    "고"
    ]
   ],
   "26. Modals": [
@@ -942,12 +1098,56 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "He suggested that they (should) play baseball.",
+    "고"
+   ],
+   [
     "He may be sick.",
     "중"
    ],
    [
+    "He can’t be working at this time.",
+    "고"
+   ],
+   [
+    "There might be some complaints.",
+    "고"
+   ],
+   [
+    "The whole plan could be ruined.",
+    "고"
+   ],
+   [
+    "Our guests should/ought to be home by now.",
+    "고"
+   ],
+   [
+    "I should have studied English grammar harder.",
+    "고"
+   ],
+   [
+    "There shouldn’t be any difficulties.",
+    "고"
+   ],
+   [
+    "You have to/You’ve got to be joking.",
+    "고"
+   ],
+   [
+    "They’ll fight to the end rather than give up.",
+    "고"
+   ],
+   [
     "That must be my daughter.",
     "중"
+   ],
+   [
+    "She may have made an important discovery.",
+    "고"
+   ],
+   [
+    "They must have arrived by now.",
+    "고"
    ],
    [
     "She can play the violin.",
@@ -976,6 +1176,10 @@ window.CURRICULUM = {
    [
     "Are you going to take the last train?",
     "중"
+   ],
+   [
+    "Oil will float on water.",
+    "고"
    ],
    [
     "He would take a walk every morning.",
@@ -1014,6 +1218,10 @@ window.CURRICULUM = {
    [
     "The film was neither well-made nor well-acted.",
     "중"
+   ],
+   [
+    "He came not to complain, but to help us.",
+    "고"
    ]
   ],
   "28. Subordinating Conjunctions": [
@@ -1086,8 +1294,24 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "The town in which I was born is very small.",
+    "고"
+   ],
+   [
+    "The house where she lives is very spacious.",
+    "고"
+   ],
+   [
+    "This is why we have to study English grammar.",
+    "고"
+   ],
+   [
     "Mr. Lee, who teaches English, has two children.",
     "중"
+   ],
+   [
+    "My kids work very hard, which makes me happy.",
+    "고"
    ],
    [
     "Nobody understood what she said about that plan.",
@@ -1096,6 +1320,10 @@ window.CURRICULUM = {
    [
     "That’s just how he talks, always serious about his work.",
     "중"
+   ],
+   [
+    "Whoever wins this game will win the World Cup.",
+    "고"
    ]
   ],
   "31. Postmodification": [
@@ -1106,6 +1334,10 @@ window.CURRICULUM = {
    [
     "At the station I met a lady carrying a large umbrella.",
     "중"
+   ],
+   [
+    "Wallets found on the street must be reported to the police.",
+    "고"
    ]
   ],
   "32. Adverbial Participles": [
@@ -1114,8 +1346,24 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "Joshua returning home, the puppy ran toward him.",
+    "고"
+   ],
+   [
     "(Being) tired, he went to bed.",
     "중"
+   ],
+   [
+    "Having seen that movie before, I wanted to see it again.",
+    "고"
+   ],
+   [
+    "Too shy to reply, she kept staring at the floor.",
+    "고"
+   ],
+   [
+    "With the night coming, stars began to shine in the sky.",
+    "고"
    ]
   ],
   "33. Stance Markers": [
@@ -1124,8 +1372,20 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "Frankly speaking, I failed the test.",
+    "고"
+   ],
+   [
     "Unfortunately, they couldn’t make it.",
     "중"
+   ],
+   [
+    "To be sure, we have heard many such stories before.",
+    "고"
+   ],
+   [
+    "To our regret, she rejected the offer.",
+    "고"
    ]
   ],
   "34. Ellipsis": [
@@ -1134,11 +1394,27 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "One student has written a poem, and the other (has written) a short story.",
+    "고"
+   ],
+   [
     "Kevin understands the problem better than Amy (does).",
     "중"
+   ],
+   [
+    "Though (he had been) defeated, he remained popular.",
+    "고"
+   ],
+   [
+    "You can borrow my pen, if you want/like (to).",
+    "고"
    ]
   ],
   "35. Inversion": [
+   [
+    "Down came the rain.",
+    "고"
+   ],
    [
     "Here he comes.",
     "중"
@@ -1148,12 +1424,20 @@ window.CURRICULUM = {
     "중"
    ],
    [
+    "Not a word did he say.",
+    "고"
+   ],
+   [
     "She was hungry and so was I.",
     "중"
    ],
    [
     "I enjoyed the play and so did my friends.",
     "중"
+   ],
+   [
+    "Ryan didn’t see the accident and neither did Rachel.",
+    "고"
    ]
   ],
   "36. Nonreferential There": [
@@ -1176,8 +1460,28 @@ window.CURRICULUM = {
   ],
   "37. Focus/ Emphasis": [
    [
+    "Won’t you try again? - Yes, I will try again.",
+    "고"
+   ],
+   [
+    "You must speak to the teacher. - I have spoken to him.",
+    "고"
+   ],
+   [
     "I do hope you will succeed.",
     "중"
+   ],
+   [
+    "It was Justin who/that told me the truth.",
+    "고"
+   ],
+   [
+    "It was by train that we traveled to London.",
+    "고"
+   ],
+   [
+    "What we need is more time.",
+    "고"
    ]
   ],
   "38. Anticipatory It": [
@@ -1206,6 +1510,14 @@ window.CURRICULUM = {
    [
     "Ms. Pova, a famous tennis player, will be visiting us at the gym tomorrow.",
     "중"
+   ],
+   [
+    "Your dream of becoming an astronaut requires a great amount of time and energy.",
+    "고"
+   ],
+   [
+    "The fact that Melissa was late didn’t surprise me.",
+    "고"
    ]
   ],
   "40. Passive Voice": [
@@ -1228,6 +1540,26 @@ window.CURRICULUM = {
    [
     "Cooper will be invited to today’s meeting.",
     "중"
+   ],
+   [
+    "The information superhighway will have been introduced to everyone by 2030.",
+    "고"
+   ],
+   [
+    "The monkey has been raised by human parents for years.",
+    "고"
+   ],
+   [
+    "I was made to clean the room.",
+    "고"
+   ],
+   [
+    "Nolan was seen to enter the building.",
+    "고"
+   ],
+   [
+    "Let it be done at once.",
+    "고"
    ]
   ]
  }

@@ -1,60 +1,65 @@
 /* 고1 공통영어2(동아·이병민) Lesson 1 · Love Yourself
-   단원명은 교과서 목차 기준. 본문 주제(자기 연민)와 의사소통 기능·문법은 추정(estimate: true).
-   대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글입니다. */
+   교과서 대조(2026-10): 읽기 주제(Are You a Good Eater? — 나쁜 식습관 유형과 고치는 법)를 교과서에 맞췄다.
+   의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정(estimate: true).
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제로 새로 쓴 글이다. */
 window.LESSON = {
   book: 'h1b-donga', no: 1, estimate: true,
   title: 'Love Yourself', ko: '너 자신을 사랑하라',
-  bigQ: {en: 'How would you talk to yourself if you were your own best friend?', ko: '내가 나의 가장 친한 친구라면, 나에게 어떻게 말할까?'},
+  bigQ: {en: 'How can we take care of ourselves, starting with how we eat?', ko: '먹는 습관부터 시작해서, 우리는 어떻게 자신을 돌볼 수 있을까?'},
+  align: {
+    tb: {reading: 'Are You a Good Eater?', note: '교과서 읽기는 스트레스성 폭식, 빨리 먹기, 생각 없이 먹기 등 나쁜 식습관 유형과 고치는 법을 소개하는 글. 여기 본문은 같은 주제로 네 가지 유형(스트레스 간식형, 끼니 거르는 형, 화면 보며 먹는 형, 편식형)을 새로 쓴 글이다. 의사소통 기능·언어 형식은 교과서 자료가 없어 추정이다.'},
+    std: {vocab: ['10공영2-01-05', '10공영2-02-06'], talk: ['10공영2-01-03', '10공영2-02-08'], grammar: ['10공영2-02-04'], read1: ['10공영2-01-01', '10공영2-01-02'], read2: ['10공영2-01-06', '10공영2-02-05']},
+    forms: ['To-Infinitive', 'Gerunds', 'Unreal Conditionals']
+  },
   goals: {
-    vocab: ['마음·감정·자기 존중과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 'com-, im-, -ful 같은 조각으로 compassion, imperfect, mindful을 분석할 수 있다.'],
+    vocab: ['식습관·건강과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 'over-, -ful, nutri- 같은 조각으로 overeat, mindful, nutrient를 분석할 수 있다.'],
     talk: ['힘들어하는 친구를 위로하고 격려할 수 있다.', '고민에 대해 조언을 구하고, If I were you ~ 등으로 조언할 수 있다.'],
     grammar: ['to부정사는 “앞으로 할 일”, 동명사는 “이미 하고 있거나 한 일”이라는 원리로 목적어 형태를 고를 수 있다.', '가정법이 “시제를 한 칸 과거로 밀어 현실과 거리를 두는 것”이라는 원리로 가정법 과거·과거완료를 쓸 수 있다.'],
-    read1: ['자기 비판과 자기 연민의 차이를 파악할 수 있다.'],
-    read2: ['자기 연민을 기르는 방법을 정리하고, 나에게 보내는 격려의 편지를 영어로 쓸 수 있다.']
+    read1: ['나쁜 식습관 유형의 문제와 해결책을 파악할 수 있다.'],
+    read2: ['네 가지 유형을 비교하고, 나의 식습관을 돌아보는 글을 가정법을 넣어 쓸 수 있다.']
   },
 
   vocab: {
-    hook: {en: 'What do you say to yourself when you make a mistake?', ko: '실수했을 때 스스로에게 뭐라고 말하나요?', note: '“바보같이”, “또 망쳤네” 같은 말이 나온다. “친구가 같은 실수를 했다면 뭐라고 말해 줄까?”로 이어 묻고 두 답을 칠판 양쪽에 적는다 — 본문의 출발점.'},
+    hook: {en: 'What do you eat when you are stressed?', ko: '스트레스를 받으면 무엇을 먹나요?', note: '떡볶이, 라면, 초콜릿 등 답이 나온다. “그 음식을 먹고 나면 기분이 정말 나아지나?”로 이어 묻는다.'},
     words: [
-      {w: 'compassion', pos: 'n.', ko: '연민, 동정심', ic: '🤲', ipa: '/kəmˈpæʃn/', audio: 'assets/audio/compassion.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'She showed compassion for the injured dog.', exKo: '그녀는 다친 개에게 연민을 보였다.'},
-      {w: 'critic', pos: 'n.', ko: '비판자, 비평가', ic: '🧐', ipa: '/ˈkrɪtɪk/', audio: 'assets/audio/critic.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We are often our own harshest critics.', exKo: '우리는 종종 스스로에게 가장 가혹한 비판자다.'},
-      {w: 'harsh', pos: 'adj.', ko: '가혹한, 혹독한', ic: '🥶', ipa: '/hɑːrʃ/', ex: 'Don’t be so harsh on yourself.', exKo: '너 자신에게 그렇게 가혹하게 굴지 마.'},
-      {w: 'flaw', pos: 'n.', ko: '결점, 흠', ic: '🩹', img: {src: 'h1/donga2/l1/img/w-flaw.jpg', credit: 'mislav-m · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/29561334@N04/8627888136'}, ipa: '/flɔː/', audio: 'assets/audio/flaw.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Everyone has flaws.', exKo: '누구에게나 결점이 있다.'},
-      {w: 'imperfect', pos: 'adj.', ko: '불완전한', ic: '🧩', ipa: '/ɪmˈpɜːrfɪkt/', audio: 'assets/audio/imperfect.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We are all imperfect human beings.', exKo: '우리는 모두 불완전한 인간이다.'},
-      {w: 'accept', pos: 'v.', ko: '받아들이다', ic: '🤝', ipa: '/əkˈsept/', audio: 'assets/audio/accept.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Try to accept yourself as you are.', exKo: '있는 그대로의 자신을 받아들이려고 노력해라.'},
-      {w: 'self-esteem', pos: 'n.', ko: '자존감', ic: '🌱', ipa: '/ˌself ɪˈstiːm/', ex: 'Praise can build a child’s self-esteem.', exKo: '칭찬은 아이의 자존감을 키울 수 있다.'},
-      {w: 'comfort', pos: 'v./n.', ko: '위로하다; 위안', ic: '🫂', img: {src: 'h1/donga2/l1/img/w-comfort.jpg', credit: 'katiesw1 · CC BY-SA 2.0 (Flickr)', link: 'https://www.flickr.com/photos/41517846@N08/4259167076'}, ipa: '/ˈkʌmfərt/', audio: 'assets/audio/comfort.mp3', audioCredit: 'Dvortygirl · GFDL (Wikimedia Commons, US)', ex: 'I tried to comfort my crying sister.', exKo: '나는 울고 있는 여동생을 위로하려고 했다.'},
-      {w: 'reassure', pos: 'v.', ko: '안심시키다', ic: '😌', ipa: '/ˌriːəˈʃʊr/', ex: 'The doctor reassured me that it was nothing serious.', exKo: '의사는 심각한 것이 아니라며 나를 안심시켰다.'},
-      {w: 'deserve', pos: 'v.', ko: '~을 받을 만하다', ic: '🏅', ipa: '/dɪˈzɜːrv/', audio: 'assets/audio/deserve.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'You deserve a break.', exKo: '너는 쉴 자격이 있어.'},
-      {w: 'appreciate', pos: 'v.', ko: '고마워하다; 진가를 알다', ic: '🙏', img: {src: 'h1/donga2/l1/img/w-appreciate.jpg', credit: 'ralphhogaboom · CC BY-SA 2.0 (Flickr)', link: 'https://www.flickr.com/photos/59568944@N00/5871263299'}, ipa: '/əˈpriːʃieɪt/', audio: 'assets/audio/appreciate.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I really appreciate your help.', exKo: '도와줘서 정말 고마워.'},
-      {w: 'isolated', pos: 'adj.', ko: '고립된, 외로운', ic: '🏝️', img: {src: 'h1/donga2/l1/img/w-isolated.jpg', credit: 'sacks08 · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/29071316@N06/4752606716'}, ipa: '/ˈaɪsəleɪtɪd/', audio: 'assets/audio/isolated.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'He felt isolated after moving to a new school.', exKo: '그는 새 학교로 옮긴 뒤 고립감을 느꼈다.'},
-      {w: 'mindful', pos: 'adj.', ko: '마음을 챙기는, 유념하는', ic: '🧘', img: {src: 'h1/donga2/l1/img/w-mindful.jpg', credit: 'alisonleighlilly · CC BY-SA 2.0 (Flickr)', link: 'https://www.flickr.com/photos/61475957@N02/5773273968'}, ipa: '/ˈmaɪndfl/', audio: 'assets/audio/mindful.mp3', audioCredit: 'Steve Shives · CC0 (Wikimedia Commons, US)', ex: 'Be mindful of how you feel right now.', exKo: '지금 네 기분이 어떤지 마음을 기울여 봐.'},
-      {w: 'struggle', pos: 'v./n.', ko: '애쓰다, 힘겨워하다; 투쟁', ic: '🌊', img: {src: 'h1/donga2/l1/img/w-struggle.jpg', credit: 'mckaysavage · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/56796376@N00/497821701'}, ipa: '/ˈstrʌɡl/', audio: 'assets/audio/struggle.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Many students struggle with stress.', exKo: '많은 학생들이 스트레스로 힘겨워한다.'},
-      {w: 'resilient', pos: 'adj.', ko: '회복력 있는, 잘 이겨 내는', ic: '🌿', ipa: '/rɪˈzɪliənt/', audio: 'assets/audio/resilient.mp3', audioCredit: 'Sylvanmoon · CC BY-SA 4.0 (Wikimedia Commons, US)', ex: 'Resilient people bounce back from failure.', exKo: '회복력 있는 사람들은 실패에서 다시 일어선다.'},
-      {w: 'worth', pos: 'n./adj.', ko: '가치; ~의 가치가 있는', ic: '💎', ipa: '/wɜːrθ/', audio: 'assets/audio/worth.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Your worth does not depend on your grades.', exKo: '너의 가치는 성적에 달려 있지 않다.'}
+      {w: 'habit', pos: 'n.', ko: '습관', ic: '🔁', ipa: '/ˈhæbɪt/', ex: 'Skipping breakfast is a bad habit.', exKo: '아침을 거르는 것은 나쁜 습관이다.'},
+      {w: 'appetite', pos: 'n.', ko: '식욕', ic: '🍽️', ipa: '/ˈæpɪtaɪt/', ex: 'Stress can change your appetite.', exKo: '스트레스는 식욕을 바꿀 수 있다.'},
+      {w: 'crave', pos: 'v.', ko: '몹시 원하다, 갈망하다', ic: '🤤', ipa: '/kreɪv/', ex: 'I crave something spicy before exams.', exKo: '나는 시험 전에 매운 것이 몹시 당긴다.'},
+      {w: 'skip', pos: 'v.', ko: '거르다, 건너뛰다', ic: '⏭️', ipa: '/skɪp/', ex: 'Don’t skip breakfast.', exKo: '아침을 거르지 마라.'},
+      {w: 'nutrient', pos: 'n.', ko: '영양소', ic: '🥦', ipa: '/ˈnuːtriənt/', ex: 'Vegetables are full of nutrients.', exKo: '채소에는 영양소가 가득하다.'},
+      {w: 'balanced', pos: 'adj.', ko: '균형 잡힌', ic: '⚖️', ipa: '/ˈbælənst/', ex: 'Eat a balanced meal every day.', exKo: '날마다 균형 잡힌 식사를 하라.'},
+      {w: 'portion', pos: 'n.', ko: '(음식의) 1인분, 몫', ic: '🥣', ipa: '/ˈpɔːrʃn/', ex: 'Put a small portion on your plate.', exKo: '접시에 적은 양을 덜어라.'},
+      {w: 'digest', pos: 'v.', ko: '소화하다', ic: '🫄', ipa: '/daɪˈdʒest/', ex: 'Chew slowly to digest your food better.', exKo: '음식을 더 잘 소화하려면 천천히 씹어라.'},
+      {w: 'overeat', pos: 'v.', ko: '과식하다', ic: '🍔', ipa: '/ˌoʊvərˈiːt/', ex: 'People often overeat when they are tired.', exKo: '사람들은 피곤할 때 자주 과식한다.'},
+      {w: 'mindful', pos: 'adj.', ko: '마음을 챙기는, 알아차리는', ic: '🧘', ipa: '/ˈmaɪndfl/', ex: 'Be mindful of what you eat.', exKo: '무엇을 먹는지 의식하라.'},
+      {w: 'satisfy', pos: 'v.', ko: '만족시키다, 채우다', ic: '😌', ipa: '/ˈsætɪsfaɪ/', ex: 'Chips never satisfy my hunger.', exKo: '감자칩은 결코 내 배고픔을 채워 주지 않는다.'},
+      {w: 'guilt', pos: 'n.', ko: '죄책감', ic: '😔', ipa: '/ɡɪlt/', ex: 'He felt guilt after eating the whole cake.', exKo: '그는 케이크를 다 먹고 죄책감을 느꼈다.'},
+      {w: 'relieve', pos: 'v.', ko: '(고통·스트레스를) 덜다', ic: '🌬️', ipa: '/rɪˈliːv/', ex: 'A short walk can relieve stress.', exKo: '짧은 산책은 스트레스를 덜어 줄 수 있다.'},
+      {w: 'aware', pos: 'adj.', ko: '알고 있는, 인식하는', ic: '💡', ipa: '/əˈwer/', ex: 'Many people aren’t aware of their eating habits.', exKo: '많은 사람이 자신의 식습관을 알아차리지 못한다.'},
+      {w: 'picky', pos: 'adj.', ko: '까다로운, 편식하는', ic: '🙅', ipa: '/ˈpɪki/', ex: 'My little brother is a picky eater.', exKo: '내 남동생은 편식을 한다.'},
+      {w: 'flavor', pos: 'n.', ko: '맛, 풍미', ic: '🌶️', ipa: '/ˈfleɪvər/', ex: 'This soup has a strong flavor.', exKo: '이 수프는 맛이 강하다.'}
     ],
     morph: [
-      {w: 'compassion', ko: '연민', parts: [{t: 'com', k: 'pre', m: '함께'}, {t: 'pass', k: 'root', m: '고통을 느끼다 (passion)'}, {t: 'ion', k: 'suf', m: '~것 (명사)'}], family: ['passion', 'compassionate', 'sympathy'], note: '“함께 아파하는 것” → 연민. com-(함께)은 company, combine에도 있다.'},
-      {w: 'imperfect', ko: '불완전한', parts: [{t: 'im', k: 'pre', m: '아닌 (in-)'}, {t: 'perfect', k: 'root', m: '완벽한'}], family: ['impossible', 'impatient', 'imperfection'], note: 'p·b·m 앞에서 in-은 im-이 된다(impossible, imbalance).'},
-      {w: 'mindful', ko: '마음을 챙기는', parts: [{t: 'mind', k: 'root', m: '마음'}, {t: 'ful', k: 'suf', m: '~이 가득한'}], family: ['mindfulness', 'careful', 'harmful'], note: '-ful = 가득한(careful, helpful). 반대는 -less(careless, mindless).'},
-      {w: 'resilient', ko: '회복력 있는', parts: [{t: 're', k: 'pre', m: '다시, 뒤로'}, {t: 'sil', k: 'root', m: '뛰다 (sal-)'}, {t: 'ient', k: 'suf', m: '~하는 (형용사)'}], family: ['resilience', 'salient (튀어나온, 두드러진)', 'bounce back'], note: '“다시 튀어 오르는” → 넘어져도 다시 일어서는. 공처럼 튀어 오르는 모습을 떠올리게 한다.'}
+      {w: 'overeat', ko: '과식하다', parts: [{t: 'over', k: 'pre', m: '지나치게'}, {t: 'eat', k: 'root', m: '먹다'}], family: ['oversleep', 'overwork', 'overuse'], note: 'over- = 지나치게, 넘어서 (oversleep 늦잠 자다).'},
+      {w: 'mindful', ko: '마음을 챙기는', parts: [{t: 'mind', k: 'root', m: '마음'}, {t: 'ful', k: 'suf', m: '~이 가득한'}], family: ['mindfulness', 'mindless', 'careful'], note: '-ful = 가득한, -less = 없는. mindless eating = 생각 없이 먹기.'},
+      {w: 'nutrient', ko: '영양소', parts: [{t: 'nutri', k: 'root', m: '먹이다, 기르다'}, {t: 'ent', k: 'suf', m: '~하는 것 (명사)'}], family: ['nutrition', 'nutritious', 'nurse'], note: 'nutri- = 먹여 기르다. nutrition 영양, nutritious 영양가 높은.'},
+      {w: 'balanced', ko: '균형 잡힌', parts: [{t: 'balance', k: 'root', m: '균형'}, {t: 'd', k: 'suf', m: '~된 (형용사)'}], family: ['balance', 'unbalanced', 'imbalance'], note: '명사·동사 + -ed가 “~된” 상태의 형용사가 된다. un-이 붙으면 반대.'}
     ],
     phrases: [
+      {w: 'turn to', ko: '~에 의지하다, ~을 찾다', ex: 'Many people turn to food when stressed.', exKo: '많은 사람이 스트레스를 받으면 음식을 찾는다.'},
+      {w: 'be aware of', ko: '~을 알다, 의식하다', ex: 'Be aware of how much you eat.', exKo: '얼마나 먹는지 의식하라.'},
+      {w: 'in a hurry', ko: '서둘러, 급히', ex: 'Don’t eat in a hurry.', exKo: '급히 먹지 마라.'},
+      {w: 'have a sweet tooth', ko: '단것을 좋아하다', ex: 'I have a sweet tooth.', exKo: '나는 단것을 좋아한다.'},
       {w: 'be hard on oneself', ko: '자신에게 엄격하다', ex: 'Don’t be too hard on yourself.', exKo: '너 자신에게 너무 엄격하게 굴지 마.'},
-      {w: 'cut ~ some slack', ko: '~에게 너그럽게 대하다', ex: 'Cut yourself some slack. You’re learning.', exKo: '너 자신에게 좀 너그러워져. 배우는 중이잖아.'},
-      {w: 'bounce back', ko: '다시 회복하다', ex: 'She bounced back quickly after the loss.', exKo: '그녀는 패배 후 빨리 회복했다.'},
-      {w: 'compare oneself with', ko: '자신을 ~와 비교하다', ex: 'Stop comparing yourself with others.', exKo: '다른 사람과 너 자신을 비교하는 것을 그만둬.'},
-      {w: 'take care of', ko: '~을 돌보다', ex: 'Take care of your mind as well as your body.', exKo: '몸뿐만 아니라 마음도 돌봐라.'},
-      {w: 'get through', ko: '(힘든 시기를) 이겨 내다', ex: 'We will get through this together.', exKo: '우리는 함께 이것을 이겨 낼 거야.'}
+      {w: 'take care of', ko: '~을 돌보다', ex: 'Take care of your body like a friend.', exKo: '친구를 대하듯 네 몸을 돌봐라.'}
     ],
     pairs: [
-      {a: 'critic', b: 'supporter', rel: '반대 역할'},
-      {a: 'harsh', b: 'gentle', rel: '반대말'},
-      {a: 'perfect', b: 'imperfect', rel: '반대말 (im-)'},
-      {a: 'accept', b: 'reject', rel: '반대말'},
-      {a: 'isolated', b: 'connected', rel: '반대말'}
+      {a: 'balanced', b: 'unbalanced', rel: '반대말 (un-)'},
+      {a: 'mindful', b: 'mindless', rel: '반대말 (-ful / -less)'},
+      {a: 'nutrient', b: 'nutritious', rel: '명사 / 형용사'},
+      {a: 'eat', b: 'overeat', rel: '먹다 / 과식하다 (over-)'}
     ],
-    wrap: {en: 'One flaw I accept about myself is ______. I deserve ______.', ko: '오늘 배운 낱말로 나를 받아들이는 한 문장 쓰기'}
+    wrap: {en: 'One eating habit I want to change is ______. Instead, I will try to ______.', ko: '오늘 배운 낱말로 바꾸고 싶은 식습관 한 가지 쓰기'}
   },
 
   talk: {
@@ -231,81 +236,74 @@ window.LESSON = {
   },
 
   reading: {
-    title: 'Be Your Own Best Friend', kind: '심리 에세이', cover: 'Kind', coverKo: '나에게 친절하기', cover2: 'Enough', coverKo2: '지금의 나로 충분해',
+    title: 'Be Kind to Yourself at the Table', kind: '건강 잡지 기사', cover: 'Eat', coverKo: '나를 돌보는 식습관', cover2: 'Kind', coverKo2: '식탁에서 나에게 친절하기',
     before: [
-      {q: 'Is it easier to be kind to others or to yourself? Why?', a: '대부분 다른 사람에게 더 친절하다고 답한다.'},
-      {q: 'What does “love yourself” mean to you?', a: '자신을 받아들이기, 돌보기, 비교하지 않기 등'}
+      {q: 'Is the way you eat as important as what you eat?', a: '천천히·제때·집중해서 먹는 것도 중요하다는 답을 이끌어 낸다.'},
+      {q: 'Do you have any eating habits you want to change?', a: '야식, 아침 거르기, 휴대전화 보며 먹기, 편식 등'}
     ],
-    gloss: {'inner voice': '마음속 목소리', 'self-criticism': '자기 비판', 'self-compassion': '자기 연민(자신을 친절하게 대함)', 'common humanity': '보편적 인간성', 'highlight reel': '하이라이트 장면 모음', 'behind-the-scenes': '무대 뒤, 이면', 'third person': '3인칭', 'selfish': '이기적인', 'motivation': '동기', 'empty cup': '빈 컵'},
+    gloss: {'stress snacker': '스트레스 간식형', 'meal skipper': '끼니 거르는 형', 'screen eater': '화면 보며 먹는 형', 'picky eater': '편식하는 사람', 'fuel': '연료', 'scroll': '(화면을) 넘기다', 'texture': '식감', 'willpower': '의지력'},
     paras: [
-      {who: '', en: 'Imagine that your best friend fails an important test. What would you say? Probably something like, “It’s okay. You worked hard, and you’ll do better next time.” Now imagine that you failed the same test. What would your inner voice say? For many of us, it would sound much harsher: “You’re so stupid. You always mess up.”',
-       ko: '가장 친한 친구가 중요한 시험에 떨어졌다고 상상해 보라. 뭐라고 말하겠는가? 아마 “괜찮아. 열심히 했잖아. 다음엔 더 잘할 거야.” 같은 말일 것이다. 이제 당신이 같은 시험에 떨어졌다고 상상해 보라. 마음속 목소리는 뭐라고 할까? 우리 중 많은 사람에게 그 목소리는 훨씬 가혹하게 들릴 것이다. “넌 정말 바보야. 넌 늘 망쳐.”',
-       check: {q: 'How does our inner voice often sound?', a: 'Much harsher than what we say to our friends.'}, think: '나의 마음속 목소리는 어떤 말투인가?'},
-      {who: 'The Inner Critic', en: 'Most of us would never talk to a friend the way we talk to ourselves. We believe that criticizing ourselves will push us to improve. If we were gentle, we think, we would become lazy. But constant self-criticism often has the opposite effect. It makes us afraid of failing, so we avoid trying new things at all.',
-       ko: '우리 대부분은 스스로에게 말하는 방식으로 친구에게 말하지는 절대 않을 것이다. 우리는 자신을 비판하는 것이 나아지도록 밀어붙일 것이라고 믿는다. 너그러우면 게을러질 거라고 생각한다. 하지만 끊임없는 자기 비판은 흔히 반대 효과를 낳는다. 그것은 실패를 두렵게 만들어서, 우리는 새로운 일을 시도하는 것조차 피하게 된다.',
-       check: {q: 'What effect does constant self-criticism often have?', a: 'It makes us afraid of failing, so we avoid trying new things.'}, think: '실패가 두려워서 시도하지 않은 일이 있나?',
-       bg: {src: 'h1/donga2/l1/img/r-p1.jpg', credit: 'Alyssa L. Miller · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/34701044@N06/4000009470', about: '창가에 누워 있는 사람'}},
-      {who: 'Self-Compassion', en: 'Psychologist Kristin Neff describes another way: self-compassion. It means treating yourself with the same kindness you would offer a good friend. It has three parts: being kind to yourself instead of judging, remembering that everyone struggles and makes mistakes, and noticing your feelings without being swallowed by them.',
-       ko: '심리학자 크리스틴 네프는 또 다른 방법을 설명한다. 바로 자기 연민이다. 그것은 좋은 친구에게 베풀 친절과 똑같은 친절로 자신을 대하는 것을 뜻한다. 자기 연민에는 세 부분이 있다. 판단하는 대신 자신에게 친절하기, 누구나 힘겨워하고 실수한다는 것을 기억하기, 그리고 감정에 휩쓸리지 않고 그것을 알아차리기다.',
-       check: {q: 'What are the three parts of self-compassion?', a: 'Being kind to yourself, remembering everyone struggles, and noticing your feelings without being swallowed by them.'}, think: '세 부분 중 나에게 가장 어려운 것은?',
-       bg: {src: 'h1/donga2/l1/img/r-p2.jpg', credit: 'waithamai · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/59684476@N02/12306490696', about: '맞잡은 두 손 (연필 그림)'}},
-      {who: 'Not Weak, Not Lazy', en: 'Some people worry that self-compassion is just an excuse. However, studies suggest the opposite. People who forgive themselves for a mistake are often more likely to learn from it and try again. When failure does not feel like a disaster, we can look at it honestly. Kindness, it turns out, is a better coach than cruelty.',
-       ko: '어떤 사람들은 자기 연민이 그저 핑계일까 봐 걱정한다. 하지만 연구들은 그 반대를 보여 준다. 실수한 자신을 용서하는 사람들은 그 실수에서 배우고 다시 시도할 가능성이 더 큰 경우가 많다. 실패가 재앙처럼 느껴지지 않을 때, 우리는 그것을 정직하게 바라볼 수 있다. 알고 보니 친절이 가혹함보다 더 나은 코치인 것이다.',
-       check: {q: 'What do studies suggest about people who forgive themselves?', a: 'They are often more likely to learn from mistakes and try again.'}, think: '나를 가장 잘 성장시킨 것은 칭찬이었나, 꾸중이었나?',
-       bg: {src: 'h1/donga2/l1/img/r-p3.jpg', credit: 'comedy_nose · Public Domain Mark (Flickr)', link: 'https://www.flickr.com/photos/23408922@N07/9320845849', about: '육상 트랙의 출발선'}},
-      {who: 'The Comparison Trap', en: 'Social media makes self-compassion even harder. We see our friends’ trips, awards, and perfect selfies, and we compare them with our ordinary days. But we are comparing our behind-the-scenes with everyone else’s highlight reel. If we saw their bad days too, we would realize that nobody’s life is perfect.',
-       ko: 'SNS는 자기 연민을 더욱 어렵게 만든다. 우리는 친구들의 여행, 수상, 완벽한 셀카를 보고 그것을 우리의 평범한 날들과 비교한다. 하지만 우리는 우리의 무대 뒤를 다른 모든 사람의 하이라이트 장면과 비교하고 있는 것이다. 그들의 나쁜 날들도 본다면, 우리는 누구의 삶도 완벽하지 않다는 것을 깨달을 것이다.',
-       check: {q: 'What are we comparing on social media?', a: 'Our behind-the-scenes with everyone else’s highlight reel.'}, think: 'SNS를 보고 기분이 나빠진 적이 있나?',
-       bg: {src: 'h1/donga2/l1/img/r-p4.jpg', credit: 'freestocks.org · CC0 1.0 (Flickr)', link: 'https://www.flickr.com/photos/135396164@N05/25314591330', about: '휴대전화로 SNS를 보는 손'}},
-      {who: 'Try This: Talk Like a Friend', en: 'Next time you make a mistake, try talking to yourself in the second or third person: “Minji, you’re nervous, and that’s okay.” Using your own name creates a little distance, so it feels as if a friend were speaking. It sounds strange at first, but many people find it surprisingly calming.',
-       ko: '다음에 실수하면 2인칭이나 3인칭으로 자신에게 말해 보라. “민지야, 너 긴장했구나. 괜찮아.” 자기 이름을 부르면 약간의 거리가 생겨서, 마치 친구가 말하는 것처럼 느껴진다. 처음에는 이상하게 들리지만, 많은 사람들이 그것이 놀라울 만큼 마음을 진정시킨다고 느낀다.',
-       check: {q: 'Why does using your own name help?', a: 'It creates distance, so it feels as if a friend were speaking.'}, think: '내 이름을 부르며 나에게 한 문장 말해 본다면?',
-       bg: {src: 'h1/donga2/l1/img/r-p5.jpg', credit: 'IQRemix · CC BY-SA 2.0 (Flickr)', link: 'https://www.flickr.com/photos/46021126@N00/15678594478', about: '거울 속의 나'}},
-      {who: 'Try This: A Letter to Yourself', en: 'Another way is to write a short letter to yourself, as if you were writing to a friend who is going through the same problem. What would you want them to remember? What would you tell them to stop doing? Keep the letter, and read it again on a hard day.',
-       ko: '또 다른 방법은 같은 문제를 겪고 있는 친구에게 쓰듯이 자신에게 짧은 편지를 쓰는 것이다. 그 친구가 무엇을 기억하기를 바라는가? 무엇을 그만하라고 말해 주겠는가? 편지를 간직했다가 힘든 날 다시 읽어 보라.',
-       check: {q: 'When should you read the letter again?', a: 'On a hard day.'}, think: '나에게 편지를 쓴다면 첫 문장은?',
-       bg: {src: 'h1/donga2/l1/img/r-p6.jpg', credit: 'Cambridge Room at the Cambridge Public Library · Public Domain Mark (Flickr)', link: 'https://www.flickr.com/photos/140174526@N06/28158012095', about: '손글씨 편지'}},
-      {who: 'Enough', en: 'Loving yourself is not selfish, and it does not mean thinking you are perfect. It means accepting that you are imperfect, like everyone else, and still deserving of kindness. After all, you will spend your whole life with yourself. You might as well be a good friend to that person.',
-       ko: '자신을 사랑하는 것은 이기적인 것이 아니며, 자신이 완벽하다고 생각하는 것도 아니다. 그것은 다른 모든 사람처럼 자신이 불완전하다는 것을 받아들이면서도 여전히 친절을 받을 자격이 있다고 여기는 것이다. 어쨌든 당신은 평생을 당신 자신과 함께 보낼 것이다. 그 사람에게 좋은 친구가 되어 주는 편이 낫다.',
-       check: {q: 'What does loving yourself mean according to the writer?', a: 'Accepting that you are imperfect and still deserving of kindness.'}, think: '“나에게 좋은 친구가 된다”는 것은 구체적으로 무엇일까?',
-       bg: {src: 'h1/donga2/l1/img/r-p7.jpg', credit: 'Mount Rainier NPS · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/78037339@N03/14771720105', about: '산이 보이는 들판의 오솔길'}}
+      {who: '', en: 'Loving yourself is not only about kind words. It is also about how you treat your body every day, and that starts at the table. Many of us have eating habits that we are not even aware of. Read about four common types of eaters, and see if you recognize yourself.',
+       ko: '자신을 사랑하는 것은 친절한 말에만 관한 것이 아니다. 날마다 자기 몸을 어떻게 대하느냐에 관한 것이기도 하며, 그것은 식탁에서 시작된다. 우리 중 많은 사람이 스스로 알아차리지도 못하는 식습관을 가지고 있다. 흔한 네 가지 유형의 식습관에 대해 읽고, 자신의 모습이 보이는지 살펴보라.',
+       check: {q: 'Where does loving yourself start, according to the writer?', a: 'At the table (with how you treat your body).'}, think: '내가 알아차리지 못한 식습관이 있을까?'},
+      {who: 'The Stress Snacker', en: 'You have three tests this week, and you feel you aren’t ready. Suddenly, you crave something salty or spicy. Stress snackers turn to food to feel better for a moment. The problem is that the snack never solves the stress. When the bag is empty, the tests are still there, and now guilt has joined them.',
+       ko: '이번 주에 시험이 세 개 있는데 준비가 안 된 것 같다. 갑자기 짜거나 매운 것이 몹시 당긴다. 스트레스 간식형은 잠깐 기분이 나아지려고 음식을 찾는다. 문제는 간식이 결코 스트레스를 해결해 주지 않는다는 것이다. 봉지가 비고 나면 시험은 여전히 그대로이고, 이제 죄책감까지 더해진다.',
+       check: {q: 'What is the problem with stress snacking?', a: 'The snack never solves the stress, and guilt joins it.'}, think: '스트레스를 받을 때 나는 무엇을 먹나?'},
+      {who: 'The Stress Snacker', en: 'Before you open a snack, try to name your feeling: “I’m worried, not hungry.” Then do something else for five minutes. Take a short walk, or remember to drink a glass of water. If you gave your body a break instead of a snack, you would find that the craving often goes away.',
+       ko: '간식을 뜯기 전에 자기 감정에 이름을 붙여 보라. “나는 배고픈 게 아니라 걱정되는 거야.” 그런 다음 5분 동안 다른 일을 해 보라. 짧게 걸어 보거나, 물 한 잔 마시는 것을 기억하라. 간식 대신 몸에 휴식을 준다면, 당기던 마음이 흔히 사라진다는 것을 알게 될 것이다.',
+       check: {q: 'What should you do before you open a snack?', a: 'Try to name your feeling.'}, think: '5분 동안 할 수 있는 다른 일은?'},
+      {who: 'The Meal Skipper', en: 'Some students skip breakfast to sleep ten more minutes. It seems like a smart choice, but your brain runs on fuel. Without breakfast, it is hard to focus in the morning, and you are more likely to overeat at lunch. If you ate even a banana or a cup of yogurt, your morning would feel very different.',
+       ko: '어떤 학생들은 10분 더 자려고 아침을 거른다. 현명한 선택처럼 보이지만 뇌는 연료로 움직인다. 아침을 먹지 않으면 오전에 집중하기 어렵고, 점심에 과식할 가능성이 더 크다. 바나나 하나나 요구르트 한 컵이라도 먹는다면 아침이 아주 다르게 느껴질 것이다.',
+       check: {q: 'What happens if you skip breakfast?', a: 'It is hard to focus, and you are more likely to overeat at lunch.'}, think: '아침으로 간단히 먹을 수 있는 것은?'},
+      {who: 'The Screen Eater', en: 'Do you keep scrolling through videos while you eat? Screen eaters often finish a whole bag of chips without noticing it, as if their hands had a mind of their own. Because they are not paying attention, the food doesn’t satisfy them. Next time, put your phone away and notice the flavor and texture of each bite.',
+       ko: '먹는 동안 영상을 계속 넘기고 있나요? 화면 보며 먹는 형은 마치 손이 스스로 생각을 가진 것처럼, 알아차리지 못한 채 감자칩 한 봉지를 다 먹어 버리곤 한다. 주의를 기울이지 않기 때문에 음식이 만족감을 주지 못한다. 다음에는 휴대전화를 치우고 한 입 한 입의 맛과 식감을 느껴 보라.',
+       check: {q: 'Why doesn’t the food satisfy screen eaters?', a: 'Because they are not paying attention.'}, think: '휴대전화 없이 밥을 먹으면 무엇이 달라질까?'},
+      {who: 'The Picky Eater', en: 'Picky eaters stick to the foods they already know and avoid trying new ones. As a result, they can miss important nutrients. The good news is that taste can change throughout our lives. Many people start to enjoy a vegetable after tasting it several times. Decide to try one new food a week, even just one bite.',
+       ko: '편식하는 사람은 이미 아는 음식만 고집하고 새로운 음식은 먹어 보기를 피한다. 그 결과 중요한 영양소를 놓칠 수 있다. 좋은 소식은 입맛이 평생에 걸쳐 바뀔 수 있다는 것이다. 많은 사람이 어떤 채소를 여러 번 맛본 뒤에 즐기기 시작한다. 일주일에 새로운 음식 하나를, 한 입만이라도 먹어 보기로 결심하라.',
+       check: {q: 'What is the good news for picky eaters?', a: 'Taste can change throughout our lives.'}, think: '내가 다시 도전해 볼 음식은?'},
+      {who: 'Not a Test', en: 'Did you see yourself in one of these types? Don’t be too hard on yourself. Nobody eats perfectly every day, and changing a habit is not a test of willpower. If you had a bad food day yesterday, simply start again at the next meal.',
+       ko: '이 유형 중 하나에서 자신의 모습을 보았나요? 자신에게 너무 엄격하게 굴지 마라. 날마다 완벽하게 먹는 사람은 아무도 없고, 습관을 바꾸는 것은 의지력 시험이 아니다. 어제 식습관이 엉망이었다면 그냥 다음 끼니에 다시 시작하면 된다.',
+       check: {q: 'What should you do after a bad food day?', a: 'Simply start again at the next meal.'}, think: '실수했을 때 나에게 해 줄 말은?'},
+      {who: 'Enough', en: 'Your body is with you every day of your life. It deserves balanced meals, regular rest, and a little patience. Treat it the way you would treat a good friend. After all, loving yourself also means feeding yourself well.',
+       ko: '여러분의 몸은 평생 날마다 여러분과 함께한다. 몸은 균형 잡힌 식사, 규칙적인 휴식, 그리고 약간의 인내를 받을 자격이 있다. 좋은 친구를 대하듯 몸을 대하라. 결국 자신을 사랑한다는 것은 자신을 잘 먹이는 것이기도 하다.',
+       check: {q: 'What does the body deserve?', a: 'Balanced meals, regular rest, and a little patience.'}, think: '내 몸에게 해 주고 싶은 작은 약속은?'}
     ],
-    coverImg: {src: 'h1/donga2/l1/img/r-cover.jpg', credit: 'Oneterry AKA Terry Kearney · CC0 1.0 (Flickr)', link: 'https://www.flickr.com/photos/24490288@N04/55067603243'},
-    coverImg2: {src: 'h1/donga2/l1/img/r-cover2.jpg', credit: 'thejaan · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/88273881@N00/14844430632'},
     split: 4,
-    next: '자기 연민은\n우리를 게으르게 만들까?',
-    recap: {q: '자기 비판과 자기 연민은 어떻게 다를까?', items: [{k: 'SELF-CRITICISM', v: '“You’re so stupid.” → afraid of failing, avoid trying'}, {k: 'SELF-COMPASSION', v: 'kindness · common humanity · noticing feelings'}]},
+    next: '아침을 거르는 사람과\n화면 보며 먹는 사람은?',
+    recap: {q: '스트레스 간식형의 문제와 해결책은?', items: [{k: 'PROBLEM', v: 'crave salty or spicy food · the snack never solves the stress · guilt'}, {k: 'TRY', v: 'name your feeling · do something else for five minutes'}]},
     tf: [
-      {p: 0, s: 'Our inner voice is usually kinder than what we say to friends.', a: false, why: '훨씬 가혹하게 들린다.'},
-      {p: 1, s: 'Constant self-criticism can make us avoid new things.', a: true},
-      {p: 2, s: 'Self-compassion has three parts.', a: true},
-      {p: 3, s: 'Studies suggest self-compassion makes people lazy.', a: false, why: '배우고 다시 시도할 가능성이 크다.'},
-      {p: 4, s: 'Social media shows us everyone’s bad days.', a: false, why: '하이라이트만 보여 준다.'},
-      {p: 5, s: 'Talking to yourself using your name can feel calming.', a: true},
-      {p: 7, s: 'Loving yourself means believing you are perfect.', a: false, why: '불완전함을 받아들이는 것이다.'}
+      {p: 0, s: 'Many people are not aware of their eating habits.', a: true},
+      {p: 1, s: 'Stress snacking solves the stress.', a: false, why: '간식은 스트레스를 해결해 주지 않는다.'},
+      {p: 2, s: 'You should name your feeling before you open a snack.', a: true},
+      {p: 3, s: 'Skipping breakfast helps you focus in the morning.', a: false, why: '아침을 거르면 집중하기 어렵다.'},
+      {p: 4, s: 'Screen eaters often notice exactly how much they eat.', a: false, why: '알아차리지 못한 채 다 먹어 버린다.'},
+      {p: 5, s: 'Our taste can change throughout our lives.', a: true},
+      {p: 6, s: 'Changing a habit is a test of willpower.', a: false, why: '의지력 시험이 아니다.'}
     ],
     key: [
-      {en: '{{If we were}} gentle, we think, we {{would become}} lazy.', note: '가정법 과거 (지금 사실의 반대)', g: 'g2'},
-      {en: 'It makes us afraid of failing, so we {{avoid trying}} new things.', note: 'avoid + 동명사', g: 'g1'},
-      {en: '{{If we saw}} their bad days too, we {{would realize}} that nobody’s life is perfect.', note: '가정법 과거', g: 'g2'},
-      {en: 'Next time you make a mistake, {{try talking}} to yourself in the third person.', note: 'try + -ing (시험 삼아 해 보다)', g: 'g1'},
-      {en: 'It feels {{as if}} a friend {{were}} speaking.', note: 'as if + 가정법 과거', g: 'g2'},
-      {en: 'What would you tell them {{to stop doing}}?', note: 'tell + O + to V / stop + -ing', g: 'g1'}
+      {en: 'Before you open a snack, {{try to name}} your feeling.', note: 'try + to부정사 (애써 ~하려고 하다)', g: 'g1'},
+      {en: 'Take a short walk, or {{remember to drink}} a glass of water.', note: 'remember + to부정사 (앞으로 할 일)', g: 'g1'},
+      {en: '{{If you gave}} your body a break, you {{would find}} that the craving goes away.', note: '가정법 과거', g: 'g2'},
+      {en: 'Do you {{keep scrolling}} through videos while you eat?', note: 'keep + 동명사', g: 'g1'},
+      {en: '… {{as if}} their hands {{had}} a mind of their own.', note: 'as if + 가정법 과거', g: 'g2'},
+      {en: 'Picky eaters {{avoid trying}} new ones.', note: 'avoid + 동명사', g: 'g1'}
     ],
-    summary: {text: 'We are often our own harshest {{critics}}. Self-criticism makes us afraid of {{failing}}, but self-{{compassion}} means treating ourselves like a good friend. People who forgive themselves are more likely to try {{again}}. We can practice by talking to ourselves in the third person or writing a {{letter}} to ourselves.'},
-    order: ['You make a mistake.', 'Your inner critic says harsh words.', 'You talk to yourself like a friend.', 'You feel calm enough to try again.'],
-    chart: {title: 'CRITIC vs FRIEND', ko: '내 안의 두 목소리 비교', cols: ['Says', 'Result'], note: '표를 보고 “If I were my own friend, I would say ~.” 가정법 문장으로 말하게 한다.', rows: [
-      {name: 'Inner critic', cells: ['“You always mess up.”', 'fear, avoiding new things']},
-      {name: 'Inner friend', cells: ['“It’s okay. Try again.”', 'learning, trying again']}
+    summary: {text: 'Loving yourself also means caring about how you eat. Stress snackers should name their feelings instead of reaching for a {{snack}}. Meal skippers are more likely to {{overeat}} at lunch. Screen eaters should put their phones away and be {{mindful}} of each bite. Picky eaters can miss {{nutrients}}, but taste can {{change}}. Most of all, don’t be too {{hard}} on yourself.'},
+    order: ['You skip breakfast to sleep more.', 'It is hard to focus in the morning.', 'You overeat at lunch.', 'You decide to eat a banana tomorrow.'],
+    chart: {title: 'FOUR EATERS', ko: '네 가지 식습관 비교', cols: ['Problem', 'Try this'], note: '표를 보고 “If you ~, you would ~.” 가정법 문장으로 조언하게 한다.', rows: [
+      {name: 'Stress snacker', cells: ['the snack never solves the stress', 'name your feeling, walk for 5 minutes']},
+      {name: 'Meal skipper', cells: ['hard to focus, overeat at lunch', 'eat a banana or yogurt']},
+      {name: 'Screen eater', cells: ['eats without noticing', 'put the phone away']},
+      {name: 'Picky eater', cells: ['misses nutrients', 'try one new food a week']}
     ]},
-    wrap: {en: 'Dear me, ______. If I were your best friend, I would tell you ______.', ko: '관통 질문으로 돌아가기: 나에게 보내는 짧은 격려 편지 쓰기'}
+    wrap: {en: 'I am a ______ eater. If I ______, I would ______. From now on, I will try to ______.', ko: '관통 질문으로 돌아가기: 나의 식습관을 돌아보고 몸에게 하는 약속 쓰기'}
   },
 
   quiz: [
-    ['“연민, 동정심”을 뜻하는 낱말은?', ['compassion', 'critic', 'flaw', 'worth'], 0, 'compassion'],
-    ['“회복력 있는”을 뜻하는 낱말은?', ['harsh', 'isolated', 'resilient', 'imperfect'], 2, 'resilient'],
-    ['imperfect의 im-이 뜻하는 것은?', ['함께', '아닌', '다시', '안에'], 1, 'im- = in- = 아닌'],
-    ['harsh의 반대말은?', ['gentle', 'strict', 'cold', 'loud'], 0, 'harsh ↔ gentle'],
+    ['“식욕”을 뜻하는 낱말은?', ['habit', 'appetite', 'portion', 'flavor'], 1, 'appetite'],
+    ['“과식하다”를 뜻하는 낱말은?', ['skip', 'digest', 'overeat', 'crave'], 2, 'overeat (over- = 지나치게)'],
+    ['mindful의 반대말은?', ['careful', 'mindless', 'helpful', 'balanced'], 1, '-ful ↔ -less'],
+    ['“단것을 좋아하다”를 뜻하는 표현은?', ['turn to', 'be aware of', 'have a sweet tooth', 'in a hurry'], 2, 'have a sweet tooth'],
     ['위로하는 말로 알맞지 않은 것은?', ['I’m sorry to hear that.', 'That must be hard.', 'You did your best.', 'You should have studied more.'], 3, '④는 비난에 가깝다'],
     ['조언하는 말은?', ['What should I do?', 'If I were you, I would rest.', 'Can you give me advice?', 'Do you have any tips?'], 1, '①③④는 조언을 구하는 말'],
     ['빈칸에 알맞은 것은? “I enjoy ____ letters.”', ['write', 'to write', 'writing', 'written'], 2, 'enjoy + -ing'],
@@ -313,9 +311,9 @@ window.LESSON = {
     ['“I stopped checking my phone.”의 뜻은?', ['휴대전화를 확인하려고 멈췄다', '휴대전화 확인하는 것을 그만두었다', '휴대전화를 확인해야 했다', '휴대전화를 확인할 것이다'], 1, 'stop + -ing = 하던 일을 멈추다'],
     ['빈칸에 알맞은 것은? “If I ____ you, I would talk to her.”', ['am', 'was being', 'were', 'have been'], 2, '가정법 과거 were'],
     ['빈칸에 알맞은 것은? “If I had known, I ____ you.”', ['will help', 'would help', 'would have helped', 'helped'], 2, '가정법 과거완료'],
-    ['자기 비판이 낳는 결과로 글에 나온 것은?', ['더 열심히 한다', '실패가 두려워 시도를 피한다', '친구가 많아진다', '자존감이 높아진다'], 1, 'avoid trying new things'],
-    ['자기 연민의 세 부분이 아닌 것은?', ['자신에게 친절하기', '누구나 실수함을 기억하기', '감정을 알아차리기', '다른 사람보다 앞서기'], 3, '세 부분: kindness, common humanity, mindfulness'],
-    ['SNS 비교가 문제인 까닭은?', ['시간이 오래 걸려서', '남의 하이라이트와 내 일상을 비교해서', '친구가 줄어서', '사진이 흐려서'], 1, 'behind-the-scenes vs highlight reel'],
-    ['글쓴이가 권하는 방법이 아닌 것은?', ['3인칭으로 자신에게 말하기', '자신에게 편지 쓰기', '실수를 더 엄하게 꾸짖기', '힘든 날 편지 다시 읽기'], 2, '가혹함보다 친절이 더 나은 코치']
+    ['스트레스 간식형에게 글쓴이가 권하는 것은?', ['간식을 반만 먹기', '감정에 이름 붙이고 5분 동안 다른 일 하기', '매운 음식 먹기', '시험공부 그만하기'], 1, 'try to name your feeling … do something else for five minutes'],
+    ['아침을 거를 때 생기는 일로 글에 나온 것은?', ['점심에 과식하기 쉽다', '잠을 더 잘 잔다', '키가 큰다', '집중이 잘된다'], 0, 'you are more likely to overeat at lunch'],
+    ['화면 보며 먹는 사람이 만족하지 못하는 까닭은?', ['음식이 맛없어서', '주의를 기울이지 않아서', '양이 적어서', '너무 빨리 배불러서'], 1, 'Because they are not paying attention'],
+    ['글의 요지로 알맞은 것은?', ['완벽하게 먹어야 한다', '편식은 고칠 수 없다', '식습관을 돌보는 것도 자신을 사랑하는 일이다', '간식은 모두 나쁘다'], 2, 'loving yourself also means feeding yourself well']
   ]
 };

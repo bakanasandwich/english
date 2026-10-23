@@ -53,7 +53,7 @@
   function alignSlide() {
     const A = L.align; if (!A) return;
     const T = A.tb || {}, all = [...new Set(Object.values(A.std || {}).flat())];
-    const formRows = (A.forms || []).map(f => { const key = Object.keys(CUR.forms).find(k => k.replace(/^\d+\.\s*/, '') === f) || f; const ex = (CUR.forms[key] || []).filter(e => e[1] === '중').slice(0, 2).map(e => e[0]); return `<li><b>${esc(f)}</b>${ex.length ? ` <span class="en">— ${esc(ex.join(' / '))}</span>` : ''}</li>`; }).join('');
+    const formRows = (A.forms || []).map(f => { const key = Object.keys(CUR.forms).find(k => k.replace(/^\d+\.\s*/, '') === f) || f; const ex = (CUR.forms[key] || []).filter(e => e[1] === (hs ? '고' : '중')).slice(0, 2).map(e => e[0]); return `<li><b>${esc(f)}</b>${ex.length ? ` <span class="en">— ${esc(ex.join(' / '))}</span>` : ''}</li>`; }).join('');
     add(`${tag('교과서 · 교육과정')}<h2>이 단원이 맞춘 기준</h2>
       <div class="align"><div><h3>${esc(B.publisher || '교과서')} 단원 구성</h3><ul class="b">
         ${T.funcs ? `<li><b>의사소통 기능</b> ${esc(T.funcs.join(' · '))}</li>` : ''}${T.forms ? `<li><b>언어 형식</b> ${esc(T.forms.join(' · '))}</li>` : ''}${T.reading ? `<li><b>읽기</b> <span class="en">${esc(T.reading)}</span></li>` : ''}</ul>
