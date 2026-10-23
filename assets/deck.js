@@ -45,7 +45,23 @@
   const goalsSlide = list => add(`${tag('학습 목표')}<h2>오늘은 이것을 할 수 있어요</h2>
     <ul class="b">${list.map(g => `<li>${esc(g)}</li>`).join('')}</ul>
     <div class="qbox" style="margin-top:40px"><div class="q"><b>Big Question</b>${esc(L.bigQ.en)}</div><div class="k">${esc(L.bigQ.ko)}</div></div>`,
-    note('학습 목표', '목표를 함께 읽고, 단원 전체를 꿰는 질문(Big Question)을 소개한다. 단원 마지막 본문 차시에서 이 질문에 영어로 답한다.'));
+    note('학습 목표', '목표를 함께 읽고, 단원 전체를 꿰는 질문(Big Question)을 소개한다. 단원 마지막 본문 차시에서 이 질문에 영어로 답한다.', stdNote(kind)));
+  /* 교과서·교육과정 대조: L.align = {tb: {reading, funcs, forms, note}, std: {vocab|talk|grammar|read1|read2: ['9영01-02', …]}, forms: ['Pronouns', …]}
+     성취기준·언어 형식 원문은 assets/curriculum.js(window.CURRICULUM)에서 가져온다 */
+  const CUR = window.CURRICULUM || {std: {}, forms: {}};
+  const stdNote = k => { const c = ((L.align || {}).std || {})[k] || []; return c.length ? `<h4>관련 성취기준</h4><p class="tr">${c.map(x => `<b>[${esc(x)}]</b> ${esc(CUR.std[x] || '')}`).join('<br>')}</p>` : ''; };
+  function alignSlide() {
+    const A = L.align; if (!A) return;
+    const T = A.tb || {}, all = [...new Set(Object.values(A.std || {}).flat())];
+    const formRows = (A.forms || []).map(f => { const key = Object.keys(CUR.forms).find(k => k.replace(/^\d+\.\s*/, '') === f) || f; const ex = (CUR.forms[key] || []).filter(e => e[1] === '중').slice(0, 2).map(e => e[0]); return `<li><b>${esc(f)}</b>${ex.length ? ` <span class="en">— ${esc(ex.join(' / '))}</span>` : ''}</li>`; }).join('');
+    add(`${tag('교과서 · 교육과정')}<h2>이 단원이 맞춘 기준</h2>
+      <div class="align"><div><h3>${esc(B.publisher || '교과서')} 단원 구성</h3><ul class="b">
+        ${T.funcs ? `<li><b>의사소통 기능</b> ${esc(T.funcs.join(' · '))}</li>` : ''}${T.forms ? `<li><b>언어 형식</b> ${esc(T.forms.join(' · '))}</li>` : ''}${T.reading ? `<li><b>읽기</b> <span class="en">${esc(T.reading)}</span></li>` : ''}</ul>
+        ${T.note ? `<p class="k">${esc(T.note)}</p>` : ''}</div>
+      <div><h3>2022 개정 교육과정</h3><ul class="b">${all.map(x => `<li><b>[${esc(x)}]</b> ${esc(CUR.std[x] || '')}</li>`).join('')}</ul>
+        ${formRows ? `<h3>[별표 4] 언어 형식</h3><ul class="b">${formRows}</ul>` : ''}</div></div>`,
+      note('교과서·교육과정 대조', '단원 구성은 교과서 목차(의사소통 기능·언어 형식·읽기 제목)와 대조했다. 대화문·본문은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식·교과서 어휘로 새로 쓴 글이다.', CUR.source ? `<p>교육과정 출처: ${esc(CUR.source)}</p>` : ''));
+  }
   const coverSlide = (label, bigWord) => add(`<div class="cover"><div class="big" style="font-size:${bigWord.length > 9 ? 120 : bigWord.length > 5 ? 160 : 220}px">${esc(bigWord)}</div>${tag(`Lesson ${L.no} · ${P.n}차시 ${P.name}`)}<h1 class="en">${esc(L.title)}</h1>
     <div class="sub">${esc(L.ko)} · ${esc(label)}</div><div class="road">${roadmap()}</div></div>`,
     note('차시 안내', `이 단원은 어휘 → 대화문 → 문법 → 본문 순서로 진행한다. 오늘은 ${P.n}차시 ${P.name}.`));
@@ -146,6 +162,7 @@
     const V = L.vocab;
     coverSlide('Words', 'Aa');
     goalsSlide(L.goals.vocab);
+    alignSlide();
     hookSlide(V.hook);
     const ws = V.words;
     for (let i = 0; i < ws.length; i += 4) {

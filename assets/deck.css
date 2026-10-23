@@ -319,3 +319,11 @@ button{font:inherit;color:inherit}
 .deck-dark .artcap span{font-size:14px;color:#8c857a}
 .deck-dark .timer{font:700 22px var(--mono);color:var(--gold);background:transparent;border:2px solid var(--gold);border-radius:999px;padding:6px 18px;cursor:pointer}
 .deck-dark .timer.run{background:var(--gold);color:#131211}
+
+/* 교과서·교육과정 대조 */
+.align { display: grid; grid-template-columns: 1fr 1.35fr; gap: 32px; line-height: 1.4; }
+.align h3 { font-size: 20px; margin: 0 0 8px; color: var(--pc); }
+.deck-light .align ul.b { font-size: 18px; margin: 0 0 14px; gap: 6px; }
+.deck-light .align ul.b>li { padding-left: 24px; }
+.deck-light .align ul.b>li::before { width: 9px; height: 9px; top: .5em; }
+.align .k { font-size: 15px; color: #8a8577; }
