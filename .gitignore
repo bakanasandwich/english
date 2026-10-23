@@ -1,0 +1,5 @@
+
+# task-observer: 세션마다 바뀌는 기록은 커밋하지 않음
+.claude/observer/skill-observations/checkpoints.log
+.claude/observer/skill-observations/observation-log/archive/.id-claims/
+graphify-out/
