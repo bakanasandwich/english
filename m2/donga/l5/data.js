@@ -35,15 +35,15 @@ window.LESSON = {
       {w: 'colorful', pos: 'adj.', ko: '다채로운, 알록달록한', ic: '🌈', ex: 'The houses are colorful.', exKo: '집들이 알록달록하다.'},
       {w: 'empty', pos: 'adj.', ko: '텅 빈', ic: '🫙', audio: 'assets/audio/empty.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The street used to be empty.', exKo: '그 거리는 예전에 텅 비어 있었다.'},
       {w: 'artwork', pos: 'n.', ko: '예술 작품', ic: '🖼️', ex: 'This artwork is by a famous street artist.', exKo: '이 작품은 유명한 거리 예술가의 것이다.'},
-      {w: 'lively', pos: 'adj.', ko: '활기찬', ic: '🎉', ex: 'Street art makes the city lively.', exKo: '거리 예술은 도시를 활기차게 만든다.'},
+      {w: 'lively', pos: 'adj.', ko: '활기찬', ic: '🎉', audio: 'assets/audio/lively.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Street art makes the city lively.', exKo: '거리 예술은 도시를 활기차게 만든다.'},
       {w: 'well-known', pos: 'adj.', ko: '잘 알려진, 유명한', ic: '⭐', ex: 'It is a well-known mural.', exKo: '그것은 잘 알려진 벽화다.'},
-      {w: 'form', pos: 'n.', ko: '형태, 종류', ic: '🔷', ex: 'Street art comes in many forms.', exKo: '거리 예술에는 여러 형태가 있다.'},
-      {w: 'represent', pos: 'v.', ko: '나타내다, 상징하다', ic: '🔣', ex: 'The three figures represent the past, present, and future.', exKo: '세 인물은 과거, 현재, 미래를 나타낸다.'},
-      {w: 'figure', pos: 'n.', ko: '인물, 모양', ic: '🧍', ex: 'Look at the eyes of the figure.', exKo: '그 인물의 눈을 보아라.'},
+      {w: 'form', pos: 'n.', ko: '형태, 종류', ic: '🔷', audio: 'assets/audio/form.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Street art comes in many forms.', exKo: '거리 예술에는 여러 형태가 있다.'},
+      {w: 'represent', pos: 'v.', ko: '나타내다, 상징하다', ic: '🔣', audio: 'assets/audio/represent.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The three figures represent the past, present, and future.', exKo: '세 인물은 과거, 현재, 미래를 나타낸다.'},
+      {w: 'figure', pos: 'n.', ko: '인물, 모양', ic: '🧍', audio: 'assets/audio/figure.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Look at the eyes of the figure.', exKo: '그 인물의 눈을 보아라.'},
       {w: 'spray', pos: 'v.', ko: '(물감 등을) 뿌리다', ic: '🎨', ex: 'He sprayed green paint on the wall.', exKo: '그는 벽에 초록 물감을 뿌렸다.'},
-      {w: 'message', pos: 'n.', ko: '메시지, 전하는 뜻', ic: '💬', ex: 'His art carries a social message.', exKo: '그의 작품은 사회적 메시지를 담고 있다.'},
-      {w: 'tiny', pos: 'adj.', ko: '아주 작은', ic: '🔍', ex: 'The paintings are tiny.', exKo: '그 그림들은 아주 작다.'},
-      {w: 'pleasure', pos: 'n.', ko: '기쁨, 즐거움', ic: '😊', ex: 'Art gives pleasure to many people.', exKo: '예술은 많은 사람에게 기쁨을 준다.'}
+      {w: 'message', pos: 'n.', ko: '메시지, 전하는 뜻', ic: '💬', audio: 'assets/audio/message.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'His art carries a social message.', exKo: '그의 작품은 사회적 메시지를 담고 있다.'},
+      {w: 'tiny', pos: 'adj.', ko: '아주 작은', ic: '🔍', audio: 'assets/audio/tiny.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The paintings are tiny.', exKo: '그 그림들은 아주 작다.'},
+      {w: 'pleasure', pos: 'n.', ko: '기쁨, 즐거움', ic: '😊', audio: 'assets/audio/pleasure.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Art gives pleasure to many people.', exKo: '예술은 많은 사람에게 기쁨을 준다.'}
     ],
     phrases: [
       {w: 'used to', ko: '(예전에) ~하곤 했다, ~였다', ex: 'Poor workers used to live here.', exKo: '예전에는 가난한 노동자들이 여기 살았다.'},
