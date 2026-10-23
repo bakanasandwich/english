@@ -1,0 +1,34 @@
+{
+ "r-p0": {
+  "file": "r-p1.jpg",
+  "title": "old books on women's issues",
+  "creator": "Muffet",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/53133240@N00/8972807",
+  "source": "flickr"
+ },
+ "r-p1": {
+  "file": "r-p0.jpg",
+  "title": "Mount Vesuvius",
+  "creator": "M McBey",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/158652122@N02/48157510282",
+  "source": "flickr"
+ },
+ "r-p2": {
+  "file": "r-cover2.jpg",
+  "title": "Pompeii Ruins",
+  "creator": "Gary Lee Todd, Ph.D.",
+  "license": "Public Domain Mark",
+  "link": "https://www.flickr.com/photos/101561334@N08/48440525386",
+  "source": "flickr"
+ },
+ "r-p4": {
+  "file": "r-p3.jpg",
+  "title": "Imsilgun_County_73",
+  "creator": "KOREA.NET - Official page of the Republic of Korea",
+  "license": "CC BY-SA 2.0",
+  "link": "https://www.flickr.com/photos/42438955@N05/16231282123",
+  "source": "flickr"
+ }
+}

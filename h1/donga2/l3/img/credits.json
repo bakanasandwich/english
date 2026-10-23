@@ -1,0 +1,82 @@
+{
+ "r-p0": {
+  "file": "r-p0.jpg",
+  "title": "Girl Checking her Instagram",
+  "creator": "MyStockPhotos",
+  "license": "CC0 1.0",
+  "link": "https://www.flickr.com/photos/136375272@N05/46908269482",
+  "source": "flickr"
+ },
+ "r-p1": {
+  "file": "r-p1.jpg",
+  "title": "Engineer",
+  "creator": "Incase.",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/62021300@N00/6685431805",
+  "source": "flickr"
+ },
+ "r-p2": {
+  "file": "r-p2.jpg",
+  "title": "Happy Our Birthday :)",
+  "creator": "Hamed Saber",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/44124425616@N01/564819621",
+  "source": "flickr"
+ },
+ "r-p4": {
+  "file": "r-p4.jpg",
+  "title": "Szappanbuborék / Soap bubbles",
+  "creator": "brenkee",
+  "license": "CC0 1.0",
+  "link": "https://www.flickr.com/photos/55128416@N05/19581533373",
+  "source": "flickr"
+ },
+ "r-p5": {
+  "file": "r-p5.jpg",
+  "title": "lock data privacy",
+  "creator": "stockcatalog",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/151691693@N02/26406047157",
+  "source": "flickr"
+ },
+ "r-p6": {
+  "file": "r-p6.jpg",
+  "title": "Hourglass - Credit to https://www.semtrio.com/",
+  "creator": "Semtrio",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/163837264@N07/43309471604",
+  "source": "flickr"
+ },
+ "r-p7": {
+  "file": "r-p7.jpg",
+  "title": null,
+  "creator": null,
+  "license": "CC0 1.0",
+  "link": "https://www.rawpixel.com/image/5943429/free-public-domain-cc0-photo",
+  "source": "rawpixel"
+ },
+ "w-algorithm": {
+  "file": "w-algorithm.jpg",
+  "title": "Free computer code screen image",
+  "creator": null,
+  "license": "CC0 1.0",
+  "link": "https://www.rawpixel.com/image/5916657/image-public-domain-computer-free",
+  "source": "rawpixel"
+ },
+ "w-privacy": {
+  "file": "w-privacy.jpg",
+  "title": "Padlock",
+  "creator": "stebulus",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/69017177@N00/297522471",
+  "source": "flickr"
+ },
+ "w-diverse": {
+  "file": "w-diverse.jpg",
+  "title": "Unity in Diversity",
+  "creator": "Untitled blue",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/61728987@N00/22800371",
+  "source": "flickr"
+ }
+}
