@@ -138,6 +138,7 @@
   const wordCard = w => `<div class="wcard${w.img ? ' has-ph' : ''}">${pic(w)}<div class="w en">${esc(w.w)} <small>${esc(w.pos)}</small></div><div class="btns">${say(w.w)}${recBtn(w)}</div>
     ${w.ipa ? `<div class="ipa en">${esc(w.ipa)}</div>` : ''}<div class="m f">${esc(w.ko)}</div></div>`;
   const dictLinks = w => `${esc(w)}: <a href="https://dictionary.cambridge.org/dictionary/english/${encodeURIComponent(w.toLowerCase())}" target="_blank" rel="noopener">Cambridge 사전</a> · <a href="https://youglish.com/pronounce/${encodeURIComponent(w)}/english" target="_blank" rel="noopener">YouGlish(실제 영상 속 발음)</a> · <a href="https://en.dict.naver.com/#/search?query=${encodeURIComponent(w)}" target="_blank" rel="noopener">네이버 사전</a>`;
+  const audioCredits = ws => { const c = ws.filter(w => w.audioCredit); return c.length ? `<p style="font-size:12px;color:#8a8577">원어민 녹음: ${c.map(w => `${esc(w.w)} — ${esc(w.audioCredit)}`).join(' · ')}</p>` : ''; };
   const credits = imgs => { const c = imgs.filter(i => i && i.credit); return c.length ? `<p style="font-size:12px;color:#8a8577">그림 출처: ${c.map(i => i.link ? `<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.credit)}</a>` : esc(i.credit)).join(' · ')}</p>` : ''; };
 
   /* ═════ 1차시 · 어휘 ═════ */
@@ -151,7 +152,7 @@
       const g = ws.slice(i, i + 4), part = `${i / 4 + 1} / ${Math.ceil(ws.length / 4)}`;
       add(`${tag(`New Words ${part}`)}<h2>듣고 따라 읽기</h2><div class="wgrid">${g.map(wordCard).join('')}</div>`,
         note('낱말 익히기', '① 그림을 보고 뜻 짐작하기 → ② 스피커(기계 음성)·사람 단추(원어민 녹음)로 발음 듣기 → ③ 두 번 따라 읽기 → ④ 넘겨서 뜻 확인. 발음 기호의 강세(ˈ)를 손뼉으로 짚어 준다.',
-          `<p class="tr">${g.map(w => `<b>${esc(w.w)}</b> ${esc(w.ipa || '')} ${esc(w.ko)}`).join('<br>')}</p>`, `<p>${g.map(w => dictLinks(w.w)).join('<br>')}</p>`, credits(g.map(w => w.img))));
+          `<p class="tr">${g.map(w => `<b>${esc(w.w)}</b> ${esc(w.ipa || '')} ${esc(w.ko)}`).join('<br>')}</p>`, `<p>${g.map(w => dictLinks(w.w)).join('<br>')}</p>`, credits(g.map(w => w.img)), audioCredits(g)));
       add(`${tag(`In Sentences ${part}`)}<h2>문장 속에서 만나기</h2><div class="sents">${g.map((w, k) => {
         const re = new RegExp(`\\b(${w.w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*)`, 'i');
         const s = w.ex.replace(re, '{{$1}}');
