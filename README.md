@@ -1,48 +1,64 @@
-# 중·고 영어 수업실
+# 새 레포용 Claude 기본 세트
 
-2022 개정 교육과정 중·고등학교 영어 차시별 수업 자료입니다. 빌드 과정 없이 HTML 파일만으로 작동하는 정적 사이트로, GitHub Pages(저장소 Settings → Pages → Branch: `main` / root)로 배포합니다.
+02 · history · science 레포에서 쓰던 스킬 중 **어느 프로젝트에나 맞는 것만** 모았어요.
 
-## 담긴 자료 (단원마다)
+## 설치 (한 줄)
 
-| 차시 | 슬라이드 | 연습실 |
-|---|---|---|
-| 1차시 어휘 | `slides1.html` 낱말·예문·덩어리 표현·철자 | `sim.html#words` 낱말 카드 · 듣고 뜻 고르기 · 듣고 철자 쓰기 |
-| 2차시 대화문 | `slides2.html` Listen & Talk 1·2, Let's Watch | `sim.html#talk` 듣고 따라 하기 · 역할 연기 · 핵심 표현 쓰기 |
-| 3차시 문법 | `slides3.html` 규칙 발견 → 정리 → 확인 → 실수 → 배열 | `sim.html#grammar` 문장 만들기 · to? -ing? · 형태 바꾸기 |
-| 4·5차시 본문 | `slides4.html` `slides5.html` (어두운 명조 스타일) | `sim.html#read` 들으며 읽기 · 문장 순서 · T/F · 요약 빈칸 |
-
-단원 자료: `worksheet.html`(A4 학습지, 정답지 겸용), `game.html`(모둠 대결 게임 3종), `quiz/bell.html?b=책&n=단원`(골든벨)
-
-## 폴더 구조
-
-```
-index.html                 메인 화면 (교과서 → 단원 → 차시 → 자료)
-assets/
-  catalog.js               사이트 이름·제작자, 교과서와 단원 목록
-  common.js                발음 듣기(브라우저 음성), 위 막대·아래 글
-  deck.css, deck.js        수업 슬라이드 엔진 (밝은 모양 / 본문용 어두운 모양)
-  lab.css, lab.js          연습실
-  ws.css, ws.js            학습지
-  game.css, game.js        게임,  bell.js 골든벨,  home.js 메인 화면
-  vendor/qrcode.js         QR 코드 (MIT, Kazuhiko Arase)
-m2/donga/l1/
-  data.js                  ★ 단원 내용 전부 (이 파일 하나로 모든 자료가 만들어짐)
-  slides1~5.html, sim.html, worksheet.html, game.html   (짧은 틀 파일)
+```bash
+bash install.sh <레포 폴더> "<화면 서버 명령>" "<작업 후 확인 방법>"
 ```
 
-## 새 단원 만들기
+예시
+- 정적 사이트: `bash install.sh ~/my-site "python3 -m http.server 8765" "agent-browser 로 바뀐 화면 열어 보기"`
+- 앱: `bash install.sh ~/my-app "npm run dev (포트 5173)" "npm test"`
 
-1. `m2/donga/l1` 폴더를 복사해 `l2`로 이름을 바꿉니다.
-2. `l2/data.js`의 내용을 새 단원으로 바꿉니다(`no: 2`). 문장 속 `{{ }}`는 슬라이드·학습지에서 빈칸이 되는 핵심 표현입니다.
-3. `assets/catalog.js`에서 해당 단원의 `ready`를 `true`로 바꾸고 제목·의사소통 기능·문법을 적습니다.
+뒤의 두 가지를 비우면 정적 사이트 기준으로 적히고, 나중에 CLAUDE.md 맨 위에서 고치면 돼요.
+이미 있는 스킬·명령은 덮어쓰지 않아요. 설치 후 커밋·푸시하면 클라우드 세션에서도 바로 써요.
 
-## 슬라이드 조작
+클라우드에서 하려면 Claude에게 "이 기본 세트를 OO 레포에 설치해 줘"라고 하고 이 압축 파일을 첨부하면 돼요.
 
-→ / 스페이스 / 클릭: 다음 단계 · ← : 이전 · N: 교사 메모(해석·발문 포함) · O: 전체 보기 · F: 전체 화면 · 주소 끝 `#5`: 5장부터.
-본문 슬라이드에서 점선 낱말을 누르면 뜻이 뜨고 발음이 들립니다.
+## 들어 있는 것
+
+**일하는 방식 (스킬 18개)**
+
+| 스킬 | 하는 일 |
+|---|---|
+| planning-and-task-breakdown | 큰 일을 작은 순서로 쪼개 계획 |
+| interview-me | 요청이 애매하면 하나씩 질문 |
+| incremental-implementation | 조금씩 만들고 그때마다 확인 |
+| test-driven-development | 테스트 먼저 쓰기 (테스트가 있는 프로젝트용) |
+| debugging-and-error-recovery | 오류 원인 찾기 |
+| code-review-and-quality | 코드 점검 |
+| code-simplification | 복잡한 코드 단순하게 |
+| security-and-hardening | 보안 점검 (로그인·개인정보) |
+| performance-optimization | 느린 화면·용량 줄이기 |
+| api-and-interface-design | 서버 주소·데이터 모양 설계 |
+| doubt-driven-development | 되돌리기 어려운 변경 전에 한 번 더 의심 |
+| git-workflow-and-versioning | 커밋·기록 정리 |
+| frontend-ui-engineering | 화면 만들기 |
+| frontend-design | 화면을 개성 있게 꾸미기 (수업 자료·소개 페이지에 좋음, 업무 앱이면 빼도 됨) |
+| ponytail · ponytail-review | 군더더기 없이 최소한으로 |
+| agent-browser | 실제 브라우저로 화면 열어 확인 |
+| task-observer | 자주 고쳐 주는 점을 기록 → 스킬 개선안 제안 → 승인한 것만 반영 |
+
+**명령어**: `/plan` 계획 · `/build` 만들기 · `/test` 점검 · `/review` 검토 · `/code-simplify` 단순화
+
+**참고 문서** (`.claude/references/`): 보안·성능·접근성 체크리스트, 완료 기준 — 스킬들이 함께 읽으므로 같이 있어야 해요.
+
+**세션 시작 훅**
+- 클라우드에서 agent-browser 자동 설치
+- 관찰기 켜기 + 열린 관찰 수 알려 주기
+- (선택) graphify 코드 지도: `.claude/hooks/setup-tools.sh` 의 `GRAPHIFY_DIR=""` 에 폴더 이름을 적으면 켜짐
 
 ## 알아 둘 점
 
-- 교과서 원문(대화문·본문)은 저작권 때문에 싣지 않았습니다. 단원 주제·의사소통 기능·언어 형식에 맞춰 새로 쓴 글입니다.
-- 정적 사이트라서 정답이 페이지 소스에 들어 있습니다(학생에게 서버에서 정답을 숨기는 기능은 없음).
-- 발음은 기기의 브라우저 음성(Web Speech)을 씁니다. 크롬·엣지·사파리에서 작동하며, 목소리는 기기마다 다릅니다.
+- task-observer 는 세션마다 약 1만 토큰을 더 써요. 끄려면 CLAUDE.md 의 관찰기 부분과 settings.json 의 `task-observer-start.sh` 줄을 지우세요.
+- 관찰 기록(`.claude/observer/`)은 커밋해야 다음 세션에 남아요.
+- 선생님 PC에서 모든 프로젝트에 쓰려면 `.claude/skills` 를 `~/.claude/skills` 에 복사해도 되지만, 클라우드 세션은 레포 안의 것만 읽어요.
+
+## 출처·라이선스
+
+- agent-skills (addyosmani/agent-skills, MIT) — `.claude/references/LICENSE-agent-skills`
+- ponytail (MIT), frontend-design (Anthropic, LICENSE.txt)
+- task-observer v3.7.0 (rebelytics/one-skill-to-rule-them-all, CC-BY-4.0)
+- agent-browser 안내 (vercel-labs/agent-browser, Apache-2.0)
