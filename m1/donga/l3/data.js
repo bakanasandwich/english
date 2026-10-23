@@ -208,13 +208,15 @@ window.LESSON = {
     paras: [
       {who: '', en: 'Every spring, Hanbit Middle School holds a robot contest. This year, Daeho, Mina, and Junseo made a team. “We’re terrible at robots,” said Junseo. “Let’s try anyway,” said Mina. Read two different stories about the same team.',
        ko: '해마다 봄에 한빛중학교는 로봇 대회를 연다. 올해 대호, 미나, 준서가 팀을 만들었다. “우리는 로봇을 정말 못하잖아.” 준서가 말했다. “그래도 해 보자.” 미나가 말했다. 같은 팀에 대한 서로 다른 두 이야기를 읽어 보자.',
-       check: {q: 'Who made a team for the robot contest?', a: 'Daeho, Mina, and Junseo.'}, think: '“그래도 해 보자”는 어떤 태도일까?'},
+       check: {q: 'Who made a team for the robot contest?', a: 'Daeho, Mina, and Junseo.'}, think: '“그래도 해 보자”는 어떤 태도일까?',
+       bg: {src: 'm1/donga/l3/img/r-p0.jpg', credit: 'Nic\'s events · CC BY-SA 2.0 (Flickr)', link: 'https://www.flickr.com/photos/68457656@N00/468770018', about: '로봇 대회에 나갈 로봇'}},
       {who: 'Story 1', en: 'Two weeks before the contest, the robot fell over again and again. Junseo was upset. “It’s your fault,” he said to Daeho. Daeho got angry. Mina didn’t say anything. After that, the team practiced less and less.',
        ko: '대회 2주 전, 로봇이 계속 넘어졌다. 준서는 속상했다. “네 잘못이야.” 준서가 대호에게 말했다. 대호는 화가 났다. 미나는 아무 말도 하지 않았다. 그 뒤로 팀은 점점 연습을 덜 했다.',
        check: {q: 'What did Junseo say to Daeho?', a: '“It’s your fault.”'}, think: '준서의 말을 들은 대호의 기분은?'},
       {who: 'Story 1', en: 'One day before the contest, the practice room was empty. Daeho texted Mina, “I quit. It’s a waste of time.” The team didn’t go to the contest. They all felt terrible.',
        ko: '대회 하루 전, 연습실은 텅 비어 있었다. 대호가 미나에게 문자를 보냈다. “나 그만둘래. 시간 낭비야.” 팀은 대회에 나가지 않았다. 모두 기분이 끔찍했다.',
-       check: {q: 'What did Daeho text Mina?', a: '“I quit. It’s a waste of time.”'}, think: '이 팀은 무엇이 잘못되었을까?'},
+       check: {q: 'What did Daeho text Mina?', a: '“I quit. It’s a waste of time.”'}, think: '이 팀은 무엇이 잘못되었을까?',
+       bg: {src: 'm1/donga/l3/img/r-p2.jpg', credit: 'ishmael n. daro · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/93280928@N02/8480668550', about: '텅 빈 교실'}},
       {who: 'Story 2', en: 'Two weeks before the contest, the robot fell over again and again. Junseo was upset. “I’m sorry. It’s my mistake,” said Daeho. “Don’t worry,” said Junseo. “We all make mistakes.” Mina smiled. “Cheer up! Let’s fix it together.”',
        ko: '대회 2주 전, 로봇이 계속 넘어졌다. 준서는 속상했다. “미안해. 내 실수야.” 대호가 말했다. “걱정하지 마.” 준서가 말했다. “누구나 실수하잖아.” 미나가 웃었다. “힘내! 같이 고치자.”',
        check: {q: 'What did Mina say?', a: '“Cheer up! Let’s fix it together.”'}, think: '1번 이야기와 무엇이 달라졌을까?'},
@@ -223,7 +225,8 @@ window.LESSON = {
        check: {q: 'Did the team win a prize?', a: 'No, they didn’t.'}, think: '상을 받지 못했는데 왜 기뻤을까?'},
       {who: 'You', en: 'The team was the same, and the robot was the same. Only their attitude was different. A positive attitude didn’t give them a prize, but it gave them a happy result. What attitude do you choose?',
        ko: '팀도 같았고 로봇도 같았다. 오직 태도만 달랐다. 긍정적인 태도가 그들에게 상을 주지는 않았지만 행복한 결과를 주었다. 여러분은 어떤 태도를 고르겠는가?',
-       check: {q: 'What was different in the two stories?', a: 'Their attitude.'}, think: '나는 어려운 상황에서 어떤 말을 해 줄 수 있을까?'}
+       check: {q: 'What was different in the two stories?', a: 'Their attitude.'}, think: '나는 어려운 상황에서 어떤 말을 해 줄 수 있을까?',
+       bg: {src: 'm1/donga/l3/img/r-p5.jpg', credit: 'ejmc · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/31821378@N00/5924944524', about: '함께 기뻐하는 팀'}}
     ],
     split: 3,
     next: '같은 상황, 다른 말 한마디.\n두 번째 이야기는 어떻게 될까?',
