@@ -55,7 +55,7 @@ window.CATALOG = [
     lessons: [
       {no: 1, ready: true, gichul: true, title: 'Life Is Experience', ko: '경험이 곧 삶이다', talk: ['경험 묻고 답하기', '감정 묻고 표현하기'], grammar: ['관계대명사 what', '현재완료'], read: '용기에 관한 세 사람의 이야기'},
       {no: 2, ready: true, gichul: true, title: 'Journey Through the Pages', ko: '책장 사이로 떠나는 여행', talk: ['책 추천하고 까닭 말하기', '선호 묻고 답하기'], grammar: ['분사구문', '과거완료'], read: '소설의 첫 문장에 관한 글'},
-      {no: 3, ready: false, gichul: true, title: 'Small Things Matter', ko: '작은 것이 중요하다', talk: ['걱정 표현하기', '해결책 제안하기'], grammar: ['수동태', '주어·동사 수일치'], read: '분리배출에 관한 칼럼'},
+      {no: 3, ready: true, gichul: true, title: 'Small Things Matter', ko: '작은 것이 중요하다', talk: ['걱정 표현하기', '해결책 제안하기'], grammar: ['수동태', '주어·동사 수일치'], read: '분리배출에 관한 칼럼'},
       {no: 4, ready: false, gichul: true, title: 'Everyday Decisions', ko: '매일의 선택', talk: ['의견 묻고 답하기', '동의·반대 표현하기'], grammar: ['사역·지각동사', 'It ~ that 강조'], read: '소비 심리에 관한 기사'}
     ]},
   { id: 'h1b-donga', school: '고등학교', grade: '1학년', book: '공통영어2', publisher: '동아출판 (이병민)', path: 'h1/donga2', hsEstimate: true,
