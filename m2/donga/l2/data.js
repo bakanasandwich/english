@@ -208,7 +208,8 @@ window.LESSON = {
     paras: [
       {who: '', en: 'These days, many teens talk in group chats more than they talk face to face. Group chats are fun and useful, but misunderstandings can easily happen. Do you want to know how you can chat smarter? Here are three tips.',
        ko: '요즘 많은 십대가 얼굴을 마주하고 이야기하는 것보다 단체 채팅방에서 더 많이 이야기한다. 단체방은 재미있고 유용하지만 오해가 쉽게 생길 수 있다. 어떻게 하면 더 똑똑하게 채팅할 수 있는지 알고 싶나요? 세 가지 요령을 소개한다.',
-       check: {q: 'What can easily happen in group chats?', a: 'Misunderstandings.'}, think: '단체방에서 오해가 생기는 까닭은?'},
+       check: {q: 'What can easily happen in group chats?', a: 'Misunderstandings.'}, think: '단체방에서 오해가 생기는 까닭은?',
+       bg: {src: 'm2/donga/l2/img/r-p0.jpg', credit: 'garryknight · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/8176740@N05/8331105136', about: '휴대전화로 메시지를 보내는 친구들'}},
       {who: 'Tip 1', en: 'Think about who will read your message. Minho posted a joke about his friend Dana in the class chat. He thought it was funny, but Dana felt hurt. Everyone in the class read it, and some of them didn’t know it was a joke.',
        ko: '누가 내 메시지를 읽을지 생각하라. 민호는 반 단체방에 친구 다나에 대한 농담을 올렸다. 민호는 재미있다고 생각했지만 다나는 상처받았다. 반 친구 모두가 그 글을 읽었고, 그중 몇몇은 그것이 농담인지 몰랐다.',
        check: {q: 'How did Dana feel?', a: 'She felt hurt.'}, think: '둘만의 농담을 단체방에 올리면 왜 문제가 될까?'},
