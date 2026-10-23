@@ -1,260 +1,311 @@
 /* 중1 영어(동아·윤정미) Lesson 7 · Find Your Dream
-   단원명은 교과서·문제집 목차 기준. 의사소통 기능과 문법은 추정(estimate: true).
-   대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글입니다. */
+   교과서 대조(2026-10): 의사소통 기능(관심 묻고 답하기 · 장래 희망 묻고 답하기), 언어 형식(to부정사 부사적 용법(목적) · 접속사 when),
+   읽기 주제(Let’s Make a Movie! — 영화를 만드는 여러 직업인의 소개), 단원 어휘를 교과서 목차·단어 목록과 맞췄다.
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식·교과서 어휘로 새로 쓴 글이다. */
 window.LESSON = {
-  book: 'm1-donga', no: 7, estimate: true,
+  book: 'm1-donga', no: 7,
   title: 'Find Your Dream', ko: '나의 꿈을 찾아서',
-  bigQ: {en: 'How can I find my dream?', ko: '나는 어떻게 꿈을 찾을 수 있을까?'},
+  bigQ: {en: 'What do you need to find your dream job?', ko: '꿈의 직업을 찾으려면 무엇이 필요할까?'},
+  align: {
+    tb: {reading: 'Let’s Make a Movie!', funcs: ['관심 묻고 답하기', '장래 희망 묻고 답하기'], forms: ['to부정사 부사적 용법 (~하기 위해)', '접속사 when'],
+      note: '교과서 읽기는 한 영화를 만드는 감독·장소 섭외 담당·촬영 감독·동물 조련사·편집자·음향 효과 담당이 자기 일을 소개하는 글. 여기 본문은 학교 밴드의 뮤직비디오 촬영장으로 바꿔 새로 쓴 글이다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-02', '9영02-04'], grammar: ['9영02-05'], read1: ['9영01-02', '9영01-03'], read2: ['9영01-10', '9영02-04']},
+    forms: ['To-Infinitive', 'Subordinating Conjunctions']
+  },
   goals: {
-    vocab: ['직업·꿈과 관련된 낱말 16개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 나의 꿈을 한 문장으로 말할 수 있다.'],
-    talk: ['장래 희망을 묻고 답할 수 있다.', '잘하는 것을 묻고 답할 수 있다.'],
-    grammar: ['to부정사(want/hope/plan to)로 하고 싶은 일을 말할 수 있다.', '접속사 because로 까닭을 말할 수 있다.'],
-    read1: ['진로의 날 행사 기사를 읽고 첫 번째 직업인의 이야기를 이해할 수 있다.'],
-    read2: ['세 직업인이 꿈을 찾은 방법을 비교하고, 나의 꿈을 영어로 쓸 수 있다.']
+    vocab: ['직업·영상 제작과 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 관심 있는 직업을 한 문장으로 소개할 수 있다.'],
+    talk: ['관심 있는 것을 묻고 답할 수 있다. (What are you interested in? — I’m interested in ~.)', '장래 희망을 묻고 답할 수 있다. (What do you want to be? — I want to be ~.)'],
+    grammar: ['to부정사(~하기 위해)로 행동의 목적을 말할 수 있다.', '접속사 when으로 “~할 때”를 나타내는 두 문장을 이을 수 있다.'],
+    read1: ['촬영장 사람들의 소개 글을 읽고 각 직업이 하는 일을 파악할 수 있다.'],
+    read2: ['여러 직업을 비교하고, 내가 해 보고 싶은 일과 그 까닭을 쓸 수 있다.']
   },
 
   vocab: {
-    hook: {en: 'When you were little, what did you want to be?', ko: '어렸을 때 무엇이 되고 싶었나요?', note: '지금의 꿈과 비교하게 한다. 꿈이 바뀌어도 괜찮다는 점을 자연스럽게 이끈다.'},
+    hook: {en: 'Who makes a movie? Only actors?', ko: '영화는 누가 만들까요? 배우만 있을까요?', note: '감독, 카메라 기사, 작가 등 답을 모은다. 영화 끝에 나오는 수많은 이름(엔딩 크레디트)을 떠올리게 한다.'},
     words: [
-      {w: 'dream', pos: 'n./v.', ko: '꿈; 꿈꾸다', ic: '💭', audio: 'assets/audio/dream.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'My dream is to be a pilot.', exKo: '내 꿈은 조종사가 되는 것이다.'},
-      {w: 'future', pos: 'n.', ko: '미래', ic: '🔭', audio: 'assets/audio/future.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'What do you want to be in the future?', exKo: '미래에 무엇이 되고 싶니?'},
-      {w: 'job', pos: 'n.', ko: '직업, 일', ic: '💼', audio: 'assets/audio/job.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'She loves her job.', exKo: '그녀는 자기 일을 사랑한다.'},
-      {w: 'vet', pos: 'n.', ko: '수의사', ic: '🐾', ex: 'A vet helps sick animals.', exKo: '수의사는 아픈 동물을 돕는다.'},
-      {w: 'chef', pos: 'n.', ko: '요리사', ic: '👨‍🍳', ex: 'The chef made great pasta.', exKo: '그 요리사는 훌륭한 파스타를 만들었다.'},
-      {w: 'pilot', pos: 'n.', ko: '조종사', ic: '🧑‍✈️', audio: 'assets/audio/pilot.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The pilot flies a plane.', exKo: '조종사는 비행기를 조종한다.'},
-      {w: 'designer', pos: 'n.', ko: '디자이너', ic: '🎨', ex: 'He is a game designer.', exKo: '그는 게임 디자이너다.'},
-      {w: 'scientist', pos: 'n.', ko: '과학자', ic: '🔬', ex: 'Scientists ask many questions.', exKo: '과학자는 많은 질문을 한다.'},
-      {w: 'interest', pos: 'n.', ko: '관심, 흥미', ic: '💡', audio: 'assets/audio/interest.mp3', audioCredit: 'Dvortygirl · Public domain (Wikimedia Commons, US)', ex: 'Follow your interests.', exKo: '네 관심을 따라가라.'},
-      {w: 'skill', pos: 'n.', ko: '기술, 능력', ic: '🛠️', audio: 'assets/audio/skill.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Cooking is a useful skill.', exKo: '요리는 쓸모 있는 기술이다.'},
-      {w: 'practice', pos: 'v./n.', ko: '연습하다; 연습', ic: '🎯', audio: 'assets/audio/practice.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'She practiced every day.', exKo: '그녀는 매일 연습했다.'},
-      {w: 'become', pos: 'v.', ko: '~이 되다', ic: '🦋', audio: 'assets/audio/become.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'He became a doctor.', exKo: '그는 의사가 되었다.'},
-      {w: 'hope', pos: 'v.', ko: '바라다, 희망하다', ic: '🌈', audio: 'assets/audio/hope.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I hope to travel the world.', exKo: '나는 세계를 여행하기를 바란다.'},
-      {w: 'decide', pos: 'v.', ko: '결정하다', ic: '✅', audio: 'assets/audio/decide.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I decided to learn coding.', exKo: '나는 코딩을 배우기로 결정했다.'},
-      {w: 'volunteer', pos: 'v.', ko: '자원봉사하다', ic: '🙋', audio: 'assets/audio/volunteer.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'She volunteered at an animal shelter.', exKo: '그녀는 동물 보호소에서 자원봉사를 했다.'},
-      {w: 'career', pos: 'n.', ko: '진로, 직업', ic: '🧭', audio: 'assets/audio/career.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Today is Career Day.', exKo: '오늘은 진로의 날이다.'}
+      {w: 'director', pos: 'n.', ko: '감독', ic: '🎬', ex: 'The director said, “Action!”', exKo: '감독이 “액션!” 하고 외쳤다.'},
+      {w: 'editor', pos: 'n.', ko: '편집자', ic: '✂️', ex: 'The editor cuts the long scenes.', exKo: '편집자가 긴 장면을 잘라 낸다.'},
+      {w: 'location', pos: 'n.', ko: '장소, (촬영) 현장', ic: '📍', ex: 'We need a good location.', exKo: '우리는 좋은 장소가 필요하다.'},
+      {w: 'manager', pos: 'n.', ko: '관리자, 담당자', ic: '📋', ex: 'She is a location manager.', exKo: '그녀는 촬영지 섭외 담당자다.'},
+      {w: 'photography', pos: 'n.', ko: '사진 촬영(술)', ic: '📷', ex: 'He is the director of photography.', exKo: '그는 촬영 감독이다.'},
+      {w: 'photographer', pos: 'n.', ko: '사진작가', ic: '🧑‍🎤', ex: 'I want to be a photographer.', exKo: '나는 사진작가가 되고 싶다.'},
+      {w: 'wrangler', pos: 'n.', ko: '(촬영용) 동물 조련사', ic: '🐕', ex: 'The wrangler trains the dog.', exKo: '조련사가 개를 훈련시킨다.'},
+      {w: 'shoot', pos: 'v.', ko: '촬영하다', ic: '🎥', ex: 'We shoot the video at the park.', exKo: '우리는 공원에서 영상을 촬영한다.'},
+      {w: 'capture', pos: 'v.', ko: '담아내다, 포착하다', ic: '🖼️', ex: 'I want to capture this moment.', exKo: '나는 이 순간을 담고 싶다.'},
+      {w: 'moment', pos: 'n.', ko: '순간', ic: '⏱️', ex: 'It was a happy moment.', exKo: '그것은 행복한 순간이었다.'},
+      {w: 'delete', pos: 'v.', ko: '지우다, 삭제하다', ic: '🗑️', ex: 'Delete the bad scenes.', exKo: '안 좋은 장면을 지워라.'},
+      {w: 'record', pos: 'v.', ko: '녹음하다, 녹화하다', ic: '🎙️', ex: 'We recorded the song in a studio.', exKo: '우리는 스튜디오에서 노래를 녹음했다.'},
+      {w: 'studio', pos: 'n.', ko: '스튜디오, 작업실', ic: '🎛️', ex: 'He makes sounds in his studio.', exKo: '그는 작업실에서 소리를 만든다.'},
+      {w: 'effect', pos: 'n.', ko: '효과', ic: '💥', ex: 'Sound effects make a movie real.', exKo: '음향 효과는 영화를 진짜처럼 만든다.'},
+      {w: 'wave', pos: 'n.', ko: '파도, 물결', ic: '🌊', ex: 'Listen to the sound of the waves.', exKo: '파도 소리를 들어 봐.'},
+      {w: 'signal', pos: 'n.', ko: '신호', ic: '✋', ex: 'She uses hand signals.', exKo: '그녀는 손 신호를 쓴다.'},
+      {w: 'calm', pos: 'v. / adj.', ko: '진정시키다; 차분한', ic: '😌', ex: 'He calms the cat with a toy.', exKo: '그는 장난감으로 고양이를 진정시킨다.'},
+      {w: 'skill', pos: 'n.', ko: '기술, 능력', ic: '🛠️', ex: 'Editing needs a lot of skill.', exKo: '편집에는 기술이 많이 필요하다.'},
+      {w: 'storytelling', pos: 'n.', ko: '이야기하기, 스토리텔링', ic: '📖', ex: 'Storytelling skills are important.', exKo: '이야기를 풀어 가는 능력이 중요하다.'},
+      {w: 'interview', pos: 'n. / v.', ko: '인터뷰(하다)', ic: '🎤', ex: 'We interviewed the director.', exKo: '우리는 감독을 인터뷰했다.'}
     ],
     phrases: [
-      {w: 'want to be', ko: '~이 되고 싶다', ex: 'I want to be a chef.', exKo: '나는 요리사가 되고 싶다.'},
+      {w: 'be interested in', ko: '~에 관심이 있다', ex: 'I’m interested in cooking.', exKo: '나는 요리에 관심이 있다.'},
+      {w: 'want to be', ko: '~이 되고 싶다', ex: 'I want to be a director.', exKo: '나는 감독이 되고 싶다.'},
+      {w: 'be in charge of', ko: '~을 맡다, 책임지다', ex: 'He is in charge of the cameras.', exKo: '그는 카메라를 맡고 있다.'},
+      {w: 'take care of', ko: '~을 돌보다', ex: 'She takes care of the cat.', exKo: '그녀는 고양이를 돌본다.'},
       {w: 'be good at', ko: '~을 잘하다', ex: 'He is good at drawing.', exKo: '그는 그림을 잘 그린다.'},
-      {w: 'be interested in', ko: '~에 관심이 있다', ex: 'She is interested in space.', exKo: '그녀는 우주에 관심이 있다.'},
-      {w: 'grow up', ko: '자라다, 어른이 되다', ex: 'When I grow up, I want to help people.', exKo: '자라면 나는 사람들을 돕고 싶다.'},
-      {w: 'give up', ko: '포기하다', ex: 'Don’t give up on your dream.', exKo: '꿈을 포기하지 마.'},
-      {w: 'find out', ko: '알아내다', ex: 'I want to find out more about jobs.', exKo: '나는 직업에 대해 더 알아내고 싶다.'}
+      {w: 'in the future', ko: '미래에', ex: 'What do you want to do in the future?', exKo: '너는 미래에 무엇을 하고 싶니?'}
     ],
     pairs: [
-      {a: 'science', b: 'scientist', rel: '분야 / 사람'},
-      {a: 'design', b: 'designer', rel: '일 / 사람'},
-      {a: 'cook', b: 'chef', rel: '요리하다 / 요리사'},
-      {a: 'future', b: 'past', rel: '반대말'}
+      {a: 'direct', b: 'director', rel: '동사 / 사람 (-or)'},
+      {a: 'edit', b: 'editor', rel: '동사 / 사람 (-or)'},
+      {a: 'photograph', b: 'photographer', rel: '사진 / 사람 (-er)'},
+      {a: 'photographer', b: 'photography', rel: '사람 / 분야'}
     ],
-    wrap: {en: 'I am interested in ______. In the future, I want to be ______.', ko: '오늘 배운 낱말로 나의 관심과 꿈 쓰기'}
+    wrap: {en: 'I’m interested in ______. I want to be a ______.', ko: '오늘 배운 낱말로 관심 분야와 장래 희망 쓰기'}
   },
 
   talk: {
-    hook: {en: 'What job do you think is the most interesting?', ko: '가장 흥미로운 직업은 무엇이라고 생각하나요?', note: '직업 이름을 영어로 모아 칠판에 적는다. 모르는 직업 이름은 함께 찾아본다.'},
-    speakers: {Haru: {voice: 1, pitch: .95}, Nari: {voice: 0, pitch: 1.15}, 'Ms. Lim': {voice: 2, pitch: 1.05}, Chris: {voice: 1, pitch: 1}, Yena: {voice: 0, pitch: 1.1}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
+    hook: {en: 'What do you like to do in your free time?', ko: '여가 시간에 무엇을 즐겨 하나요?', note: '좋아하는 활동을 모은 뒤, 그 활동과 이어지는 직업을 함께 떠올려 본다. (그림 → 웹툰 작가, 요리 → 요리사)'},
+    speakers: {Hojin: {voice: 1, pitch: 1}, Mina: {voice: 0, pitch: 1.15}, Jacob: {voice: 1, pitch: .95}, Sera: {voice: 0, pitch: 1.1}, 'Mr. Kang': {voice: 2, pitch: .95}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
     sets: [
-      { id: 'lt1', label: 'Listen & Talk 1', func: '장래 희망 묻고 답하기',
-        key: {q: ['What do you want to be?', 'What is your dream?'], a: ['I want to be a(n) ~.', 'My dream is to be ~.', 'I’m not sure yet.']},
-        note: 'want to be + 직업. 직업 앞에 a / an을 붙인다(an artist). 3차시 to부정사와 이어진다.',
+      { id: 'lt1', label: 'Listen & Talk 1', func: '관심 묻고 답하기',
+        key: {q: ['What are you interested in?', 'Are you interested in ~?'], a: ['I’m interested in ~.', 'Yes, I’m really interested in ~.', 'Not really. I’m more interested in ~.']},
+        note: 'be interested in 뒤에는 명사나 동명사(-ing). I’m interested in cook ✗ → I’m interested in cooking ✔.',
         dialogs: [
-          { title: 'Dialogue A', setting: '진로 시간, 교실', lines: [
-            {s: 'Nari', en: 'Haru, {{what do you want to be}} in the future?', ko: '하루야, 너는 미래에 뭐가 되고 싶어?'},
-            {s: 'Haru', en: '{{I want to be}} a vet.', ko: '나는 수의사가 되고 싶어.'},
-            {s: 'Nari', en: 'A vet? Why?', ko: '수의사? 왜?'},
-            {s: 'Haru', en: 'Because I love animals. I have two dogs.', ko: '동물을 좋아하거든. 개를 두 마리 키워.'},
-            {s: 'Nari', en: 'That’s a great dream!', ko: '멋진 꿈이다!'}
+          { title: 'Dialogue A', setting: '방과 후, 컴퓨터실', lines: [
+            {s: 'Mina', en: 'What are you doing, Hojin?', ko: '호진아, 뭐 하고 있어?'},
+            {s: 'Hojin', en: 'I’m editing a video of our band. I want to delete some boring scenes.', ko: '우리 밴드 영상을 편집하고 있어. 지루한 장면 몇 개를 지우고 싶어서.'},
+            {s: 'Mina', en: 'Wow, you’re good! {{Are you interested in}} editing?', ko: '와, 잘한다! 편집에 관심 있어?'},
+            {s: 'Hojin', en: 'Yes, {{I’m really interested in}} making videos.', ko: '응, 나는 영상 만드는 데 정말 관심이 많아.'}
           ]},
-          { title: 'Dialogue B', setting: '점심시간', lines: [
-            {s: 'A', en: '{{What is your dream}}?', ko: '네 꿈은 뭐야?'},
-            {s: 'B', en: '{{I’m not sure yet}}. How about you?', ko: '아직 잘 모르겠어. 너는?'},
-            {s: 'A', en: '{{My dream is to be}} a chef. I love cooking.', ko: '내 꿈은 요리사야. 요리하는 걸 좋아해.'},
-            {s: 'B', en: 'Cool. Can you cook for me someday?', ko: '멋지다. 언젠가 나한테 요리해 줄래?'}
+          { title: 'Dialogue B', setting: '점심시간, 운동장 벤치', lines: [
+            {s: 'A', en: '{{What are you interested in}}, Jacob?', ko: '제이콥, 너는 무엇에 관심 있어?'},
+            {s: 'B', en: '{{I’m interested in}} animals. I take care of my neighbor’s dog every weekend.', ko: '나는 동물에 관심 있어. 주말마다 이웃집 개를 돌봐.'},
+            {s: 'A', en: 'That’s cool. Is he a good dog?', ko: '멋지다. 착한 개야?'},
+            {s: 'B', en: 'Yes. When I give him a hand signal, he sits down.', ko: '응. 내가 손 신호를 주면 앉아.'}
           ]}
         ],
         check: [
-          {q: 'What does Haru want to be?', a: 'He wants to be a vet.'},
-          {q: 'Why does Haru want to be a vet?', a: 'Because he loves animals.'},
-          {q: 'What is A’s dream?', a: 'To be a chef.'}
+          {q: 'What is Hojin doing?', a: 'He is editing a video of his band.'},
+          {q: 'What is Hojin interested in?', a: 'Making videos.'},
+          {q: 'What does Jacob do every weekend?', a: 'He takes care of his neighbor’s dog.'}
         ],
-        drill: {frame: ['A: What do you want to be?', 'B: I want to be ____.'], opts: ['a vet', 'a pilot', 'a chef', 'a scientist', 'a game designer', 'an artist']}
+        drill: {frame: ['A: What are you interested in?', 'B: I’m interested in ____.'], opts: ['music', 'drawing', 'cooking', 'robots', 'animals', 'taking pictures']}
       },
-      { id: 'lt2', label: 'Listen & Talk 2', func: '잘하는 것 묻고 답하기',
-        key: {q: ['What are you good at?', 'Are you good at ~?'], a: ['I’m good at ~.', 'Yes, I am. / No, I’m not.', 'I’m not good at ~, but ~.']},
-        note: 'be good at 뒤에는 명사나 -ing(동명사). I’m good at draw(✗) → drawing(○).',
+      { id: 'lt2', label: 'Listen & Talk 2', func: '장래 희망 묻고 답하기',
+        key: {q: ['What do you want to be in the future?', 'What’s your dream job?'], a: ['I want to be a(n) ~.', 'My dream is to be a(n) ~.', 'I’m not sure yet.']},
+        note: 'want to be + 직업 명사. 직업 앞에는 a / an을 쓴다 (an editor, a photographer).',
         dialogs: [
-          { title: 'Dialogue A', setting: '진로 상담실', lines: [
-            {s: 'Ms. Lim', en: 'Chris, {{what are you good at}}?', ko: '크리스, 너는 무엇을 잘하니?'},
-            {s: 'Chris', en: '{{I’m good at}} drawing and making stories.', ko: '그림 그리기랑 이야기 만들기를 잘해요.'},
-            {s: 'Ms. Lim', en: 'How about becoming a webtoon artist?', ko: '웹툰 작가가 되는 건 어떠니?'},
-            {s: 'Chris', en: 'Wow, I like that idea! I read webtoons every day.', ko: '와, 그 생각 좋아요! 저 매일 웹툰 읽어요.'},
-            {s: 'Ms. Lim', en: 'Then practice drawing a little every day.', ko: '그럼 매일 조금씩 그림을 연습하렴.'}
+          { title: 'Dialogue A', setting: '진로 수업, 교실', lines: [
+            {s: 'Mr. Kang', en: 'Sera, {{what do you want to be in the future}}?', ko: '세라야, 너는 나중에 무엇이 되고 싶니?'},
+            {s: 'Sera', en: '{{I want to be}} a photographer.', ko: '저는 사진작가가 되고 싶어요.'},
+            {s: 'Mr. Kang', en: 'Why?', ko: '왜?'},
+            {s: 'Sera', en: 'I love to capture happy moments. When I take pictures, I feel free.', ko: '행복한 순간을 담는 게 정말 좋아요. 사진을 찍을 때 자유로운 기분이 들어요.'}
           ]},
-          { title: 'Dialogue B', setting: '체육 시간', lines: [
-            {s: 'A', en: '{{Are you good at}} sports?', ko: '너 운동 잘해?'},
-            {s: 'B', en: '{{No, I’m not}}. {{I’m not good at}} running, but I’m good at math.', ko: '아니. 달리기는 못하지만 수학은 잘해.'},
-            {s: 'A', en: 'Everyone is good at different things.', ko: '사람마다 잘하는 게 달라.'},
-            {s: 'B', en: 'That’s right!', ko: '맞아!'}
+          { title: 'Dialogue B', setting: '쉬는 시간, 복도', lines: [
+            {s: 'A', en: '{{What’s your dream job}}?', ko: '네 꿈의 직업은 뭐야?'},
+            {s: 'B', en: '{{I’m not sure yet}}. I like many things.', ko: '아직 잘 모르겠어. 좋아하는 게 많아서.'},
+            {s: 'A', en: 'Why don’t you go to the job fair? You can meet people from many jobs.', ko: '직업 박람회에 가 보는 게 어때? 여러 직업의 사람들을 만날 수 있어.'},
+            {s: 'B', en: 'Good idea. I’ll go there to get some ideas.', ko: '좋은 생각이야. 아이디어를 얻으러 거기 가 볼게.'}
           ]}
         ],
         check: [
-          {q: 'What is Chris good at?', a: 'Drawing and making stories.'},
-          {q: 'What job does Ms. Lim suggest?', a: 'A webtoon artist.'},
-          {q: 'What is B good at?', a: 'Math.'}
+          {q: 'What does Sera want to be?', a: 'A photographer.'},
+          {q: 'How does Sera feel when she takes pictures?', a: 'She feels free.'},
+          {q: 'Why will B go to the job fair?', a: 'To get some ideas.'}
         ],
-        drill: {frame: ['A: What are you good at?', 'B: I’m good at ____.'], opts: ['drawing', 'singing', 'cooking', 'math', 'swimming', 'making friends']}
+        drill: {frame: ['A: What do you want to be in the future?', 'B: I want to be ____.'], opts: ['a director', 'an editor', 'a chef', 'a vet', 'a photographer', 'an engineer']}
       }
     ],
-    interviewEx: 'Dohyun wants to be a pilot. He is good at science.',
+    interviewEx: 'Jun is interested in robots. He wants to be an engineer in the future.',
     watch: {
-      label: 'Let’s Watch', title: 'The Dream Map', setting: '진로 수업. 예나가 ‘꿈 지도’를 그리다가 고민에 빠진다.',
+      label: 'Let’s Watch', title: 'Job Fair Day', setting: '학교 직업 박람회. 학생들이 부스를 돌며 직업인을 인터뷰한다.',
       lines: [
-        {s: 'Yena', en: 'Ms. Lim, I don’t know my dream. Everyone has one but me.', ko: '임 선생님, 제 꿈을 모르겠어요. 저 빼고 다 있어요.'},
-        {s: 'Ms. Lim', en: 'That’s okay. Let’s make a dream map. What do you like to do?', ko: '괜찮아. 꿈 지도를 만들어 보자. 무엇을 하는 걸 좋아하니?'},
-        {s: 'Yena', en: 'I like to take pictures of the sky.', ko: '하늘 사진 찍는 걸 좋아해요.'},
-        {s: 'Ms. Lim', en: 'Good. And what are you good at?', ko: '좋아. 그리고 무엇을 잘하니?'},
-        {s: 'Yena', en: 'I’m good at science. I want to know why the sky changes color.', ko: '과학을 잘해요. 하늘 색이 왜 바뀌는지 알고 싶어요.'},
-        {s: 'Ms. Lim', en: 'Maybe you can be a weather scientist!', ko: '어쩌면 기상학자가 될 수도 있겠구나!'}
+        {s: 'Mina', en: 'Excuse me. Can I interview you? What do you do?', ko: '실례합니다. 인터뷰해도 될까요? 무슨 일을 하세요?'},
+        {s: 'Mr. Kang', en: 'I’m a sound effects artist. I make sounds for movies in my studio.', ko: '나는 음향 효과 전문가야. 작업실에서 영화에 쓸 소리를 만들지.'},
+        {s: 'Mina', en: 'What do you use to make the sounds?', ko: '소리를 만들 때 무엇을 쓰세요?'},
+        {s: 'Mr. Kang', en: 'Many things! I shake rice in a box to make the sound of rain.', ko: '여러 가지! 빗소리를 내려고 상자에 쌀을 넣고 흔들어.'},
+        {s: 'Mina', en: 'Amazing! I’m interested in music, so I want to try it.', ko: '놀라워요! 저는 음악에 관심이 있어서 해 보고 싶어요.'}
       ],
       check: [
-        {q: 'What does Yena like to do?', a: 'She likes to take pictures of the sky.'},
-        {q: 'What is Yena good at?', a: 'Science.'},
-        {q: 'What job does Ms. Lim suggest?', a: 'A weather scientist.'}
+        {q: 'What is Mr. Kang’s job?', a: 'He is a sound effects artist.'},
+        {q: 'How does he make the sound of rain?', a: 'He shakes rice in a box.'},
+        {q: 'Why does Mina want to try it?', a: 'She is interested in music.'}
       ]
     },
-    wrap: {en: 'Tell your partner your dream and what you are good at.', ko: '나의 꿈과 잘하는 것을 짝과 묻고 답하기'}
+    wrap: {en: 'Interview your partner about their interests and dream job.', ko: '짝의 관심 분야와 꿈의 직업을 인터뷰하기'}
   },
 
   grammar: {
-    cover: 'to · because',
-    hook: {en: 'I want {{to be}} a vet {{because}} I love animals.', ko: '빈칸에 들어갈 말은 각각 어떤 일을 할까?', answer: 'to be는 ‘~이 되는 것’(want의 목적어), because는 까닭(~하기 때문에)', note: '“무엇을 원해?”와 “왜?”를 차례로 물어 두 빈칸의 역할을 찾게 한다.'},
+    cover: 'to ~ · when',
+    hook: {en: 'A lot of people are working hard {{to create}} this video.  /  {{When}} the cat gets excited, I use a toy.', ko: 'to create와 When이 이끄는 덩어리는 문장에 각각 어떤 정보를 더할까?', answer: 'to create → “만들기 위해서”(목적) / When ~ → “~할 때”(때)', note: '교과서 언어 형식(A lot of people are working hard to create this movie. / Max gets too excited when a lot of people are around.)과 같은 짜임이다.'},
     points: [
-      { id: 'g1', name: 'to부정사 (명사적 용법)', short: 'to부정사', form: 'want / hope / plan / decide + to + 동사원형', meaning: '~하기를 (원하다·바라다·계획하다)',
+      { id: 'g1', name: 'to부정사 (부사적 용법: 목적)', short: 'to부정사 (목적)', form: '문장 + to + 동사원형', meaning: '~하기 위해서, ~하려고',
         notice: [
-          {en: 'I want {{to be}} a pilot.', ko: '나는 조종사가 되고 싶다.'},
-          {en: 'She hopes {{to travel}} to space.', ko: '그녀는 우주로 여행하기를 바란다.'},
-          {en: 'My dream is {{to help}} sick animals.', ko: '내 꿈은 아픈 동물을 돕는 것이다.'}
+          {en: 'People are working hard {{to create}} this video.', ko: '사람들이 이 영상을 만들기 위해 열심히 일하고 있다.'},
+          {en: 'He uses a drone {{to capture}} the whole stage.', ko: '그는 무대 전체를 담기 위해 드론을 쓴다.'},
+          {en: 'I read a lot {{to learn}} storytelling.', ko: '나는 이야기하는 법을 배우려고 책을 많이 읽는다.'}
         ],
         rule: [
-          {k: '목적어', v: 'want · hope · plan · decide · need + to V', ex: 'He decided to learn coding.'},
-          {k: '보어', v: 'My dream / goal is + to V', ex: 'My goal is to win the contest.'},
-          {k: '부정', v: 'not + to V', ex: 'I decided not to give up.'}
+          {k: '뜻', v: '동작 뒤에 to + 동사원형 → 그 동작을 하는 목적 (~하려고)', ex: 'She went to the studio to record a song.'},
+          {k: '자리', v: '문장 끝 또는 맨 앞 (맨 앞이면 쉼표)', ex: 'To make a good video, we need a plan.'},
+          {k: '질문', v: 'Why ~? — To + 동사원형 ~.로 짧게 답할 수 있다', ex: 'Why did you go there? — To meet the director.'}
         ],
+        compare: {
+          title: '같은 to부정사, 다른 역할', note: '동사 바로 뒤 목적어 자리면 “~하는 것”, 완전한 문장 뒤면 “~하기 위해”.',
+          head: ['~하는 것 (명사적)', '~하기 위해 (부사적)'],
+          cols: [['I want to shoot a video.', '(want의 목적어)'], ['I went to the park to shoot a video.', '(가게 된 목적)']]
+        },
         check: [
-          {q: 'I want ____ a chef. (be)', a: 'to be'},
-          {q: 'She hopes ____ a scientist. (become)', a: 'to become'},
-          {q: 'My dream is ____ the world. (travel)', a: 'to travel'},
-          {q: 'He decided ____ Chinese. (learn)', a: 'to learn'},
-          {q: 'We plan ____ at the shelter. (volunteer)', a: 'to volunteer'}
+          {q: 'She uses hand signals ____ the cat. (calm)', a: 'to calm'},
+          {q: 'He went to the studio ____ sounds. (record)', a: 'to record'},
+          {q: 'We use drones ____ the stage. (capture)', a: 'to capture'},
+          {q: '____ a better story, I delete some scenes. (create)', a: 'To create'},
+          {q: 'Why did you visit the fair? — ____ people. (meet)', a: 'To meet'}
         ],
-        trap: {bad: 'I want be a designer.', good: 'I want to be a designer.', why: 'want 뒤에 동사가 오면 to를 꼭 쓴다.'},
+        trap: {bad: 'I went to the studio for record a song.', good: 'I went to the studio to record a song.', why: '“~하기 위해”는 to + 동사원형. for 뒤에는 명사가 온다.'},
         scramble: [
-          {ko: '나는 수의사가 되고 싶다.', en: 'I want to be a vet.'},
-          {ko: '그녀는 매일 그림을 연습하기로 결정했다.', en: 'She decided to practice drawing every day.'},
-          {ko: '내 꿈은 사람들을 돕는 것이다.', en: 'My dream is to help people.'}
+          {ko: '그는 무대를 담기 위해 드론을 쓴다.', en: 'He uses a drone to capture the stage.'},
+          {ko: '나는 노래를 녹음하려고 스튜디오에 갔다.', en: 'I went to the studio to record a song.'},
+          {ko: '좋은 이야기를 만들기 위해 나는 장면을 지운다.', en: 'To make a good story, I delete scenes.'}
         ]
       },
-      { id: 'g2', name: '접속사 because', short: 'because', form: '문장 + because + 주어 + 동사', meaning: '~하기 때문에',
+      { id: 'g2', name: '접속사 when', short: '접속사 when', form: 'When + 주어 + 동사, 주어 + 동사 / 주어 + 동사 + when + 주어 + 동사', meaning: '~할 때',
         notice: [
-          {en: 'I want to be a vet {{because}} I love animals.', ko: '나는 동물을 좋아하기 때문에 수의사가 되고 싶다.'},
-          {en: '{{Because}} she is good at math, she wants to be a scientist.', ko: '수학을 잘하기 때문에 그녀는 과학자가 되고 싶어 한다.'},
-          {en: 'He practices every day {{because}} he has a dream.', ko: '그는 꿈이 있기 때문에 매일 연습한다.'}
+          {en: 'Coco gets too excited {{when}} a lot of people are around.', ko: '코코는 사람이 많을 때 너무 흥분한다.'},
+          {en: '{{When}} I take pictures, I feel free.', ko: '사진을 찍을 때 나는 자유로운 기분이 든다.'},
+          {en: '{{When}} the shooting is over, my work begins.', ko: '촬영이 끝나면 내 일이 시작된다.'}
         ],
         rule: [
-          {k: '뒤', v: 'because + 주어 + 동사 (문장)', ex: 'I’m happy because I passed the test.'},
-          {k: '구별', v: 'because of + 명사', ex: 'I stayed home because of the rain.'},
-          {k: 'Why?', v: 'Why ~? — Because ~.', ex: 'Why do you like it? — Because it’s fun.'}
+          {k: '역할', v: 'when + 주어 + 동사 = “~할 때” (때를 알려 주는 문장 덩어리)', ex: 'I was sleeping when you called.'},
+          {k: '자리', v: '앞에 오면 쉼표(,)를 찍는다', ex: 'When I am nervous, I take a deep breath.'},
+          {k: '구별', v: '의문사 When(언제)?과 다르다: 문장 두 개를 잇는지 본다', ex: 'When is the shooting? (언제) / When it rains, we stop. (~할 때)'}
         ],
         check: [
-          {q: 'I like cooking ____ it’s fun. (because)', a: 'because'},
-          {q: 'He stayed home ____ ____ the rain. (because of)', a: 'because of'},
-          {q: 'Why do you want to be a pilot? — ____ I love planes.', a: 'Because'},
-          {q: 'She is tired because she ____ late. (sleep, 과거)', a: 'slept'},
-          {q: 'I practice every day because I ____ to win. (want)', a: 'want'}
+          {q: '____ the music starts, the band plays. (~할 때)', a: 'When'},
+          {q: 'The cat gets scared when it ____ loud sounds. (hear)', a: 'hears'},
+          {q: 'When I ____ young, I wanted to be a singer. (be)', a: 'was'},
+          {q: 'I feel happy ____ I capture a good moment. (~할 때)', a: 'when'},
+          {q: 'When the shooting is over(,) my work ____. (begin)', a: 'begins'}
         ],
-        trap: {bad: 'I want to be a chef because of I love cooking.', good: 'I want to be a chef because I love cooking.', why: '뒤에 문장(주어 + 동사)이 오면 because, 명사가 오면 because of.'},
+        trap: {bad: 'When I take pictures I feel free.', good: 'When I take pictures, I feel free.', why: 'when 덩어리가 문장 앞에 오면 쉼표로 나눈다.'},
         scramble: [
-          {ko: '나는 춤을 좋아하기 때문에 댄서가 되고 싶다.', en: 'I want to be a dancer because I love dancing.'},
-          {ko: '그는 비 때문에 늦었다.', en: 'He was late because of the rain.'},
-          {ko: '그녀는 꿈이 있어서 행복하다.', en: 'She is happy because she has a dream.'}
+          {ko: '사진을 찍을 때 나는 행복하다.', en: 'When I take pictures, I am happy.'},
+          {ko: '촬영이 끝나면 내 일이 시작된다.', en: 'When the shooting is over, my work begins.'},
+          {ko: '그 고양이는 사람이 많을 때 긴장한다.', en: 'The cat gets nervous when many people are around.'}
         ]
       }
     ],
-    wrap: {en: 'I want to be ______ because ______.', ko: 'to부정사와 because를 넣어 나의 꿈과 까닭 쓰기'},
-    wrapEx: 'I want to be a game designer because I love making stories.'
+    wrap: {en: 'I want to be a ______. I will ______ to ______. When I ______, I feel ______.', ko: '꿈의 직업을 위해 할 일(to부정사)과 그 일을 할 때의 기분(when) 쓰기'},
+    wrapEx: 'I want to be an editor. I will watch many movies to learn storytelling. When I edit videos, I feel excited.'
   },
 
   reading: {
-    title: 'Career Day at Hanbit Middle School', kind: '학교 신문 기사', cover: 'Dream', coverKo: '꿈을 만난 날', cover2: 'Path', coverKo2: '꿈으로 가는 길',
+    title: 'Behind the Music Video', kind: '촬영장 인터뷰 기사', cover: 'Action!', coverKo: '뮤직비디오 촬영 현장', cover2: 'Jobs', coverKo2: '카메라 뒤의 사람들',
     before: [
-      {q: 'Look at the title. What happens on Career Day?', a: '여러 직업의 사람들이 와서 이야기한다'},
-      {q: 'Who do you want to meet on Career Day?', a: '자유롭게 말한 뒤 글과 비교'}
+      {q: 'Look at the title. Who will we meet?', a: '뮤직비디오를 만드는 여러 사람'},
+      {q: 'What jobs do we need to make a video?', a: '감독, 촬영, 편집, 음향, 장소 섭외 등'}
     ],
-    gloss: {'guests': '손님, 초대 손님', 'drone': '드론', 'bakery': '빵집', 'zookeeper': '사육사', 'flour': '밀가루', 'failed': '실패했다', 'recipe': '조리법', 'pandas': '판다', 'patient': '참을성 있는', 'path': '길'},
+    gloss: {'music video': '뮤직비디오', 'rooftop': '옥상', 'permission': '허락', 'drone': '드론', 'treat': '간식', 'hand signal': '손 신호', 'paper bag': '종이봉투', 'footsteps': '발소리'},
     paras: [
-      {who: '', en: 'Last Friday was Career Day at our school. Three guests came and talked about their jobs. Every student listened carefully because they wanted to find their dreams, too.',
-       ko: '지난 금요일은 우리 학교 진로의 날이었습니다. 세 명의 손님이 와서 자신의 직업에 대해 이야기했습니다. 학생들도 자기 꿈을 찾고 싶었기 때문에 모두 주의 깊게 들었습니다.',
-       check: {q: 'How many guests came?', a: 'Three guests.'}, think: '진로의 날에 묻고 싶은 질문은?'},
-      {who: 'Ms. Kang, Drone Pilot', en: 'Ms. Kang flies drones for TV shows. “When I was your age, I loved making paper planes,” she said. “I always wanted to see the world from the sky.” She practiced flying drones for three years.',
-       ko: '강 씨는 TV 프로그램을 위해 드론을 조종합니다. “여러분 나이 때 저는 종이비행기 만들기를 아주 좋아했어요.” 그녀가 말했습니다. “늘 하늘에서 세상을 보고 싶었죠.” 그녀는 3년 동안 드론 조종을 연습했습니다.',
-       check: {q: 'What did Ms. Kang love when she was young?', a: 'Making paper planes.'}, think: '어릴 때 좋아한 것이 직업과 이어진 예는?'},
-      {who: 'Mr. Oh, Baker', en: 'Mr. Oh has a small bakery. He decided to become a baker because his grandma’s bread made people happy. “At first, I failed many times,” he said. “But I didn’t give up. Now my bread is famous in town.”',
-       ko: '오 씨는 작은 빵집을 운영합니다. 할머니의 빵이 사람들을 행복하게 했기 때문에 그는 제빵사가 되기로 결심했습니다. “처음에는 여러 번 실패했어요.” 그가 말했습니다. “하지만 포기하지 않았어요. 이제 제 빵은 마을에서 유명해요.”',
-       check: {q: 'Why did Mr. Oh decide to become a baker?', a: 'Because his grandma’s bread made people happy.'}, think: '실패를 이겨 낸 경험이 있나요?'},
-      {who: 'Ms. Wang, Zookeeper', en: 'Ms. Wang takes care of pandas at a zoo. She volunteered at an animal shelter in middle school. “That experience changed my life,” she said. “I wanted to help animals every day.”',
-       ko: '왕 씨는 동물원에서 판다를 돌봅니다. 그녀는 중학생 때 동물 보호소에서 자원봉사를 했습니다. “그 경험이 제 인생을 바꿨어요.” 그녀가 말했습니다. “매일 동물을 돕고 싶었거든요.”',
-       check: {q: 'What did Ms. Wang do in middle school?', a: 'She volunteered at an animal shelter.'}, think: '경험이 꿈을 만드는 까닭은?'},
-      {who: 'Ms. Wang, Zookeeper', en: 'A student asked, “What do you need to be a zookeeper?” Ms. Wang smiled. “You need to be patient and kind. Pandas are slow, so you must wait a lot!” Everyone laughed.',
-       ko: '한 학생이 물었습니다. “사육사가 되려면 무엇이 필요해요?” 왕 씨가 미소 지었습니다. “참을성 있고 친절해야 해요. 판다는 느려서 많이 기다려야 하거든요!” 모두가 웃었습니다.',
-       check: {q: 'What do you need to be a zookeeper?', a: 'You need to be patient and kind.'}, think: '여러분의 꿈에 필요한 성격은?'},
-      {who: 'Our Lesson', en: 'The three guests had different jobs, but they gave us the same advice: “Find what you love, and try many things. Don’t be afraid to fail.” What is your dream? It’s okay to keep looking.',
-       ko: '세 손님은 직업이 서로 달랐지만 우리에게 같은 조언을 해 주었습니다. “좋아하는 것을 찾고 여러 가지를 해 보세요. 실패를 두려워하지 마세요.” 여러분의 꿈은 무엇인가요? 계속 찾아도 괜찮아요.',
-       check: {q: 'What was the guests’ advice?', a: 'Find what you love, try many things, and don’t be afraid to fail.'}, think: '이번 학기에 새로 해 보고 싶은 것은?'}
+      {who: 'Director', en: 'Hi, I’m Yuna Seo, the director of “My Cat, My Star.” It’s a music video about a girl and her cat. Many people are working hard to make this video. Do you want to meet them?',
+       ko: '안녕하세요, 저는 “나의 고양이, 나의 스타”의 감독 서유나예요. 한 소녀와 고양이에 관한 뮤직비디오예요. 많은 사람이 이 영상을 만들기 위해 열심히 일하고 있어요. 그들을 만나 볼래요?',
+       check: {q: 'What is the music video about?', a: 'A girl and her cat.'}, think: '뮤직비디오 한 편에 몇 명이 필요할까?'},
+      {who: 'Location Manager', en: 'I’m Daniel, the location manager. My job is to find perfect places for shooting. For this video, I found a rooftop garden. I visited the owner three times to get permission. It wasn’t easy, but the view is amazing!',
+       ko: '저는 장소 섭외 담당 대니얼이에요. 제 일은 촬영하기에 완벽한 장소를 찾는 거예요. 이번 영상을 위해 옥상 정원을 찾았어요. 허락을 받으려고 주인을 세 번 찾아갔어요. 쉽지 않았지만 경치가 놀라워요!',
+       check: {q: 'Why did Daniel visit the owner three times?', a: 'To get permission.'}, think: '장소 섭외 담당에게 필요한 능력은?'},
+      {who: 'Director of Photography', en: 'I’m Sora, the director of photography. I’m in charge of all the cameras. Today, the girl is going to dance with her cat on the rooftop. To capture the whole scene from the sky, I’m going to use a drone.',
+       ko: '저는 촬영 감독 소라예요. 카메라를 모두 맡고 있어요. 오늘 소녀가 옥상에서 고양이와 춤을 출 거예요. 하늘에서 장면 전체를 담기 위해 드론을 쓸 거예요.',
+       check: {q: 'Why will Sora use a drone?', a: 'To capture the whole scene from the sky.'}, think: '드론으로 찍으면 무엇이 달라 보일까?'},
+      {who: 'Animal Wrangler', en: 'I’m Minjae, the animal wrangler. I take care of Momo, the cat. Momo is a great actor, but she gets nervous when the drone flies near her. So I use hand signals and treats to calm her.',
+       ko: '저는 동물 조련사 민재예요. 고양이 모모를 돌보고 있어요. 모모는 훌륭한 배우지만 드론이 가까이 날면 긴장해요. 그래서 손 신호와 간식으로 모모를 진정시켜요.',
+       check: {q: 'When does Momo get nervous?', a: 'When the drone flies near her.'}, think: '동물 배우를 돌보는 일에서 중요한 것은?'},
+      {who: 'Sound Effects Artist', en: 'I’m Leo. I make sound effects in my studio. When recording on location is not easy, I create the sounds. Listen. Do you hear the cat’s footsteps on the roof? I made that sound with a paper bag and my fingers!',
+       ko: '저는 레오예요. 작업실에서 음향 효과를 만들어요. 현장에서 녹음하기 어려울 때 제가 소리를 만들어요. 들어 보세요. 지붕 위 고양이 발소리가 들리나요? 종이봉투와 손가락으로 만든 소리예요!',
+       check: {q: 'What did Leo use to make the footsteps?', a: 'A paper bag and his fingers.'}, think: '생활 속 물건으로 만들 수 있는 소리는?'},
+      {who: 'Editor', en: 'I’m Grace, the editor. My work begins when the shooting is over. To make a better story, I change the order of scenes or delete some of them. Storytelling skills are important for my job, so I watch a lot of movies. Which job do you want to try?',
+       ko: '저는 편집자 그레이스예요. 제 일은 촬영이 끝나면 시작돼요. 더 좋은 이야기를 만들기 위해 장면 순서를 바꾸거나 일부를 지워요. 이야기를 풀어 가는 능력이 제 일에 중요해서 영화를 많이 봐요. 여러분은 어떤 일을 해 보고 싶나요?',
+       check: {q: 'When does Grace’s work begin?', a: 'When the shooting is over.'}, think: '내가 해 보고 싶은 일은? 왜?'}
     ],
     split: 3,
-    next: '사육사는 어떻게\n꿈을 찾았을까?',
-    recap: {q: '두 손님의 꿈 이야기는?', items: [{k: 'MS. KANG', v: 'loved paper planes → drone pilot'}, {k: 'MR. OH', v: 'grandma’s bread → baker, didn’t give up'}]},
+    next: '고양이 모모는 누가 돌볼까?\n촬영이 끝난 뒤에는 누가 일할까?',
+    recap: {q: '대니얼과 소라는 무슨 일을 할까?', items: [{k: 'DANIEL', v: 'location manager · found a rooftop garden · got permission'}, {k: 'SORA', v: 'director of photography · cameras · a drone to capture the scene'}]},
     tf: [
-      {p: 0, s: 'Career Day was last Monday.', a: false, why: '지난 금요일.'},
-      {p: 1, s: 'Ms. Kang loved making paper planes.', a: true},
-      {p: 2, s: 'Mr. Oh never failed.', a: false, why: '처음에 여러 번 실패했다.'},
-      {p: 3, s: 'Ms. Wang volunteered at an animal shelter.', a: true},
-      {p: 4, s: 'Pandas are fast, so zookeepers don’t wait.', a: false, why: '판다는 느려서 많이 기다려야 한다.'},
-      {p: 5, s: 'The guests said, “Don’t be afraid to fail.”', a: true}
+      {p: 0, s: 'The music video is about a boy and his dog.', a: false, why: 'It’s a music video about a girl and her cat.'},
+      {p: 1, s: 'Daniel found a rooftop garden.', a: true},
+      {p: 2, s: 'Sora is in charge of all the cameras.', a: true},
+      {p: 3, s: 'Momo gets nervous when the drone flies near her.', a: true},
+      {p: 4, s: 'Leo recorded real cat footsteps on the roof.', a: false, why: 'I made that sound with a paper bag and my fingers!'},
+      {p: 5, s: 'Grace’s work begins before the shooting.', a: false, why: 'My work begins when the shooting is over.'}
     ],
     key: [
-      {en: 'They {{wanted to find}} their dreams, too.', note: 'want + to부정사', g: 'g1'},
-      {en: 'I always {{wanted to see}} the world from the sky.', note: 'want + to부정사', g: 'g1'},
-      {en: 'He {{decided to become}} a baker {{because}} his grandma’s bread made people happy.', note: 'decide + to부정사 / because + 문장', g: 'g1'},
-      {en: 'I {{wanted to help}} animals every day.', note: 'want + to부정사', g: 'g1'},
-      {en: 'Pandas are slow, {{so}} you must wait a lot!', note: 'so: 그래서 (결과) ↔ because: 왜냐하면 (원인)', g: 'g2'},
-      {en: 'Don’t be afraid {{to fail}}.', note: 'be afraid + to부정사', g: 'g1'}
+      {en: 'Many people are working hard {{to make}} this video.', note: 'to부정사 (목적)', g: 'g1'},
+      {en: 'I visited the owner three times {{to get}} permission.', note: 'to부정사 (목적)', g: 'g1'},
+      {en: '{{To capture}} the whole scene from the sky, I’m going to use a drone.', note: '문장 앞 to부정사 (목적)', g: 'g1'},
+      {en: 'She gets nervous {{when}} the drone flies near her.', note: 'when + 주어 + 동사', g: 'g2'},
+      {en: 'I use hand signals and treats {{to calm}} her.', note: 'to부정사 (목적)', g: 'g1'},
+      {en: 'My work begins {{when}} the shooting is over.', note: 'when + 주어 + 동사', g: 'g2'}
     ],
-    summary: {text: 'On Career Day, three guests talked about their {{jobs}}. Ms. Kang became a drone {{pilot}} because she loved paper planes. Mr. Oh became a baker and didn’t give {{up}}. Ms. Wang wanted to {{help}} animals. They said, “Find what you {{love}}, and try many things.”'},
-    order: ['Ms. Kang made paper planes.', 'She wanted to see the world from the sky.', 'She practiced flying drones.', 'She became a drone pilot.'],
-    chart: {title: 'THREE GUESTS', ko: '세 손님 비교하기', cols: ['Job', 'How they found it'], note: '“좋아한 것 / 가족 / 경험”이 꿈을 찾는 세 가지 길이었다는 점을 정리한다.', rows: [
-      {name: 'Ms. Kang', cells: ['drone pilot', 'loved paper planes']},
-      {name: 'Mr. Oh', cells: ['baker', 'grandma’s bread']},
-      {name: 'Ms. Wang', cells: ['zookeeper', 'volunteered at a shelter']}
+    summary: {text: 'Many people work together to make a music video. The location {{manager}} finds places for shooting. The director of {{photography}} uses a drone to {{capture}} the scene. The wrangler uses hand {{signals}} to calm the cat. The sound artist makes {{effects}}, and the {{editor}} changes the order of scenes.'},
+    order: ['Daniel found a rooftop garden.', 'He got permission from the owner.', 'Sora shot the dance with a drone.', 'Grace edited the scenes.'],
+    chart: {title: 'BEHIND THE CAMERA', ko: '직업과 하는 일 정리하기', cols: ['Job', 'What they do'], note: '표를 보고 He/She ~s to ~. 문장으로 말하게 한다. (Sora uses a drone to capture the scene.)', rows: [
+      {name: 'Daniel', cells: ['location manager', 'finds perfect places for shooting']},
+      {name: 'Sora', cells: ['director of photography', 'uses a drone to capture the scene']},
+      {name: 'Minjae', cells: ['animal wrangler', 'uses signals and treats to calm Momo']},
+      {name: 'Leo', cells: ['sound effects artist', 'makes sounds in his studio']},
+      {name: 'Grace', cells: ['editor', 'changes or deletes scenes']}
     ]},
-    wrap: {en: 'I love ______. I want to ______ because ______. To find my dream, I will ______.', ko: '관통 질문으로 돌아가기: 나의 꿈을 찾는 계획 쓰기'}
+    wrap: {en: 'I want to be a ______. I will ______ to ______.', ko: '관통 질문으로 돌아가기: 해 보고 싶은 직업과 그 꿈을 위해 할 일 쓰기'}
   },
 
   quiz: [
-    ['“수의사”를 뜻하는 낱말은?', ['vet', 'chef', 'pilot', 'designer'], 0, 'vet: 수의사'],
-    ['“design – designer”와 관계가 같은 것은?', ['art – arter', 'cook – cooks', 'science – scientist', 'pilot – piloter'], 2, '분야 → 사람: science → scientist'],
-    ['“He is good ___ drawing.”', ['in', 'on', 'at', 'for'], 2, 'be good at'],
-    ['“Don\u2019t give ___ on your dream.”', ['in', 'up', 'off', 'out'], 1, 'give up: 포기하다'],
-    ['장래 희망을 묻는 표현은?', ['What did you eat?', 'What do you do now?', 'What are you good at?', 'What do you want to be?'], 3, 'What do you want to be?'],
-    ['“Are you good at sports?”에 알맞은 대답은?', ['No, I\u2019m not.', 'No, I don\u2019t.', 'Yes, I do.', 'Yes, I can.'], 0, 'Are you ~? → Yes, I am. / No, I\u2019m not.'],
-    ['Let\u2019s Watch에서 임 선생님이 예나에게 추천한 직업은?', ['사진작가', '하늘 화가', '비행기 조종사', '기상학자'], 3, 'a weather scientist'],
-    ['빈칸에 알맞은 것은? “I want ___ a pilot.”', ['be', 'being', 'to be', 'am'], 2, 'want + to부정사'],
-    ['빈칸에 알맞은 것은? “He stayed home ___ the rain.”', ['so', 'because of', 'and', 'because'], 1, '명사 앞: because of'],
-    ['어법상 틀린 문장은?', ['I hope to win.', 'My dream is to fly.', 'He decided to stay.', 'She wants be a vet.'], 3, 'She wants to be a vet.'],
-    ['“Why do you like cats?”에 알맞은 대답은?', ['Yes, I like cats.', 'Because they are cute.', 'I like dogs more.', 'So they are very cute.'], 1, 'Why ~? — Because ~.'],
-    ['강 씨가 어렸을 때 좋아한 것은?', ['드론 날리기', '빵 굽기 놀이', '종이비행기 만들기', '동물 돌보기 놀이'], 2, 'I loved making paper planes.'],
-    ['오 씨가 제빵사가 되기로 한 까닭은?', ['할머니의 빵 때문에', '빵이 아주 싸서', '동물을 좋아해서', '하늘을 보고 싶어서'], 0, 'his grandma\u2019s bread made people happy'],
-    ['왕 씨가 중학생 때 한 일은?', ['드론 연습하기', '동물 보호소 봉사', '빵집 아르바이트', '판다 그림 그리기'], 1, 'She volunteered at an animal shelter.'],
-    ['세 손님의 공통된 조언은?', ['한 가지만 하라', '빨리 꿈을 정하라', '돈을 많이 벌어라', '실패를 두려워 마라'], 3, 'Don\u2019t be afraid to fail.']
+    ['“편집자”를 뜻하는 낱말은?', ['director', 'editor', 'manager', 'wrangler'], 1, 'editor: 편집자'],
+    ['“사진작가”를 뜻하는 낱말은?', ['photography', 'photo', 'photographer', 'photograph'], 2, 'photographer: 사람 / photography: 분야'],
+    ['“He is in charge ___ the cameras.”', ['in', 'of', 'at', 'for'], 1, 'be in charge of: ~을 맡다'],
+    ['관심을 묻는 표현은?', ['What are you interested in?', 'What do you do?', 'How often do you shoot?', 'Where are you from?'], 0, 'What are you interested in?'],
+    ['“What do you want to be in the future?”에 알맞은 대답은?', ['I’m interested in it.', 'I want to be a director.', 'I like it a lot.', 'Yes, I do.'], 1, 'I want to be ~.'],
+    ['“I’m interested in ___ pictures.”', ['take', 'taking', 'to take', 'took'], 1, 'be interested in + 동명사'],
+    ['Let’s Watch에서 빗소리를 만드는 방법은?', ['물을 붓는다', '상자에 쌀을 넣고 흔든다', '종이를 찢는다', '손뼉을 친다'], 1, 'I shake rice in a box to make the sound of rain.'],
+    ['빈칸에 알맞은 것은? “I went to the studio ___ a song.”', ['record', 'to record', 'recording', 'for record'], 1, '목적: to + 동사원형'],
+    ['빈칸에 알맞은 것은? “___ I take pictures, I feel free.”', ['What', 'When', 'Why', 'To'], 1, 'When + 주어 + 동사, ~'],
+    ['어법상 틀린 문장은?', ['I use a drone to capture it.', 'When it rains, we stop.', 'She went there for meet him.', 'I read a lot to learn.'], 2, 'She went there to meet him.'],
+    ['밑줄 친 to의 쓰임이 다른 것은?', ['I want to be an editor.', 'He went out to buy milk.', 'She uses treats to calm the cat.', 'I came here to see you.'], 0, '첫째는 want의 목적어(~하는 것), 나머지는 목적(~하려고)'],
+    ['대니얼이 주인을 세 번 찾아간 까닭은?', ['인터뷰하려고', '허락을 받으려고', '드론을 빌리려고', '고양이를 찾으려고'], 1, 'to get permission'],
+    ['모모가 긴장하는 때는?', ['밥을 먹을 때', '드론이 가까이 날 때', '음악이 나올 때', '사람이 없을 때'], 1, 'when the drone flies near her'],
+    ['그레이스가 영화를 많이 보는 까닭은?', ['쉬려고', '이야기를 풀어 가는 능력이 중요해서', '배우가 되고 싶어서', '소리를 만들려고'], 1, 'Storytelling skills are important for my job.'],
+    ['글의 요지로 알맞은 것은?', ['감독이 가장 중요하다', '영상 하나를 여러 직업인이 함께 만든다', '고양이는 배우가 될 수 없다', '드론은 위험하다'], 1, 'Many people are working hard to make this video.']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {director: '/dəˈrektər/', editor: '/ˈedɪtər/', location: '/loʊˈkeɪʃn/', manager: '/ˈmænɪdʒər/', photography: '/fəˈtɑːɡrəfi/', photographer: '/fəˈtɑːɡrəfər/', wrangler: '/ˈræŋɡlər/', shoot: '/ʃuːt/', capture: '/ˈkæptʃər/', moment: '/ˈmoʊmənt/', delete: '/dɪˈliːt/', record: '/rɪˈkɔːrd/', studio: '/ˈstuːdioʊ/', effect: '/ɪˈfekt/', wave: '/weɪv/', signal: '/ˈsɪɡnəl/', calm: '/kɑːm/', skill: '/skɪl/', storytelling: '/ˈstɔːritelɪŋ/', interview: '/ˈɪntərvjuː/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'photographer', ko: '사진작가', parts: [{t: 'photo', k: 'root', m: '빛'}, {t: 'graph', k: 'root', m: '그리다, 쓰다'}, {t: 'er', k: 'suf', m: '~하는 사람'}], family: ['photography', 'autograph', 'telegraph'], note: '빛(photo)으로 그림을 그리는(graph) 사람 → 사진작가. -y를 붙이면 분야(photography).'},
+    {w: 'director', ko: '감독', parts: [{t: 'direct', k: 'root', m: '지시하다, 이끌다'}, {t: 'or', k: 'suf', m: '~하는 사람'}], family: ['editor', 'actor', 'visitor'], note: '동사 + -or / -er = 그 일을 하는 사람 (edit → editor).'},
+    {w: 'storytelling', ko: '이야기하기', parts: [{t: 'story', k: 'root', m: '이야기'}, {t: 'tell', k: 'root', m: '말하다'}, {t: 'ing', k: 'suf', m: '~하기 (명사)'}], family: ['storyteller', 'fortune-telling'], note: '이야기(story)를 말하는(tell) 일(-ing) → 스토리텔링.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '“~하기 위해”는 왜 to로 표현할까?',
+    pic: [{en: 'I use a drone', ko: '한 일'}, {en: 'to →', ko: '~쪽으로 (목표)', hot: true}, {en: 'capture the stage', ko: '이루려는 목적'}],
+    core: 'to의 기본 뜻은 “~쪽으로 향해”다. 행동 뒤에 to + 동사원형을 붙이면 그 행동이 향하는 목표, 곧 “~하기 위해”라는 목적이 된다.',
+    why: ['문장이 이미 완전한데 뒤에 to + 동사원형이 붙으면 대부분 목적(~하려고).', '더 분명하게 말하려면 in order to를 쓴다.', '“왜?”에 대한 답으로 To + 동사원형 ~.만 말할 수도 있다 (Why? — To save energy.)']
+  };
+  g1.anim = [{title: '두 문장을 to로 잇기: 목적', states: [
+    {t: 'Sora/S | uses/V | a drone/O | . | / | She/S#we2 | wants to/V#w | capture/V#r | the stage/O#fw | .', note: '① 한 일 ② 바란 것', ko: '소라는 드론을 쓴다. 소라는 무대를 담고 싶어 한다.'},
+    {t: 'Sora/S | uses/V | a drone/O | to/X#w | capture/V#r | the stage/O#fw | .', note: '완전한 문장 + to + 동사원형 = ~하기 위해', ko: '소라는 무대를 담기 위해 드론을 쓴다.'}]}];
+  g1.contrast = {title: 'to부정사: 목적어? 목적?', pairs: [
+    {a: 'I want {{to record}} a song.', ka: '나는 노래를 녹음하고 싶다. (want의 목적어 = 하고 싶은 것)', b: 'I went to the studio {{to record}} a song.', kb: '나는 노래를 녹음하려고 스튜디오에 갔다. (완전한 문장 뒤 → 목적)'}],
+    point: '앞 문장이 이미 완전하면 to부정사는 “~하기 위해”(목적).'};
+  g2.principle = {
+    q: 'when은 두 문장을 어떻게 이어 줄까?',
+    pic: [{en: 'When the drone flies near her,', ko: '때를 알려 주는 절'}, {en: 'Momo gets nervous.', ko: '중심 문장', hot: true}],
+    core: '접속사 when은 “~할 때”라는 때의 정보를 담은 문장을 중심 문장에 붙여 준다. when절은 앞에 와도, 뒤에 와도 된다.',
+    why: ['when절이 앞에 오면 그 끝에 콤마(,)를 찍는다.', 'when절 안에서는 미래의 일도 현재형으로 쓴다 (When it rains, we will stay inside).', '의문사 when(언제?)과 모양은 같지만 역할이 다르다.']
+  };
+  g2.anim = [{title: '두 문장을 when으로 잇기', states: [
+    {t: 'The drone/S | flies/V | near Momo/M | . | / | Momo/S#we | gets/V#v | nervous/C#w | .', note: '두 사건', ko: '드론이 모모 가까이 난다. 모모는 긴장한다.'},
+    {t: 'When/X | the drone/S | flies/V | near Momo/M | , | Momo/S#we | gets/V#v | nervous/C#w | .', note: 'when + 문장 + 콤마 + 중심 문장', ko: '드론이 가까이 날 때 모모는 긴장한다.'}]}];
+  g2.contrast = {title: '접속사 when vs 의문사 when', pairs: [
+    {a: '{{When}} I take pictures, I feel free.', ka: '사진을 찍을 때 나는 자유롭다. (접속사: ~할 때)', b: '{{When}} do you take pictures?', kb: '너는 언제 사진을 찍니? (의문사: 언제?)'}],
+    point: '뒤에 콤마와 또 다른 문장이 이어지면 접속사 when.'};
+})(window.LESSON);
