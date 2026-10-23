@@ -63,6 +63,6 @@ window.CATALOG = [
       {no: 1, ready: true, gichul: true, title: 'Love Yourself', ko: '너 자신을 사랑하라', talk: ['위로·격려하기', '조언 구하고 하기'], grammar: ['to부정사·동명사 목적어', '가정법'], read: '식습관 건강 기사 (교과서: Are You a Good Eater?)'},
       {no: 2, ready: true, gichul: true, title: 'Beyond Borders', ko: '경계를 넘어', talk: ['계획 묻고 답하기', '기대 표현하기'], grammar: ['관계부사', '명사절 whether·if'], read: '해외 봉사 여름 이야기'},
       {no: 3, ready: true, gichul: true, title: 'Into the Smart Future', ko: '스마트한 미래로', talk: ['가능성 말하기', '확신 정도 표현하기'], grammar: ['조동사 + have p.p.', '도치'], read: '알고리즘 논설문 (교과서: Social Media Algorithms: A Double-edged Sword)'},
-      {no: 4, ready: true, gichul: true, title: 'Explore the World of Art', ko: '예술의 세계를 탐험하라', talk: ['감상 묻고 답하기', '묘사하기'], grammar: ['복합관계사', 'with + 명사 + 분사'], read: '미술 작품 감상 에세이'}
+      {no: 4, ready: true, gichul: true, title: 'Explore the World of Art', ko: '예술의 세계를 탐험하라', talk: ['감상 묻고 답하기', '묘사하기'], grammar: ['복합관계사', 'with + 명사 + 분사'], read: '과학으로 다시 본 그림 강연문 (교과서: Rediscovering Art Through Science)'}
     ]}
 ];

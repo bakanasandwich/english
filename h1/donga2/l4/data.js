@@ -1,16 +1,22 @@
 /* 고1 공통영어2(동아·이병민) Lesson 4 · Explore the World of Art
-   단원명은 교과서 목차 기준. 본문 주제(그림을 천천히 보는 법)와 의사소통 기능·문법은 추정(estimate: true).
+   교과서 대조(2026-10): 읽기 주제(Rediscovering Art Through Science — 과학으로 그림 속 숨은 층을 찾다)를 교과서에 맞췄다.
+   의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정(estimate: true).
    대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글이며, 다룬 그림은 모두 저작권이 끝난 작품입니다. */
 window.LESSON = {
   book: 'h1b-donga', no: 4, estimate: true,
   title: 'Explore the World of Art', ko: '예술의 세계를 탐험하라',
-  bigQ: {en: 'What happens when we really look at a work of art?', ko: '예술 작품을 정말로 “보면” 무슨 일이 일어날까?'},
+  bigQ: {en: 'What can science help us see in a work of art?', ko: '과학은 예술 작품에서 무엇을 보게 해 줄까?'},
+  align: {
+    tb: {reading: 'Rediscovering Art Through Science', note: '교과서 읽기는 과학 기술로 그림의 숨은 층과 원래 모습을 찾아낸 사례(다빈치의 그림 등)를 소개하는 강연문. 여기 본문은 다른 작품들(페르메이르 두 점, 반 고흐, 렘브란트)로 같은 주제를 새로 쓴 글이다. 의사소통 기능·언어 형식은 교과서 자료가 없어 추정이다.'},
+    std: {vocab: ['10공영2-01-05', '10공영2-02-06'], talk: ['10공영2-01-03', '10공영2-02-01'], grammar: ['10공영2-02-01'], read1: ['10공영2-01-01', '10공영2-01-06'], read2: ['10공영2-01-04', '10공영2-02-05']},
+    forms: ['Relative Clauses', 'Adverbial Participles']
+  },
   goals: {
-    vocab: ['미술·감상과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 'im-, ex-, ob- 같은 조각으로 impression, express, observe를 분석할 수 있다.'],
+    vocab: ['미술·과학 분석과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 're-, ex-, ob- 같은 조각으로 reveal, restore, express, observe를 분석할 수 있다.'],
     talk: ['작품에 대한 감상을 묻고 답할 수 있다.', '그림 속 모습을 위치와 모양을 써서 묘사할 수 있다.'],
     grammar: ['복합관계사가 “관계사 + ever = 어떤 ~이든(no matter wh-)”이라는 원리로 whatever, however 문장을 쓸 수 있다.', 'with + 명사 + 분사가 “명사가 ~한 채로”를 나타낸다는 원리로 -ing와 p.p.를 고를 수 있다.'],
-    read1: ['천천히 보기(slow looking)가 무엇인지 알고, 두 작품을 관찰한 내용을 파악할 수 있다.'],
-    read2: ['작품을 감상하는 질문을 정리하고, 한 작품을 골라 영어로 묘사하고 해석할 수 있다.']
+    read1: ['과학 도구로 그림 속을 보는 방법과 페르메이르의 두 그림에서 찾은 것을 파악할 수 있다.'],
+    read2: ['네 작품의 발견을 비교하고, 과학이 예술 감상에 주는 의미에 대한 나의 생각을 쓸 수 있다.']
   },
 
   vocab: {
@@ -19,25 +25,26 @@ window.LESSON = {
       {w: 'masterpiece', pos: 'n.', ko: '걸작', ic: '🖼️', ipa: '/ˈmæstərpiːs/', audio: 'assets/audio/masterpiece.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The Starry Night is a masterpiece.', exKo: '「별이 빛나는 밤」은 걸작이다.'},
       {w: 'exhibition', pos: 'n.', ko: '전시회', ic: '🏛️', ipa: '/ˌeksɪˈbɪʃn/', audio: 'assets/audio/exhibition.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We went to a photo exhibition.', exKo: '우리는 사진 전시회에 갔다.'},
       {w: 'portrait', pos: 'n.', ko: '초상화', ic: '🧑‍🎨', ipa: '/ˈpɔːrtrət/', audio: 'assets/audio/portrait.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'She painted a portrait of her mother.', exKo: '그녀는 어머니의 초상화를 그렸다.'},
-      {w: 'landscape', pos: 'n.', ko: '풍경(화)', ic: '🏞️', ipa: '/ˈlændskeɪp/', ex: 'He loves painting landscapes.', exKo: '그는 풍경화 그리기를 좋아한다.'},
+      {w: 'layer', pos: 'n.', ko: '층, 겹', ic: '🧅', ipa: '/ˈleɪər/', ex: 'The painting has many layers.', exKo: '그 그림에는 여러 층이 있다.'},
       {w: 'brushstroke', pos: 'n.', ko: '붓질, 붓 자국', ic: '🖌️', ipa: '/ˈbrʌʃstroʊk/', ex: 'You can see thick brushstrokes in his paintings.', exKo: '그의 그림에서는 두꺼운 붓 자국을 볼 수 있다.'},
       {w: 'canvas', pos: 'n.', ko: '캔버스, 화폭', ic: '⬜', ipa: '/ˈkænvəs/', audio: 'assets/audio/canvas.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The painter stretched a new canvas.', exKo: '화가는 새 캔버스를 팽팽히 당겨 맸다.'},
-      {w: 'texture', pos: 'n.', ko: '질감', ic: '🧶', ipa: '/ˈtekstʃər/', audio: 'assets/audio/texture.mp3', audioCredit: 'Wikimedia Commons contributor · GFDL (Wikimedia Commons, US)', ex: 'The paint gives the picture a rough texture.', exKo: '물감이 그림에 거친 질감을 준다.'},
-      {w: 'perspective', pos: 'n.', ko: '원근법; 관점', ic: '📐', ipa: '/pərˈspektɪv/', audio: 'assets/audio/perspective.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The painting has a strange perspective.', exKo: '그 그림은 원근법이 독특하다.'},
+      {w: 'surface', pos: 'n.', ko: '표면', ic: '🟫', ipa: '/ˈsɜːrfɪs/', ex: 'Under the surface, there is another picture.', exKo: '표면 아래에 또 다른 그림이 있다.'},
+      {w: 'reveal', pos: 'v.', ko: '드러내다, 밝히다', ic: '🔦', ipa: '/rɪˈviːl/', ex: 'The X-ray revealed a hidden face.', exKo: 'X선 사진이 숨은 얼굴을 드러냈다.'},
       {w: 'interpret', pos: 'v.', ko: '해석하다', ic: '🔍', ipa: '/ɪnˈtɜːrprɪt/', audio: 'assets/audio/interpret.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'People interpret the painting differently.', exKo: '사람들은 그 그림을 다르게 해석한다.'},
       {w: 'express', pos: 'v.', ko: '표현하다', ic: '💬', ipa: '/ɪkˈspres/', audio: 'assets/audio/express.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Artists express their feelings through color.', exKo: '예술가들은 색으로 감정을 표현한다.'},
-      {w: 'impression', pos: 'n.', ko: '인상, 느낌', ic: '✨', ipa: '/ɪmˈpreʃn/', audio: 'assets/audio/impression.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'What was your first impression of the picture?', exKo: '그 그림에 대한 첫인상은 어땠니?'},
-      {w: 'inspire', pos: 'v.', ko: '영감을 주다', ic: '🌟', ipa: '/ɪnˈspaɪər/', ex: 'Nature inspired many of his works.', exKo: '자연이 그의 많은 작품에 영감을 주었다.'},
-      {w: 'abstract', pos: 'adj.', ko: '추상적인', ic: '🔷', ipa: '/ˈæbstrækt/', ex: 'Abstract art does not show real objects.', exKo: '추상 미술은 실제 사물을 보여 주지 않는다.'},
+      {w: 'restore', pos: 'v.', ko: '복원하다', ic: '🖌️', ipa: '/rɪˈstɔːr/', ex: 'Experts restored the old painting.', exKo: '전문가들이 그 오래된 그림을 복원했다.'},
+      {w: 'beneath', pos: 'prep.', ko: '~의 아래에', ic: '⬇️', ipa: '/bɪˈniːθ/', ex: 'Scientists looked beneath the paint.', exKo: '과학자들이 물감 아래를 들여다보았다.'},
+      {w: 'analyze', pos: 'v.', ko: '분석하다', ic: '🔬', ipa: '/ˈænəlaɪz/', ex: 'An engineer analyzed the painting.', exKo: '한 엔지니어가 그 그림을 분석했다.'},
       {w: 'detail', pos: 'n.', ko: '세부, 세부 사항', ic: '🔎', ipa: '/ˈdiːteɪl/', audio: 'assets/audio/detail.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Look at the small details in the corner.', exKo: '구석의 작은 세부를 봐.'},
       {w: 'observe', pos: 'v.', ko: '관찰하다', ic: '👁️', ipa: '/əbˈzɜːrv/', audio: 'assets/audio/observe.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Observe the painting for one full minute.', exKo: '그 그림을 꼬박 1분 동안 관찰해라.'},
-      {w: 'swirl', pos: 'v./n.', ko: '소용돌이치다; 소용돌이', ic: '🌀', ipa: '/swɜːrl/', ex: 'The stars swirl across the night sky.', exKo: '별들이 밤하늘을 가로질러 소용돌이친다.'}
+      {w: 'original', pos: 'adj.', ko: '원래의, 독창적인', ic: '🧾', ipa: '/əˈrɪdʒənl/', ex: 'The original painting was different.', exKo: '원래 그림은 달랐다.'},
     ],
     morph: [
-      {w: 'impression', ko: '인상', parts: [{t: 'im', k: 'pre', m: '안으로'}, {t: 'press', k: 'root', m: '누르다'}, {t: 'ion', k: 'suf', m: '~것 (명사)'}], family: ['impress', 'impressive', 'Impressionism'], note: '마음 “안으로 눌러 찍힌 것” → 인상. 모네 등의 인상주의(Impressionism)도 같은 낱말.'},
       {w: 'express', ko: '표현하다', parts: [{t: 'ex', k: 'pre', m: '밖으로'}, {t: 'press', k: 'root', m: '누르다'}], family: ['expression', 'expressive', 'impression ↔'], note: '마음속 것을 “밖으로 눌러 짜내다” → 표현하다. impression(안으로)과 짝지어 기억!'},
       {w: 'observe', ko: '관찰하다', parts: [{t: 'ob', k: 'pre', m: '~을 향해'}, {t: 'serve', k: 'root', m: '지키다, 살피다'}], family: ['observation', 'observatory', 'preserve'], note: '대상을 향해 지켜보다 → 관찰하다. observatory = 천문대.'},
-      {w: 'masterpiece', ko: '걸작', parts: [{t: 'master', k: 'root', m: '대가, 장인'}, {t: 'piece', k: 'suf', m: '작품, 조각'}], family: ['mastermind', 'masterful'], note: '원래 장인이 되기 위해 내던 “대가의 작품”이라는 뜻. 두 낱말이 붙은 합성어.'}
+      {w: 'masterpiece', ko: '걸작', parts: [{t: 'master', k: 'root', m: '대가, 장인'}, {t: 'piece', k: 'suf', m: '작품, 조각'}], family: ['mastermind', 'masterful'], note: '원래 장인이 되기 위해 내던 “대가의 작품”이라는 뜻. 두 낱말이 붙은 합성어.'},
+      {w: 'reveal', ko: '드러내다', parts: [{t: 're', k: 'pre', m: '반대로, 되돌려'}, {t: 'veal', k: 'root', m: '베일(veil)을 씌우다'}], family: ['veil', 'revelation', 'unveil'], note: '씌운 베일(veil)을 거꾸로 걷다 → 드러내다. unveil도 같은 뜻.'},
+      {w: 'restore', ko: '복원하다', parts: [{t: 're', k: 'pre', m: '다시'}, {t: 'store', k: 'root', m: '세우다, 갖추다'}], family: ['restoration', 'restorer', 'store'], note: '다시(re) 원래대로 세우다 → 복원하다. restorer = 복원 전문가.'}
     ],
     phrases: [
       {w: 'take a closer look', ko: '더 자세히 보다', ex: 'Take a closer look at her eyes.', exKo: '그녀의 눈을 더 자세히 봐.'},
@@ -231,79 +238,68 @@ window.LESSON = {
   },
 
   reading: {
-    title: 'The Art of Slow Looking', kind: '감상 에세이', cover: 'Look', coverKo: '천천히 보는 기술', cover2: 'Wonder', coverKo2: '그림이 말을 걸 때',
+    title: 'What Science Sees in Art', kind: '강연문', cover: 'Layers', coverKo: '그림 속에 숨은 층', cover2: 'Reveal', coverKo2: '과학이 다시 보게 한 그림',
     before: [
-      {q: 'When you visit a museum, do you read the label first or look at the work first?', a: '대부분 설명을 먼저 읽거나 사진부터 찍는다.'},
-      {q: 'Do you know any of these paintings: The Starry Night, The Great Wave, Girl with a Pearl Earring?', a: '본 적은 있지만 자세히 본 적은 없다는 답이 많다.'}
+      {q: 'Can a painting hide something under its surface?', a: '덧칠된 그림, 처음 스케치, 지워진 물건 등'},
+      {q: 'How can scientists look under the paint without damaging it?', a: 'X선, 적외선 카메라, 현미경 같은 기술로'}
     ],
-    gloss: {'on average': '평균적으로', 'slow looking': '천천히 보기', asylum: '요양원', 'cypress': '사이프러스(측백나무과 나무)', woodblock: '목판', 'Mount Fuji': '후지산', foam: '거품', 'claw': '갈고리 발톱', turban: '터번', 'pearl': '진주', 'parted': '살짝 벌어진', 'label': '작품 설명표'},
+    gloss: {'X-ray': '엑스선', 'infrared': '적외선', 'sketch': '밑그림', 'curtain': '커튼', 'Cupid': '큐피드(사랑의 신)', 'restorer': '복원 전문가', 'peasant': '농민', 'strip': '길쭉한 조각'},
     paras: [
-      {who: '', en: 'In one study at a large art museum in New York, visitors spent less than half a minute, on average, in front of each work. Many people walk quickly from room to room, taking photos and reading labels. But whatever you see in a second, you will see much more in a minute. Some teachers call this “slow looking.”',
-       ko: '뉴욕의 한 대형 미술관에서 이루어진 연구에서, 관람객들은 작품 하나 앞에서 평균 30초도 머물지 않았다. 많은 사람들이 사진을 찍고 설명표를 읽으며 이 방 저 방을 빠르게 걸어 다닌다. 하지만 1초 동안 무엇을 보든, 1분이면 훨씬 더 많은 것을 보게 될 것이다. 어떤 선생님들은 이것을 “천천히 보기”라고 부른다.',
-       check: {q: 'How long did visitors spend in front of each work on average?', a: 'Less than half a minute.'}, think: '나는 미술관에서 작품 하나를 얼마나 오래 보았나?',
-       bg: {src: 'h1/donga2/l4/img/r-p0.jpg', about: '미술관 전시실'}},
-      {who: 'How to Look Slowly', en: 'Slow looking is simple. Choose one work, and look at it for at least one minute before reading anything about it. First, notice whatever catches your eye. Then move your eyes slowly from corner to corner. Finally, ask yourself, “What is happening here? What makes me say that?” You will be surprised by how much appears.',
-       ko: '천천히 보기는 간단하다. 작품 하나를 골라, 그것에 대해 아무것도 읽기 전에 적어도 1분 동안 바라본다. 먼저 눈길을 끄는 것은 무엇이든 알아차린다. 그다음 눈을 천천히 이쪽 구석에서 저쪽 구석으로 옮긴다. 마지막으로 스스로 묻는다. “여기서 무슨 일이 일어나고 있지? 왜 그렇게 생각하지?” 얼마나 많은 것이 나타나는지에 놀랄 것이다.',
-       check: {q: 'What should you do before reading anything about the work?', a: 'Look at it for at least one minute.'}, think: '“왜 그렇게 생각하지?”라는 질문이 왜 중요할까?',
-       bg: {src: 'h1/donga2/l4/img/r-p1.jpg', about: '그림을 바라보는 관람객'}},
-      {who: 'The Starry Night, 1889', en: 'Try it with Vincent van Gogh’s The Starry Night. At first glance, you see a night sky. Look longer, and the sky begins to move, with the stars swirling like waves. A dark cypress tree rises in the foreground like a flame. Below, a small village sleeps quietly. Van Gogh painted this view from his window at an asylum in southern France.',
-       ko: '빈센트 반 고흐의 「별이 빛나는 밤」으로 해 보자. 처음 흘끗 보면 밤하늘이 보인다. 더 오래 보면 하늘이 움직이기 시작하고, 별들이 파도처럼 소용돌이친다. 어두운 사이프러스 나무가 앞쪽에서 불꽃처럼 솟아오른다. 그 아래에는 작은 마을이 조용히 잠들어 있다. 반 고흐는 남프랑스의 한 요양원 창문에서 보이는 이 풍경을 그렸다.',
-       check: {q: 'What does the cypress tree look like?', a: 'It looks like a flame.'}, think: '반 고흐는 왜 하늘을 움직이는 것처럼 그렸을까?',
-       art: {src: 'h1/donga2/l4/img/r-p2.jpg', title: 'Vincent van Gogh, The Starry Night (1889)', credit: 'Public domain · Wikimedia Commons'},
-       bg: {src: 'h1/donga2/l4/img/r-p2.jpg', about: '반 고흐 「별이 빛나는 밤」(1889)', pos: 'center'}},
-      {who: 'The Great Wave, about 1831', en: 'Now look at Katsushika Hokusai’s woodblock print The Great Wave off Kanagawa. A giant wave rises on the left, with its white foam reaching out like claws. Three long boats are caught beneath it, with the rowers bending low. In the background, Mount Fuji looks tiny. However huge the mountain is in real life, here it seems smaller than a single wave.',
-       ko: '이제 가쓰시카 호쿠사이의 목판화 「가나가와 해변의 큰 파도」를 보자. 왼쪽에서 거대한 파도가 솟아오르고, 하얀 거품이 갈고리 발톱처럼 뻗어 나온다. 기다란 배 세 척이 그 아래 붙잡혀 있고, 노 젓는 사람들은 몸을 낮게 숙이고 있다. 배경에는 후지산이 아주 작아 보인다. 실제로는 그 산이 아무리 거대해도, 여기서는 파도 하나보다 작아 보인다.',
-       check: {q: 'How does Mount Fuji look in the print?', a: 'It looks tiny, smaller than a single wave.'}, think: '산을 작게 그린 까닭은 무엇일까?',
-       art: {src: 'h1/donga2/l4/img/r-p3.jpg', title: 'Katsushika Hokusai, The Great Wave off Kanagawa (c. 1831)', credit: 'Public domain · Wikimedia Commons'},
-       bg: {src: 'h1/donga2/l4/img/r-p3.jpg', about: '호쿠사이 「가나가와 해변의 큰 파도」(1831년경)', pos: 'center'}},
-      {who: 'Girl with a Pearl Earring, about 1665', en: 'Johannes Vermeer’s Girl with a Pearl Earring shows a young woman against a dark background. She looks over her shoulder at us, with her lips slightly parted, as if she were about to speak. A single drop of light shines on the pearl. Nobody knows for sure who she was. Whoever she was, she seems to be waiting for us to answer.',
-       ko: '요하네스 페르메이르의 「진주 귀걸이를 한 소녀」는 어두운 배경 앞의 젊은 여성을 보여 준다. 그녀는 마치 막 말을 하려는 듯 입술을 살짝 벌린 채 어깨 너머로 우리를 바라본다. 빛 한 방울이 진주 위에서 빛난다. 그녀가 누구였는지는 아무도 확실히 모른다. 그녀가 누구였든, 그녀는 우리가 대답하기를 기다리고 있는 것 같다.',
-       check: {q: 'Do we know who the girl was?', a: 'No, nobody knows for sure.'}, think: '그녀는 무슨 말을 하려던 걸까?',
-       art: {src: 'h1/donga2/l4/img/r-p4.jpg', title: 'Johannes Vermeer, Girl with a Pearl Earring (c. 1665)', credit: 'Public domain · Wikimedia Commons'},
-       bg: {src: 'h1/donga2/l4/img/r-p4.jpg', about: '페르메이르 「진주 귀걸이를 한 소녀」(1665년경)', pos: 'center 30%'}},
-      {who: 'Questions, Not Answers', en: 'You do not need to be an expert to look closely. Good questions are more useful than facts: What do I notice first? What colors are used, and how do they make me feel? What is outside the frame? Whatever answers you find, they belong to you. Experts may know the history, but only you know what you see.',
-       ko: '자세히 보는 데 전문가일 필요는 없다. 좋은 질문이 사실보다 더 쓸모 있다. 나는 무엇을 먼저 알아차리는가? 어떤 색이 쓰였고, 그 색은 나를 어떤 기분이 들게 하는가? 화폭 밖에는 무엇이 있을까? 어떤 답을 찾든 그것은 당신의 것이다. 전문가는 역사를 알지 모르지만, 당신이 무엇을 보는지는 당신만 안다.',
-       check: {q: 'What is more useful than facts?', a: 'Good questions.'}, think: '그림을 볼 때 나만의 질문 하나를 만든다면?',
-       bg: {src: 'h1/donga2/l4/img/r-p5.jpg', about: '빈 액자'}},
-      {who: 'No Wrong Answers', en: 'Two people can look at the same painting and feel completely different things. One may find The Starry Night joyful; another may find it lonely. Neither is wrong. However you interpret a work, you are taking part in a conversation that began when the artist first touched the canvas, with the brush shaking slightly in their hand.',
-       ko: '두 사람이 같은 그림을 보고 완전히 다른 것을 느낄 수 있다. 어떤 사람은 「별이 빛나는 밤」을 즐겁다고 느끼고, 다른 사람은 외롭다고 느낄 수 있다. 어느 쪽도 틀리지 않다. 당신이 작품을 어떻게 해석하든, 당신은 화가가 붓을 손에 살짝 떨며 처음 캔버스에 댔을 때 시작된 대화에 참여하고 있는 것이다.',
-       check: {q: 'Is there one correct way to feel about a painting?', a: 'No. Different feelings are not wrong.'}, think: '친구와 같은 그림을 다르게 느낀 적이 있나?',
-       bg: {src: 'h1/donga2/l4/img/r-p6.jpg', about: '물감과 붓'}},
-      {who: 'Your Minute', en: 'The next time you visit a museum — or even scroll past a painting on your phone — give it one minute. Stop, breathe, and look. Whenever you do, you may discover a tiny dog in the corner, a light in someone’s eyes, or a feeling you did not know you had. Art is not only on the wall. It happens in the looking.',
-       ko: '다음에 미술관을 방문할 때 — 혹은 휴대전화에서 그림을 스쳐 지나갈 때조차 — 그것에 1분을 주어라. 멈추고, 숨 쉬고, 보라. 그럴 때마다 당신은 구석의 작은 개, 누군가의 눈 속 빛, 또는 자신에게 있는 줄 몰랐던 감정을 발견할지도 모른다. 예술은 벽에만 있는 것이 아니다. 예술은 바라보는 행위 속에서 일어난다.',
-       check: {q: 'Where does art happen, according to the writer?', a: 'In the looking.'}, think: '이번 주에 1분 동안 볼 작품을 하나 고른다면?',
-       bg: {src: 'h1/donga2/l4/img/r-p7.jpg', about: '미술관 벤치에 앉은 사람'}}
+      {who: '', en: 'When we look at a painting, we see colors, shapes, and light. But what we see is only the top layer. Under the surface, many famous works hide changes, sketches, and even other paintings. Today, science lets us look beneath the paint without touching it. Whatever we find there, it helps us see the work in a new light.',
+       ko: '그림을 볼 때 우리는 색, 모양, 빛을 본다. 하지만 우리가 보는 것은 맨 위의 층일 뿐이다. 표면 아래에 많은 유명한 작품들이 수정한 흔적, 밑그림, 심지어 다른 그림까지 숨기고 있다. 오늘날 과학은 그림에 손대지 않고 물감 아래를 볼 수 있게 해 준다. 거기서 무엇을 찾든, 그것은 작품을 새로운 시각으로 보게 해 준다.',
+       check: {q: 'What do we usually see when we look at a painting?', a: 'Only the top layer (colors, shapes, and light).'}, think: '내가 아는 그림 아래에는 무엇이 숨어 있을까?'},
+      {who: 'Tools of Science', en: 'X-rays pass through paint, but some old paints block them, so hidden shapes appear on the X-ray image. Infrared cameras can show the artist’s first sketch under the colors. With these tools pointed at a canvas, experts can watch a painting being made, step by step.',
+       ko: 'X선은 물감을 통과하지만 어떤 옛 물감은 X선을 막기 때문에 숨은 형태가 X선 사진에 나타난다. 적외선 카메라는 색 아래에 있는 화가의 첫 밑그림을 보여 줄 수 있다. 이런 도구를 캔버스에 겨누면 전문가들은 그림이 한 단계씩 그려지는 과정을 지켜볼 수 있다.',
+       check: {q: 'What can infrared cameras show?', a: 'The artist’s first sketch under the colors.'}, think: '과학 도구로 그림을 보면 무엇이 좋을까?'},
+      {who: 'Girl with a Pearl Earring, about 1665', en: 'Johannes Vermeer’s girl seems to float in a dark, empty space. In 2018, however, scientists studied the painting with microscopes and special cameras. They found that there was once a green curtain behind her. The paint has changed over time, so the curtain has almost disappeared. They even found tiny eyelashes that no one could see before.',
+       ko: '요하네스 페르메이르의 소녀는 어둡고 텅 빈 공간에 떠 있는 것처럼 보인다. 그러나 2018년, 과학자들이 현미경과 특수 카메라로 이 그림을 연구했다. 그들은 소녀 뒤에 원래 초록색 커튼이 있었다는 것을 알아냈다. 시간이 지나면서 물감이 변해 커튼은 거의 사라졌다. 그들은 전에는 아무도 볼 수 없었던 작은 속눈썹까지 찾아냈다.',
+       check: {q: 'What was once behind the girl?', a: 'A green curtain.'}, think: '텅 빈 배경과 커튼이 있는 배경은 느낌이 어떻게 다를까?',
+       art: {src: 'h1/donga2/l4/img/r-p4.jpg', title: 'Johannes Vermeer, Girl with a Pearl Earring (c. 1665)', credit: 'Public domain · Wikimedia Commons'}},
+      {who: 'Girl Reading a Letter, about 1657', en: 'In another Vermeer painting, a young woman reads a letter by an open window, with the light falling on her face. In 1979, an X-ray showed a large picture of Cupid on the wall behind her. Someone had painted over it after Vermeer died. Restorers carefully removed the top layer, and in 2021 Cupid appeared again. Now the letter seems to be a love letter.',
+       ko: '페르메이르의 또 다른 그림에서는 한 젊은 여성이 얼굴에 빛을 받으며 열린 창가에서 편지를 읽는다. 1979년, X선 촬영으로 그녀 뒤의 벽에 큐피드를 그린 커다란 그림이 있다는 것이 드러났다. 페르메이르가 죽은 뒤 누군가 그 위를 덧칠했던 것이다. 복원 전문가들이 맨 위층을 조심스럽게 걷어 냈고, 2021년 큐피드가 다시 나타났다. 이제 그 편지는 연애편지처럼 보인다.',
+       check: {q: 'What did the X-ray show in 1979?', a: 'A large picture of Cupid on the wall behind the woman.'}, think: '큐피드가 다시 나타나자 그림의 뜻은 어떻게 바뀌었을까?'},
+      {who: 'Patch of Grass, 1887', en: 'Vincent van Gogh was often too poor to buy new canvases, so he painted over his old ones. In 2008, scientists used very powerful X-rays to study his painting Patch of Grass. Under the green grass, they discovered the face of a peasant woman. However hard he tried to cover it, science found her.',
+       ko: '빈센트 반 고흐는 새 캔버스를 살 수 없을 만큼 가난한 때가 많아서 옛 그림 위에 다시 그렸다. 2008년, 과학자들은 아주 강력한 X선으로 그의 그림 「풀밭」을 연구했다. 초록 풀 아래에서 그들은 한 농민 여성의 얼굴을 발견했다. 그가 아무리 애써 덮었어도, 과학은 그녀를 찾아냈다.',
+       check: {q: 'Why did Van Gogh paint over his old canvases?', a: 'He was often too poor to buy new canvases.'}, think: '반 고흐가 덮어 버린 그림은 어떤 그림이었을까?'},
+      {who: 'The Night Watch, 1642', en: 'Rembrandt’s The Night Watch is a huge group portrait. In 1715, it was cut on all four sides so that it could fit on a wall. For three hundred years, the missing parts were lost. In 2021, researchers used a small copy from the 17th century and artificial intelligence to recreate the lost strips. For a while, visitors could see the painting as Rembrandt had planned it.',
+       ko: '렘브란트의 「야경」은 거대한 단체 초상화다. 1715년, 이 그림은 벽에 맞추려고 네 면이 모두 잘렸다. 300년 동안 잘린 부분은 사라진 상태였다. 2021년, 연구자들은 17세기의 작은 모사본과 인공지능을 이용해 잃어버린 조각들을 다시 만들어 냈다. 한동안 관람객들은 렘브란트가 계획했던 모습 그대로 그림을 볼 수 있었다.',
+       check: {q: 'Why was The Night Watch cut in 1715?', a: 'So that it could fit on a wall.'}, think: '잘린 그림을 되살리는 데 AI를 쓰는 것을 어떻게 생각하나?'},
+      {who: 'Does Science Spoil Art?', en: 'Some people worry that science takes the magic out of art. But knowing how a painting was made does not make it less beautiful. Instead, it shows us the artist’s choices: what they changed, what they hid, and what they kept. Wherever we look, the painting tells a longer story.',
+       ko: '어떤 사람들은 과학이 예술에서 마법을 빼앗을까 봐 걱정한다. 하지만 그림이 어떻게 그려졌는지 안다고 해서 덜 아름다워지는 것은 아니다. 오히려 그것은 화가의 선택, 곧 무엇을 바꾸고, 무엇을 숨기고, 무엇을 남겼는지를 보여 준다. 어디를 보든 그림은 더 긴 이야기를 들려준다.',
+       check: {q: 'What does science show us about artists?', a: 'Their choices — what they changed, hid, and kept.'}, think: '과학은 예술을 망칠까, 더 풍부하게 할까?'},
+      {who: 'A New Way of Looking', en: 'Next time you stand in front of a painting, look closely, with your mind open to what might be underneath. Science and art may seem far apart, but together they help us see more than our eyes alone can.',
+       ko: '다음에 그림 앞에 서게 되면, 그 아래에 무엇이 있을지 마음을 열고 자세히 보라. 과학과 예술은 서로 멀리 떨어져 있는 것처럼 보일지 모르지만, 함께하면 우리 눈만으로 볼 수 있는 것보다 더 많이 보게 해 준다.',
+       check: {q: 'What do science and art help us do together?', a: 'See more than our eyes alone can.'}, think: '과학과 예술이 만나는 또 다른 예는?'}
     ],
-    coverImg: {src: 'h1/donga2/l4/img/r-cover.jpg'},
-    coverImg2: {src: 'h1/donga2/l4/img/r-cover2.jpg'},
     split: 4,
-    next: '「진주 귀걸이를 한 소녀」는\n무엇을 말하려는 걸까?',
-    recap: {q: '천천히 보면 무엇이 보였나?', items: [{k: 'STARRY NIGHT', v: 'the sky moves, with the stars swirling like waves'}, {k: 'GREAT WAVE', v: 'a giant wave with foam like claws; Mount Fuji looks tiny'}]},
+    next: '반 고흐와 렘브란트의 그림에서는\n무엇이 발견되었을까?',
+    recap: {q: '과학은 페르메이르의 그림에서 무엇을 찾았나?', items: [{k: 'TOOLS', v: 'X-rays, infrared cameras, microscopes'}, {k: 'PEARL EARRING', v: 'a green curtain behind the girl · tiny eyelashes'}, {k: 'READING A LETTER', v: 'a hidden Cupid, painted over after Vermeer died'}]},
     tf: [
-      {p: 0, s: 'Visitors spent several minutes in front of each work.', a: false, why: '평균 30초도 머물지 않았다.'},
-      {p: 1, s: 'In slow looking, you read the label first.', a: false, why: '아무것도 읽기 전에 1분 동안 본다.'},
-      {p: 2, s: 'Van Gogh painted the view from a window.', a: true},
-      {p: 3, s: 'Mount Fuji looks huge in The Great Wave.', a: false, why: '아주 작아 보인다.'},
-      {p: 4, s: 'We know exactly who the girl with the pearl earring was.', a: false, why: '아무도 확실히 모른다.'},
-      {p: 5, s: 'You must be an expert to look closely at art.', a: false, why: '전문가일 필요는 없다.'},
-      {p: 6, s: 'Two people can feel differently about the same painting.', a: true}
+      {p: 0, s: 'What we see on a painting is only the top layer.', a: true},
+      {p: 1, s: 'Infrared cameras can show the artist’s first sketch.', a: true},
+      {p: 2, s: 'The girl with the pearl earring was always in an empty space.', a: false, why: '원래 뒤에 초록색 커튼이 있었다.'},
+      {p: 3, s: 'Vermeer himself painted over Cupid.', a: false, why: '페르메이르가 죽은 뒤 누군가 덧칠했다.'},
+      {p: 4, s: 'A woman’s face was found under Patch of Grass.', a: true},
+      {p: 5, s: 'The Night Watch was cut to fit on a wall.', a: true},
+      {p: 6, s: 'The writer thinks science makes art less beautiful.', a: false, why: '덜 아름다워지지 않고 화가의 선택을 보여 준다.'}
     ],
     key: [
-      {en: 'But {{whatever}} you see in a second, you will see much more in a minute.', note: '복합관계대명사 whatever (무엇을 ~하든)', g: 'g1'},
-      {en: 'Look longer, and the sky begins to move, {{with the stars swirling}} like waves.', note: 'with + 명사 + -ing (별들이 소용돌이치며)', g: 'g2'},
-      {en: 'Three long boats are caught beneath it, {{with the rowers bending}} low.', note: 'with + 명사 + -ing', g: 'g2'},
-      {en: '{{However huge}} the mountain is in real life, here it seems smaller than a single wave.', note: 'however + 형용사 (아무리 ~해도)', g: 'g1'},
-      {en: 'She looks over her shoulder at us, {{with her lips slightly parted}}.', note: 'with + 명사 + p.p. (입술이 벌어진 채로)', g: 'g2'},
-      {en: '{{Whoever}} she was, she seems to be waiting for us to answer.', note: '복합관계대명사 whoever (누구였든)', g: 'g1'}
+      {en: '{{Whatever}} we find there, it helps us see the work in a new light.', note: '복합관계대명사 whatever (무엇을 ~하든)', g: 'g1'},
+      {en: '{{With these tools pointed}} at a canvas, experts can watch a painting being made.', note: 'with + 명사 + p.p. (도구가 겨누어진 채로)', g: 'g2'},
+      {en: 'A young woman reads a letter, {{with the light falling}} on her face.', note: 'with + 명사 + -ing (빛이 비치며)', g: 'g2'},
+      {en: '{{However hard}} he tried to cover it, science found her.', note: 'however + 부사 (아무리 ~해도)', g: 'g1'},
+      {en: '{{Wherever}} we look, the painting tells a longer story.', note: '복합관계부사 wherever (어디를 ~하든)', g: 'g1'},
+      {en: 'Look closely, {{with your mind open}} to what might be underneath.', note: 'with + 명사 + 형용사 (마음을 연 채로)', g: 'g2'}
     ],
-    summary: {text: 'Most visitors look at each work for less than half a minute. {{Slow}} looking means observing one work for at least one minute. In The Starry Night, the sky moves, with the stars {{swirling}}. In The Great Wave, Mount Fuji looks {{tiny}}. Vermeer’s girl looks at us with her lips slightly {{parted}}. However you {{interpret}} a work, your answer belongs to you.'},
-    order: ['Choose one work of art.', 'Look at it for at least one minute.', 'Move your eyes slowly from corner to corner.', 'Ask yourself what is happening and why you think so.'],
-    chart: {title: 'THREE WORKS', ko: '세 작품 관찰 정리', cols: ['What I notice', 'How it feels'], note: '표를 보고 “In the picture, ___ with ___ing.” 문장과 “Whenever I see ___, I feel ___.” 문장으로 말하게 한다.', rows: [
-      {name: 'The Starry Night', cells: ['swirling stars, flame-like tree', 'moving, joyful or lonely']},
-      {name: 'The Great Wave', cells: ['claw-like foam, tiny Mount Fuji', 'tense, powerful']},
-      {name: 'Girl with a Pearl Earring', cells: ['parted lips, shining pearl', 'mysterious, waiting']}
+    summary: {text: 'What we see on a painting is only the top {{layer}}. With X-rays and infrared cameras, scientists can look {{beneath}} the paint. They found a green curtain behind Vermeer’s girl, a hidden Cupid that {{restorers}} brought back, and a woman’s face under Van Gogh’s grass. AI even helped {{recreate}} the lost parts of The Night Watch. Science does not spoil art; it {{reveals}} the artist’s choices.'},
+    order: ['Someone painted over Cupid after Vermeer died.', 'An X-ray showed the hidden Cupid in 1979.', 'Restorers removed the top layer.', 'Cupid appeared again in 2021.'],
+    chart: {title: 'WHAT SCIENCE FOUND', ko: '네 작품에서 과학이 찾은 것', cols: ['Tool', 'Discovery'], note: '표를 보고 “With ~ pointed at the painting, scientists found ~.” 문장과 “Whatever ~, …” 문장으로 말하게 한다.', rows: [
+      {name: 'Pearl Earring', cells: ['microscopes, special cameras (2018)', 'a green curtain, tiny eyelashes']},
+      {name: 'Reading a Letter', cells: ['X-ray (1979), restoration (2021)', 'a hidden Cupid']},
+      {name: 'Patch of Grass', cells: ['powerful X-rays (2008)', 'a peasant woman’s face']},
+      {name: 'The Night Watch', cells: ['an old copy + AI (2021)', 'the lost strips']}
     ]},
-    wrap: {en: 'Whenever I look at ______, I notice ______. It makes me feel ______.', ko: '관통 질문으로 돌아가기: 한 작품을 골라 1분 동안 보고 묘사·해석하기'}
+    wrap: {en: 'Whatever is hidden in ______, I would like to ______. With ______, we can ______.', ko: '관통 질문으로 돌아가기: 과학으로 다시 보고 싶은 작품과 그 까닭 쓰기'}
   },
 
   quiz: [
@@ -318,9 +314,9 @@ window.LESSON = {
     ['“However, the painting was small.”의 However는?', ['아무리 ~해도', '하지만', '무엇이든', '언제든'], 1, '콤마가 붙은 접속부사 = 하지만'],
     ['빈칸에 알맞은 것은? “She painted with her eyes ____.”', ['closing', 'closed', 'close', 'to close'], 1, '눈은 감기는 쪽 → p.p.'],
     ['빈칸에 알맞은 것은? “The dog sat with its tail ____.”', ['wagged', 'wagging', 'wag', 'to wag'], 1, '꼬리가 흔드는 쪽 → -ing'],
-    ['연구에서 관람객이 작품 하나를 본 평균 시간은?', ['5분 이상', '약 2분', '30초 미만', '10분'], 2, 'less than half a minute'],
-    ['「별이 빛나는 밤」에서 사이프러스 나무는 무엇처럼 보이나?', ['파도', '불꽃', '진주', '산'], 1, 'like a flame'],
-    ['「가나가와 해변의 큰 파도」에서 후지산은?', ['아주 크게 그려졌다', '아주 작아 보인다', '그려지지 않았다', '왼쪽에 있다'], 1, 'Mount Fuji looks tiny'],
-    ['글쓴이의 주장으로 알맞은 것은?', ['그림은 전문가만 이해할 수 있다', '천천히 바라보면 예술이 일어난다', '설명표를 먼저 읽어야 한다', '그림에는 정답이 있다'], 1, 'It happens in the looking.']
+    ['2018년 연구로 「진주 귀걸이를 한 소녀」에서 밝혀진 것은?', ['소녀 뒤에 원래 초록색 커튼이 있었다', '귀걸이가 진짜 진주였다', '소녀의 이름', '다른 그림 위에 그렸다'], 0, 'there was once a green curtain behind her'],
+    ['「편지를 읽는 여인」의 큐피드에 대해 맞는 것은?', ['페르메이르가 직접 지웠다', '페르메이르가 죽은 뒤 누군가 덧칠했다', '2021년에 새로 그려 넣었다', 'X선으로도 보이지 않았다'], 1, 'Someone had painted over it after Vermeer died.'],
+    ['반 고흐가 옛 그림 위에 다시 그린 까닭은?', ['더 유명해지려고', '새 캔버스를 살 돈이 없어서', '그림이 마음에 들지 않아서', '선생님이 시켜서'], 1, 'too poor to buy new canvases'],
+    ['글쓴이의 주장으로 알맞은 것은?', ['과학은 예술의 마법을 빼앗는다', '과학과 예술이 함께하면 더 많이 볼 수 있다', '그림은 손대지 말고 봐야 한다', 'AI가 화가를 대신할 것이다'], 1, 'together they help us see more than our eyes alone can']
   ]
 };
