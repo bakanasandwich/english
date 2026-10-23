@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'h1a-donga', no: 1, estimate: true,
   title: 'Life Is Experience', ko: '경험이 곧 삶이다',
   bigQ: {en: 'What does it really mean to be brave?', ko: '용기 있다는 것은 정말 무엇을 뜻할까?'},
+  align: {
+    tb: {reading: 'When Were You Bravest?', note: '교과서 읽기는 세 젊은이가 인생에서 가장 용감했던 순간(부상 후 다시 일어서기, 쓰러진 점원 돕기 등)을 들려주는 글. 여기 본문은 같은 주제(일상의 용기)로 새로 쓴 글이다. 의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정이다.'},
+    std: {vocab: ['10공영1-01-05', '10공영1-02-06'], talk: ['10공영1-01-03', '10공영1-02-08'], grammar: ['10공영1-02-03'], read1: ['10공영1-01-01', '10공영1-01-02'], read2: ['10공영1-01-06', '10공영1-02-05']},
+    forms: ['Relative Clauses', 'Perfectives']
+  },
   goals: {
     vocab: ['용기·감정·도전과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', '접두사·접미사로 낱말을 쪼개어 처음 보는 낱말의 뜻을 짐작할 수 있다.'],
     talk: ['Have you ever ~?로 경험을 묻고 현재완료로 답할 수 있다.', '어떤 순간의 감정을 묻고 구체적으로 표현할 수 있다.'],

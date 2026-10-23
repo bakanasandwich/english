@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'h1a-donga', no: 4, estimate: true,
   title: 'Everyday Decisions', ko: '매일의 선택',
   bigQ: {en: 'Are we really in control of what we buy?', ko: '우리는 정말 스스로 사는 것을 결정하고 있을까?'},
+  align: {
+    tb: {reading: 'Why You Buy What You Buy', note: '교과서 읽기는 앵커링 효과 등 소비 결정에 영향을 주는 심리 요인을 설명하는 강연문. 여기 본문은 같은 제목·주제로 새로 쓴 글이다. 의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정이다.'},
+    std: {vocab: ['10공영1-01-05', '10공영1-02-06'], talk: ['10공영1-01-03', '10공영1-02-08'], grammar: ['10공영1-02-03'], read1: ['10공영1-01-01', '10공영1-01-02'], read2: ['10공영1-01-06', '10공영1-02-05']},
+    forms: ['Causative Verbs / Sensory Perception Verbs', 'Focus/ Emphasis']
+  },
   goals: {
     vocab: ['소비·선택과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 'pur-, -ity, ir- 같은 조각으로 purchase, scarcity, irrational을 분석할 수 있다.'],
     talk: ['어떤 주제에 대한 의견을 묻고 까닭과 함께 답할 수 있다.', '상대의 의견에 동의하거나 정중하게 반대할 수 있다.'],

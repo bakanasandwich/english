@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'h1a-donga', no: 3, estimate: true,
   title: 'Small Things Matter', ko: '작은 것이 중요하다',
   bigQ: {en: 'Can a small habit really change the planet?', ko: '작은 습관 하나가 정말 지구를 바꿀 수 있을까?'},
+  align: {
+    tb: {reading: 'Wishful Recycling', note: '교과서 읽기는 재활용되지 않는 물건을 희망만으로 재활용함에 넣는 ‘위시사이클링’의 문제를 다루는 글. 여기 본문은 같은 제목·주제로 새로 쓴 글이다. 의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정이다.'},
+    std: {vocab: ['10공영1-01-05', '10공영1-02-06'], talk: ['10공영1-01-03', '10공영1-02-08'], grammar: ['10공영1-02-03'], read1: ['10공영1-01-01', '10공영1-01-02'], read2: ['10공영1-01-06', '10공영1-02-05']},
+    forms: ['Passive Voice']
+  },
   goals: {
     vocab: ['재활용·환경과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 're-, dis-, -able 같은 조각으로 recycle, disposable 같은 낱말을 분석할 수 있다.'],
     talk: ['걱정되는 일을 표현하고 그 까닭을 말할 수 있다.', '문제에 대한 해결책을 제안하고 그 제안에 답할 수 있다.'],

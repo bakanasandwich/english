@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'h1b-donga', no: 2, estimate: true,
   title: 'Beyond Borders', ko: '경계를 넘어',
   bigQ: {en: 'What do we need to connect with people from other cultures?', ko: '다른 문화의 사람들과 이어지려면 무엇이 필요할까?'},
+  align: {
+    tb: {reading: 'A Summer to Remember', note: '교과서 읽기는 한 고등학생이 케냐의 자원봉사 캠프에서 보낸 여름을 기록한 글. 여기 본문은 같은 주제(해외 봉사로 국경을 넘은 여름)로 새로 쓴 글이다. 의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정이다.'},
+    std: {vocab: ['10공영2-01-05', '10공영2-02-06'], talk: ['10공영2-01-03', '10공영2-02-08'], grammar: ['10공영2-02-03'], read1: ['10공영2-01-01', '10공영2-01-02'], read2: ['10공영2-01-06', '10공영2-02-05']},
+    forms: ['Relative Clauses', 'Reports of Questions and Statements']
+  },
   goals: {
     vocab: ['문화·여행·소통과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 'inter-, mis-, trans- 같은 조각으로 international, misunderstand, translate를 분석할 수 있다.'],
     talk: ['계획을 묻고 답할 수 있다.', '앞으로의 일에 대한 기대를 표현할 수 있다.'],

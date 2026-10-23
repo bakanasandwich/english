@@ -5,6 +5,11 @@ window.LESSON = {
   book: 'h1a-donga', no: 2, estimate: true,
   title: 'Journey Through the Pages', ko: '책장 사이로 떠나는 여행',
   bigQ: {en: 'Why do some first sentences stay with us forever?', ko: '어떤 첫 문장은 왜 평생 우리 곁에 남을까?'},
+  align: {
+    tb: {reading: 'Great Opening Lines', note: '교과서 읽기는 유명한 소설의 첫 문장(피터 팬 등)이 독자의 마음을 사로잡는 방식을 소개하는 글. 여기 본문은 같은 주제(책의 첫 문장)로 새로 쓴 글이다. 의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정이다.'},
+    std: {vocab: ['10공영1-01-05', '10공영1-02-06'], talk: ['10공영1-01-03', '10공영1-02-08'], grammar: ['10공영1-02-03'], read1: ['10공영1-01-01', '10공영1-01-02'], read2: ['10공영1-01-06', '10공영1-02-05']},
+    forms: ['Adverbial Participles', 'Perfectives']
+  },
   goals: {
     vocab: ['책·이야기와 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', '접두사·어근·접미사로 narrator, universal 같은 낱말을 분석할 수 있다.'],
     talk: ['책을 추천하고 그 까닭을 말할 수 있다.', '두 가지 중 무엇을 더 좋아하는지 묻고 답할 수 있다.'],
