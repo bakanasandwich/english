@@ -39,11 +39,11 @@ window.LESSON = {
       {w: 'hold', pos: 'v.', ko: '(행사를) 열다', ic: '🎪', audio: 'assets/audio/hold.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The town holds the festival in July.', exKo: '그 도시는 7월에 축제를 연다.'},
       {w: 'unique', pos: 'adj.', ko: '독특한', ic: '🦄', audio: 'assets/audio/unique.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Each festival is unique.', exKo: '축제마다 독특하다.'},
       {w: 'seasonal', pos: 'adj.', ko: '계절의, 계절마다 있는', ic: '🍂', ex: 'There are many seasonal festivals.', exKo: '계절마다 열리는 축제가 많다.'},
-      {w: 'statue', pos: 'n.', ko: '조각상', ic: '🗽', ex: 'They make giant wooden statues.', exKo: '그들은 거대한 나무 조각상을 만든다.'},
+      {w: 'statue', pos: 'n.', ko: '조각상', ic: '🗽', audio: 'assets/audio/statue.mp3', audioCredit: 'EncycloPetey · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'They make giant wooden statues.', exKo: '그들은 거대한 나무 조각상을 만든다.'},
       {w: 'symbolize', pos: 'v.', ko: '상징하다', ic: '🔣', ex: 'The colors symbolize spring.', exKo: '그 색들은 봄을 상징한다.'},
-      {w: 'decorate', pos: 'v.', ko: '장식하다', ic: '🎀', ex: 'People decorate the streets with flowers.', exKo: '사람들은 꽃으로 거리를 장식한다.'},
-      {w: 'participate', pos: 'v.', ko: '참가하다', ic: '🙋', ex: 'Thousands of people participate in the fight.', exKo: '수천 명이 그 싸움에 참가한다.'},
-      {w: 'traditional', pos: 'adj.', ko: '전통적인', ic: '🏮', ex: 'They enjoy traditional dances.', exKo: '그들은 전통 춤을 즐긴다.'}
+      {w: 'decorate', pos: 'v.', ko: '장식하다', ic: '🎀', audio: 'assets/audio/decorate.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'People decorate the streets with flowers.', exKo: '사람들은 꽃으로 거리를 장식한다.'},
+      {w: 'participate', pos: 'v.', ko: '참가하다', ic: '🙋', audio: 'assets/audio/participate.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Thousands of people participate in the fight.', exKo: '수천 명이 그 싸움에 참가한다.'},
+      {w: 'traditional', pos: 'adj.', ko: '전통적인', ic: '🏮', audio: 'assets/audio/traditional.mp3', audioCredit: 'Persent101 · GFDL (Wikimedia Commons, US)', ex: 'They enjoy traditional dances.', exKo: '그들은 전통 춤을 즐긴다.'}
     ],
     phrases: [
       {w: 'take place', ko: '(행사가) 열리다', ex: 'The festival takes place in August.', exKo: '그 축제는 8월에 열린다.'},

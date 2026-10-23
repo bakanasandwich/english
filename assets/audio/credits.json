@@ -3718,5 +3718,397 @@
   "license": "CC BY-SA 3.0",
   "accent": "US",
   "link": "https://commons.wikimedia.org/wiki/File:En-us-smart.ogg"
+ },
+ "issue": {
+  "file": "assets/audio/issue.mp3",
+  "commons": "En-us-issue.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-issue.ogg"
+ },
+ "danger": {
+  "file": "assets/audio/danger.mp3",
+  "commons": "En-us-danger.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-danger.ogg"
+ },
+ "various": {
+  "file": "assets/audio/various.mp3",
+  "commons": "En-us-various.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-various.ogg"
+ },
+ "activity": {
+  "file": "assets/audio/activity.mp3",
+  "commons": "En-us-activity.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-activity.ogg"
+ },
+ "wild": {
+  "file": "assets/audio/wild.mp3",
+  "commons": "En-us-wild.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-wild.ogg"
+ },
+ "chance": {
+  "file": "assets/audio/chance.mp3",
+  "commons": "En-us-chance.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-chance.ogg"
+ },
+ "errand": {
+  "file": "assets/audio/errand.mp3",
+  "commons": "En-us-errand.ogg",
+  "author": "Neskaya",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-errand.ogg"
+ },
+ "ceremony": {
+  "file": "assets/audio/ceremony.mp3",
+  "commons": "En-us-ceremony.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-ceremony.ogg"
+ },
+ "freely": {
+  "file": "assets/audio/freely.mp3",
+  "commons": "En-us-freely.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-freely.ogg"
+ },
+ "expression": {
+  "file": "assets/audio/expression.mp3",
+  "commons": "En-us-expression.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-expression.ogg"
+ },
+ "differently": {
+  "file": "assets/audio/differently.mp3",
+  "commons": "En-us-differently.ogg",
+  "author": "Neskaya",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-differently.ogg"
+ },
+ "misunderstanding": {
+  "file": "assets/audio/misunderstanding.mp3",
+  "commons": "En-us-misunderstanding.ogg",
+  "author": "Neskaya",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-misunderstanding.ogg"
+ },
+ "sensitive": {
+  "file": "assets/audio/sensitive.mp3",
+  "commons": "En-us-sensitive.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-sensitive.ogg"
+ },
+ "tip": {
+  "file": "assets/audio/tip.mp3",
+  "commons": "En-us-tip.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-tip.ogg"
+ },
+ "necessity": {
+  "file": "assets/audio/necessity.mp3",
+  "commons": "En-us-necessity.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-necessity.ogg"
+ },
+ "sticky": {
+  "file": "assets/audio/sticky.mp3",
+  "commons": "En-us-sticky.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-sticky.ogg"
+ },
+ "wire": {
+  "file": "assets/audio/wire.mp3",
+  "commons": "En-us-wire.ogg",
+  "author": "Dvortygirl",
+  "license": "Public domain",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-wire.ogg"
+ },
+ "fur": {
+  "file": "assets/audio/fur.mp3",
+  "commons": "En-us-fur.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-fur.ogg"
+ },
+ "wipe": {
+  "file": "assets/audio/wipe.mp3",
+  "commons": "En-us-wipe.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-wipe.ogg"
+ },
+ "decision": {
+  "file": "assets/audio/decision.mp3",
+  "commons": "En-us-decision.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-decision.ogg"
+ },
+ "product": {
+  "file": "assets/audio/product.mp3",
+  "commons": "En-us-product.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-product.ogg"
+ },
+ "limited": {
+  "file": "assets/audio/limited.mp3",
+  "commons": "En-us-limited.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-limited.ogg"
+ },
+ "similar": {
+  "file": "assets/audio/similar.mp3",
+  "commons": "En-us-similar.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-similar.ogg"
+ },
+ "choose": {
+  "file": "assets/audio/choose.mp3",
+  "commons": "En-us-choose.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-choose.ogg"
+ },
+ "realize": {
+  "file": "assets/audio/realize.mp3",
+  "commons": "En-us-realize.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-realize.ogg"
+ },
+ "spread": {
+  "file": "assets/audio/spread.mp3",
+  "commons": "En-us-spread.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-spread.ogg"
+ },
+ "naturally": {
+  "file": "assets/audio/naturally.mp3",
+  "commons": "En-us-naturally.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-naturally.ogg"
+ },
+ "lively": {
+  "file": "assets/audio/lively.mp3",
+  "commons": "En-us-lively.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-lively.ogg"
+ },
+ "form": {
+  "file": "assets/audio/form.mp3",
+  "commons": "En-us-form.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-form.ogg"
+ },
+ "represent": {
+  "file": "assets/audio/represent.mp3",
+  "commons": "En-us-represent.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-represent.ogg"
+ },
+ "figure": {
+  "file": "assets/audio/figure.mp3",
+  "commons": "En-us-figure.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-figure.ogg"
+ },
+ "pleasure": {
+  "file": "assets/audio/pleasure.mp3",
+  "commons": "En-us-pleasure.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-pleasure.ogg"
+ },
+ "foreigner": {
+  "file": "assets/audio/foreigner.mp3",
+  "commons": "En-us-foreigner.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-foreigner.ogg"
+ },
+ "independent": {
+  "file": "assets/audio/independent.mp3",
+  "commons": "En-us-independent.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-independent.ogg"
+ },
+ "movement": {
+  "file": "assets/audio/movement.mp3",
+  "commons": "En-us-movement.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-movement.ogg"
+ },
+ "right": {
+  "file": "assets/audio/right.mp3",
+  "commons": "En-us-right.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-right.ogg"
+ },
+ "gather": {
+  "file": "assets/audio/gather.mp3",
+  "commons": "En-us-gather.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-gather.ogg"
+ },
+ "historic": {
+  "file": "assets/audio/historic.mp3",
+  "commons": "En-us-historic.ogg",
+  "author": "Neskaya",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-historic.ogg"
+ },
+ "article": {
+  "file": "assets/audio/article.mp3",
+  "commons": "En-us-article.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-article.ogg"
+ },
+ "continue": {
+  "file": "assets/audio/continue.mp3",
+  "commons": "En-us-continue.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-continue.ogg"
+ },
+ "government": {
+  "file": "assets/audio/government.mp3",
+  "commons": "En-uk-government.ogg",
+  "author": "Association Shtooka, Judith Franck",
+  "license": "CC BY 3.0",
+  "accent": "UK",
+  "link": "https://commons.wikimedia.org/wiki/File:En-uk-government.ogg"
+ },
+ "invitation": {
+  "file": "assets/audio/invitation.mp3",
+  "commons": "En-us-invitation.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-invitation.ogg"
+ },
+ "alphabet": {
+  "file": "assets/audio/alphabet.mp3",
+  "commons": "En-us-alphabet.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-alphabet.ogg"
+ },
+ "textbook": {
+  "file": "assets/audio/textbook.mp3",
+  "commons": "En-us-textbook.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-textbook.ogg"
+ },
+ "letter": {
+  "file": "assets/audio/letter.mp3",
+  "commons": "En-us-letter.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-letter.ogg"
+ },
+ "honor": {
+  "file": "assets/audio/honor.mp3",
+  "commons": "En-us-honor.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-honor.ogg"
+ },
+ "statue": {
+  "file": "assets/audio/statue.mp3",
+  "commons": "En-us-statue.ogg",
+  "author": "EncycloPetey",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-statue.ogg"
+ },
+ "decorate": {
+  "file": "assets/audio/decorate.mp3",
+  "commons": "En-us-decorate.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-decorate.ogg"
+ },
+ "participate": {
+  "file": "assets/audio/participate.mp3",
+  "commons": "En-us-participate.ogg",
+  "author": "Dvortygirl",
+  "license": "CC BY-SA 3.0",
+  "accent": "US",
+  "link": "https://commons.wikimedia.org/wiki/File:En-us-participate.ogg"
  }
 }
