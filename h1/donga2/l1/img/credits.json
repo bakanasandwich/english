@@ -1,122 +1,58 @@
 {
- "r-cover": {
-  "file": "r-cover.jpg",
-  "title": "Silence on the Brathay",
-  "creator": "Oneterry AKA Terry Kearney",
-  "license": "CC0 1.0",
-  "link": "https://www.flickr.com/photos/24490288@N04/55067603243",
-  "source": "flickr"
- },
  "r-cover2": {
   "file": "r-cover2.jpg",
-  "title": "Happy",
-  "creator": "thejaan",
+  "title": "breakfast",
+  "creator": "matryosha",
   "license": "CC BY 2.0",
-  "link": "https://www.flickr.com/photos/88273881@N00/14844430632",
+  "link": "https://www.flickr.com/photos/49570108@N07/5580664501",
   "source": "flickr"
  },
- "r-p1": {
-  "file": "r-p1.jpg",
-  "title": "A Silent Calling",
-  "creator": "Alyssa L. Miller",
+ "r-p0": {
+  "file": "r-p0.jpg",
+  "title": "Dinner table",
+  "creator": "futureshape",
   "license": "CC BY 2.0",
-  "link": "https://www.flickr.com/photos/34701044@N06/4000009470",
-  "source": "flickr"
- },
- "r-p2": {
-  "file": "r-p2.jpg",
-  "title": "holding hands",
-  "creator": "waithamai",
-  "license": "CC BY 2.0",
-  "link": "https://www.flickr.com/photos/59684476@N02/12306490696",
+  "link": "https://www.flickr.com/photos/55231259@N00/6818430659",
   "source": "flickr"
  },
  "r-p3": {
   "file": "r-p3.jpg",
-  "title": "Project 365 #200: 190713 The Finishing Line",
-  "creator": "comedy_nose",
-  "license": "Public Domain Mark",
-  "link": "https://www.flickr.com/photos/23408922@N07/9320845849",
-  "source": "flickr"
- },
- "r-p4": {
-  "file": "r-p4.jpg",
-  "title": "Welcome to Twitter",
-  "creator": "freestocks.org",
-  "license": "CC0 1.0",
-  "link": "https://www.flickr.com/photos/135396164@N05/25314591330",
-  "source": "flickr"
- },
- "r-p5": {
-  "file": "r-p5.jpg",
-  "title": "Mirror Reflection",
-  "creator": "IQRemix",
-  "license": "CC BY-SA 2.0",
-  "link": "https://www.flickr.com/photos/46021126@N00/15678594478",
-  "source": "flickr"
- },
- "r-p6": {
-  "file": "r-p6.jpg",
-  "title": "Handwritten letter from Henry Wadsworth Longfellow, 1874 May 17",
-  "creator": "Cambridge Room at the Cambridge Public Library",
-  "license": "Public Domain Mark",
-  "link": "https://www.flickr.com/photos/140174526@N06/28158012095",
+  "title": "Cereal and Bananas!",
+  "creator": "ralph and jenny",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/92269745@N00/4436764804",
   "source": "flickr"
  },
  "r-p7": {
   "file": "r-p7.jpg",
-  "title": "Sunrise Meadows",
-  "creator": "Mount Rainier NPS",
-  "license": "CC BY 2.0",
-  "link": "https://www.flickr.com/photos/78037339@N03/14771720105",
-  "source": "flickr"
- },
- "w-comfort": {
-  "file": "w-comfort.jpg",
-  "title": "Best friends 9/365/2010",
-  "creator": "katiesw1",
+  "title": "Mixed Bean, Beetroot, and Roasted Potato Salad - Salad Bowl - Soulmama Vegetarian",
+  "creator": "avlxyz",
   "license": "CC BY-SA 2.0",
-  "link": "https://www.flickr.com/photos/41517846@N08/4259167076",
+  "link": "https://www.flickr.com/photos/10559879@N00/2695730538",
   "source": "flickr"
  },
- "w-isolated": {
-  "file": "w-isolated.jpg",
-  "title": "Moment of silence",
-  "creator": "sacks08",
+ "w-nutrient": {
+  "file": "w-nutrient.jpg",
+  "title": "Eat healthy fruits and veggies bowl",
+  "creator": "Trace Nietert",
   "license": "CC BY 2.0",
-  "link": "https://www.flickr.com/photos/29071316@N06/4752606716",
+  "link": "https://www.flickr.com/photos/53553325@N06/8543057650",
   "source": "flickr"
  },
- "w-mindful": {
-  "file": "w-mindful.jpg",
-  "title": "Meditation under the Angel Oak",
-  "creator": "alisonleighlilly",
+ "w-portion": {
+  "file": "w-portion.jpg",
+  "title": "Muffin - IMG_0246",
+  "creator": "Nicola since 1972",
+  "license": "CC BY 2.0",
+  "link": "https://www.flickr.com/photos/15216811@N06/5398771984",
+  "source": "flickr"
+ },
+ "w-flavor": {
+  "file": "w-flavor.jpg",
+  "title": "Spices",
+  "creator": "dynamosquito",
   "license": "CC BY-SA 2.0",
-  "link": "https://www.flickr.com/photos/61475957@N02/5773273968",
-  "source": "flickr"
- },
- "w-struggle": {
-  "file": "w-struggle.jpg",
-  "title": "Nepal - Island Peak - 009 - Climbing the sumnmit headwall",
-  "creator": "mckaysavage",
-  "license": "CC BY 2.0",
-  "link": "https://www.flickr.com/photos/56796376@N00/497821701",
-  "source": "flickr"
- },
- "w-flaw": {
-  "file": "w-flaw.jpg",
-  "title": "Old yoghurt",
-  "creator": "mislav-m",
-  "license": "CC BY 2.0",
-  "link": "https://www.flickr.com/photos/29561334@N04/8627888136",
-  "source": "flickr"
- },
- "w-appreciate": {
-  "file": "w-appreciate.jpg",
-  "title": "Sewing thank you card",
-  "creator": "ralphhogaboom",
-  "license": "CC BY-SA 2.0",
-  "link": "https://www.flickr.com/photos/59568944@N00/5871263299",
+  "link": "https://www.flickr.com/photos/25182210@N07/3985621955",
   "source": "flickr"
  }
 }

@@ -26,9 +26,9 @@ window.LESSON = {
       {w: 'appetite', pos: 'n.', ko: '식욕', ic: '🍽️', ipa: '/ˈæpɪtaɪt/', ex: 'Stress can change your appetite.', exKo: '스트레스는 식욕을 바꿀 수 있다.'},
       {w: 'crave', pos: 'v.', ko: '몹시 원하다, 갈망하다', ic: '🤤', ipa: '/kreɪv/', ex: 'I crave something spicy before exams.', exKo: '나는 시험 전에 매운 것이 몹시 당긴다.'},
       {w: 'skip', pos: 'v.', ko: '거르다, 건너뛰다', ic: '⏭️', ipa: '/skɪp/', ex: 'Don’t skip breakfast.', exKo: '아침을 거르지 마라.'},
-      {w: 'nutrient', pos: 'n.', ko: '영양소', ic: '🥦', ipa: '/ˈnuːtriənt/', ex: 'Vegetables are full of nutrients.', exKo: '채소에는 영양소가 가득하다.'},
+      {w: 'nutrient', pos: 'n.', ko: '영양소', ic: '🥦', img: {src: 'h1/donga2/l1/img/w-nutrient.jpg', credit: 'Trace Nietert · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/53553325@N06/8543057650'}, ipa: '/ˈnuːtriənt/', ex: 'Vegetables are full of nutrients.', exKo: '채소에는 영양소가 가득하다.'},
       {w: 'balanced', pos: 'adj.', ko: '균형 잡힌', ic: '⚖️', ipa: '/ˈbælənst/', ex: 'Eat a balanced meal every day.', exKo: '날마다 균형 잡힌 식사를 하라.'},
-      {w: 'portion', pos: 'n.', ko: '(음식의) 1인분, 몫', ic: '🥣', ipa: '/ˈpɔːrʃn/', ex: 'Put a small portion on your plate.', exKo: '접시에 적은 양을 덜어라.'},
+      {w: 'portion', pos: 'n.', ko: '(음식의) 1인분, 몫', ic: '🥣', img: {src: 'h1/donga2/l1/img/w-portion.jpg', credit: 'Nicola since 1972 · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/15216811@N06/5398771984'}, ipa: '/ˈpɔːrʃn/', ex: 'Put a small portion on your plate.', exKo: '접시에 적은 양을 덜어라.'},
       {w: 'digest', pos: 'v.', ko: '소화하다', ic: '🫄', ipa: '/daɪˈdʒest/', ex: 'Chew slowly to digest your food better.', exKo: '음식을 더 잘 소화하려면 천천히 씹어라.'},
       {w: 'overeat', pos: 'v.', ko: '과식하다', ic: '🍔', ipa: '/ˌoʊvərˈiːt/', ex: 'People often overeat when they are tired.', exKo: '사람들은 피곤할 때 자주 과식한다.'},
       {w: 'mindful', pos: 'adj.', ko: '마음을 챙기는, 알아차리는', ic: '🧘', ipa: '/ˈmaɪndfl/', ex: 'Be mindful of what you eat.', exKo: '무엇을 먹는지 의식하라.'},
@@ -37,7 +37,7 @@ window.LESSON = {
       {w: 'relieve', pos: 'v.', ko: '(고통·스트레스를) 덜다', ic: '🌬️', ipa: '/rɪˈliːv/', ex: 'A short walk can relieve stress.', exKo: '짧은 산책은 스트레스를 덜어 줄 수 있다.'},
       {w: 'aware', pos: 'adj.', ko: '알고 있는, 인식하는', ic: '💡', ipa: '/əˈwer/', ex: 'Many people aren’t aware of their eating habits.', exKo: '많은 사람이 자신의 식습관을 알아차리지 못한다.'},
       {w: 'picky', pos: 'adj.', ko: '까다로운, 편식하는', ic: '🙅', ipa: '/ˈpɪki/', ex: 'My little brother is a picky eater.', exKo: '내 남동생은 편식을 한다.'},
-      {w: 'flavor', pos: 'n.', ko: '맛, 풍미', ic: '🌶️', ipa: '/ˈfleɪvər/', ex: 'This soup has a strong flavor.', exKo: '이 수프는 맛이 강하다.'}
+      {w: 'flavor', pos: 'n.', ko: '맛, 풍미', ic: '🌶️', img: {src: 'h1/donga2/l1/img/w-flavor.jpg', credit: 'dynamosquito · CC BY-SA 2.0 (Flickr)', link: 'https://www.flickr.com/photos/25182210@N07/3985621955'}, ipa: '/ˈfleɪvər/', ex: 'This soup has a strong flavor.', exKo: '이 수프는 맛이 강하다.'}
     ],
     morph: [
       {w: 'overeat', ko: '과식하다', parts: [{t: 'over', k: 'pre', m: '지나치게'}, {t: 'eat', k: 'root', m: '먹다'}], family: ['oversleep', 'overwork', 'overuse'], note: 'over- = 지나치게, 넘어서 (oversleep 늦잠 자다).'},
@@ -245,7 +245,8 @@ window.LESSON = {
     paras: [
       {who: '', en: 'Loving yourself is not only about kind words. It is also about how you treat your body every day, and that starts at the table. Many of us have eating habits that we are not even aware of. Read about four common types of eaters, and see if you recognize yourself.',
        ko: '자신을 사랑하는 것은 친절한 말에만 관한 것이 아니다. 날마다 자기 몸을 어떻게 대하느냐에 관한 것이기도 하며, 그것은 식탁에서 시작된다. 우리 중 많은 사람이 스스로 알아차리지도 못하는 식습관을 가지고 있다. 흔한 네 가지 유형의 식습관에 대해 읽고, 자신의 모습이 보이는지 살펴보라.',
-       check: {q: 'Where does loving yourself start, according to the writer?', a: 'At the table (with how you treat your body).'}, think: '내가 알아차리지 못한 식습관이 있을까?'},
+       check: {q: 'Where does loving yourself start, according to the writer?', a: 'At the table (with how you treat your body).'}, think: '내가 알아차리지 못한 식습관이 있을까?',
+       bg: {src: 'h1/donga2/l1/img/r-p0.jpg', credit: 'futureshape · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/55231259@N00/6818430659', about: '식탁 위에 차려진 음식'}},
       {who: 'The Stress Snacker', en: 'You have three tests this week, and you feel you aren’t ready. Suddenly, you crave something salty or spicy. Stress snackers turn to food to feel better for a moment. The problem is that the snack never solves the stress. When the bag is empty, the tests are still there, and now guilt has joined them.',
        ko: '이번 주에 시험이 세 개 있는데 준비가 안 된 것 같다. 갑자기 짜거나 매운 것이 몹시 당긴다. 스트레스 간식형은 잠깐 기분이 나아지려고 음식을 찾는다. 문제는 간식이 결코 스트레스를 해결해 주지 않는다는 것이다. 봉지가 비고 나면 시험은 여전히 그대로이고, 이제 죄책감까지 더해진다.',
        check: {q: 'What is the problem with stress snacking?', a: 'The snack never solves the stress, and guilt joins it.'}, think: '스트레스를 받을 때 나는 무엇을 먹나?'},
@@ -254,7 +255,8 @@ window.LESSON = {
        check: {q: 'What should you do before you open a snack?', a: 'Try to name your feeling.'}, think: '5분 동안 할 수 있는 다른 일은?'},
       {who: 'The Meal Skipper', en: 'Some students skip breakfast to sleep ten more minutes. It seems like a smart choice, but your brain runs on fuel. Without breakfast, it is hard to focus in the morning, and you are more likely to overeat at lunch. If you ate even a banana or a cup of yogurt, your morning would feel very different.',
        ko: '어떤 학생들은 10분 더 자려고 아침을 거른다. 현명한 선택처럼 보이지만 뇌는 연료로 움직인다. 아침을 먹지 않으면 오전에 집중하기 어렵고, 점심에 과식할 가능성이 더 크다. 바나나 하나나 요구르트 한 컵이라도 먹는다면 아침이 아주 다르게 느껴질 것이다.',
-       check: {q: 'What happens if you skip breakfast?', a: 'It is hard to focus, and you are more likely to overeat at lunch.'}, think: '아침으로 간단히 먹을 수 있는 것은?'},
+       check: {q: 'What happens if you skip breakfast?', a: 'It is hard to focus, and you are more likely to overeat at lunch.'}, think: '아침으로 간단히 먹을 수 있는 것은?',
+       bg: {src: 'h1/donga2/l1/img/r-p3.jpg', credit: 'ralph and jenny · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/92269745@N00/4436764804', about: '바나나를 올린 아침 시리얼'}},
       {who: 'The Screen Eater', en: 'Do you keep scrolling through videos while you eat? Screen eaters often finish a whole bag of chips without noticing it, as if their hands had a mind of their own. Because they are not paying attention, the food doesn’t satisfy them. Next time, put your phone away and notice the flavor and texture of each bite.',
        ko: '먹는 동안 영상을 계속 넘기고 있나요? 화면 보며 먹는 형은 마치 손이 스스로 생각을 가진 것처럼, 알아차리지 못한 채 감자칩 한 봉지를 다 먹어 버리곤 한다. 주의를 기울이지 않기 때문에 음식이 만족감을 주지 못한다. 다음에는 휴대전화를 치우고 한 입 한 입의 맛과 식감을 느껴 보라.',
        check: {q: 'Why doesn’t the food satisfy screen eaters?', a: 'Because they are not paying attention.'}, think: '휴대전화 없이 밥을 먹으면 무엇이 달라질까?'},
@@ -266,8 +268,10 @@ window.LESSON = {
        check: {q: 'What should you do after a bad food day?', a: 'Simply start again at the next meal.'}, think: '실수했을 때 나에게 해 줄 말은?'},
       {who: 'Enough', en: 'Your body is with you every day of your life. It deserves balanced meals, regular rest, and a little patience. Treat it the way you would treat a good friend. After all, loving yourself also means feeding yourself well.',
        ko: '여러분의 몸은 평생 날마다 여러분과 함께한다. 몸은 균형 잡힌 식사, 규칙적인 휴식, 그리고 약간의 인내를 받을 자격이 있다. 좋은 친구를 대하듯 몸을 대하라. 결국 자신을 사랑한다는 것은 자신을 잘 먹이는 것이기도 하다.',
-       check: {q: 'What does the body deserve?', a: 'Balanced meals, regular rest, and a little patience.'}, think: '내 몸에게 해 주고 싶은 작은 약속은?'}
+       check: {q: 'What does the body deserve?', a: 'Balanced meals, regular rest, and a little patience.'}, think: '내 몸에게 해 주고 싶은 작은 약속은?',
+       bg: {src: 'h1/donga2/l1/img/r-p7.jpg', credit: 'avlxyz · CC BY-SA 2.0 (Flickr)', link: 'https://www.flickr.com/photos/10559879@N00/2695730538', about: '채소가 가득한 샐러드 한 그릇'}}
     ],
+    coverImg2: {src: 'h1/donga2/l1/img/r-cover2.jpg', credit: 'matryosha · CC BY 2.0 (Flickr)', link: 'https://www.flickr.com/photos/49570108@N07/5580664501'},
     split: 4,
     next: '아침을 거르는 사람과\n화면 보며 먹는 사람은?',
     recap: {q: '스트레스 간식형의 문제와 해결책은?', items: [{k: 'PROBLEM', v: 'crave salty or spicy food · the snack never solves the stress · guilt'}, {k: 'TRY', v: 'name your feeling · do something else for five minutes'}]},
