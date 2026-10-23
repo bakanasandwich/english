@@ -1,14 +1,21 @@
 /* 중2 영어(동아·윤정미) Lesson 8 · Time Travel
-   단원명과 문법(현재완료, something + 형용사)은 교과서 목차·문제집 목차 기준.
-   의사소통 기능은 추정(estimate: true). 대화문·읽기 글(단편 이야기)은 교과서 원문이 아니라 새로 쓴 글입니다. */
+   교과서 대조(2026-10): 언어 형식(현재완료 · want + 목적어 + to부정사), 읽기 주제(A Butterfly That Changed the Future — 시간 여행 이야기)를 교과서와 맞췄다.
+   교과서 8과는 의사소통 기능 없이 읽기 중심으로 구성된 단원이라, 2차시 대화문은 단원 주제에 맞춘 보충 활동이다.
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식으로 새로 쓴 글이다. */
 window.LESSON = {
-  book: 'm2-donga', no: 8, estimate: true,
+  book: 'm2-donga', no: 8,
   title: 'Time Travel', ko: '시간 여행',
   bigQ: {en: 'If you could travel in time, what would you want to see?', ko: '시간 여행을 할 수 있다면 무엇을 보고 싶나요?'},
+  align: {
+    tb: {reading: 'A Butterfly That Changed the Future', funcs: ['(읽기 중심 단원 — 의사소통 기능 없음)'], forms: ['현재완료 (I’ve never seen such a huge thing.)', 'want + 목적어 + to부정사 (I don’t want you to do anything foolish.)'],
+      note: '교과서 읽기는 과거로 시간 여행을 떠난 사람이 나비 한 마리를 밟아 미래가 바뀌는 단편 이야기. 여기 본문은 다락방의 카메라로 1970년에 간 소녀가 어린 할머니를 만나는 이야기로, 같은 주제·같은 언어 형식으로 새로 쓴 글이다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-02', '9영02-04'], grammar: ['9영02-04'], read1: ['9영01-04', '9영01-05'], read2: ['9영01-07', '9영02-07']},
+    forms: ['Perfectives', 'To-Infinitive']
+  },
   goals: {
     vocab: ['시간·과거와 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 옛날과 지금을 한 문장으로 비교할 수 있다.'],
     talk: ['경험을 묻고 답할 수 있다.', '기대하는 일을 표현할 수 있다.'],
-    grammar: ['현재완료(경험·계속·완료)로 과거와 지금을 이어 말할 수 있다.', 'something / nothing + 형용사로 무언가를 설명할 수 있다.'],
+    grammar: ['현재완료(경험·계속·완료)로 과거와 지금을 이어 말할 수 있다.', 'want / ask / tell + 목적어 + to부정사로 남에게 바라는 일을 말할 수 있다.'],
     read1: ['이야기의 배경과 사건을 파악하고, 민서가 과거로 간 과정을 이해할 수 있다.'],
     read2: ['1970년과 지금을 비교하고 이야기의 결말을 이해하며, 가고 싶은 시대를 영어로 쓸 수 있다.']
   },
@@ -133,7 +140,7 @@ window.LESSON = {
 
   grammar: {
     cover: 'have + p.p.',
-    hook: {en: 'Grandma {{has lived}} here for 50 years.  /  I found {{something strange}} in the attic.', ko: '두 문장에서 색칠될 부분은 각각 어떤 뜻을 더해 줄까?', answer: 'has lived는 과거부터 지금까지 이어진 일(현재완료), something strange는 형용사가 -thing 뒤에서 꾸미는 모양', note: '첫 문장: “지금도 사실까?”(예) → 과거와 지금을 잇는 현재완료. 두 번째: strange something이라고 하지 않는다는 점을 먼저 느끼게 한다.'},
+    hook: {en: 'Grandma {{has lived}} here for 50 years.  /  “I {{want you to}} come back someday.”', ko: '두 문장에서 색칠될 부분은 각각 어떤 뜻을 더해 줄까?', answer: 'has lived → 과거부터 지금까지 계속 살아왔다(현재완료) / want you to come → 네가 오기를 원한다(오는 사람은 you)', note: '교과서 언어 형식(I’ve never seen such a huge thing. / I don’t want you to do anything foolish.)과 같은 짜임이다.'},
     points: [
       { id: 'g1', name: '현재완료', short: '현재완료', form: 'have / has + 과거분사', meaning: '(지금까지) ~해 왔다 / ~한 적 있다 / ~했다',
         notice: [
@@ -165,34 +172,39 @@ window.LESSON = {
           {ko: '너는 고대 도시에 가 본 적이 있니?', en: 'Have you ever been to an ancient city?'}
         ]
       },
-      { id: 'g2', name: '-thing + 형용사', short: 'something + 형용사', form: 'something / anything / nothing + 형용사', meaning: '~한 무언가 / 아무것도 ~하지 않은',
+      { id: 'g2', name: 'want + 목적어 + to부정사', short: 'want A to ~', form: 'want / ask / tell + 목적어 + to + 동사원형', meaning: '(목적어)가 ~하기를 원하다 / ~하라고 부탁하다·말하다',
         notice: [
-          {en: 'I found {{something strange}} in the attic.', ko: '나는 다락방에서 이상한 무언가를 찾았다.'},
-          {en: 'Is there {{anything special}} in the box?', ko: '상자 안에 특별한 무언가가 있니?'},
-          {en: 'There is {{nothing new}} here.', ko: '여기에는 새로운 것이 아무것도 없다.'}
+          {en: 'I {{want you to come}} back someday.', ko: '나는 네가 언젠가 다시 오기를 원해.'},
+          {en: 'Grandma {{wants Minseo to keep}} the photo.', ko: '할머니는 민서가 그 사진을 간직하기를 원하신다.'},
+          {en: 'The note {{told her not to press}} the button twice.', ko: '쪽지는 그녀에게 단추를 두 번 누르지 말라고 했다.'}
         ],
         rule: [
-          {k: '순서', v: '-thing으로 끝나는 말은 형용사가 뒤에서 꾸민다', ex: 'something cold (○) / cold something (✗)'},
-          {k: '+ to부정사', v: '-thing + 형용사 + to부정사', ex: 'I want something cold to drink.'},
-          {k: 'some / any', v: '긍정문 something, 부정·의문문 anything', ex: 'I didn’t see anything strange.'}
+          {k: '행동하는 사람', v: '목적어가 to부정사의 행동을 한다 (I want you to come → 오는 사람은 you)', ex: 'Mom wants me to clean my room.'},
+          {k: '같은 짜임', v: 'ask(부탁하다), tell(말하다), expect(기대하다), allow(허락하다)', ex: 'She asked me to help her.'},
+          {k: '부정', v: 'to 앞에 not: 동사 + 목적어 + not to ~', ex: 'I don’t want you to do anything foolish.'}
         ],
+        compare: {
+          title: 'want to vs want + 목적어 + to', note: '행동할 사람이 나인지 다른 사람인지에 따라 목적어를 넣는다.',
+          head: ['want to ~ (내가)', 'want + 목적어 + to ~ (남이)'],
+          cols: [['I want to visit 1970.', 'I want to see Grandma.'], ['I want you to visit 1970.', 'I want Grandma to see this.']]
+        },
         check: [
-          {q: 'I want to eat something ____. (sweet)', a: 'sweet'},
-          {q: 'Did you see ____ interesting? (anything / something)', a: 'anything'},
-          {q: 'There’s ____ wrong with it. (nothing / anything)', a: 'nothing'},
-          {q: 'She told me something ____. (surprise → 형용사)', a: 'surprising'},
-          {q: 'Give me something warm ____ wear. (to부정사)', a: 'to'}
+          {q: 'I want ____ to come back. (너가)', a: 'you'},
+          {q: 'Grandma wants Minseo ____ the photo. (keep)', a: 'to keep'},
+          {q: 'The note told her ____ press the button twice. (부정)', a: 'not to'},
+          {q: 'She asked me ____ her cat. (find)', a: 'to find'},
+          {q: 'Mom told us ____ home before dinner. (come)', a: 'to come'}
         ],
-        trap: {bad: 'I want to do special something.', good: 'I want to do something special.', why: '-thing으로 끝나는 말은 형용사를 뒤에 둔다.'},
+        trap: {bad: 'I want that you come back.', good: 'I want you to come back.', why: 'want는 that절이 아니라 목적어 + to부정사를 쓴다.'},
         scramble: [
-          {ko: '나는 특별한 무언가를 경험하고 싶다.', en: 'I want to experience something special.'},
-          {ko: '그 상자 안에는 이상한 것이 아무것도 없었다.', en: 'There was nothing strange in the box.'},
-          {ko: '마실 차가운 것 좀 있니?', en: 'Do you have anything cold to drink?'}
+          {ko: '나는 네가 언젠가 다시 오기를 원한다.', en: 'I want you to come back someday.'},
+          {ko: '할머니는 민서에게 사진을 간직하라고 하셨다.', en: 'Grandma told Minseo to keep the photo.'},
+          {ko: '나는 네가 어리석은 일을 하지 않기를 바란다.', en: 'I don’t want you to do anything foolish.'}
         ]
       }
     ],
-    wrap: {en: 'I have never ______. I want to find something ______.', ko: '현재완료 한 문장, something + 형용사 한 문장으로 시간 여행 상상 쓰기'},
-    wrapEx: 'I have never seen a dinosaur. I want to find something ancient in the past.'
+    wrap: {en: 'I have never ______. I want my friend to ______.', ko: '현재완료 한 문장, want + 목적어 + to부정사 한 문장으로 시간 여행 상상 쓰기'},
+    wrapEx: 'I have never seen a dinosaur. I want my friend to travel back in time with me.'
   },
 
   reading: {
@@ -218,14 +230,14 @@ window.LESSON = {
       {who: 'Part 2', en: 'A girl about Minseo’s age ran up to her. “Have you seen my cat?” she asked. Minseo looked at the girl’s name tag and almost screamed. It said “Lee Young-ja.” That was Grandma’s name!',
        ko: '민서 또래의 한 소녀가 민서에게 달려왔다. “우리 고양이 봤니?” 소녀가 물었다. 민서는 소녀의 이름표를 보고 하마터면 소리를 지를 뻔했다. 이름표에는 ‘이영자’라고 쓰여 있었다. 그건 할머니의 이름이었다!',
        check: {q: 'Whose name was on the girl’s name tag?', a: 'Grandma’s name (Lee Young-ja).'}, think: '어린 할머니를 만난다면 무엇을 묻고 싶나요?'},
-      {who: 'Part 2', en: 'The two girls found the cat together and spent the whole day playing. They played gonggi, shared a sweet potato, and talked about their dreams. Young-ja said, “I’ve never met anyone like you. You’re from somewhere special, aren’t you?”',
-       ko: '두 소녀는 함께 고양이를 찾고 하루 종일 놀았다. 공기놀이를 하고, 고구마를 나눠 먹고, 꿈에 대해 이야기했다. 영자가 말했다. “너 같은 애는 처음 만나 봐. 너 특별한 곳에서 왔지, 그렇지?”',
+      {who: 'Part 2', en: 'The two girls found the cat together and spent the whole day playing. They played gonggi, shared a sweet potato, and talked about their dreams. Young-ja said, “I’ve never met anyone like you. You’re from somewhere special, aren’t you? I want you to come back someday.”',
+       ko: '두 소녀는 함께 고양이를 찾고 하루 종일 놀았다. 공기놀이를 하고, 고구마를 나눠 먹고, 꿈에 대해 이야기했다. 영자가 말했다. “너 같은 애는 처음 만나 봐. 너 특별한 곳에서 왔지, 그렇지? 언젠가 꼭 다시 와 줬으면 좋겠어.”',
        check: {q: 'What did the girls do together?', a: 'They played gonggi, shared a sweet potato, and talked about their dreams.'}, think: '1970년 아이들의 놀이와 지금의 놀이를 비교하면?'},
       {who: 'Part 3', en: 'Before sunset, Minseo took a photo of the two of them. Then she pressed the button once. Flash! She was back in the attic, and she heard Grandma calling her for dinner.',
        ko: '해가 지기 전, 민서는 둘의 사진을 찍었다. 그리고 단추를 한 번 눌렀다. 번쩍! 민서는 다락방으로 돌아와 있었고, 할머니가 저녁 먹으라고 부르는 소리가 들렸다.',
        check: {q: 'How did Minseo return?', a: 'She pressed the button once.'}, think: '돌아온 민서의 기분은 어땠을까?'},
-      {who: 'Part 3', en: 'After dinner, Grandma showed her an old photo. Two girls were smiling, and one of them looked exactly like Minseo. “I have kept this photo for fifty years,” Grandma said. “I’ve always wondered who my friend was.” Minseo just smiled. Some secrets are better kept.',
-       ko: '저녁을 먹고 나서 할머니가 오래된 사진 한 장을 보여 주셨다. 두 소녀가 웃고 있었고, 그중 한 명은 민서와 꼭 닮아 있었다. “이 사진을 50년 동안 간직해 왔단다.” 할머니가 말씀하셨다. “그 친구가 누구였는지 늘 궁금했어.” 민서는 그저 미소 지었다. 어떤 비밀은 지키는 편이 낫다.',
+      {who: 'Part 3', en: 'After dinner, Grandma showed her an old photo. Two girls were smiling, and one of them looked exactly like Minseo. “I have kept this photo for fifty years,” Grandma said. “I’ve always wondered who my friend was. Now I want you to keep it.” Minseo just smiled. Some secrets are better kept.',
+       ko: '저녁을 먹고 나서 할머니가 오래된 사진 한 장을 보여 주셨다. 두 소녀가 웃고 있었고, 그중 한 명은 민서와 꼭 닮아 있었다. “이 사진을 50년 동안 간직해 왔단다.” 할머니가 말씀하셨다. “그 친구가 누구였는지 늘 궁금했어. 이제 이 사진은 네가 간직했으면 좋겠구나.” 민서는 그저 미소 지었다. 어떤 비밀은 지키는 편이 낫다.',
        check: {q: 'How long has Grandma kept the photo?', a: 'For fifty years.'}, think: '민서는 왜 비밀을 말하지 않았을까?'}
     ],
     split: 3,
@@ -242,7 +254,8 @@ window.LESSON = {
     key: [
       {en: 'Minseo {{has always loved}} old things.', note: '현재완료 (계속): 지금까지 늘 좋아해 왔다', g: 'g1'},
       {en: 'Grandma {{has lived}} there {{for}} more than fifty years.', note: '현재완료 + for + 기간', g: 'g1'},
-      {en: 'She found {{something strange}}.', note: 'something + 형용사', g: 'g2'},
+      {en: '“I {{want you to come}} back someday.”', note: 'want + 목적어 + to부정사', g: 'g2'},
+      {en: '“Now I {{want you to keep}} it.”', note: 'want + 목적어 + to부정사', g: 'g2'},
       {en: '“{{Have you seen}} my cat?”', note: '현재완료 의문문 (경험·완료)', g: 'g1'},
       {en: '“{{I’ve never met}} anyone like you.”', note: '현재완료 (경험): never', g: 'g1'},
       {en: '“I {{have kept}} this photo for fifty years.”', note: '현재완료 (계속): 50년 동안 간직해 왔다', g: 'g1'}
@@ -254,7 +267,7 @@ window.LESSON = {
       {name: 'TV', cells: ['black-and-white TV', 'smart TVs and phones']},
       {name: 'Games', cells: ['gonggi, playing outside', 'online games']}
     ]},
-    wrap: {en: 'If I could travel in time, I would go to ______. I have never ______. I want to see something ______ there.', ko: '관통 질문으로 돌아가기: 가고 싶은 시대와 하고 싶은 일을 세 문장으로 쓰기'}
+    wrap: {en: 'If I could travel in time, I would go to ______. I have never ______. I want ______ to ______ with me.', ko: '관통 질문으로 돌아가기: 가고 싶은 시대와 하고 싶은 일을 세 문장으로 쓰기'}
   },
 
   quiz: [
@@ -269,9 +282,48 @@ window.LESSON = {
     ['빈칸에 알맞은 것은? “She has lived here ___ 2010.”', ['for', 'since', 'ago', 'during'], 1, 'since + 시작 시점'],
     ['빈칸에 알맞은 것은? “I have ___ this movie twice.”', ['see', 'saw', 'seeing', 'seen'], 3, 'have + 과거분사'],
     ['어법상 틀린 문장은?', ['I have just finished it.', 'Have you ever been there?', 'I have met him yesterday.', 'She has lived here for years.'], 2, 'yesterday와 현재완료는 함께 쓰지 않는다.'],
-    ['어순이 바른 것은?', ['strange something', 'something strange', 'strange thing some', 'some strange thing it'], 1, '-thing + 형용사'],
+    ['빈칸에 알맞은 것은? “I want you ___ back someday.”', ['come', 'coming', 'to come', 'came'], 2, 'want + 목적어 + to부정사'],
     ['민서가 다락방에서 찾은 것은?', ['카메라', '오래된 편지', '흑백 TV', '고양이 인형'], 0, 'a camera with a small note'],
     ['1970년에서 민서가 만난 소녀는?', ['민서의 엄마', '민서의 이모', '민서의 선생님', '민서의 할머니'], 3, '이름표에 할머니의 이름 ‘이영자’'],
     ['할머니가 사진을 간직해 온 기간은?', ['10년', '20년', '30년', '50년'], 3, 'I have kept this photo for fifty years.']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {past: '/pæst/', future: '/ˈfjuːtʃər/', century: '/ˈsentʃəri/', ancient: '/ˈeɪnʃənt/', machine: '/məˈʃiːn/', attic: '/ˈætɪk/', strange: '/streɪndʒ/', flash: '/flæʃ/', disappear: '/ˌdɪsəˈpɪr/', calendar: '/ˈkælɪndər/', memory: '/ˈmeməri/', photo: '/ˈfoʊtoʊ/', wonder: '/ˈwʌndər/', exactly: '/ɪɡˈzæktli/', history: '/ˈhɪstri/', invent: '/ɪnˈvent/', secret: '/ˈsiːkrət/', mysterious: '/mɪˈstɪriəs/', return: '/rɪˈtɜːrn/', experience: '/ɪkˈspɪriəns/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'disappear', ko: '사라지다', parts: [{t: 'dis', k: 'pre', m: '반대'}, {t: 'appear', k: 'root', m: '나타나다'}], family: ['dislike', 'disagree', 'appearance'], note: 'dis- = 반대. 나타나다 ↔ 사라지다.'},
+    {w: 'mysterious', ko: '신비로운', parts: [{t: 'myster(y)', k: 'root', m: '수수께끼'}, {t: 'ious', k: 'suf', m: '~이 가득한'}], family: ['mystery', 'curious', 'famous'], note: 'y로 끝나는 명사 + -ous → -ious (mystery → mysterious).'},
+    {w: 'return', ko: '돌아오다', parts: [{t: 're', k: 'pre', m: '다시, 되돌려'}, {t: 'turn', k: 'root', m: '돌다'}], family: ['recycle', 'replay', 'review'], note: '다시(re) 돌다(turn) → 돌아오다.'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: '과거의 일인데 왜 have(현재형)를 쓸까?',
+    pic: [{en: 'past', ko: '과거의 일'}, {en: '———→', ko: '지금까지 이어짐', arrow: ''}, {en: 'now', ko: '지금 기준', hot: true}],
+    core: '현재완료(have + p.p.)는 “지금”에 서서 과거를 돌아본다. 과거의 일이 지금까지 이어지거나, 지금 그 경험·결과를 “가지고(have)” 있을 때 쓴다.',
+    why: ['경험: ever, never, before / 계속: for, since / 완료: already, just, yet.', 'yesterday, last year, ago처럼 끝난 과거 시점과는 함께 쓰지 않는다.', '의문문: Have you ever ~? — Yes, I have. / No, I haven’t.']
+  };
+  g1.anim = [{title: '과거 + 지금 → 현재완료', states: [
+    {t: 'Minseo/S | loved/V#v | old things/O | as a child | . | / | She | still | loves | them | .', note: '어릴 때부터 + 지금도', ko: '민서는 어릴 때 옛날 물건을 좋아했다. 지금도 좋아한다.'},
+    {t: 'Minseo/S | has always loved/X#v | old things/O | .', note: '과거부터 지금까지 → has + p.p.', ko: '민서는 늘 옛날 물건을 좋아해 왔다.'}]}];
+  g1.contrast = {title: '과거 vs 현재완료', pairs: [
+    {a: 'I {{saw}} that movie last week.', ka: '나는 지난주에 그 영화를 봤다. (끝난 과거 시점)', b: 'I {{have seen}} that movie twice.', kb: '나는 그 영화를 두 번 본 적이 있다. (지금까지의 경험)'}],
+    point: '끝난 때(last week)가 있으면 과거, 지금까지의 경험·계속이면 have + p.p.'};
+  g2.principle = {
+    q: 'want 뒤에 왜 사람(목적어)이 먼저 올까?',
+    pic: [{en: 'I want', ko: '바라는 사람 (나)'}, {en: 'you', ko: '행동할 사람', hot: true}, {en: 'to apologize', ko: '바라는 행동'}],
+    core: 'want to ~는 “내가 하고 싶다”, want + 사람 + to ~는 “그 사람이 하기를 바란다”이다. 행동할 사람이 바뀌면 그 사람을 want와 to 사이에 끼워 넣는다.',
+    why: ['목적어 = to부정사의 행동을 하는 사람 (I want you to go → 가는 사람은 you).', 'ask, tell, expect, allow도 같은 짜임.', 'want that ~ 처럼 that절을 쓰지 않는다.']
+  };
+  g2.anim = [{title: '내가 하고 싶다 → 네가 해 주길 바란다', states: [
+    {t: 'I/S | want/V | to come/X#tv | back/M | .', note: '내가 하고 싶은 일', ko: '나는 돌아오고 싶다.'},
+    {t: 'I/S | want/V | you/O#you | to come/X#tv | back/M | .', note: '행동할 사람(you)을 want와 to 사이에', ko: '나는 네가 돌아오기를 바란다.'}]},
+    {title: '명령문을 전할 때', states: [
+    {t: 'The note/S | said/V | , | “ | Don’t press/V#b | the button twice/O#c | . | ”', note: '쪽지에 쓰인 말 그대로', ko: '쪽지에는 “단추를 두 번 누르지 마시오.”라고 쓰여 있었다.'},
+    {t: 'The note/S | told/V | her/O | not to press/X#b | the button twice/O#c | .', note: 'tell + 목적어 + not to부정사', ko: '쪽지는 그녀에게 단추를 두 번 누르지 말라고 했다.'}]}];
+  g2.contrast = {title: 'want to vs want + 목적어 + to', pairs: [
+    {a: 'I want {{to keep}} the photo.', ka: '나는 그 사진을 간직하고 싶다. (내가 간직한다)', b: 'I want {{you to keep}} the photo.', kb: '나는 네가 그 사진을 간직하기를 원한다. (네가 간직한다)'}],
+    point: '행동할 사람이 다르면 want + 그 사람 + to부정사.'};
+})(window.LESSON);
