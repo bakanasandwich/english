@@ -1,16 +1,22 @@
 /* 고1 공통영어2(동아·이병민) Lesson 3 · Into the Smart Future
-   단원명은 교과서 목차 기준. 본문 주제(인공지능과 함께 사는 미래)와 의사소통 기능·문법은 추정(estimate: true).
-   대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글입니다. */
+   교과서 대조(2026-10): 읽기 주제(Social Media Algorithms: A Double-edged Sword — 알고리즘의 장단점)를 교과서에 맞췄다.
+   의사소통 기능·언어 형식은 교과서 자료를 구하지 못해 단원 주제에 맞춘 추정(estimate: true).
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제로 새로 쓴 글이다. */
 window.LESSON = {
   book: 'h1b-donga', no: 3, estimate: true,
   title: 'Into the Smart Future', ko: '스마트한 미래로',
   bigQ: {en: 'How can we make smart technology work for us, not against us?', ko: '스마트 기술이 우리에게 해가 아니라 도움이 되게 하려면 어떻게 해야 할까?'},
+  align: {
+    tb: {reading: 'Social Media Algorithms: A Double-edged Sword', note: '교과서 읽기는 소셜 미디어 알고리즘의 장점(검색 시간 절약, 관계 유지)과 단점(중독, 필터 버블 등)을 다루는 글. 여기 본문은 같은 주제로 새로 쓴 논설문이다. 의사소통 기능·언어 형식은 교과서 자료가 없어 추정이다.'},
+    std: {vocab: ['10공영2-01-05', '10공영2-02-06'], talk: ['10공영2-01-03', '10공영2-02-04'], grammar: ['10공영2-02-04'], read1: ['10공영2-01-02', '10공영2-01-06'], read2: ['10공영2-01-08', '10공영2-02-04']},
+    forms: ['Modals', 'Inversion']
+  },
   goals: {
-    vocab: ['인공지능·기술과 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 'pre-, auto-, nov- 같은 조각으로 predict, automatic, innovation을 분석할 수 있다.'],
+    vocab: ['알고리즘·소셜 미디어와 관련된 낱말 16개의 뜻과 발음(강세)을 익힌다.', 'pre-, -ize, -ive 같은 조각으로 predict, personalize, addictive를 분석할 수 있다.'],
     talk: ['미래에 일어날 가능성을 말할 수 있다.', '어떤 일에 대한 확신 정도를 표현할 수 있다.'],
     grammar: ['조동사 + have p.p.가 “지금의 판단 + 과거의 일”이라는 원리로 추측·후회를 표현할 수 있다.', '부정어·부사구를 앞으로 보내면 의문문 어순이 된다는 원리로 도치 문장을 이해하고 쓸 수 있다.'],
-    read1: ['인공지능이 일상을 바꾸는 모습과 그 편리함을 파악할 수 있다.'],
-    read2: ['인공지능의 위험과 우리가 갖춰야 할 태도를 정리하고 나의 생각을 영어로 쓸 수 있다.']
+    read1: ['알고리즘이 작동하는 방식과 그 편리함을 파악할 수 있다.'],
+    read2: ['알고리즘의 위험(끝없는 스크롤, 필터 버블, 개인 정보)과 대처법을 정리하고 나의 다짐을 영어로 쓸 수 있다.']
   },
 
   vocab: {
@@ -20,24 +26,24 @@ window.LESSON = {
       {w: 'intelligence', pos: 'n.', ko: '지능', ic: '🧠', ipa: '/ɪnˈtelɪdʒəns/', audio: 'assets/audio/intelligence.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Some animals show great intelligence.', exKo: '어떤 동물들은 뛰어난 지능을 보인다.'},
       {w: 'algorithm', pos: 'n.', ko: '알고리즘(문제 해결 절차)', ic: '🔢', ipa: '/ˈælɡərɪðəm/', audio: 'assets/audio/algorithm.mp3', audioCredit: 'Dcoetzee · CC0 (Wikimedia Commons, US)', ex: 'The algorithm chooses which videos you see.', exKo: '알고리즘이 네가 볼 영상을 고른다.'},
       {w: 'predict', pos: 'v.', ko: '예측하다', ic: '🔮', ipa: '/prɪˈdɪkt/', audio: 'assets/audio/predict.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'It is hard to predict the future.', exKo: '미래를 예측하기는 어렵다.'},
-      {w: 'automatic', pos: 'adj.', ko: '자동의', ic: '⚙️', ipa: '/ˌɔːtəˈmætɪk/', audio: 'assets/audio/automatic.mp3', audioCredit: 'recorded by Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The doors are automatic.', exKo: '그 문들은 자동이다.'},
-      {w: 'device', pos: 'n.', ko: '장치, 기기', ic: '📱', ipa: '/dɪˈvaɪs/', audio: 'assets/audio/device.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'How many devices do you use every day?', exKo: '너는 매일 몇 개의 기기를 쓰니?'},
+      {w: 'recommend', pos: 'v.', ko: '추천하다', ic: '👍', ipa: '/ˌrekəˈmend/', ex: 'The app recommends videos based on what I watched.', exKo: '그 앱은 내가 본 것을 바탕으로 영상을 추천한다.'},
+      {w: 'content', pos: 'n.', ko: '(온라인) 콘텐츠, 내용', ic: '🎞️', ipa: '/ˈkɑːntent/', ex: 'Algorithms decide which content we see first.', exKo: '알고리즘은 우리가 어떤 콘텐츠를 먼저 볼지 정한다.'},
       {w: 'privacy', pos: 'n.', ko: '사생활, 개인 정보', ic: '🔒', ipa: '/ˈpraɪvəsi/', ex: 'We should protect our privacy online.', exKo: '우리는 온라인에서 개인 정보를 지켜야 한다.'},
       {w: 'bias', pos: 'n.', ko: '편향, 편견', ic: '⚖️', ipa: '/ˈbaɪəs/', audio: 'assets/audio/bias.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Data can contain human bias.', exKo: '데이터에는 인간의 편향이 담길 수 있다.'},
       {w: 'reliable', pos: 'adj.', ko: '믿을 만한', ic: '✅', ipa: '/rɪˈlaɪəbl/', audio: 'assets/audio/reliable.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Is this information reliable?', exKo: '이 정보는 믿을 만한가?'},
-      {w: 'replace', pos: 'v.', ko: '대신하다, 교체하다', ic: '🔄', ipa: '/rɪˈpleɪs/', audio: 'assets/audio/replace.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Will robots replace teachers?', exKo: '로봇이 선생님을 대신할까?'},
-      {w: 'innovation', pos: 'n.', ko: '혁신', ic: '💡', ipa: '/ˌɪnəˈveɪʃn/', ex: 'The smartphone was a great innovation.', exKo: '스마트폰은 위대한 혁신이었다.'},
+      {w: 'previous', pos: 'adj.', ko: '이전의', ic: '⏪', ipa: '/ˈpriːviəs/', ex: 'It looks at your previous activity.', exKo: '그것은 너의 이전 활동 기록을 살펴본다.'},
+      {w: 'addictive', pos: 'adj.', ko: '중독성 있는', ic: '🌀', ipa: '/əˈdɪktɪv/', ex: 'Short videos can be addictive.', exKo: '짧은 영상은 중독성이 있을 수 있다.'},
       {w: 'convenient', pos: 'adj.', ko: '편리한', ic: '🛋️', ipa: '/kənˈviːniənt/', audio: 'assets/audio/convenient.mp3', audioCredit: 'Dvortygirl · Public domain (Wikimedia Commons, US)', ex: 'Online banking is very convenient.', exKo: '인터넷 뱅킹은 매우 편리하다.'},
-      {w: 'ethical', pos: 'adj.', ko: '윤리적인', ic: '🧭', ipa: '/ˈeθɪkl/', audio: 'assets/audio/ethical.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Using AI raises ethical questions.', exKo: 'AI 사용은 윤리적 질문을 불러일으킨다.'},
+      {w: 'personalize', pos: 'v.', ko: '개인 맞춤으로 하다', ic: '🎯', ipa: '/ˈpɜːrsənəlaɪz/', ex: 'The app personalizes your feed.', exKo: '그 앱은 너의 피드를 개인 맞춤으로 만든다.'},
       {w: 'accurate', pos: 'adj.', ko: '정확한', ic: '🎯', ipa: '/ˈækjərət/', audio: 'assets/audio/accurate.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The translation was not accurate.', exKo: '그 번역은 정확하지 않았다.'},
-      {w: 'efficient', pos: 'adj.', ko: '효율적인', ic: '⚡', ipa: '/ɪˈfɪʃnt/', audio: 'assets/audio/efficient.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Smart lights make energy use more efficient.', exKo: '스마트 조명은 에너지 사용을 더 효율적으로 만든다.'},
+      {w: 'diverse', pos: 'adj.', ko: '다양한', ic: '🌈', ipa: '/daɪˈvɜːrs/', ex: 'Follow people with diverse opinions.', exKo: '다양한 의견을 가진 사람들을 팔로우하라.'},
       {w: 'responsibility', pos: 'n.', ko: '책임', ic: '🤲', ipa: '/rɪˌspɑːnsəˈbɪləti/', audio: 'assets/audio/responsibility.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Who has responsibility for an AI’s mistake?', exKo: 'AI의 실수에 대한 책임은 누구에게 있을까?'}
     ],
     morph: [
       {w: 'predict', ko: '예측하다', parts: [{t: 'pre', k: 'pre', m: '미리'}, {t: 'dict', k: 'root', m: '말하다'}], family: ['dictionary', 'predictable', 'contradict'], note: '“미리 말하다” → 예측하다. dict = 말하다(dictionary: 말 모음).'},
-      {w: 'automatic', ko: '자동의', parts: [{t: 'auto', k: 'pre', m: '스스로'}, {t: 'mat', k: 'root', m: '움직이다, 생각하다'}, {t: 'ic', k: 'suf', m: '~의 (형용사)'}], family: ['automobile', 'autograph', 'autonomous'], note: 'auto- = 스스로(automobile: 스스로 움직이는 것 → 자동차).'},
-      {w: 'innovation', ko: '혁신', parts: [{t: 'in', k: 'pre', m: '안으로'}, {t: 'nov', k: 'root', m: '새로운'}, {t: 'ation', k: 'suf', m: '~것 (명사)'}], family: ['novel (새로운; 소설)', 'renovate', 'novice'], note: 'nov = 새로운. 공통영어1 2과의 novel(소설)도 원래 “새로운 이야기”라는 뜻이었다.'},
-      {w: 'unreliable', ko: '믿을 수 없는', parts: [{t: 'un', k: 'pre', m: '아닌'}, {t: 'reli', k: 'root', m: '의지하다 (rely)'}, {t: 'able', k: 'suf', m: '~할 수 있는'}], family: ['rely', 'reliable', 'reliance'], note: 'y로 끝나는 동사 + able → y를 i로(rely → reliable).'}
+      {w: 'unreliable', ko: '믿을 수 없는', parts: [{t: 'un', k: 'pre', m: '아닌'}, {t: 'reli', k: 'root', m: '의지하다 (rely)'}, {t: 'able', k: 'suf', m: '~할 수 있는'}], family: ['rely', 'reliable', 'reliance'], note: 'y로 끝나는 동사 + able → y를 i로(rely → reliable).'},
+      {w: 'personalize', ko: '개인 맞춤으로 하다', parts: [{t: 'person', k: 'root', m: '사람'}, {t: 'al', k: 'suf', m: '~의 (형용사)'}, {t: 'ize', k: 'suf', m: '~하게 만들다 (동사)'}], family: ['personal', 'realize', 'organize'], note: '사람(person) → 개인의(personal) → 개인에게 맞추다(personalize). -ize는 동사를 만든다.'},
+      {w: 'addictive', ko: '중독성 있는', parts: [{t: 'addict', k: 'root', m: '빠지게 하다'}, {t: 'ive', k: 'suf', m: '~하는 성질의 (형용사)'}], family: ['addiction', 'addicted', 'active'], note: '-ive = ~하는 성질이 있는. addiction 중독, be addicted to ~에 중독되다.'}
     ],
     phrases: [
       {w: 'rely on', ko: '~에 의존하다', ex: 'Many students rely on AI for homework.', exKo: '많은 학생들이 숙제에 AI를 의존한다.'},
@@ -51,7 +57,7 @@ window.LESSON = {
       {a: 'artificial', b: 'natural', rel: '반대말'},
       {a: 'accurate', b: 'inaccurate', rel: '반대말 (in-)'},
       {a: 'reliable', b: 'unreliable', rel: '반대말 (un-)'},
-      {a: 'manual', b: 'automatic', rel: '수동 / 자동'},
+      {a: 'diverse', b: 'similar', rel: '반대말'},
       {a: 'convenience', b: 'risk', rel: '편리함 / 위험'}
     ],
     wrap: {en: 'One way AI makes my life convenient is ______. One risk is ______.', ko: '오늘 배운 낱말로 AI의 편리함과 위험을 한 문장씩 쓰기'}
@@ -230,83 +236,72 @@ window.LESSON = {
   },
 
   reading: {
-    title: 'Living with Smart Machines', kind: '논설문', cover: 'Smart', coverKo: '똑똑한 기계와의 동거', cover2: 'Human', coverKo2: '결정은 사람의 몫',
+    title: 'The Algorithm Knows You — Too Well?', kind: '논설문', cover: 'Feed', coverKo: '알고리즘이 고른 화면', cover2: 'Choice', coverKo2: '결정은 사람의 몫',
     before: [
-      {q: 'What is one thing AI does for you every day?', a: '영상 추천, 번역, 길 찾기, 자동 완성 등'},
-      {q: 'Can AI make mistakes? Give an example.', a: '틀린 정보를 자신 있게 말하기, 음성 인식 오류 등'}
+      {q: 'Why do you think your video app shows you the videos it shows?', a: '내가 전에 본 영상, 누른 좋아요, 검색 기록 때문'},
+      {q: 'Have you ever watched videos for much longer than you planned?', a: '추천 영상을 계속 누르다가 시간 가는 줄 몰랐던 경험'}
     ],
-    gloss: {'great-grandparents': '증조부모', 'recommendation': '추천', 'self-driving': '자율 주행의', 'thermostat': '온도 조절기', 'tutor': '개인 교사', 'confidently': '자신 있게', 'fact-check': '사실을 확인하다', 'training data': '학습 데이터', 'unfair': '불공정한', 'automated': '자동화된', 'creativity': '창의성', 'passengers': '승객'},
+    gloss: {'feed': '(SNS의) 게시물 목록', 'recommendation': '추천', 'previous activity': '이전 활동 기록', 'endless scroll': '끝없는 스크롤', 'filter bubble': '필터 버블(비슷한 정보에만 갇힘)', 'echo chamber': '반향실(같은 의견만 되울림)', 'personal data': '개인 정보', 'search engine': '검색 엔진'},
     paras: [
-      {who: '', en: 'Imagine showing your phone to your great-grandparents. You talk to it, and it answers. It translates languages, recognizes faces, and tells you which way to walk. They could never have imagined such a device. Yet for us, it is simply part of everyday life. Artificial intelligence, or AI, has quietly moved into our homes, schools, and pockets.',
-       ko: '증조부모님께 당신의 휴대전화를 보여 드린다고 상상해 보라. 당신이 말을 걸면 그것이 대답한다. 언어를 번역하고, 얼굴을 알아보고, 어느 쪽으로 걸어가야 하는지 알려 준다. 그분들은 그런 기기를 결코 상상하지 못하셨을 것이다. 하지만 우리에게 그것은 그저 일상의 일부다. 인공지능, 즉 AI는 조용히 우리의 집과 학교와 주머니 속으로 들어왔다.',
-       check: {q: 'What can the phone do?', a: 'It answers, translates languages, recognizes faces, and gives directions.'}, think: '30년 뒤 나의 손주는 지금의 나를 어떻게 볼까?',
-       bg: {src: 'h1/donga2/l3/img/r-p0.jpg', about: '스마트폰을 든 손'}},
-      {who: 'Smart Suggestions', en: 'Every time you open a video app, an algorithm decides what to show you. Not only does it recommend songs and videos, but it also predicts what you might want to buy next. These recommendations are convenient. They save time and introduce us to new things. However, they also shape what we see, often without our noticing.',
-       ko: '영상 앱을 열 때마다 알고리즘이 무엇을 보여 줄지 결정한다. 그것은 노래와 영상을 추천할 뿐만 아니라, 당신이 다음에 무엇을 사고 싶어 할지도 예측한다. 이런 추천은 편리하다. 시간을 아껴 주고 새로운 것을 소개해 준다. 하지만 그것은 또한 우리가 보는 것을 만들어 내며, 우리는 종종 그것을 알아차리지 못한다.',
-       check: {q: 'What does the algorithm predict?', a: 'What you might want to buy next.'}, think: '추천 영상만 보면 어떤 일이 생길까?',
-       bg: {src: 'h1/donga2/l3/img/r-p1.jpg', about: '노트북 화면'}},
-      {who: 'Smart Homes, Smart Cars', en: 'In smart homes, lights turn off by themselves when you leave a room, and thermostats learn when you usually wake up. Self-driving cars are being tested on real roads in several countries. Little did people know thirty years ago how quickly machines would learn to do these things.',
-       ko: '스마트 홈에서는 방을 나가면 불이 저절로 꺼지고, 온도 조절기는 당신이 보통 언제 일어나는지 학습한다. 자율 주행차는 여러 나라의 실제 도로에서 시험되고 있다. 30년 전 사람들은 기계가 이런 일을 얼마나 빨리 배우게 될지 거의 알지 못했다.',
-       check: {q: 'What does a smart thermostat learn?', a: 'When you usually wake up.'}, think: '스마트 홈에서 살고 싶은가? 왜 그런가?',
-       bg: {src: 'h1/donga2/l3/img/r-p2.jpg', about: '도로 위의 자동차'}},
-      {who: 'A Tutor in Your Pocket', en: 'AI is also changing how we learn. A student who is stuck on a math problem can ask an AI tutor for a hint at midnight. A student who has just moved from another country can use AI to translate class notes. For many learners, AI has opened doors that would have been closed before.',
-       ko: 'AI는 우리가 배우는 방식도 바꾸고 있다. 수학 문제에서 막힌 학생은 한밤중에도 AI 튜터에게 힌트를 요청할 수 있다. 다른 나라에서 막 이사 온 학생은 AI로 수업 필기를 번역할 수 있다. 많은 학습자에게 AI는 전에는 닫혀 있었을 문을 열어 주었다.',
-       check: {q: 'How can AI help a student who has just moved from another country?', a: 'It can translate class notes.'}, think: '나는 공부할 때 AI를 어떻게 쓰고 있나?',
-       bg: {src: 'h1/donga2/l3/img/r-p3.jpg', about: '책상에서 공부하는 학생'}},
-      {who: 'Confidently Wrong', en: 'But AI is not always right. Some AI chatbots give wrong answers in a very confident tone, and many users believe them. A student who copies such an answer without checking might get a poor grade — or worse, spread false information. Looking back, that student should have fact-checked the answer with a reliable source.',
-       ko: '하지만 AI가 늘 옳은 것은 아니다. 어떤 AI 챗봇은 아주 자신 있는 말투로 틀린 답을 하고, 많은 사용자가 그것을 믿는다. 그런 답을 확인 없이 베끼는 학생은 나쁜 점수를 받거나, 더 나쁘게는 거짓 정보를 퍼뜨릴 수도 있다. 돌이켜 보면, 그 학생은 믿을 만한 자료로 그 답을 확인했어야 했다.',
-       check: {q: 'What should the student have done?', a: 'The student should have fact-checked the answer with a reliable source.'}, think: '자신 있게 말하는 정보는 왜 더 믿기 쉬울까?',
-       bg: {src: 'h1/donga2/l3/img/r-p4.jpg', about: '물음표'}},
-      {who: 'Hidden Bias', en: 'AI learns from huge amounts of data created by humans. If that data contains unfair ideas about certain groups of people, the AI may learn and repeat them. Some systems that judged job applications, for example, have been criticized for treating some applicants unfairly. The machines did not intend to be unfair; they simply copied patterns from the past.',
-       ko: 'AI는 인간이 만든 방대한 데이터로 학습한다. 그 데이터에 특정 집단에 대한 불공정한 생각이 담겨 있다면, AI는 그것을 배우고 되풀이할 수 있다. 예를 들어 입사 지원서를 평가하던 일부 시스템은 일부 지원자를 불공정하게 대한다는 비판을 받았다. 기계가 불공정하려고 한 것은 아니었다. 그저 과거의 패턴을 따라 했을 뿐이다.',
-       check: {q: 'Why can AI be unfair?', a: 'Because it learns from human data that may contain unfair ideas.'}, think: '기계의 불공정함은 누구의 책임일까?',
-       bg: {src: 'h1/donga2/l3/img/r-p5.jpg', about: '서버실의 데이터 장비'}},
-      {who: 'Working Together', en: 'Will AI take over our jobs? Some tasks, especially repetitive ones, are likely to be automated. But new jobs will also appear, and many jobs will change rather than disappear. Only by learning to work with AI can we stay ahead. Skills that machines find difficult — creativity, empathy, and asking good questions — will become even more valuable.',
-       ko: 'AI가 우리의 일자리를 빼앗을까? 일부 업무, 특히 반복적인 일은 자동화될 가능성이 크다. 하지만 새로운 일자리도 생겨날 것이고, 많은 일자리가 사라지기보다는 변할 것이다. AI와 함께 일하는 법을 배워야만 우리는 앞서 나갈 수 있다. 기계가 어려워하는 능력, 즉 창의성, 공감, 좋은 질문을 던지는 능력은 더욱 가치 있어질 것이다.',
-       check: {q: 'What skills will become more valuable?', a: 'Creativity, empathy, and asking good questions.'}, think: 'AI가 대신할 수 없는 나만의 능력은 무엇일까?',
-       bg: {src: 'h1/donga2/l3/img/r-p6.jpg', about: '로봇 팔'}},
-      {who: 'Our Choice', en: 'The future is not something that simply happens to us. People design AI, choose the data it learns from, and decide how it is used. Smart machines can make our lives easier, safer, and more efficient, but only if we stay curious, careful, and responsible. The smartest part of a smart future should still be us.',
-       ko: '미래는 그저 우리에게 일어나는 무언가가 아니다. 사람이 AI를 설계하고, 그것이 학습할 데이터를 고르고, 그것이 어떻게 쓰일지 결정한다. 똑똑한 기계는 우리의 삶을 더 쉽고 안전하고 효율적으로 만들 수 있다. 하지만 그것은 우리가 호기심을 갖고, 신중하고, 책임감을 가질 때에만 가능하다. 스마트한 미래에서 가장 똑똑한 부분은 여전히 우리여야 한다.',
-       check: {q: 'Who decides how AI is used?', a: 'People do.'}, think: '“가장 똑똑한 부분은 우리여야 한다”는 말은 무슨 뜻일까?',
-       bg: {src: 'h1/donga2/l3/img/r-p7.jpg', about: '도시의 야경'}}
+      {who: '', en: 'Every time you open a social media app, an algorithm decides what you will see first. It looks at your previous activity — the videos you watched, the posts you liked, and even how long you stopped on each picture. Then it fills your feed with content you are likely to enjoy. Like a sword with two edges, this smart system can help us, but it can also hurt us.',
+       ko: '소셜 미디어 앱을 열 때마다 알고리즘이 무엇을 먼저 보여 줄지 정한다. 알고리즘은 이전 활동 기록, 곧 당신이 본 영상, 좋아요를 누른 게시물, 심지어 사진마다 얼마나 오래 멈췄는지까지 살펴본다. 그런 다음 당신이 즐길 만한 콘텐츠로 피드를 채운다. 양날의 칼처럼 이 똑똑한 시스템은 우리를 도울 수도 있지만 해칠 수도 있다.',
+       check: {q: 'What does the algorithm look at?', a: 'Our previous activity (videos we watched, posts we liked, how long we stopped).'}, think: '내 피드에는 어떤 콘텐츠가 가장 많이 나오나?'},
+      {who: 'A Helpful Guide', en: 'There is far more content online than anyone could ever read. Without algorithms, we would have to search through it all by ourselves. Not only do they save our time, but they also introduce us to songs, books, and creators we might never have found on our own.',
+       ko: '온라인에는 누구도 다 읽을 수 없을 만큼 훨씬 많은 콘텐츠가 있다. 알고리즘이 없다면 우리는 그 모든 것을 혼자 뒤져야 할 것이다. 알고리즘은 시간을 절약해 줄 뿐만 아니라, 우리가 혼자서는 결코 찾지 못했을지도 모르는 노래, 책, 창작자를 소개해 준다.',
+       check: {q: 'What two benefits of algorithms does the writer mention?', a: 'They save time and introduce us to new songs, books, and creators.'}, think: '추천 덕분에 좋아하게 된 노래나 채널이 있나?'},
+      {who: 'Staying Connected', en: 'Algorithms also help us stay close to the people we care about. They put a friend’s birthday post or a cousin’s new baby photo at the top of our feed. Thanks to them, we may have heard news from old friends that we would otherwise have missed.',
+       ko: '알고리즘은 우리가 아끼는 사람들과 가깝게 지내도록 돕기도 한다. 친구의 생일 게시물이나 사촌의 아기 사진을 피드 맨 위에 올려 준다. 알고리즘 덕분에, 그렇지 않았다면 놓쳤을 옛 친구들의 소식을 우리는 들을 수 있었을 것이다.',
+       check: {q: 'How do algorithms help us stay connected?', a: 'They put posts from friends and family at the top of our feed.'}, think: '알고리즘 덕분에 알게 된 소식이 있나?'},
+      {who: 'The Endless Scroll', en: 'However, the same system is designed to keep us watching. Each video is followed by another one that is just as interesting. Many users say they opened an app for “just five minutes” and looked up an hour later. They should have stopped earlier, but the feed never ends.',
+       ko: '하지만 같은 시스템이 우리가 계속 보도록 설계되어 있다. 영상 하나가 끝나면 그만큼 흥미로운 영상이 또 이어진다. 많은 사용자가 “딱 5분만” 하려고 앱을 열었다가 고개를 들어 보니 한 시간이 지나 있었다고 말한다. 더 일찍 멈췄어야 했지만, 피드는 결코 끝나지 않는다.',
+       check: {q: 'What is the system designed to do?', a: 'To keep us watching.'}, think: '나도 “5분만” 하다가 오래 본 적이 있나?'},
+      {who: 'The Filter Bubble', en: 'Algorithms show us more of what we already like. Over time, we see fewer and fewer different opinions. This is called a filter bubble. Inside it, we may believe that everyone thinks the way we do. Rarely do we notice that the bubble is there at all.',
+       ko: '알고리즘은 우리가 이미 좋아하는 것을 더 많이 보여 준다. 시간이 지날수록 우리는 다른 의견을 점점 덜 보게 된다. 이것을 필터 버블이라고 부른다. 그 안에서 우리는 모든 사람이 나처럼 생각한다고 믿게 될지도 모른다. 우리는 거품이 거기 있다는 것조차 좀처럼 알아차리지 못한다.',
+       check: {q: 'What is a filter bubble?', a: 'A situation where we see fewer and fewer different opinions because algorithms show more of what we already like.'}, think: '내 피드에서 반대 의견을 본 적이 있나?'},
+      {who: 'Your Data', en: 'To make good guesses, algorithms need a great deal of personal data. Every click, search, and pause is recorded. Most users have agreed to share this information, but few of them have read what they agreed to. They might have shared more than they wanted to.',
+       ko: '좋은 짐작을 하려면 알고리즘에는 엄청난 양의 개인 정보가 필요하다. 모든 클릭, 검색, 멈춤이 기록된다. 대부분의 사용자는 이 정보를 공유하는 데 동의했지만, 무엇에 동의했는지 읽어 본 사람은 거의 없다. 그들은 원했던 것보다 더 많이 공유했을지도 모른다.',
+       check: {q: 'What do algorithms need to make good guesses?', a: 'A great deal of personal data.'}, think: '앱 가입할 때 약관을 읽어 본 적이 있나?'},
+      {who: 'Taking Control', en: 'So how can we use algorithms without being used by them? Set a time limit before you open an app. Follow people with views different from yours. Search for information yourself instead of waiting for it to appear. Only when we make these choices can we stay in control.',
+       ko: '그렇다면 알고리즘에 이용당하지 않고 알고리즘을 이용하려면 어떻게 해야 할까? 앱을 열기 전에 시간제한을 정하라. 나와 생각이 다른 사람들도 팔로우하라. 정보가 나타나기를 기다리지 말고 스스로 찾아보라. 이런 선택을 할 때에만 우리는 주도권을 지킬 수 있다.',
+       check: {q: 'What can we do to stay in control?', a: 'Set a time limit, follow people with different views, and search for information ourselves.'}, think: '셋 중 내가 오늘 바로 할 수 있는 것은?'},
+      {who: 'Our Choice', en: 'An algorithm is a tool, not a master. It knows what we clicked yesterday, but it does not know who we want to become tomorrow. That decision is still ours.',
+       ko: '알고리즘은 도구이지 주인이 아니다. 그것은 우리가 어제 무엇을 눌렀는지는 알지만, 우리가 내일 어떤 사람이 되고 싶은지는 모른다. 그 결정은 여전히 우리의 몫이다.',
+       check: {q: 'What does the algorithm not know?', a: 'Who we want to become tomorrow.'}, think: '알고리즘이 모르는 나에 대해 한 문장으로 쓴다면?'}
     ],
-    coverImg: {src: 'h1/donga2/l3/img/r-cover.jpg'},
-    coverImg2: {src: 'h1/donga2/l3/img/r-cover2.jpg'},
     split: 4,
-    next: 'AI가 늘 옳을까?\n우리는 무엇을 조심해야 할까?',
-    recap: {q: 'AI는 우리의 삶을 어떻게 바꾸었나?', items: [{k: 'SUGGESTIONS', v: 'recommends songs and predicts what we will buy'}, {k: 'HOMES & CARS', v: 'smart lights, learning thermostats, self-driving cars'}, {k: 'LEARNING', v: 'AI tutors and translation for students'}]},
+    next: '편리한 알고리즘에는\n어떤 위험이 숨어 있을까?',
+    recap: {q: '알고리즘은 우리를 어떻게 도울까?', items: [{k: 'HOW IT WORKS', v: 'looks at our previous activity · fills our feed'}, {k: 'HELPFUL GUIDE', v: 'saves time · introduces new songs, books, and creators'}, {k: 'CONNECTED', v: 'friends’ and family’s posts at the top'}]},
     tf: [
-      {p: 0, s: 'Our great-grandparents used AI every day.', a: false, why: '그런 기기를 상상하지 못했다.'},
-      {p: 1, s: 'Algorithms only recommend songs.', a: false, why: '살 물건도 예측한다.'},
-      {p: 2, s: 'Self-driving cars are being tested on real roads.', a: true},
-      {p: 3, s: 'AI can help students who have just moved from another country.', a: true},
-      {p: 4, s: 'AI chatbots always give correct answers.', a: false, why: '자신 있는 말투로 틀린 답을 하기도 한다.'},
-      {p: 5, s: 'AI can repeat unfair ideas found in its data.', a: true},
-      {p: 6, s: 'The writer thinks all jobs will disappear.', a: false, why: '많은 일자리는 사라지기보다 변할 것이다.'},
-      {p: 7, s: 'The writer believes people decide how AI is used.', a: true}
+      {p: 0, s: 'The algorithm looks at how long we stop on each picture.', a: true},
+      {p: 1, s: 'Without algorithms, searching would be easier.', a: false, why: '혼자 다 뒤져야 할 것이다.'},
+      {p: 2, s: 'Algorithms can help us hear news from old friends.', a: true},
+      {p: 3, s: 'The feed is designed to keep us watching.', a: true},
+      {p: 4, s: 'Inside a filter bubble, we see many different opinions.', a: false, why: '다른 의견을 점점 덜 본다.'},
+      {p: 5, s: 'Most users have read what they agreed to.', a: false, why: '읽어 본 사람은 거의 없다.'},
+      {p: 7, s: 'The writer thinks algorithms should make our decisions.', a: false, why: '결정은 여전히 우리의 몫이다.'}
     ],
     key: [
-      {en: 'They {{could never have imagined}} such a device.', note: 'could have p.p. (~할 수 있었을 것이다) + never', g: 'g1'},
-      {en: '{{Not only does it}} recommend songs and videos, but it also predicts …', note: 'Not only 도치 (does + 주어 + 동사원형)', g: 'g2'},
-      {en: '{{Little did people know}} thirty years ago how quickly machines would learn.', note: 'Little 도치', g: 'g2'},
-      {en: 'AI has opened doors that {{would have been}} closed before.', note: '조동사 + have p.p. (가정의 결과)', g: 'g1'},
-      {en: 'That student {{should have fact-checked}} the answer.', note: 'should have p.p. (했어야 했는데 안 함)', g: 'g1'},
-      {en: '{{Only by learning}} to work with AI {{can we}} stay ahead.', note: 'Only + 부사구 도치 (can + 주어)', g: 'g2'}
+      {en: '{{Not only do they}} save our time, but they also introduce us to new songs.', note: 'Not only 도치 (do + 주어 + 동사원형)', g: 'g2'},
+      {en: '… creators we {{might never have found}} on our own.', note: '조동사 + have p.p. (~했을지도 모른다)', g: 'g1'},
+      {en: 'We {{may have heard}} news that we {{would otherwise have missed}}.', note: 'may have p.p. / would have p.p.', g: 'g1'},
+      {en: 'They {{should have stopped}} earlier, but the feed never ends.', note: 'should have p.p. (했어야 했는데 안 함)', g: 'g1'},
+      {en: '{{Rarely do we notice}} that the bubble is there at all.', note: 'Rarely 도치', g: 'g2'},
+      {en: '{{Only when we make}} these choices {{can we}} stay in control.', note: 'Only + 부사절 도치 (can + 주어)', g: 'g2'}
     ],
-    summary: {text: 'AI has moved into our everyday lives. Not only does it {{recommend}} songs, but it also predicts what we will buy. It helps students learn, but it can be confidently {{wrong}}, so we should always {{fact-check}} its answers. AI can also repeat human {{bias}} from its data. Only by staying curious and {{responsible}} can we make smart machines work for us.'},
-    order: ['A student asks an AI chatbot a question.', 'The chatbot gives a confident but wrong answer.', 'The student copies the answer without checking.', 'The student realizes he should have fact-checked.'],
-    chart: {title: 'AI: BENEFITS & RISKS', ko: 'AI의 편리함과 위험 정리', cols: ['Benefit', 'Risk'], note: '표를 보고 “Not only does AI ~, but it also ~.” 도치 문장과 “We should have ~.” 문장으로 말하게 한다.', rows: [
-      {name: 'Recommendations', cells: ['save time', 'shape what we see']},
-      {name: 'AI tutors', cells: ['help at any time', 'confidently wrong answers']},
-      {name: 'Data', cells: ['learns quickly', 'repeats human bias']},
-      {name: 'Automation', cells: ['efficient work', 'some jobs change']}
+    summary: {text: 'Social media {{algorithms}} decide what we see by looking at our previous activity. Not only do they save time, but they also help us stay {{connected}}. However, they are designed to keep us {{watching}}, they can trap us in a filter {{bubble}}, and they collect our personal {{data}}. Only when we set limits and search for ourselves can we stay in {{control}}.'},
+    order: ['You open an app for “just five minutes.”', 'The algorithm shows one interesting video after another.', 'You look up an hour later.', 'You realize you should have stopped earlier.'],
+    chart: {title: 'A DOUBLE-EDGED SWORD', ko: '알고리즘의 양날 정리', cols: ['Helpful edge', 'Harmful edge'], note: '표를 보고 “Not only do algorithms ~, but they also ~.” 도치 문장과 “We should have ~.” 문장으로 말하게 한다.', rows: [
+      {name: 'Time', cells: ['saves search time', 'endless scroll wastes time']},
+      {name: 'Content', cells: ['new songs and creators', 'filter bubble']},
+      {name: 'People', cells: ['news from friends', 'only similar opinions']},
+      {name: 'Data', cells: ['better guesses', 'privacy risk']}
     ]},
-    wrap: {en: 'To make AI work for us, we should ______. Only by ______ can we ______.', ko: '관통 질문으로 돌아가기: AI를 현명하게 쓰기 위한 나의 제안 쓰기'}
+    wrap: {en: 'To use algorithms wisely, I will ______. Only when ______ can we ______.', ko: '관통 질문으로 돌아가기: 알고리즘을 현명하게 쓰기 위한 나의 다짐 쓰기'}
   },
 
   quiz: [
     ['“예측하다”를 뜻하는 낱말은?', ['replace', 'predict', 'protect', 'produce'], 1, 'predict'],
-    ['“편향, 편견”을 뜻하는 낱말은?', ['bias', 'device', 'privacy', 'innovation'], 0, 'bias'],
+    ['“편향, 편견”을 뜻하는 낱말은?', ['bias', 'content', 'privacy', 'feed'], 0, 'bias'],
     ['predict의 pre-가 뜻하는 것은?', ['스스로', '미리', '다시', '아닌'], 1, 'pre- = 미리'],
     ['reliable의 반대말은?', ['unreliable', 'irreliable', 'disreliable', 'nonreliable'], 0, 'un- + reliable'],
     ['가능성을 말하는 표현은?', ['I doubt that.', 'It’s likely to rain.', 'I’m certain.', 'Are you sure?'], 1, 'be likely to'],
@@ -316,9 +311,9 @@ window.LESSON = {
     ['어법상 틀린 문장은?', ['He must have left.', 'She may have forgotten.', 'The AI must made a mistake.', 'We could have won.'], 2, 'must have made'],
     ['빈칸에 알맞은 것은? “Never ____ such a smart robot.”', ['I have seen', 'have I seen', 'I seen have', 'seen I have'], 1, 'Never + have + I'],
     ['빈칸에 알맞은 것은? “Not only ____ fast, but it is also cheap.”', ['it is', 'is it', 'does it', 'it does'], 1, 'be동사 도치: is it'],
-    ['AI 추천의 위험으로 글에 나온 것은?', ['너무 비싸다', '우리가 보는 것을 만들어 낸다', '느리다', '소리가 크다'], 1, 'shape what we see'],
-    ['AI가 불공정할 수 있는 까닭은?', ['기계가 나빠서', '사람이 만든 데이터의 편향을 배워서', '전기가 부족해서', '규칙이 없어서'], 1, 'learns from human data'],
-    ['더 가치 있어질 능력이 아닌 것은?', ['창의성', '공감', '좋은 질문하기', '반복 작업'], 3, '반복 작업은 자동화될 가능성이 크다'],
-    ['글쓴이의 주장으로 알맞은 것은?', ['AI를 쓰지 말아야 한다', '사람이 AI를 책임 있게 설계하고 써야 한다', 'AI가 모든 결정을 해야 한다', '미래는 예측할 수 없다'], 1, 'People design AI … decide how it is used']
+    ['알고리즘의 장점으로 글에 나온 것은?', ['개인 정보를 지켜 준다', '혼자서는 찾지 못했을 콘텐츠를 소개해 준다', '다른 의견을 많이 보여 준다', '사용 시간을 줄여 준다'], 1, 'introduce us to songs, books, and creators we might never have found'],
+    ['필터 버블이란?', ['좋아하는 것만 보다가 다른 의견을 점점 덜 보게 되는 것', '광고가 너무 많은 것', '친구 소식을 놓치는 것', '영상이 끝나지 않는 것'], 0, 'we see fewer and fewer different opinions'],
+    ['주도권을 지키는 방법이 아닌 것은?', ['앱을 열기 전에 시간제한 정하기', '생각이 다른 사람도 팔로우하기', '정보를 스스로 찾아보기', '추천 영상만 계속 보기'], 3, 'Set a time limit … Follow people with views different from yours … Search for information yourself'],
+    ['글쓴이의 주장으로 알맞은 것은?', ['알고리즘을 쓰지 말아야 한다', '알고리즘은 도구일 뿐, 결정은 우리의 몫이다', '알고리즘은 늘 옳다', '개인 정보는 모두 공개해야 한다'], 1, 'An algorithm is a tool, not a master … That decision is still ours.']
   ]
 };
