@@ -1,285 +1,310 @@
 /* 중2 영어(동아·윤정미) Lesson 1 · The Future Is in Our Hands
-   단원명은 교과서 목차 기준. 대화문·읽기 글은 교과서 원문이 아니라 단원 주제에 맞춰 새로 쓴 글입니다.
-   의사소통 기능과 문법은 교과서 구성표 확인 전 추정(estimate: true).
-   문장 속 {{ }}는 핵심 표현(슬라이드·학습지에서 빈칸)입니다. */
+   교과서 대조(2026-10): 의사소통 기능(희망 표현하기 · 안심시키기), 언어 형식(to부정사 형용사적 용법 · make + 목적어 + 형용사),
+   읽기 주제(Live Freely and Happily Ever After! — 십대가 NGO 활동으로 동물을 자연으로 돌려보내는 블로그), 단원 어휘를 교과서 본문 어휘와 맞췄다.
+   대화문·읽기 글은 저작권 때문에 교과서 원문을 싣지 않고, 같은 주제·같은 언어 형식·교과서 어휘로 새로 쓴 글이다. */
 window.LESSON = {
-  book: 'm2-donga', no: 1, estimate: true,
+  book: 'm2-donga', no: 1,
   title: 'The Future Is in Our Hands', ko: '미래는 우리 손에',
-  bigQ: {en: 'What can we do for our planet today?', ko: '오늘 우리가 지구를 위해 할 수 있는 일은?'},
+  bigQ: {en: 'What can teens do to make the world better?', ko: '십대는 세상을 더 낫게 만들기 위해 무엇을 할 수 있을까?'},
+  align: {
+    tb: {reading: 'Live Freely and Happily Ever After!', funcs: ['희망 표현하기', '안심시키기'], forms: ['to부정사 형용사적 용법 (chances to see)', 'make + 목적어 + 형용사'],
+      note: '교과서 읽기는 제주에 사는 십대가 돌고래 보호 NGO에 가입해 해변 청소, 훈련 보조를 하고 수족관 돌고래를 바다로 돌려보내는 과정을 쓴 블로그. 여기 본문은 야생동물 구조 NGO가 다친 수리부엉이를 숲으로 돌려보내는 이야기로 새로 쓴 블로그다.'},
+    std: {vocab: ['9영01-01', '9영02-01'], talk: ['9영01-05', '9영02-11'], grammar: ['9영02-02'], read1: ['9영01-04', '9영01-05'], read2: ['9영01-10', '9영02-04']},
+    forms: ['To-Infinitive', 'Sentence Patterns']
+  },
   goals: {
-    vocab: ['환경·기후와 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 환경 문제를 한 문장으로 말할 수 있다.'],
-    talk: ['걱정을 표현하고 그에 답할 수 있다.', '함께 할 일을 제안하고 답할 수 있다.'],
-    grammar: ['목적을 나타내는 to부정사(~하기 위해)를 쓸 수 있다.', '조건을 나타내는 접속사 if를 써서 결과를 말할 수 있다.'],
-    read1: ['글의 주제를 예측하고, 첫 번째 모둠의 활동을 정확히 이해할 수 있다.'],
-    read2: ['세 모둠의 문제·행동·결과를 비교하고 글의 요지를 요약할 수 있다.', '지구를 위한 나의 실천을 영어로 쓸 수 있다.']
+    vocab: ['봉사·동물 보호와 관련된 낱말 20개의 뜻을 알고 정확히 발음할 수 있다.', '낱말을 넣어 십대가 할 수 있는 봉사 활동을 한 문장으로 말할 수 있다.'],
+    talk: ['상대가 잘되기를 바라는 마음을 표현할 수 있다. (I hope you ~.)', '걱정하는 상대를 안심시킬 수 있다. (Don’t worry. You’ll be all right.)'],
+    grammar: ['명사 뒤의 to부정사로 “~할 (명사)”를 나타낼 수 있다.', 'make + 목적어 + 형용사로 “~를 …하게 만들다”를 말할 수 있다.'],
+    read1: ['봉사 블로그를 읽고 글쓴이가 NGO에 가입한 까닭과 한 일을 파악할 수 있다.'],
+    read2: ['동물이 자연으로 돌아가기까지의 과정을 정리하고, 내가 해 보고 싶은 봉사 계획을 쓸 수 있다.']
   },
 
-  /* ───────── 1차시 · 어휘 ───────── */
   vocab: {
-    hook: {en: 'What do you throw away every day?', ko: '여러분은 매일 무엇을 버리나요?', note: '30초 동안 짝과 오늘 버린 것을 떠올려 말하게 한다(우유팩, 비닐, 남은 음식…). 나온 낱말을 칠판에 모아 두면 waste, plastic, recycle과 연결된다.'},
+    hook: {en: 'Can teens change the world?', ko: '십대가 세상을 바꿀 수 있을까요?', note: '십대가 할 수 있는 일(봉사, 캠페인, 기부 등)을 모은다. 오늘 낱말은 그런 활동에 쓰는 말이라고 소개한다.'},
     words: [
-      {w: 'environment', pos: 'n.', ko: '환경', ic: '🌍', audio: 'assets/audio/environment.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We should protect the environment.', exKo: '우리는 환경을 보호해야 한다.'},
-      {w: 'planet', pos: 'n.', ko: '행성; 지구', ic: '🪐', audio: 'assets/audio/planet.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'There is no other planet like Earth.', exKo: '지구 같은 행성은 또 없다.'},
-      {w: 'climate', pos: 'n.', ko: '기후', ic: '🌡️', audio: 'assets/audio/climate.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The climate is getting warmer.', exKo: '기후가 점점 따뜻해지고 있다.'},
-      {w: 'pollution', pos: 'n.', ko: '오염', ic: '🏭', audio: 'assets/audio/pollution.mp3', audioCredit: 'Association Shtooka, Judith Franck · CC BY 3.0 (Wikimedia Commons, UK)', ex: 'Air pollution is bad for our health.', exKo: '대기 오염은 건강에 해롭다.'},
-      {w: 'waste', pos: 'n./v.', ko: '쓰레기; 낭비하다', ic: '🗑️', audio: 'assets/audio/waste.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Don’t waste water when you brush your teeth.', exKo: '양치할 때 물을 낭비하지 마라.'},
-      {w: 'plastic', pos: 'n./adj.', ko: '플라스틱; 플라스틱의', ic: '🧴', audio: 'assets/audio/plastic.mp3', audioCredit: 'Jelkner · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Plastic takes hundreds of years to break down.', exKo: '플라스틱은 분해되는 데 수백 년이 걸린다.'},
-      {w: 'recycle', pos: 'v.', ko: '재활용하다', ic: '♻️', ex: 'We recycle cans and paper at school.', exKo: '우리는 학교에서 캔과 종이를 재활용한다.'},
-      {w: 'reduce', pos: 'v.', ko: '줄이다', ic: '📉', audio: 'assets/audio/reduce.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Let’s reduce food waste.', exKo: '음식물 쓰레기를 줄이자.'},
-      {w: 'reuse', pos: 'v.', ko: '다시 쓰다', ic: '🔁', ex: 'You can reuse this bottle many times.', exKo: '이 병은 여러 번 다시 쓸 수 있다.'},
-      {w: 'save', pos: 'v.', ko: '아끼다; 구하다', ic: '💡', audio: 'assets/audio/save.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Turn off the lights to save energy.', exKo: '에너지를 아끼기 위해 불을 꺼라.'},
-      {w: 'energy', pos: 'n.', ko: '에너지', ic: '⚡', audio: 'assets/audio/energy.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Solar energy comes from the sun.', exKo: '태양 에너지는 해에서 온다.'},
-      {w: 'protect', pos: 'v.', ko: '보호하다', ic: '🛡️', audio: 'assets/audio/protect.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Trees protect the soil from rain.', exKo: '나무는 비로부터 흙을 보호한다.'},
-      {w: 'worried', pos: 'adj.', ko: '걱정하는', ic: '😟', audio: 'assets/audio/worried.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'I’m worried about the polar bears.', exKo: '나는 북극곰이 걱정된다.'},
-      {w: 'campaign', pos: 'n.', ko: '캠페인, (사회) 운동', ic: '📣', audio: 'assets/audio/campaign.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Our class started a no-plastic campaign.', exKo: '우리 반은 플라스틱 안 쓰기 캠페인을 시작했다.'},
-      {w: 'solution', pos: 'n.', ko: '해결책', ic: '🧩', audio: 'assets/audio/solution.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We need a solution to this problem.', exKo: '우리는 이 문제의 해결책이 필요하다.'},
-      {w: 'leftover', pos: 'n./adj.', ko: '남은 음식; 남은', ic: '🍱', ex: 'We used leftover rice to make fried rice.', exKo: '우리는 남은 밥으로 볶음밥을 만들었다.'},
-      {w: 'collect', pos: 'v.', ko: '모으다', ic: '🧺', audio: 'assets/audio/collect.mp3', audioCredit: 'Neskaya · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'We collected trash on the beach.', exKo: '우리는 해변에서 쓰레기를 모았다.'},
-      {w: 'local', pos: 'adj.', ko: '지역의', ic: '📍', audio: 'assets/audio/local.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Buy fruit from local farms.', exKo: '지역 농장의 과일을 사라.'},
-      {w: 'result', pos: 'n.', ko: '결과', ic: '📊', audio: 'assets/audio/result.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'The result surprised everyone.', exKo: '그 결과는 모두를 놀라게 했다.'},
-      {w: 'possible', pos: 'adj.', ko: '가능한', ic: '✨', audio: 'assets/audio/possible.mp3', audioCredit: 'Dvortygirl · CC BY-SA 3.0 (Wikimedia Commons, US)', ex: 'Is it possible to live without plastic?', exKo: '플라스틱 없이 사는 것이 가능할까?'}
+      {w: 'NGO', pos: 'n.', ko: '비정부 기구 (시민 단체)', ic: '🤝', ex: 'She works with an NGO for animals.', exKo: '그녀는 동물을 위한 비정부 기구와 함께 일한다.'},
+      {w: 'social', pos: 'adj.', ko: '사회의', ic: '🏙️', ex: 'We talked about social issues.', exKo: '우리는 사회 문제에 대해 이야기했다.'},
+      {w: 'issue', pos: 'n.', ko: '문제, 쟁점', ic: '❗', ex: 'Plastic waste is a big issue.', exKo: '플라스틱 쓰레기는 큰 문제다.'},
+      {w: 'volunteer', pos: 'n. / v.', ko: '자원봉사자; 자원봉사하다', ic: '🙋', ex: 'I volunteer at the center on Saturdays.', exKo: '나는 토요일마다 센터에서 봉사한다.'},
+      {w: 'danger', pos: 'n.', ko: '위험', ic: '⚠️', ex: 'Many wild animals are in danger.', exKo: '많은 야생 동물이 위험에 처해 있다.'},
+      {w: 'endangered', pos: 'adj.', ko: '멸종 위기에 처한', ic: '🦉', ex: 'This owl is an endangered animal.', exKo: '이 부엉이는 멸종 위기 동물이다.'},
+      {w: 'protect', pos: 'v.', ko: '보호하다', ic: '🛡️', ex: 'We must protect wild birds.', exKo: '우리는 야생 조류를 보호해야 한다.'},
+      {w: 'injured', pos: 'adj.', ko: '다친', ic: '🩹', ex: 'They found an injured owl.', exKo: '그들은 다친 부엉이를 발견했다.'},
+      {w: 'various', pos: 'adj.', ko: '다양한', ic: '🎨', ex: 'The NGO does various activities.', exKo: '그 단체는 다양한 활동을 한다.'},
+      {w: 'activity', pos: 'n.', ko: '활동', ic: '🏃', ex: 'Cleaning the forest is a fun activity.', exKo: '숲 청소는 즐거운 활동이다.'},
+      {w: 'project', pos: 'n.', ko: '프로젝트, 계획', ic: '📁', ex: 'Our latest project is to free the owl.', exKo: '우리의 최근 프로젝트는 부엉이를 풀어 주는 것이다.'},
+      {w: 'training', pos: 'n.', ko: '훈련', ic: '🎯', ex: 'The owl had flying training.', exKo: '부엉이는 비행 훈련을 받았다.'},
+      {w: 'skill', pos: 'n.', ko: '기술, 능력', ic: '🛠️', ex: 'It needs hunting skills.', exKo: '그것은 사냥 기술이 필요하다.'},
+      {w: 'survive', pos: 'v.', ko: '살아남다', ic: '🌱', ex: 'Animals need skills to survive.', exKo: '동물은 살아남을 기술이 필요하다.'},
+      {w: 'wild', pos: 'n. / adj.', ko: '야생; 야생의', ic: '🌲', ex: 'It will live in the wild.', exKo: '그것은 야생에서 살 것이다.'},
+      {w: 'chance', pos: 'n.', ko: '기회', ic: '🍀', ex: 'I had a chance to help.', exKo: '나는 도울 기회가 있었다.'},
+      {w: 'errand', pos: 'n.', ko: '심부름', ic: '📦', ex: 'I ran some errands for the staff.', exKo: '나는 직원들을 위해 심부름을 했다.'},
+      {w: 'ceremony', pos: 'n.', ko: '의식, 식', ic: '🎗️', ex: 'There was a small ceremony.', exKo: '작은 행사가 있었다.'},
+      {w: 'emotional', pos: 'adj.', ko: '감정적인, 감동적인', ic: '🥹', ex: 'The ceremony made us emotional.', exKo: '그 행사는 우리를 뭉클하게 했다.'},
+      {w: 'freely', pos: 'adv.', ko: '자유롭게', ic: '🕊️', ex: 'Fly freely, little owl!', exKo: '자유롭게 날아라, 작은 부엉이야!'}
     ],
     phrases: [
-      {w: 'throw away', ko: '버리다', ex: 'Don’t throw away old clothes.', exKo: '헌 옷을 버리지 마라.'},
-      {w: 'turn off', ko: '(전기·물 등을) 끄다', ex: 'Turn off the tap while you wash your hands.', exKo: '손을 씻는 동안 수도꼭지를 잠가라.'},
-      {w: 'be worried about', ko: '~을 걱정하다', ex: 'She is worried about the air.', exKo: '그녀는 공기를 걱정한다.'},
-      {w: 'pick up', ko: '줍다', ex: 'We picked up cans in the park.', exKo: '우리는 공원에서 캔을 주웠다.'},
-      {w: 'make a difference', ko: '변화를 가져오다', ex: 'Small actions can make a difference.', exKo: '작은 행동이 변화를 만들 수 있다.'},
-      {w: 'in the end', ko: '결국, 마침내', ex: 'In the end, we saved a lot of paper.', exKo: '결국 우리는 종이를 많이 아꼈다.'}
+      {w: 'take part in', ko: '~에 참여하다', ex: 'I took part in a cleanup.', exKo: '나는 청소 활동에 참여했다.'},
+      {w: 'run errands', ko: '심부름을 하다', ex: 'I ran errands at the center.', exKo: '나는 센터에서 심부름을 했다.'},
+      {w: 'grow up', ko: '자라다', ex: 'I grew up near a forest.', exKo: '나는 숲 근처에서 자랐다.'},
+      {w: 'at the same time', ko: '동시에', ex: 'I was sad and happy at the same time.', exKo: '나는 슬프면서 동시에 기뻤다.'},
+      {w: 'I hope (that) ~.', ko: '~하기를 바라.', ex: 'I hope you have fun.', exKo: '즐거운 시간 보내길 바라.'},
+      {w: 'You’ll be all right.', ko: '괜찮을 거야.', ex: 'Don’t worry. You’ll be all right.', exKo: '걱정 마. 괜찮을 거야.'}
     ],
     pairs: [
-      {a: 'reduce', b: 'increase', rel: '반대말'},
-      {a: 'save', b: 'waste', rel: '반대말'},
-      {a: 'collect', b: 'gather', rel: '비슷한 말'},
-      {a: 'recycle', b: 'recycling', rel: '동사 / 명사', note: 'We recycle. / Recycling is easy.'}
+      {a: 'danger', b: 'endangered', rel: '위험 / 멸종 위기의'},
+      {a: 'free', b: 'freely', rel: '형용사 / 부사'},
+      {a: 'emotion', b: 'emotional', rel: '명사 / 형용사'},
+      {a: 'survive', b: 'survival', rel: '동사 / 명사'}
     ],
-    wrap: {en: 'I’m worried about ______. I can ______ to save the planet.', ko: '오늘 배운 낱말 두 개 이상을 넣어 환경을 위한 나의 다짐 쓰기'}
+    wrap: {en: 'Teens can ______. I want to take part in ______.', ko: '오늘 배운 낱말로 십대가 할 수 있는 봉사 활동 쓰기'}
   },
 
-  /* ───────── 2차시 · 대화문 ───────── */
   talk: {
-    hook: {en: 'What environmental problem worries you the most?', ko: '가장 걱정되는 환경 문제는 무엇인가요?', note: '미세먼지, 폭염, 바다 쓰레기 등 학생 경험에서 끌어낸다. 답을 영어로 바꿔 주며 I’m worried about ~ 을 미리 들려준다.'},
-    speakers: {Hana: {voice: 0, pitch: 1.1}, Ben: {voice: 1, pitch: .95}, Mina: {voice: 0, pitch: 1.15}, Tom: {voice: 1, pitch: .9}, Jisu: {voice: 0, pitch: 1.1}, Alex: {voice: 1, pitch: .95}, 'Mr. Lee': {voice: 2, pitch: .9}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
+    hook: {en: 'What do you say to a friend before a big day?', ko: '중요한 날을 앞둔 친구에게 어떤 말을 해 주나요?', note: '“잘될 거야”, “걱정 마” 같은 말을 모은다. 희망을 표현하고 안심시키는 영어 표현으로 이어진다.'},
+    speakers: {Inho: {voice: 1, pitch: 1}, Sujin: {voice: 0, pitch: 1.15}, Chris: {voice: 1, pitch: .95}, 'Ms. Park': {voice: 2, pitch: 1.05}, Dad: {voice: 2, pitch: .9}, A: {voice: 0, pitch: 1}, B: {voice: 1, pitch: 1}},
     sets: [
-      { id: 'lt1', label: 'Listen & Talk 1', func: '걱정 표현하고 답하기',
-        key: {q: ['What are you worried about?', 'You look worried. What’s wrong?'], a: ['I’m worried about ~.', 'I’m concerned about ~.', 'Don’t worry. / I’m sure ~.']},
-        note: 'worried about 뒤에는 명사나 -ing가 온다. 걱정을 들은 사람은 Don’t worry. / I’m sure ~ 로 안심시키거나 해결책을 말한다.',
+      { id: 'lt1', label: 'Listen & Talk 1', func: '희망 표현하기',
+        key: {q: ['I’m going to ~.', 'I have ~ tomorrow.'], a: ['I hope you have a great time.', 'I hope you do your best.', 'I hope it goes well.']},
+        note: 'I hope (that) + 주어 + 동사로 상대가 잘되기를 바란다. hope 뒤에는 주로 현재형이나 will을 쓴다.',
         dialogs: [
-          { title: 'Dialogue A', setting: '아침 등굣길, 하늘이 뿌옇다', lines: [
-            {s: 'Ben', en: 'Hana, why are you wearing a mask today?', ko: '하나야, 오늘 왜 마스크를 쓰고 있어?'},
-            {s: 'Hana', en: 'The fine dust is really bad. {{I’m worried about}} my health.', ko: '미세먼지가 정말 심해. 건강이 걱정돼.'},
-            {s: 'Ben', en: 'Me too. The sky looks gray these days.', ko: '나도. 요즘 하늘이 회색으로 보여.'},
-            {s: 'Hana', en: 'I read that cars make a lot of air pollution.', ko: '자동차가 대기 오염을 많이 만든다고 읽었어.'},
-            {s: 'Ben', en: 'Then let’s walk to school more often.', ko: '그럼 학교에 더 자주 걸어가자.'},
-            {s: 'Hana', en: 'Good idea. {{I’m sure}} it will help a little.', ko: '좋은 생각이야. 조금은 도움이 될 거라고 확신해.'}
+          { title: 'Dialogue A', setting: '금요일 방과 후, 교문 앞', lines: [
+            {s: 'Sujin', en: 'I hear you’re going to volunteer at the animal center this weekend.', ko: '이번 주말에 동물 센터에서 봉사한다며.'},
+            {s: 'Inho', en: 'Yes. It’s my first time. I’m so excited.', ko: '응. 처음이야. 정말 신나.'},
+            {s: 'Sujin', en: '{{I hope you have}} a great time there.', ko: '거기서 즐거운 시간 보내길 바라.'},
+            {s: 'Inho', en: 'Thanks. {{I hope}} I can help the animals a lot.', ko: '고마워. 동물들을 많이 도울 수 있으면 좋겠어.'}
           ]},
-          { title: 'Dialogue B', setting: '과학 시간이 끝난 뒤', lines: [
-            {s: 'A', en: 'You look {{worried}}. What’s wrong?', ko: '걱정스러워 보여. 무슨 일 있어?'},
-            {s: 'B', en: 'I’m {{concerned about}} the sea animals. There’s so much plastic in the ocean.', ko: '바다 동물들이 걱정돼. 바다에 플라스틱이 너무 많아.'},
-            {s: 'A', en: '{{Don’t worry}} too much. We can start by using fewer straws.', ko: '너무 걱정하지 마. 빨대를 덜 쓰는 것부터 시작할 수 있어.'},
-            {s: 'B', en: 'You’re right. Small things matter.', ko: '네 말이 맞아. 작은 일이 중요하지.'}
+          { title: 'Dialogue B', setting: '토요일 아침, 공원 입구', lines: [
+            {s: 'A', en: 'Today I’m running a 10K race for the first time.', ko: '오늘 처음으로 10킬로미터 달리기를 해.'},
+            {s: 'B', en: 'Wow! {{I hope you do your best}}.', ko: '와! 최선을 다하길 바라.'},
+            {s: 'A', en: 'The money from the race will go to an NGO for kids.', ko: '이 대회 참가비는 어린이를 위한 NGO에 기부돼.'},
+            {s: 'B', en: 'That’s great. {{I hope it goes well}}!', ko: '멋지다. 잘되길 바라!'}
           ]}
         ],
         check: [
-          {q: 'Why is Hana wearing a mask?', a: 'Because the fine dust is really bad.'},
-          {q: 'What does Ben suggest?', a: 'He suggests walking to school more often.'},
-          {q: 'What is B worried about?', a: 'B is worried about the sea animals.'}
+          {q: 'Where will Inho volunteer this weekend?', a: 'At the animal center.'},
+          {q: 'What does Sujin hope?', a: 'She hopes Inho has a great time there.'},
+          {q: 'Where will the money from the race go?', a: 'To an NGO for kids.'}
         ],
-        drill: {frame: ['A: What are you worried about?', 'B: I’m worried about ____.'], opts: ['the polar bears', 'fine dust', 'food waste', 'hot summers', 'plastic in the sea', 'forest fires']}
+        drill: {frame: ['A: I have a ____ tomorrow.', 'B: I hope you do your best!'], opts: ['math test', 'soccer game', 'piano contest', 'speech', 'job interview', 'dance show']}
       },
-      { id: 'lt2', label: 'Listen & Talk 2', func: '제안하고 답하기',
-        key: {q: ['Why don’t we ~?', 'How about -ing?', 'Let’s ~.'], a: ['That’s a good idea.', 'Sounds great!', 'Sorry, but I can’t.']},
-        note: 'Why don’t we 뒤에는 동사원형, How about 뒤에는 -ing. 거절할 때는 Sorry, but ~ 뒤에 까닭을 붙이면 자연스럽다.',
+      { id: 'lt2', label: 'Listen & Talk 2', func: '안심시키기',
+        key: {q: ['I’m worried about ~.', 'I’m a little nervous.'], a: ['Don’t worry. You’ll do all right.', 'You’ll be fine.', 'Everything will be OK.']},
+        note: '걱정하는 상대에게 Don’t worry.로 먼저 말하고, You’ll be all right. / You’ll do well.처럼 will로 앞일을 안심시킨다.',
         dialogs: [
-          { title: 'Dialogue A', setting: '점심시간, 급식실', lines: [
-            {s: 'Mina', en: 'Look at all the food in the trash can, Tom.', ko: '톰, 쓰레기통에 있는 음식 좀 봐.'},
-            {s: 'Tom', en: 'Wow, that’s a lot of waste.', ko: '와, 엄청난 낭비다.'},
-            {s: 'Mina', en: '{{Why don’t we}} start a clean-plate campaign?', ko: '우리 빈 그릇 캠페인을 시작하는 게 어때?'},
-            {s: 'Tom', en: '{{That’s a good idea}}. How can we do it?', ko: '좋은 생각이야. 어떻게 하지?'},
-            {s: 'Mina', en: '{{How about}} making posters for the cafeteria?', ko: '급식실에 붙일 포스터를 만드는 건 어때?'},
-            {s: 'Tom', en: 'Great. Let’s start this afternoon.', ko: '좋아. 오늘 오후에 시작하자.'}
+          { title: 'Dialogue A', setting: '새 학기 첫날, 교무실 앞', lines: [
+            {s: 'Ms. Park', en: 'How’s it going, Chris?', ko: '크리스, 잘 지내니?'},
+            {s: 'Chris', en: 'Good, but {{I’m a little nervous}}. I don’t know anyone here.', ko: '좋아요, 그런데 조금 긴장돼요. 여기 아는 사람이 없어요.'},
+            {s: 'Ms. Park', en: '{{Don’t worry. You’ll be all right}}. I hope you make lots of friends soon.', ko: '걱정 마. 괜찮을 거야. 곧 친구를 많이 사귀길 바란다.'},
+            {s: 'Chris', en: 'Thank you, Ms. Park.', ko: '감사합니다, 박 선생님.'}
           ]},
-          { title: 'Dialogue B', setting: '토요일 아침, 전화 통화', lines: [
-            {s: 'A', en: '{{Let’s}} pick up trash at the park tomorrow.', ko: '내일 공원에서 쓰레기를 줍자.'},
-            {s: 'B', en: '{{Sorry, but I can’t}}. I have a piano lesson.', ko: '미안하지만 못 해. 피아노 수업이 있어.'},
-            {s: 'A', en: 'Then how about next Sunday?', ko: '그럼 다음 일요일은 어때?'},
-            {s: 'B', en: 'Sounds great!', ko: '좋아!'}
+          { title: 'Dialogue B', setting: '공항, 반려견 이동장 앞', lines: [
+            {s: 'Inho', en: 'Dad, {{I’m worried about}} Bori. It’s his first time on an airplane.', ko: '아빠, 보리가 걱정돼요. 비행기를 처음 타잖아요.'},
+            {s: 'Dad', en: '{{Don’t worry}}. It’s a short flight.', ko: '걱정 마. 짧은 비행이야.'},
+            {s: 'Inho', en: 'But he’ll be alone in the dark.', ko: '그래도 어두운 데 혼자 있잖아요.'},
+            {s: 'Dad', en: 'His favorite blanket is with him. {{He’ll be fine}}.', ko: '보리가 제일 좋아하는 담요가 같이 있어. 괜찮을 거야.'}
           ]}
         ],
         check: [
-          {q: 'What does Mina want to start?', a: 'She wants to start a clean-plate campaign.'},
-          {q: 'How will they tell others about the campaign?', a: 'They will make posters for the cafeteria.'},
-          {q: 'Why can’t B go to the park tomorrow?', a: 'Because B has a piano lesson.'}
+          {q: 'Why is Chris nervous?', a: 'He doesn’t know anyone (at the new school).'},
+          {q: 'What does Ms. Park hope?', a: 'She hopes Chris makes lots of friends soon.'},
+          {q: 'Why is Inho worried about Bori?', a: 'It’s Bori’s first time on an airplane.'}
         ],
-        drill: {frame: ['A: Why don’t we ____?', 'B: That’s a good idea.'], opts: ['plant trees', 'use our own cups', 'walk to school', 'turn off the lights', 'recycle cans', 'save water']}
+        drill: {frame: ['A: I’m worried about ____.', 'B: Don’t worry. You’ll be all right.'], opts: ['my test', 'the race', 'my speech', 'my new school', 'the interview', 'my first lesson']}
       }
     ],
-    interviewEx: 'Minho is worried about fine dust. He suggests walking to school.',
+    interviewEx: 'Minji is worried about her piano contest. I said, “Don’t worry. I hope you do your best!”',
     watch: {
-      label: 'Let’s Watch', title: 'The Classroom Energy Team', setting: '쉬는 시간, 텅 빈 교실에 불과 에어컨이 켜져 있다. 지수와 알렉스가 담임 이 선생님과 이야기한다.',
+      label: 'Let’s Watch', title: 'My First Day as a Volunteer', setting: '야생동물 구조 센터. 인호가 첫 봉사 날 직원 박 선생님을 만난다.',
       lines: [
-        {s: 'Jisu', en: 'Look, Alex. Nobody is here, but all the lights are on.', ko: '봐, 알렉스. 아무도 없는데 불이 다 켜져 있어.'},
-        {s: 'Alex', en: 'The air conditioner is on, too. What a waste!', ko: '에어컨도 켜져 있어. 이런 낭비가!'},
-        {s: 'Mr. Lee', en: 'You’re right. Our class used a lot of electricity last month.', ko: '맞아. 우리 반은 지난달에 전기를 많이 썼단다.'},
-        {s: 'Jisu', en: 'I’m worried about it. Why don’t we make an energy team?', ko: '걱정돼요. 우리 에너지 지킴이 팀을 만드는 게 어때요?'},
-        {s: 'Mr. Lee', en: 'Good idea. What will the team do?', ko: '좋은 생각이구나. 팀은 무엇을 할 거니?'},
-        {s: 'Alex', en: 'We’ll check the lights at every break to save energy.', ko: '에너지를 아끼기 위해 쉬는 시간마다 불을 확인할 거예요.'},
-        {s: 'Jisu', en: 'If we turn off the lights, we’ll save a lot of electricity.', ko: '불을 끄면 전기를 많이 아낄 수 있을 거예요.'},
-        {s: 'Mr. Lee', en: 'Great. Let’s check the result next month.', ko: '좋아. 다음 달에 결과를 확인해 보자.'}
+        {s: 'Ms. Park', en: 'Welcome, Inho! Today you’ll help us feed the birds.', ko: '환영해요, 인호! 오늘은 새들 먹이 주는 일을 도와줄 거예요.'},
+        {s: 'Inho', en: 'I’m a little worried. I don’t have any experience.', ko: '조금 걱정돼요. 경험이 전혀 없어서요.'},
+        {s: 'Ms. Park', en: 'Don’t worry. You’ll do all right. I’ll show you everything.', ko: '걱정 마요. 잘할 거예요. 제가 다 알려 줄게요.'},
+        {s: 'Inho', en: 'Thank you. I hope the injured owl gets better soon.', ko: '감사해요. 다친 부엉이가 빨리 나으면 좋겠어요.'},
+        {s: 'Ms. Park', en: 'Me, too. She is getting stronger every day.', ko: '저도요. 날마다 튼튼해지고 있어요.'}
       ],
       check: [
-        {q: 'What problem do Jisu and Alex find?', a: 'All the lights are on, but nobody is in the classroom.'},
-        {q: 'What does Jisu suggest?', a: 'She suggests making an energy team.'},
-        {q: 'When will they check the result?', a: 'Next month.'}
+        {q: 'What will Inho do today?', a: 'He will help feed the birds.'},
+        {q: 'Why is Inho worried?', a: 'He doesn’t have any experience.'},
+        {q: 'What does Inho hope?', a: 'He hopes the injured owl gets better soon.'}
       ]
     },
-    wrap: {en: 'Tell your partner one environmental worry and one suggestion.', ko: '걱정 하나와 제안 하나를 넣어 짝과 대화한 뒤, 대화를 두 문장으로 쓰기'}
+    wrap: {en: 'Tell your partner about a worry. Your partner reassures you and gives a wish with “I hope ~.”', ko: '걱정거리를 말하고, 짝은 안심시키며 “I hope ~.”로 바람을 말해 주기'}
   },
 
-  /* ───────── 3차시 · 문법 ───────── */
   grammar: {
-    cover: 'to / if',
-    hook: {en: 'I turned off the light {{to save}} energy.  /  {{If}} we save energy, the planet will be happier.', ko: '빈칸에 들어갈 말은 무엇이고, 문장에 어떤 뜻을 더해 줄까?', answer: 'to + 동사원형은 ‘~하기 위해’(목적), if는 ‘만약 ~하면’(조건)', note: '답을 바로 주지 않고, 두 문장이 각각 ‘왜’와 ‘어떤 조건에서’를 말한다는 점을 학생이 찾게 한다.'},
+    cover: 'to ~ · make A B',
+    hook: {en: 'I had many chances {{to see}} owls.  /  The ceremony {{made}} us {{emotional}}.', ko: 'to see는 어떤 말을 꾸밀까? made 뒤의 us와 emotional은 어떤 관계일까?', answer: 'to see → chances를 꾸밈(볼 기회) / made us emotional → 우리가(us) 뭉클해지게(emotional) 만들었다', note: '교과서 언어 형식(I had many chances to see dolphins. / The ceremony made us emotional.)과 같은 짜임이다.'},
     points: [
-      { id: 'g1', name: 'to부정사의 부사적 용법 (목적)', short: 'to부정사 (목적)', form: 'to + 동사원형', meaning: '~하기 위해',
+      { id: 'g1', name: 'to부정사 (형용사적 용법)', short: 'to부정사 (형용사적)', form: '명사 + to + 동사원형', meaning: '~할 (명사), ~하는 (명사)',
         notice: [
-          {en: 'I walk to school {{to reduce}} pollution.', ko: '나는 오염을 줄이기 위해 학교에 걸어간다.'},
-          {en: 'We made posters {{to start}} a campaign.', ko: '우리는 캠페인을 시작하기 위해 포스터를 만들었다.'},
-          {en: 'She went to the market {{to buy}} local fruit.', ko: '그녀는 지역 과일을 사기 위해 시장에 갔다.'}
+          {en: 'I had many chances {{to see}} wild birds.', ko: '나는 야생 조류를 볼 기회가 많았다.'},
+          {en: 'Owls need skills {{to survive}} in the wild.', ko: '부엉이는 야생에서 살아남을 기술이 필요하다.'},
+          {en: 'It is a great way {{to learn}} about social issues.', ko: '그것은 사회 문제에 대해 배우는 좋은 방법이다.'}
         ],
         rule: [
-          {k: '자리', v: '문장 뒤에 붙어 ‘왜’ 했는지 말한다', ex: 'I got up early to catch the bus.'},
-          {k: '같은 뜻', v: 'in order to + 동사원형', ex: 'He saved money in order to buy a bike.'},
-          {k: '묻고 답하기', v: 'Why did you ~? — To + 동사원형.', ex: 'Why did you go there? — To pick up trash.'}
-        ],
-        check: [
-          {q: 'I use a tumbler ____ plastic cups. (reduce)', a: 'to reduce'},
-          {q: 'We went to the beach ____ trash. (collect)', a: 'to collect'},
-          {q: 'He turned off the TV ____ energy. (save)', a: 'to save'},
-          {q: 'They planted trees ____ the river. (protect)', a: 'to protect'},
-          {q: 'She studies hard ____ a scientist. (become)', a: 'to become'}
-        ],
-        trap: {bad: 'I went to the library for borrow a book.', good: 'I went to the library to borrow a book.', why: '목적을 말할 때 동사 앞에는 for가 아니라 to를 쓴다.'},
-        scramble: [
-          {ko: '나는 물을 아끼기 위해 샤워를 짧게 한다.', en: 'I take short showers to save water.'},
-          {ko: '우리는 쓰레기를 줍기 위해 공원에 갔다.', en: 'We went to the park to pick up trash.'},
-          {ko: '그는 비닐을 줄이기 위해 장바구니를 가져온다.', en: 'He brings a shopping bag to reduce plastic.'}
-        ]
-      },
-      { id: 'g2', name: '조건의 접속사 if', short: 'if (조건)', form: 'If + 주어 + 현재시제, 주어 + will ~', meaning: '만약 ~하면 …할 것이다',
-        notice: [
-          {en: '{{If}} we {{use}} less plastic, the sea {{will be}} cleaner.', ko: '우리가 플라스틱을 덜 쓰면 바다는 더 깨끗해질 것이다.'},
-          {en: '{{If}} you {{turn off}} the lights, you {{will save}} energy.', ko: '불을 끄면 에너지를 아낄 것이다.'},
-          {en: 'We will plant trees {{if}} it {{is}} sunny tomorrow.', ko: '내일 날씨가 맑으면 우리는 나무를 심을 것이다.'}
-        ],
-        rule: [
-          {k: '모양', v: 'if절은 미래 일이라도 현재시제', ex: 'If it rains tomorrow, we will stay inside.'},
-          {k: '자리', v: 'if절이 앞이면 쉼표(,) / 뒤면 쉼표 없음', ex: 'We will stay inside if it rains.'},
-          {k: '명령문', v: 'If ~, 명령문: ~하면 …해라', ex: 'If you see trash, pick it up.'}
+          {k: '자리', v: '꾸미는 명사 바로 뒤에 to + 동사원형', ex: 'something to eat, time to go, a way to help'},
+          {k: '전치사', v: '“명사 + 전치사”가 필요한 동사는 전치사를 남긴다', ex: 'a friend to talk with / a chair to sit on'},
+          {k: '-thing', v: '-thing + 형용사 + to부정사', ex: 'something important to do'}
         ],
         compare: {
-          title: '어느 쪽이 맞을까?', note: 'if절 안에서는 will을 쓰지 않는다는 점을 가장 많이 틀린다. 오른쪽 열이 왜 틀렸는지 말해 보게 한다.',
-          head: ['if절 (현재시제)', '주절 (will + 동사원형)', '틀린 모양'],
-          cols: [['If it rains,', 'If you recycle,', 'If we walk,', 'If she reuses it,'], ['we will stay home.', 'you will save trees.', 'we will be healthy.', 'she will save money.'], ['If it will rain', 'If you will recycle', 'If we will walk', 'If she will reuse']]
+          title: '같은 to부정사, 다른 역할', note: '명사 뒤 → 형용사(~할), 동사 뒤 → 명사(~하는 것), 완전한 문장 뒤 → 부사(~하기 위해).',
+          head: ['명사적', '형용사적', '부사적 (목적)'],
+          cols: [['I want to help.', '(돕기를 원한다)'], ['I had a chance to help.', '(도울 기회)'], ['I went there to help.', '(돕기 위해 갔다)']]
         },
         check: [
-          {q: 'If you ____ the tap, you will save water. (turn off)', a: 'turn off'},
-          {q: 'If it ____ sunny tomorrow, we will clean the beach. (be)', a: 'is'},
-          {q: 'If we recycle more, there ____ less trash. (be)', a: 'will be'},
-          {q: 'If he ____ by bike, he will not pollute the air. (go)', a: 'goes'},
-          {q: 'If you see a plastic bag on the street, ____ it up. (pick)', a: 'pick'}
+          {q: 'I had a chance ____ the owl. (feed)', a: 'to feed'},
+          {q: 'Animals need skills ____ in the wild. (survive)', a: 'to survive'},
+          {q: 'It’s a good way ____ the world better. (make)', a: 'to make'},
+          {q: 'I need a friend to talk ____. (전치사)', a: 'with'},
+          {q: 'There are many things ____ for animals. (do)', a: 'to do'}
         ],
-        trap: {bad: 'If it will rain tomorrow, we will stay home.', good: 'If it rains tomorrow, we will stay home.', why: '조건을 나타내는 if절에서는 미래의 일도 현재시제로 쓴다.'},
+        trap: {bad: 'I had a chance seeing owls.', good: 'I had a chance to see owls.', why: '명사(chance)를 꾸밀 때는 to + 동사원형.'},
         scramble: [
-          {ko: '버스를 타면 너는 공기를 지킬 것이다.', en: 'If you take the bus, you will protect the air.'},
-          {ko: '우리가 종이를 재활용하면 나무를 구할 것이다.', en: 'If we recycle paper, we will save trees.'},
-          {ko: '쓰레기를 보면 주워라.', en: 'If you see trash, pick it up.'}
+          {ko: '나는 부엉이를 볼 기회가 있었다.', en: 'I had a chance to see owls.'},
+          {ko: '동물들은 살아남을 기술이 필요하다.', en: 'Animals need skills to survive.'},
+          {ko: '그것은 배우는 좋은 방법이다.', en: 'It is a good way to learn.'}
+        ]
+      },
+      { id: 'g2', name: 'make + 목적어 + 형용사', short: 'make A + 형용사', form: 'make / keep / find + 목적어 + 형용사', meaning: '~를 …하게 만들다',
+        notice: [
+          {en: 'The ceremony {{made us emotional}}.', ko: '그 행사는 우리를 뭉클하게 했다.'},
+          {en: 'The experience {{made me excited}}.', ko: '그 경험은 나를 신나게 했다.'},
+          {en: 'Plastic waste {{makes the sea dirty}}.', ko: '플라스틱 쓰레기는 바다를 더럽게 만든다.'}
+        ],
+        rule: [
+          {k: '관계', v: '목적어와 형용사 사이에 “A는 B다”가 성립한다 (us = emotional)', ex: 'The news made her sad. (she was sad)'},
+          {k: '형용사', v: '목적어 뒤에는 부사가 아니라 형용사 (made us happily ✗)', ex: 'Music makes me happy.'},
+          {k: '같은 짜임', v: 'keep + 목적어 + 형용사 (~를 …하게 유지하다)', ex: 'Keep the beach clean.'}
+        ],
+        check: [
+          {q: 'The news made me ____. (sad)', a: 'sad'},
+          {q: 'The volunteers keep the forest ____. (clean)', a: 'clean'},
+          {q: 'The owl made the children ____. (happy)', a: 'happy'},
+          {q: 'Fishing nets make the sea ____. (dangerous)', a: 'dangerous'},
+          {q: 'The ceremony made ____ emotional. (we)', a: 'us'}
+        ],
+        trap: {bad: 'The ceremony made us emotionally.', good: 'The ceremony made us emotional.', why: 'make + 목적어 뒤에는 형용사. 목적어의 상태를 말해 주기 때문.'},
+        scramble: [
+          {ko: '그 행사는 우리를 뭉클하게 했다.', en: 'The ceremony made us emotional.'},
+          {ko: '그 경험은 나를 신나게 했다.', en: 'The experience made me excited.'},
+          {ko: '숲을 깨끗하게 유지해라.', en: 'Keep the forest clean.'}
         ]
       }
     ],
-    wrap: {en: 'I ______ to save the planet. If we ______, ______.', ko: 'to부정사(목적) 한 문장, if 조건문 한 문장으로 나의 실천 쓰기'},
-    wrapEx: 'I carry a tumbler to reduce plastic. If we use fewer cups, the sea will be cleaner.'
+    wrap: {en: 'I had a chance to ______. It made me ______.', ko: '봉사나 특별한 경험에서 얻은 기회(to부정사)와 그 경험이 준 감정(make + 목적어 + 형용사) 쓰기'},
+    wrapEx: 'I had a chance to plant trees with my club. It made me proud.'
   },
 
-  /* ───────── 4·5차시 · 본문 ───────── */
   reading: {
-    title: 'Small Hands, Big Changes', kind: '학급 프로젝트 보고서', cover: 'Hands', coverKo: '우리 손으로 바꾸는 것', cover2: 'Change', coverKo2: '작은 행동, 큰 변화',
+    title: 'Fly Freely, Little Owl!', kind: '십대 봉사 블로그', cover: 'Wings', coverKo: '날개를 되찾은 부엉이', cover2: 'Freely', coverKo2: '숲으로 돌아가다',
     before: [
-      {q: 'Look at the title. What do “small hands” mean?', a: '어른이 아닌 학생들, 작은 힘'},
-      {q: 'What can students do to help the planet?', a: '자유롭게 예측한 뒤 글에서 확인'}
+      {q: 'Look at the title. What will happen to the owl?', a: '자유롭게 날아간다 (자연으로 돌아간다)'},
+      {q: 'How can teens work with NGOs?', a: '봉사, 캠페인, 모금, 청소 활동 등'}
     ],
-    gloss: {
-      project: '과제, 프로젝트', cafeteria: '급식실', 'clean-plate': '음식을 남기지 않는', survey: '설문 조사', portions: '(음식의) 1인분 양',
-      tumbler: '텀블러', disposable: '일회용의', plogging: '조깅하며 쓰레기 줍기', jogging: '조깅', habits: '습관', shocked: '충격을 받은'
-    },
+    gloss: {'wildlife rescue center': '야생동물 구조 센터', 'Eurasian eagle-owl': '수리부엉이', 'wing': '날개', 'glass wall': '유리벽', 'cage': '우리', 'mouse': '쥐', 'release': '풀어 줌, 방사', 'staff': '직원'},
     paras: [
-      {who: '', en: 'This spring, our class had a project called “Small Hands, Big Changes.” Each group chose one problem at our school and tried to solve it for a month. Here are the stories of three groups.',
-       ko: '올봄 우리 반은 ‘작은 손, 큰 변화’라는 프로젝트를 했습니다. 모둠마다 학교의 문제 하나를 골라 한 달 동안 해결해 보려고 했습니다. 세 모둠의 이야기를 소개합니다.',
-       check: {q: 'How long did each group work on its problem?', a: 'For a month.'}, think: '우리 학교에서 고치고 싶은 문제 하나는?'},
-      {who: 'Group 1 · Food Waste', en: 'Our group was shocked by the cafeteria trash cans. They were full of rice and vegetables. To find out why, we did a survey. Many students said, “The portions are too big.”',
-       ko: '우리 모둠은 급식실 쓰레기통을 보고 깜짝 놀랐습니다. 밥과 채소로 가득했거든요. 그 까닭을 알아내기 위해 우리는 설문 조사를 했습니다. 많은 학생이 “양이 너무 많아요.”라고 답했습니다.',
-       check: {q: 'Why did Group 1 do a survey?', a: 'To find out why students left so much food.'}, think: '여러분이 급식을 남기는 까닭은?'},
-      {who: 'Group 1 · Food Waste', en: 'So we started a clean-plate campaign. Students could ask for smaller portions, and we put up posters with a simple message: “If you take only what you need, you will waste less.” In the end, food waste dropped by 30 percent.',
-       ko: '그래서 우리는 빈 그릇 캠페인을 시작했습니다. 학생들은 더 적은 양을 요청할 수 있었고, 우리는 간단한 문구를 담은 포스터를 붙였습니다. “필요한 만큼만 담으면 덜 버리게 될 거예요.” 결국 음식물 쓰레기가 30퍼센트 줄었습니다.',
-       check: {q: 'How much did food waste drop?', a: 'By 30 percent.'}, think: '포스터 문구가 효과적이었던 까닭은?'},
-      {who: 'Group 2 · Plastic', en: 'We counted the plastic cups in our classroom trash. There were more than 200 in just one week! To reduce them, we asked everyone to bring a tumbler. We also kept a few extra cups in a box for students who forgot.',
-       ko: '우리는 교실 쓰레기 속 플라스틱 컵을 세어 보았습니다. 겨우 일주일 만에 200개가 넘었어요! 그것을 줄이기 위해 모두에게 텀블러를 가져오자고 부탁했습니다. 잊은 학생을 위해 상자에 여분의 컵 몇 개도 마련해 두었습니다.',
-       check: {q: 'How many plastic cups did Group 2 find in one week?', a: 'More than 200.'}, think: '여분의 컵을 둔 것은 왜 좋은 생각일까?'},
-      {who: 'Group 2 · Plastic', en: 'At first, only a few students joined. But when the class saw the empty trash can, more students brought tumblers. By the end of the month, we used almost no disposable cups.',
-       ko: '처음에는 몇 명만 참여했습니다. 하지만 텅 빈 쓰레기통을 보자 더 많은 학생이 텀블러를 가져왔습니다. 그달 말쯤에는 일회용 컵을 거의 쓰지 않았습니다.',
-       check: {q: 'What made more students bring tumblers?', a: 'Seeing the empty trash can.'}, think: '눈에 보이는 결과는 사람들을 어떻게 바꿀까?'},
-      {who: 'Group 3 · Trash Outside', en: 'Our group loves running, so we tried plogging. Plogging means jogging and picking up trash at the same time. Every Saturday, we met at the park to jog and clean. We collected 15 bags of trash in a month.',
-       ko: '우리 모둠은 달리기를 좋아해서 플로깅을 해 보았습니다. 플로깅은 조깅을 하면서 동시에 쓰레기를 줍는 것입니다. 토요일마다 우리는 달리고 청소하기 위해 공원에서 만났습니다. 한 달 동안 쓰레기 15봉투를 모았습니다.',
-       check: {q: 'What is plogging?', a: 'Jogging and picking up trash at the same time.'}, think: '좋아하는 일과 환경 실천을 합친 다른 예는?'},
-      {who: 'Group 3 · Trash Outside', en: 'Our project is over, but our new habits are not. We learned that the future is not far away. It is in our hands, and it starts with small changes today.',
-       ko: '프로젝트는 끝났지만 우리의 새 습관은 끝나지 않았습니다. 우리는 미래가 멀리 있지 않다는 것을 배웠습니다. 미래는 우리 손안에 있고, 오늘의 작은 변화에서 시작됩니다.',
-       check: {q: 'Where is the future, according to the writer?', a: 'In our hands.'}, think: '“Our new habits are not over.”는 무슨 뜻일까?'}
+      {who: 'Mar 3', en: 'I grew up near a mountain, so I had many chances to see wild birds. Then I learned that many of them are in danger. Some, like the Eurasian eagle-owl, are even endangered. I wanted to do something, so I joined an NGO, Wings for Wildlife. It does various activities to protect wild animals.',
+       ko: '나는 산 근처에서 자라서 야생 조류를 볼 기회가 많았다. 그러다 그중 많은 새가 위험에 처해 있다는 것을 알게 되었다. 수리부엉이처럼 멸종 위기에 처한 새도 있다. 무언가 하고 싶어서 나는 ‘야생을 위한 날개’라는 NGO에 가입했다. 이 단체는 야생 동물을 보호하기 위해 다양한 활동을 한다.',
+       check: {q: 'Why did the writer join the NGO?', a: 'He learned that many wild birds are in danger and wanted to do something.'}, think: '내가 사는 곳 근처의 위험에 처한 동물은?'},
+      {who: 'Mar 18', en: 'Today I visited the wildlife rescue center for the first time. There was an injured owl. She hit a glass wall and hurt her wing. The staff named her Bam. I just ran some errands, but seeing Bam made me sad and hopeful at the same time.',
+       ko: '오늘 처음으로 야생동물 구조 센터에 갔다. 다친 부엉이가 한 마리 있었다. 유리벽에 부딪혀 날개를 다쳤다. 직원들은 그 부엉이에게 ‘밤’이라는 이름을 지어 주었다. 나는 심부름만 몇 가지 했지만, 밤을 보니 슬프면서 동시에 희망이 생겼다.',
+       check: {q: 'How did Bam get hurt?', a: 'She hit a glass wall (and hurt her wing).'}, think: '유리벽 때문에 새가 다치지 않게 하려면?'},
+      {who: 'Apr 9', en: 'Bam is getting better. The latest project of our center is to return her to the forest. But first, she needs some skills to survive in the wild. Today she had flying training in a big cage. When she flew from one end to the other, everyone cheered.',
+       ko: '밤이 나아지고 있다. 우리 센터의 최근 프로젝트는 밤을 숲으로 돌려보내는 것이다. 하지만 먼저 밤은 야생에서 살아남을 기술이 필요하다. 오늘 밤은 커다란 우리에서 비행 훈련을 했다. 한쪽 끝에서 다른 쪽 끝까지 날았을 때 모두 환호했다.',
+       check: {q: 'What is the latest project of the center?', a: 'To return Bam to the forest.'}, think: '야생에서 살아남으려면 어떤 기술이 필요할까?'},
+      {who: 'May 2', en: 'Today Bam learned to catch food on her own. At first, she missed again and again. But she didn’t give up, and finally she caught a mouse! The staff said, “She is ready.” Hearing that made me excited.',
+       ko: '오늘 밤은 혼자 먹이를 잡는 법을 배웠다. 처음에는 계속 놓쳤다. 하지만 포기하지 않았고 마침내 쥐 한 마리를 잡았다! 직원들이 말했다. “이제 준비됐어요.” 그 말을 들으니 나는 신이 났다.',
+       check: {q: 'What did Bam finally catch?', a: 'A mouse.'}, think: '밤이 포기하지 않은 모습에서 무엇을 배울 수 있을까?'},
+      {who: 'May 20', en: 'Today Bam went back to the forest. There was a small release ceremony, and all the members were there. The ceremony made us quite emotional. When she flew away, I cried a little. I can’t see Bam anymore, but now the whole forest is her home. “Fly freely, little owl!” I shouted.',
+       ko: '오늘 밤이 숲으로 돌아갔다. 작은 방사 행사가 있었고 회원 모두가 그 자리에 있었다. 그 행사는 우리를 꽤 뭉클하게 했다. 밤이 날아갈 때 나는 조금 울었다. 이제 밤을 볼 수 없지만, 이제 숲 전체가 밤의 집이다. “자유롭게 날아라, 작은 부엉이야!” 나는 외쳤다.',
+       check: {q: 'How did the members feel at the ceremony?', a: 'They felt quite emotional.'}, think: '헤어지는데도 기쁜 까닭은?'},
+      {who: 'You', en: 'You can take part in NGO activities as a teenager. It is a great way to learn about social issues and to make the world better. The future is in our hands. What do you want to do?',
+       ko: '여러분도 십대로서 NGO 활동에 참여할 수 있다. 그것은 사회 문제에 대해 배우고 세상을 더 낫게 만드는 좋은 방법이다. 미래는 우리 손에 있다. 여러분은 무엇을 하고 싶나요?',
+       check: {q: 'What is a great way to learn about social issues?', a: 'Taking part in NGO activities.'}, think: '내가 참여하고 싶은 활동은?'}
     ],
     split: 3,
-    next: '플라스틱 컵과 공원 쓰레기는\n어떻게 줄었을까?',
-    recap: {q: '1모둠은 무엇을 바꿨을까?', items: [{k: 'PROBLEM', v: 'too much food waste'}, {k: 'ACTION', v: 'a survey and a clean-plate campaign'}, {k: 'RESULT', v: 'food waste dropped by 30%'}]},
+    next: '밤은 야생에서 살아남을\n준비가 되었을까?',
+    recap: {q: '글쓴이는 왜 NGO에 가입했고, 밤은 어떻게 다쳤을까?', items: [{k: 'WHY JOIN', v: 'many wild birds are in danger · wanted to do something'}, {k: 'BAM', v: 'hit a glass wall · hurt her wing · flying training'}]},
     tf: [
-      {p: 1, s: 'The cafeteria trash cans were full of rice and vegetables.', a: true},
-      {p: 2, s: 'Group 1 made the portions bigger.', a: false, why: '더 적은 양을 요청할 수 있게 했다.'},
-      {p: 3, s: 'Group 2 found more than 200 plastic cups in a week.', a: true},
-      {p: 4, s: 'All the students brought tumblers from the first day.', a: false, why: '처음에는 몇 명만 참여했다.'},
-      {p: 5, s: 'Group 3 met at the park every Sunday.', a: false, why: 'Sunday가 아니라 Saturday.'},
-      {p: 6, s: 'The writer thinks the future starts with small changes.', a: true}
+      {p: 0, s: 'The writer grew up near the sea.', a: false, why: 'I grew up near a mountain.'},
+      {p: 1, s: 'The writer did a lot of important work on the first day.', a: false, why: 'I just ran some errands.'},
+      {p: 2, s: 'Bam had flying training in a big cage.', a: true},
+      {p: 3, s: 'Bam caught a mouse on her first try.', a: false, why: 'At first, she missed again and again.'},
+      {p: 4, s: 'The writer cried a little at the ceremony.', a: true},
+      {p: 5, s: 'Teens can take part in NGO activities.', a: true}
     ],
     key: [
-      {en: '{{To find out}} why, we did a survey.', note: 'to부정사 (목적): ~하기 위해', g: 'g1'},
-      {en: '{{If}} you {{take}} only what you need, you {{will waste}} less.', note: 'if + 현재시제, 주어 + will ~', g: 'g2'},
-      {en: '{{To reduce}} them, we asked everyone to bring a tumbler.', note: 'to부정사 (목적)가 문장 앞에', g: 'g1'},
-      {en: 'We met at the park {{to jog and clean}}.', note: 'to + 동사원형 두 개를 and로 연결', g: 'g1'},
-      {en: 'Plogging means {{jogging and picking up}} trash.', note: 'mean + 동명사: ~하는 것을 뜻하다', g: ''},
-      {en: 'The future {{is in our hands}}.', note: '미래는 우리 손에 달려 있다 (단원 제목)', g: ''}
+      {en: 'I had many chances {{to see}} wild birds.', note: '명사 + to부정사 (볼 기회)', g: 'g1'},
+      {en: 'Seeing Bam {{made me sad and hopeful}} at the same time.', note: 'make + 목적어 + 형용사', g: 'g2'},
+      {en: 'She needs some skills {{to survive}} in the wild.', note: '명사 + to부정사 (살아남을 기술)', g: 'g1'},
+      {en: 'Hearing that {{made me excited}}.', note: 'make + 목적어 + 형용사', g: 'g2'},
+      {en: 'The ceremony {{made us quite emotional}}.', note: 'make + 목적어 + 형용사', g: 'g2'},
+      {en: 'It is a great way {{to learn}} about social issues.', note: '명사 + to부정사 (배우는 방법)', g: 'g1'}
     ],
-    summary: {text: 'Group 1 did a {{survey}} and started a clean-plate {{campaign}}, so food waste {{dropped}}. Group 2 asked everyone to bring a {{tumbler}} to reduce plastic cups. Group 3 tried {{plogging}} and collected 15 bags of trash. The future is in our {{hands}}.'},
-    order: ['Group 1 saw full trash cans.', 'They did a survey.', 'They started a clean-plate campaign.', 'Food waste dropped by 30 percent.'],
-    chart: {title: 'THREE GROUPS', ko: '세 모둠 비교하기', cols: ['Problem', 'Action', 'Result'], note: '세 모둠 모두 ‘숫자’로 결과를 확인했다는 공통점을 찾게 한다.', rows: [
-      {name: 'Group 1', cells: ['food waste', 'survey · clean-plate campaign', 'dropped by 30%']},
-      {name: 'Group 2', cells: ['plastic cups', 'bring a tumbler', 'almost no disposable cups']},
-      {name: 'Group 3', cells: ['trash in the park', 'plogging every Saturday', '15 bags of trash']}
+    summary: {text: 'The writer joined an {{NGO}} to protect wild animals. At the rescue center, he met Bam, an {{injured}} owl. Bam needed skills to {{survive}} in the wild, so she had flying {{training}}. At the release {{ceremony}}, everyone felt {{emotional}}, and Bam flew freely into the forest.'},
+    order: ['Bam hit a glass wall.', 'She had flying training.', 'She caught a mouse on her own.', 'She went back to the forest.'],
+    chart: {title: 'BAM’S JOURNEY', ko: '밤이 숲으로 돌아가기까지', cols: ['What happened', 'How the writer felt'], note: '표를 보고 It made me + 형용사. 문장으로 말하게 한다.', rows: [
+      {name: 'Mar 18', cells: ['met injured Bam', 'sad and hopeful']},
+      {name: 'Apr 9', cells: ['flying training', 'everyone cheered']},
+      {name: 'May 2', cells: ['caught a mouse', 'excited']},
+      {name: 'May 20', cells: ['release ceremony', 'emotional, happy']}
     ]},
-    wrap: {en: 'I’m worried about ______. To help, I will ______. If we ______, ______.', ko: '관통 질문으로 돌아가기: 지구를 위한 나의 실천을 세 문장으로 쓰기'}
+    wrap: {en: 'I want to ______. It’s a great way to ______.', ko: '관통 질문으로 돌아가기: 내가 해 보고 싶은 봉사 활동과 그 의미 쓰기'}
   },
 
-  /* ───────── 골든벨: [문제, [보기 4개], 정답 번호(0부터), 해설] ───────── */
   quiz: [
-    ['“줄이다”를 뜻하는 낱말은?', ['save', 'reuse', 'reduce', 'collect'], 2, 'reduce: 줄이다 / reuse: 다시 쓰다'],
-    ['빈칸에 알맞은 것은? “Please turn ___ the lights.”', ['up', 'off', 'into', 'away'], 1, 'turn off: 끄다'],
-    ['“pollution”의 뜻은?', ['오염', '해결책', '재활용', '기후 변화'], 0, 'pollution: 오염'],
-    ['“save”와 뜻이 반대인 것은?', ['keep', 'reuse', 'protect', 'waste'], 3, 'save(아끼다) ↔ waste(낭비하다)'],
-    ['“We used ___ rice to make fried rice.”', ['leftover', 'local', 'possible', 'worried'], 0, 'leftover: 남은'],
-    ['걱정을 나타내는 표현은?', ['Sounds great!', 'Why don’t we go?', 'I’m worried about it.', 'That’s a good idea.'], 2, 'I’m worried about ~: ~이 걱정된다'],
-    ['제안하는 표현이 아닌 것은?', ['Let’s walk.', 'How about walking?', 'Why don’t we walk?', 'I’m sure you can walk.'], 3, 'I’m sure ~는 확신·안심을 나타낸다.'],
-    ['Let’s Watch에서 지수가 제안한 것은?', ['포스터 만들기', '에너지 지킴이 팀', '에어컨 새로 사기', '창문 열어 두기'], 1, 'Why don’t we make an energy team?'],
-    ['빈칸에 알맞은 것은? “If it ___ tomorrow, we will stay home.”', ['rain', 'rains', 'rained', 'will rain'], 1, '조건의 if절은 미래라도 현재시제'],
-    ['빈칸에 알맞은 것은? “I walk to school ___ pollution.”', ['reduce', 'reducing', 'to reduce', 'for reduce'], 2, '목적(~하기 위해): to + 동사원형'],
-    ['어법상 틀린 문장은?', ['If you see trash, pick it up.', 'He saves money to buy a bike.', 'We went out to pick up trash.', 'If we will recycle, it will help.'], 3, 'If we recycle로 고쳐야 한다.'],
-    ['“Why did you go to the park?”에 알맞은 대답은?', ['Yes, I did.', 'Because of trash.', 'To pick up trash.', 'I picked trash up.'], 2, 'Why ~? — To + 동사원형(목적)'],
-    ['1모둠이 설문 조사를 한 까닭은?', ['급식 메뉴를 바꾸려고', '음식을 남기는 까닭을 알려고', '포스터 문구를 정하려고', '급식실 청소를 하려고'], 1, 'To find out why, we did a survey.'],
-    ['2모둠이 일회용 컵을 줄이기 위해 한 일은?', ['텀블러 가져오기', '플라스틱 컵 팔기', '쓰레기통 치우기', '정수기 없애기'], 0, 'we asked everyone to bring a tumbler'],
-    ['플로깅(plogging)이란?', ['공원에서 나무 심기', '자전거로 학교 가기', '쓰레기를 모아 팔기', '조깅하며 쓰레기 줍기'], 3, 'jogging and picking up trash at the same time']
+    ['“멸종 위기에 처한”을 뜻하는 낱말은?', ['injured', 'endangered', 'various', 'emotional'], 1, 'endangered: 멸종 위기에 처한'],
+    ['“심부름”을 뜻하는 낱말은?', ['errand', 'issue', 'project', 'ceremony'], 0, 'errand: 심부름 (run errands 심부름을 하다)'],
+    ['“I took part ___ a cleanup.”', ['on', 'in', 'at', 'for'], 1, 'take part in: ~에 참여하다'],
+    ['희망을 표현하는 말은?', ['I hope you have fun.', 'Don’t worry.', 'May I go?', 'How often do you go?'], 0, 'I hope ~.'],
+    ['걱정하는 친구를 안심시키는 말은?', ['I’m worried.', 'You’ll be all right.', 'I hope so.', 'What’s wrong?'], 1, 'Don’t worry. You’ll be all right.'],
+    ['“I’m worried about my test.”에 알맞은 응답은?', ['I’m happy for you.', 'Don’t worry. You’ll do well.', 'Congratulations!', 'Yes, I do.'], 1, '안심시키기'],
+    ['Let’s Watch에서 인호가 걱정한 까닭은?', ['새가 무서워서', '경험이 없어서', '늦어서', '아파서'], 1, 'I don’t have any experience.'],
+    ['빈칸에 알맞은 것은? “I had a chance ___ owls.”', ['see', 'seeing', 'to see', 'saw'], 2, '명사 + to부정사'],
+    ['빈칸에 알맞은 것은? “The ceremony made us ___.”', ['emotion', 'emotional', 'emotionally', 'to emotional'], 1, 'make + 목적어 + 형용사'],
+    ['어법상 틀린 문장은?', ['Music makes me happy.', 'I need a chair to sit on.', 'The news made her sadly.', 'Keep the beach clean.'], 2, 'The news made her sad.'],
+    ['밑줄 친 to부정사의 쓰임이 다른 것은?', ['skills to survive', 'a way to learn', 'chances to see', 'I want to help'], 3, 'want to help는 목적어(명사적), 나머지는 명사를 꾸미는 형용사적'],
+    ['밤이 다친 까닭은?', ['덫에 걸려서', '유리벽에 부딪혀서', '다른 새와 싸워서', '먹이를 못 찾아서'], 1, 'She hit a glass wall and hurt her wing.'],
+    ['센터의 최근 프로젝트는?', ['새 건물 짓기', '밤을 숲으로 돌려보내기', '쥐 잡기', '유리벽 청소하기'], 1, 'to return her to the forest'],
+    ['방사 행사에서 글쓴이가 한 일은?', ['밤에게 먹이를 주었다', '조금 울고 소리쳤다', '사진만 찍었다', '집에 일찍 갔다'], 1, 'I cried a little… I shouted.'],
+    ['글의 요지로 알맞은 것은?', ['부엉이는 위험하다', '십대도 NGO 활동으로 세상을 바꿀 수 있다', '유리벽을 없애자', '야생 동물은 우리에서 살아야 한다'], 1, 'It is a great way to learn about social issues and to make the world better.']
   ]
 };
+
+/* ── 보강: 원리 중심 문법 · 모션 그래픽 · 낱말 만들기 · 발음 기호 ── */
+(function (L) {
+  const ipa = {NGO: '/ˌen dʒiː ˈoʊ/', social: '/ˈsoʊʃl/', issue: '/ˈɪʃuː/', volunteer: '/ˌvɑːlənˈtɪr/', danger: '/ˈdeɪndʒər/', endangered: '/ɪnˈdeɪndʒərd/', protect: '/prəˈtekt/', injured: '/ˈɪndʒərd/', various: '/ˈveriəs/', activity: '/ækˈtɪvəti/', project: '/ˈprɑːdʒekt/', training: '/ˈtreɪnɪŋ/', skill: '/skɪl/', survive: '/sərˈvaɪv/', wild: '/waɪld/', chance: '/tʃæns/', errand: '/ˈerənd/', ceremony: '/ˈserəmoʊni/', emotional: '/ɪˈmoʊʃənl/', freely: '/ˈfriːli/'};
+  L.vocab.words.forEach(w => { if (ipa[w.w]) w.ipa = ipa[w.w]; });
+  L.vocab.morph = [
+    {w: 'endangered', ko: '멸종 위기에 처한', parts: [{t: 'en', k: 'pre', m: '~에 넣다, ~하게 하다'}, {t: 'danger', k: 'root', m: '위험'}, {t: 'ed', k: 'suf', m: '~된 (형용사)'}], family: ['danger', 'dangerous', 'encourage'], note: '위험(danger) 속에 놓인(en-) 상태(-ed) → 멸종 위기에 처한.'},
+    {w: 'survive', ko: '살아남다', parts: [{t: 'sur', k: 'pre', m: '넘어서'}, {t: 'vive', k: 'root', m: '살다'}], family: ['survival', 'vivid', 'revive'], note: '(위험을) 넘어서(sur) 살다(vive) → 살아남다. 명사는 survival.'},
+    {w: 'emotional', ko: '감정적인, 뭉클한', parts: [{t: 'emotion', k: 'root', m: '감정'}, {t: 'al', k: 'suf', m: '~의, ~한 (형용사)'}], family: ['natural', 'national', 'personal'], note: '명사 + -al = 형용사 (nation → national).'}
+  ];
+  const [g1, g2] = L.grammar.points;
+  g1.principle = {
+    q: 'to부정사는 어떻게 명사를 꾸밀까?',
+    pic: [{en: 'chances', ko: '명사'}, {en: 'to see', ko: '앞으로 볼 (to = 앞으로)', hot: true}],
+    core: '명사 뒤에 to + 동사원형을 붙이면 “~할 (명사)”라는 뜻으로 그 명사를 꾸민다. to가 “앞으로 할 일”을 가리키기 때문이다.',
+    why: ['명사 + to + 동사원형 = ~할 명사 (something to eat = 먹을 것).', '형용사와 달리 명사 뒤에서 꾸민다.', '동사 뒤에 전치사가 필요하면 그대로 둔다 (a friend to talk with).']
+  };
+  g1.anim = [{title: '명사 뒤에 to부정사를 붙이면', states: [
+    {t: 'I/S | had | many chances/O#m | . | / | I/S#i2 | could see/V#sp | owls | .', note: '두 문장', ko: '나는 기회가 많았다. 나는 부엉이를 볼 수 있었다.'},
+    {t: 'I/S | had | many chances/O#m | to see/X#sp | owls | .', note: '명사 + to + 동사원형 = ~할 명사', ko: '나는 부엉이를 볼 기회가 많았다.'}]}];
+  g1.contrast = {title: '명사를 꾸미는 to부정사', pairs: [
+    {a: 'I need {{something to eat}}.', ka: '나는 먹을 것이 필요하다.', b: 'I need {{a friend to talk with}}.', kb: '나는 이야기 나눌 친구가 필요하다. (talk with a friend → with 남음)'}],
+    point: '명사 + to + 동사원형 = ~할 (명사). 전치사가 필요하면 끝에 남긴다.'};
+  g2.principle = {
+    q: 'make 뒤에 왜 목적어와 형용사가 나란히 올까?',
+    pic: [{en: 'The ceremony made', ko: '만들었다'}, {en: 'us', ko: '누구를 (목적어)'}, {en: 'emotional', ko: '어떤 상태로 (형용사)', hot: true}],
+    core: 'make A B(형용사)는 “A를 B인 상태로 만들다”이다. 목적어 하나만으로는 뜻이 끝나지 않아서, 그 목적어가 어떤 상태가 되었는지를 형용사가 채워 준다. 목적어와 형용사 사이에는 “A는 B다”가 숨어 있다.',
+    why: ['us = emotional처럼 목적어와 형용사가 짝을 이룬다.', '상태를 말하므로 부사(emotionally)가 아니라 형용사.', 'keep, find, leave도 같은 짜임 (Keep the forest clean).']
+  };
+  g2.anim = [{title: '두 문장 → make + 목적어 + 형용사', states: [
+    {t: 'We/S#us | became/V | emotional/C#c | . | / | The ceremony/S#cer | caused/V | it | .', note: '결과(우리가 뭉클해짐) + 원인(행사)', ko: '우리는 뭉클해졌다. 그 행사가 그렇게 했다.'},
+    {t: 'The ceremony/S#cer | made/X | us/O#us | emotional/C#c | .', note: '원인이 주어로, 결과가 목적어 + 형용사로', ko: '그 행사는 우리를 뭉클하게 했다.'}]}];
+  g2.contrast = {title: '형용사? 부사?', pairs: [
+    {a: 'The news made her {{sad}}.', ka: '그 소식은 그녀를 슬프게 했다. (목적어의 상태 → 형용사)', b: 'She told the news {{sadly}}.', kb: '그녀는 그 소식을 슬프게 전했다. (동작을 꾸밈 → 부사)'}],
+    point: 'make + 목적어 뒤에는 목적어의 상태를 말하는 형용사.'};
+})(window.LESSON);
